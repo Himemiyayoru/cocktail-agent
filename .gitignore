@@ -1,0 +1,9 @@
+# Python 忽略项
+.venv/
+__pycache__/
+.idea/
+*.db
+
+# Node.js / 前端忽略项
+cocktail-app/node_modules/
+cocktail-app/.expo/
