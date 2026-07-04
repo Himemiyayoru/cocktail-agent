@@ -40,4 +40,4 @@ class RecipeItem(Base):
 
 if __name__ == "__main__":
     Base.metadata.create_all(bind=engine)
-    print("✅ 数据库与表结构创建完成！")
+    print("✅ Database and table structures created successfully!")

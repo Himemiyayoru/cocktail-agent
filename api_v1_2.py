@@ -11,11 +11,11 @@ from sqlalchemy.orm import Session
 from sqlalchemy import or_
 from openai import AsyncOpenAI
 
-# 导入数据库模块 (确保同目录下有 database.py)
+# Import database module (ensure database.py is in the same directory)
 from database import SessionLocal, Ingredient, Recipe, RecipeItem
 
 # ==========================================
-# 🔌 初始化本地大模型客户端 (Ollama)
+# 🔌 Initialize Local LLM Client (Ollama)
 # ==========================================
 client = AsyncOpenAI(
     base_url="http://localhost:11434/v1",
@@ -23,14 +23,14 @@ client = AsyncOpenAI(
 )
 
 # ==========================================
-# 🎧 初始化本地听觉模型 (Whisper)
+# 🎧 Initialize Local Hearing Model (Whisper)
 # ==========================================
-print("🚀 正在加载本地 Whisper 听觉模型 (Base版本)...")
+print("🚀 Loading local Whisper hearing model (Base version)...")
 whisper_model = whisper.load_model("base")
 
 app = FastAPI(title="Cocktail Physics & Bob AI API (Voice Edition)", version="1.2")
 
-# 允许跨域请求 (CORS)
+# Allow Cross-Origin Resource Sharing (CORS)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -49,11 +49,11 @@ def get_db():
 
 
 # ==========================================
-# 🧱 Pydantic 请求数据模型
+# 🧱 Pydantic Request Data Models
 # ==========================================
 class RecipeComponent(BaseModel):
-    ingredient_name: str = Field(..., description="数据库中的成分名称")
-    volume_ml: float = Field(..., gt=0, description="液体体积")
+    ingredient_name: str = Field(..., description="Ingredient name in the database")
+    volume_ml: float = Field(..., gt=0, description="Liquid volume in ml")
 
 
 class SimulateDBRequest(BaseModel):
@@ -63,16 +63,16 @@ class SimulateDBRequest(BaseModel):
 
 
 class InventoryRequest(BaseModel):
-    owned_ingredients: List[str] = Field(..., description="用户拥有的材料名称列表")
-    allow_missing: int = Field(default=0, ge=0, description="允许缺少的最大材料数")
+    owned_ingredients: List[str] = Field(..., description="List of ingredient names owned by the user")
+    allow_missing: int = Field(default=0, ge=0, description="Maximum number of missing ingredients allowed")
 
 
 class BobChatRequest(BaseModel):
-    user_message: str = Field(..., description="用户对 Bob 说的话")
+    user_message: str = Field(..., description="User's message to Bob")
 
 
 # ==========================================
-# 🟢 Tab 1 接口：首页瀑布流与配方搜索
+# 🟢 Tab 1 API: Featured Recipes & Search
 # ==========================================
 @app.get("/api/v2/recipes/featured")
 def get_featured_recipes(db: Session = Depends(get_db)):
@@ -101,7 +101,7 @@ def search_recipes(query: str, db: Session = Depends(get_db)):
 def get_recipe_details(recipe_id: int, db: Session = Depends(get_db)):
     recipe = db.query(Recipe).filter(Recipe.id == recipe_id).first()
     if not recipe:
-        raise HTTPException(status_code=404, detail="找不到该配方")
+        raise HTTPException(status_code=404, detail="Recipe not found")
 
     items = db.query(RecipeItem).filter(RecipeItem.recipe_id == recipe_id).all()
     components = []
@@ -121,7 +121,7 @@ def get_recipe_details(recipe_id: int, db: Session = Depends(get_db)):
 
 
 # ==========================================
-# 🔵 Tab 2 接口：库存匹配引擎
+# 🔵 Tab 2 API: Inventory Matching Engine
 # ==========================================
 @app.post("/api/v2/recipes/inventory_match")
 def match_recipes_by_inventory(req: InventoryRequest, db: Session = Depends(get_db)):
@@ -152,7 +152,7 @@ def match_recipes_by_inventory(req: InventoryRequest, db: Session = Depends(get_
 
 
 # ==========================================
-# ⚙️ 核心基建：物理与流体推演引擎
+# ⚙️ Core Infrastructure: Physics & Fluid Simulation Engine
 # ==========================================
 @app.post("/api/v2/simulate_from_db")
 def simulate_from_db(req: SimulateDBRequest, db: Session = Depends(get_db)):
@@ -160,7 +160,7 @@ def simulate_from_db(req: SimulateDBRequest, db: Session = Depends(get_db)):
     for comp in req.components:
         db_ing = db.query(Ingredient).filter(Ingredient.name == comp.ingredient_name).first()
         if not db_ing:
-            raise HTTPException(status_code=404, detail=f"图谱缺失：找不到成分 '{comp.ingredient_name}'")
+            raise HTTPException(status_code=404, detail=f"Knowledge graph missing: Ingredient '{comp.ingredient_name}' not found")
         extracted_ingredients.append({
             "name": db_ing.name, "volume_ml": comp.volume_ml, "abv": db_ing.abv,
             "brix": db_ing.brix, "ph": db_ing.ph, "opacity": db_ing.opacity,
@@ -202,13 +202,13 @@ def simulate_from_db(req: SimulateDBRequest, db: Session = Depends(get_db)):
 
 
 # ==========================================
-# 🤖 Tab 3 接口：Bob 的本地智能吧台
+# 🤖 Tab 3 API: Bob's Local AI Bar
 # ==========================================
 @app.post("/api/v2/chat_with_bob")
 async def chat_with_bob(req: BobChatRequest, db: Session = Depends(get_db)):
     all_ingredients = db.query(Ingredient).all()
     ingredient_context = "\n".join(
-        [f"- {i.name} (分类: {i.category}, ABV: {i.abv * 100}%, Brix: {i.brix}, 浊度: {i.opacity})" for i in
+        [f"- {i.name} (Category: {i.category}, ABV: {i.abv * 100}%, Brix: {i.brix}, Opacity: {i.opacity})" for i in
          all_ingredients])
 
     system_prompt = f"""
@@ -286,20 +286,20 @@ async def chat_with_bob(req: BobChatRequest, db: Session = Depends(get_db)):
 
 
 # ==========================================
-# 🎤 终极升级：Whisper 语音识别接口
+# 🎤 Ultimate Upgrade: Whisper Voice Recognition API
 # ==========================================
 @app.post("/api/v2/transcribe")
 async def transcribe_audio(audio_file: UploadFile = File(...)):
-    # 接收前端传来的录音，存入临时文件
+    # Receive audio from frontend and save to temporary file
     with tempfile.NamedTemporaryFile(delete=False, suffix=".m4a") as tmp:
         tmp.write(await audio_file.read())
         tmp_path = tmp.name
 
     try:
-        print(f"🎧 正在解析音频: {audio_file.filename}")
+        print(f"🎧 Parsing audio: {audio_file.filename}")
         result = whisper_model.transcribe(tmp_path)
         text = result.get("text", "").strip()
-        print(f"📝 识别结果: {text}")
+        print(f"📝 Transcription result: {text}")
 
         return {"status": "success", "text": text}
     finally:
