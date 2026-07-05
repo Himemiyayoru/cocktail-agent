@@ -16,6 +16,8 @@ Designed as a showcase of integrating deterministic algorithms (Physics Engine) 
 ## ✨ Core Features
 
 *   🧪 **Fluid Physics Simulation Engine**: Real-time calculation of cocktail dilution, final ABV, sugar concentration (Brix), and color blending using optical absorbance approximations.
+*   🥃 **3D Vector Glassware Rendering**: A custom-built SVG graphics engine that dynamically renders liquids to perfectly mold to different glass geometries (Highball, Martini, Flute, etc.) with real-time volume capacity limits and smart compression.
+*   🔄 **Dynamic Physical States**: Seamlessly toggle between "Mixed" (homogeneous optical blending) and "Layered" (physically stacked based on specific gravity derived from ABV and Brix) representations.
 *   🤖 **Local-First AI Agent ("Bob")**: Integrated with Ollama (Llama 3) for zero-cost, privacy-first natural language recipe generation. Bob is prompted to act as a veteran bartender with a distinct, humorous personality.
 *   🎧 **Local Voice-to-Text System**: Utilizes OpenAI's Whisper model locally to transcribe user audio inputs into text, enabling a hands-free "Hold to Talk" bar experience.
 *   🗄️ **Relational Knowledge Graph**: Built with SQLite and SQLAlchemy to manage ingredients, recipes, and their respective molecular properties.
@@ -26,17 +28,15 @@ Designed as a showcase of integrating deterministic algorithms (Physics Engine) 
 
 The system follows a strict decoupling between the UI, the AI reasoning layer, and the physics calculation layer.
 
-```text
-[ Mobile App (React Native / Expo Go) ]
-       |
-       | REST API (JSON over LAN/Tunnel)
-       v
-[ FastAPI Core Backend ] 
-       |---> 🧮 Physics & Fluid Engine (Calculates ABV, Brix, RGB, Dilution)
-       |---> 🧠 Local LLM Gateway (Ollama API -> Llama 3)
-       |---> 🎧 Hearing Engine (Local Whisper Base Model)
-       |---> 🗄️ SQLite Database (SQLAlchemy ORM)
-```
+    [ Mobile App (React Native / Expo Go) ]
+           |
+           | REST API (JSON over LAN/Tunnel)
+           v
+    [ FastAPI Core Backend ] 
+           |---> 🧮 Physics & Fluid Engine (Calculates ABV, Brix, RGB, Dilution)
+           |---> 🧠 Local LLM Gateway (Ollama API -> Llama 3)
+           |---> 🎧 Hearing Engine (Local Whisper Base Model)
+           |---> 🗄️ SQLite Database (SQLAlchemy ORM)
 
 ## 🚀 Getting Started
 
@@ -94,7 +94,7 @@ Scan the generated QR code with the **Expo Go** app on your phone to enter the b
 *   [x] **v0.8**: Integration of Local LLM ("Bob") via Ollama API.
 *   [x] **v0.9**: Frontend scaffolding (React Native + Expo Router) & Dark Theme setup.
 *   [x] **v1.0**: Frontend UI/UX implementation (Classics Feed, Inventory Grid, Agent Chat UI).
-*   [ ] **v1.1**: Interactive "Mutation Lab" - side-by-side physical comparison visualizations.
+*   [x] **v1.1**: Interactive "Mutation Lab" - side-by-side physical comparison visualizations with true 3D SVG glassware rendering.
 *   [x] **v1.2**: Voice-to-Text integration for speaking directly to Bob.
 
 ## 📄 License

@@ -42,7 +42,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     background: '#f8f9fa',
     card: '#ffffff',
     text: '#1a1a1a',
-    primary: '#007aff', // 科技蓝
+    primary: '#000000',
     border: '#e0e0e0',
     subtext: '#6c757d',
   };
