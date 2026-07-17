@@ -1,0 +1,214 @@
+[
+  {
+    "name": "50/50",
+    "description": "The 50/50 cocktail is a refreshing blend that showcases the smoothness of vanilla vodka paired with the citrusy brightness of orange juice, accented by a hint of Grand Marnier. This drink is perfect for warm days and is a delightful twist on the classic vodka cocktail.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill the Collins glass with crushed ice.",
+      "Add 75 ml of vanilla vodka.",
+      "Add 1 ml of Grand Marnier.",
+      "Fill the glass with orange juice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Vanilla vodka",
+        "category": "spirit",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grand Marnier",
+        "category": "liqueur",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            102,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "501 Blue",
+    "description": "The 501 Blue is a vibrant cocktail that showcases the beautiful blue hue of Blue Curacao, reminiscent of tropical waters. This refreshing drink combines the sweetness of blueberry schnapps with the crispness of vodka and a splash of sour mix, topped off with a fizzy finish from 7-Up. Perfect for summer gatherings or beach parties, this cocktail is as visually stunning as it is delicious.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a Collins glass with ice.",
+      "Pour equal parts of Blue Curacao, blueberry schnapps, vodka, sour mix, and 7-Up into the glass.",
+      "Stir gently to combine the ingredients."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Blue Curacao",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            102,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blueberry schnapps",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 25,
+          "ph": 3.0,
+          "opacity": 0.4,
+          "color_rgb": [
+            0,
+            0,
+            128
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sour mix",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 3.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "7-Up",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "57 Chevy with a White License Plate",
+    "description": "The 57 Chevy with a White License Plate is a classic cocktail that embodies the spirit of the 1950s, reminiscent of the iconic car it is named after. This drink combines the smooth sweetness of white crème de cacao with the clean, crisp profile of vodka, creating a refreshing and delightful experience.",
+    "glass_type": "highball",
+    "method": "stirred",
+    "instructions": [
+      "Fill a highball glass with ice.",
+      "Add white crème de cacao and vodka.",
+      "Stir gently to combine."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "white Creme de Cacao",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  }
+]

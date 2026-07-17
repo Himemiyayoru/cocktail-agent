@@ -1,0 +1,83 @@
+[
+  {
+    "name": "9 1/2 Weeks",
+    "description": "The 9 1/2 Weeks cocktail is inspired by the iconic film of the same name, which explores themes of passion and desire. This vibrant drink combines citrus flavors with a hint of strawberry, making it a refreshing choice for those looking to indulge in a taste of romance.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Combine all ingredients in a glass mixer.",
+      "Chill and strain into a coupe glass.",
+      "Garnish with sliced strawberry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Absolut Citron",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 6.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Curacao",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 4.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Strawberry liqueur",
+        "category": "liqueur",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 40,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            127
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  }
+]

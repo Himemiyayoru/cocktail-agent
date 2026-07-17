@@ -1,0 +1,132 @@
+[
+  {
+    "name": "Yellow Bird",
+    "description": "The Yellow Bird is a classic cocktail that dates back to the mid-20th century, known for its vibrant color and tropical flavors. It combines the sweetness of Galliano and Triple Sec with the tartness of lime juice, creating a refreshing drink that transports you to a sunny beach with every sip.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a chilled cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "White Rum",
+        "category": "spirit",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Galliano",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple Sec",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 25,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Yoghurt Cooler",
+    "description": "The Yoghurt Cooler is a refreshing beverage that combines the creamy texture of yoghurt with the vibrant flavors of fresh fruit. Perfect for hot days, this drink is not only delicious but also nutritious, making it a popular choice for those looking to cool down while enjoying a healthy treat. The method of blending ensures a smooth consistency, while the addition of ice creates a frosty delight.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Place all ingredients in the blender jar.",
+      "Cover and whiz on medium speed until well blended.",
+      "Pour into one tall, two medium, or three small glasses.",
+      "For added ice, remove the center of the cover while the blender is on, drop in 3 or 4 ice cubes, and blend until completely crushed."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Yoghurt",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Fruit",
+        "category": "juice",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            100,
+            100
+          ]
+        }
+      }
+    ]
+  }
+]

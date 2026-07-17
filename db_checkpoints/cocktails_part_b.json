@@ -1,0 +1,2054 @@
+[
+  {
+    "name": "B-52",
+    "description": "The B-52 is a classic layered shot that combines the rich flavors of Irish cream, orange liqueur, and coffee liqueur. Named after the B-52 Stratofortress bomber, this cocktail became popular in the 1980s and is known for its visually striking layers and delightful taste.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Layer Baileys Irish cream into the shot glass.",
+      "Carefully layer Grand Marnier on top of the Baileys.",
+      "Finally, layer Kahlua on top of the Grand Marnier.",
+      "Serve with a stirrer."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grand Marnier",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            140,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 35,
+          "ph": 4.0,
+          "opacity": 1.0,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "B-53",
+    "description": "The B-53 is a delightful layered shot that builds on the classic B-52, adding a unique twist with the rich flavors of Kahlua, the anise notes of Sambuca, and the orange zest of Grand Marnier. This visually striking drink is perfect for showcasing the art of layering cocktails.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Layer the Kahlua into the shot glass.",
+      "Carefully layer the Sambuca on top of the Kahlua.",
+      "Finally, layer the Grand Marnier on top of the Sambuca."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sambuca",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 38,
+          "brix": 25,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grand Marnier",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            102,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bijou",
+    "description": "The Bijou cocktail, meaning 'jewel' in French, is a classic drink that dates back to the late 19th century. It combines the herbal complexity of Green Chartreuse with the botanical notes of gin and the sweetness of vermouth, creating a vibrant and flavorful experience. This cocktail is often associated with the Art Deco movement and has been a favorite among cocktail enthusiasts for generations.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Add ice to a mixing glass.",
+      "Pour in the Green Chartreuse, gin, sweet vermouth, and orange bitters.",
+      "Stir well until chilled.",
+      "Strain into a chilled coupe glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Orange Bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 44,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Green Chartreuse",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 55,
+          "brix": 25,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 15,
+          "ph": 3.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            128,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Boxcar",
+    "description": "The Boxcar cocktail is a delightful blend of gin and triple sec, enhanced by the tartness of lemon juice and the sweetness of grenadine. The addition of egg white gives it a smooth texture and a frothy top, reminiscent of classic sour cocktails. This drink is a nod to the era of train travel, where cocktails were crafted to be enjoyed on the go.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "In a shaker half-filled with ice cubes, combine all of the ingredients.",
+      "Shake well.",
+      "Strain into a sour glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg white",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Big Red",
+    "description": "The Big Red is a vibrant shot that combines the creamy sweetness of Irish cream with the spicy kick of Goldschlager, a cinnamon schnapps. This shot is perfect for celebrations and adds a fun twist to any gathering.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Pour Irish cream into a shot glass.",
+      "Add Goldschlager on top."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Irish cream",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Goldschlager",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 43.5,
+          "brix": 25,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            215,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bellini",
+    "description": "The Bellini is a classic Italian cocktail that originated in Venice during the 1940s. It was created by Giuseppe Cipriani, the founder of Harry's Bar, and is named after the Venetian painter Giovanni Bellini due to its distinctive peach color. This refreshing drink combines the sweetness of peach purée with the effervescence of sparkling wine, making it a popular choice for brunch and celebrations.",
+    "glass_type": "flute",
+    "method": "build",
+    "instructions": [
+      "Pour peach purée into a chilled flute.",
+      "Add sparkling wine.",
+      "Stir gently."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Champagne",
+        "category": "spirit",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 0,
+          "ph": 3.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Peach schnapps",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bramble",
+    "description": "The Bramble is a modern classic cocktail that originated in the 1980s, created by renowned bartender Dick Bradsell in London. This refreshing drink combines the botanical notes of gin with the tartness of lemon juice and the sweetness of simple syrup, all beautifully complemented by the rich flavor of blackberry liqueur. The marbling effect created by the liqueur not only adds visual appeal but also enhances the drink's complexity.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Fill glass with crushed ice.",
+      "Build gin, lemon juice, and simple syrup over the ice.",
+      "Stir gently to combine.",
+      "Pour blackberry liqueur over in a circular fashion to create a marbling effect.",
+      "Garnish with two blackberries and a lemon slice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 40,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar Syrup",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Creme de Mure",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 16,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            128
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Balmoral",
+    "description": "The Balmoral is a classic cocktail that showcases the rich flavors of Scotch whisky, balanced with the herbal notes of sweet and dry vermouths. Named after the Scottish castle, this drink embodies the elegance and sophistication of its namesake, making it a favorite among whisky enthusiasts.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "In a mixing glass half-filled with ice cubes, combine all of the ingredients.",
+      "Stir well.",
+      "Strain into a cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Scotch",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            178,
+            34,
+            34
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            224
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bluebird",
+    "description": "The Bluebird cocktail is a classic drink that showcases the vibrant color of blue curaçao, combined with the botanical notes of gin and the sweetness of triple sec. Its origins can be traced back to the early 20th century, often enjoyed for its refreshing taste and eye-catching appearance. The addition of bitters adds depth, while the lemon twist and cherry garnish provide a delightful finish.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "In a mixing glass half-filled with crushed ice, combine the gin, triple sec, blue curaçao, and bitters.",
+      "Stir well.",
+      "Strain into a cocktail glass.",
+      "Garnish with the lemon twist and the cherry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            200,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blue Curacao",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 35,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            102,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            100,
+            50,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino cherry",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 25,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon peel",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Brooklyn",
+    "description": "The Brooklyn cocktail is a classic drink that dates back to the early 20th century, showcasing the rich flavors of rye whiskey complemented by the herbal notes of dry vermouth and the sweetness of maraschino liqueur. It is a sophisticated choice for those who appreciate a well-balanced cocktail.",
+    "glass_type": "martini",
+    "method": "stirred",
+    "instructions": [
+      "Combine ingredients with ice.",
+      "Stir until well-chilled.",
+      "Strain into a chilled cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Rye Whiskey",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino Liqueur",
+        "category": "liqueur",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 20,
+          "ph": 3.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura Bitters",
+        "category": "modifier",
+        "volume_ml": 3,
+        "physics_baseline": {
+          "abv": 44,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino Cherry",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bora Bora",
+    "description": "The Bora Bora cocktail is a tropical delight that captures the essence of paradise in a glass. With its vibrant flavors of pineapple and passion fruit, this drink is reminiscent of sun-soaked beaches and exotic getaways. Perfect for summer gatherings or a refreshing escape any time of year.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Combine pineapple juice, passion fruit juice, lemon juice, and grenadine in a blender.",
+      "Blend until smooth and well mixed.",
+      "Fill a highball glass with ice.",
+      "Pour the blended mixture over the ice.",
+      "Garnish with a slice of pineapple and a cherry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Passion fruit juice",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 14,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            102
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.0,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Boomerang",
+    "description": "The Boomerang cocktail is a classic drink that showcases the harmonious blend of gin and vermouth, with a touch of bitters and maraschino liqueur for added complexity. This cocktail is a nod to the elegance of the early 20th century, often enjoyed in sophisticated settings. Its name suggests a return to the familiar flavors of gin and vermouth, making it a timeless choice for cocktail enthusiasts.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "In a mixing glass half-filled with ice cubes, combine the gin, dry vermouth, bitters, and maraschino liqueur.",
+      "Stir well.",
+      "Strain into a cocktail glass and garnish with the maraschino cherry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            230,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 10,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            100,
+            50,
+            50
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino Liqueur",
+        "category": "liqueur",
+        "volume_ml": 2.5,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 20,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            200,
+            200
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino Cherry",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Barracuda",
+    "description": "The Barracuda is a tropical cocktail that combines the sweetness of rum and pineapple juice with the herbal notes of Galliano, topped with sparkling wine for a refreshing finish. This drink is perfect for summer gatherings and evokes the vibrant spirit of beachside bars.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake the rum, Galliano, pineapple juice, and lime juice with ice.",
+      "Strain into a coupe glass.",
+      "Top up with Prosecco."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 135,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Galliano",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 6,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple Juice",
+        "category": "juice",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Prosecco",
+        "category": "wine",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 11,
+          "brix": 10,
+          "ph": 3.2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Brigadier",
+    "description": "The Brigadier is a delightful cocktail that combines the rich, comforting flavors of hot chocolate with the herbal complexity of Green Chartreuse and the fruity sweetness of Cherry Heering. This unique blend offers a warm and indulgent experience, perfect for cozy gatherings or a special treat on a chilly evening.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Warm a mug to enhance the drinking experience.",
+      "Mix the hot chocolate, Green Chartreuse, and Cherry Heering in the warmed mug.",
+      "Stir gently to combine the ingredients."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Hot Chocolate",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 6.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            102,
+            51,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Green Chartreuse",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 55,
+          "brix": 25,
+          "ph": 5,
+          "opacity": 0.3,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cherry Heering",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 24,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Broadside",
+    "description": "The Broadside cocktail is a unique blend that showcases the bold flavors of rum and scotch, complemented by the herbal notes of fresh wormwood. This drink is a nod to the adventurous spirit of sailors and explorers who sought out exotic ingredients during their voyages. The use of bitters adds depth, making it a complex and intriguing choice for those looking to try something different.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Half fill the glass with ice cubes.",
+      "Crush the wormwood and add to the ice.",
+      "Pour the rum, scotch, and bitters over the mixture.",
+      "Serve and enjoy!"
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "151 proof rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 75,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Scotch",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.2,
+          "color_rgb": [
+            178,
+            134,
+            82
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bitters",
+        "category": "modifier",
+        "volume_ml": 3,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.5,
+          "color_rgb": [
+            100,
+            25,
+            25
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Fresh Wormwood",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            34,
+            139,
+            34
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Buccaneer",
+    "description": "The Buccaneer is a refreshing cocktail that combines the crispness of a light beer with the zesty notes of Bacardi Limon. This drink is perfect for warm weather and evokes the spirit of adventure on the high seas, making it a favorite among those who enjoy a laid-back yet flavorful experience.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour the Corona into a highball glass.",
+      "Add the Bacardi Limon to the beer.",
+      "Stir very gently to combine."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Corona",
+        "category": "beer",
+        "volume_ml": 532,
+        "physics_baseline": {
+          "abv": 4.6,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bacardi Limon",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Brain Fart",
+    "description": "The Brain Fart is a punch-style cocktail that combines high-proof spirits with refreshing sodas, creating a fun and potent party drink. Its origins are rooted in the creative mixology of the late 20th century, where bold flavors and high alcohol content became a staple in social gatherings.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Combine all ingredients in a punch bowl.",
+      "Mix slowly and gently to combine flavors.",
+      "Add ice to the punch bowl for chilling.",
+      "Ensure sodas are very cold before adding."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 500
+    },
+    "components": [
+      {
+        "ingredient_name": "Everclear",
+        "category": "spirit",
+        "volume_ml": 750,
+        "physics_baseline": {
+          "abv": 95,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Smirnoff Red Label Vodka",
+        "category": "spirit",
+        "volume_ml": 750,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Mountain Dew",
+        "category": "soda",
+        "volume_ml": 2000,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.3,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Surge",
+        "category": "soda",
+        "volume_ml": 2000,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.4,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 473,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Blackthorn",
+    "description": "The Blackthorn cocktail is a classic drink that showcases the unique flavor of sloe gin, a liqueur made from the fruit of the blackthorn bush. This cocktail combines the sweetness of vermouth with the tartness of sloe gin, creating a balanced and refreshing drink. Traditionally served in a cocktail glass, it is garnished with a twist of lemon peel, adding a citrusy aroma that enhances the overall experience.",
+    "glass_type": "martini",
+    "method": "stirred",
+    "instructions": [
+      "Stir sloe gin and sweet vermouth with ice.",
+      "Strain into a cocktail glass.",
+      "Add the twist of lemon peel and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            150,
+            75,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sloe gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 15,
+          "ph": 3.0,
+          "opacity": 0.4,
+          "color_rgb": [
+            128,
+            0,
+            128
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon peel",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bob Marley",
+    "description": "The Bob Marley shot is a vibrant and colorful layered cocktail that pays homage to the legendary reggae musician. Known for its striking appearance, this shot combines the sweet, fruity flavor of Midori melon liqueur with the herbal notes of Jägermeister and the spicy kick of Goldschlager. It's a fun and festive drink perfect for parties and celebrations.",
+    "glass_type": "shot",
+    "method": "layer",
+    "instructions": [
+      "Pour the Midori melon liqueur into the shot glass as the first layer.",
+      "Slowly pour the Jägermeister over the back of a spoon to create the second layer.",
+      "Finally, layer the Goldschlager on top using the same spoon technique."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Midori melon liqueur",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Jägermeister",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 25,
+          "ph": 4.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            0,
+            100,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Goldschlager",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 43,
+          "brix": 20,
+          "ph": 3.0,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            215,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bible Belt",
+    "description": "The Bible Belt cocktail is a sweet and tangy drink that reflects the Southern charm and hospitality. Combining the fruity notes of Southern Comfort with the citrusy zing of lime and the sweetness of triple sec, this cocktail is perfect for warm evenings and gatherings.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix all ingredients together.",
+      "Pour over ice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Southern Comfort",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 20,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 25,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sour mix",
+        "category": "syrup",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            153
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bubble Gum",
+    "description": "The Bubble Gum shot is a playful and colorful concoction that brings back childhood memories with its sweet and fruity flavors. This layered shot is perfect for parties and celebrations, offering a fun visual appeal and a delightful taste that combines the essence of various fruits.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Layer the vodka into the shot glass.",
+      "Carefully layer the banana liqueur on top of the vodka.",
+      "Next, layer the orange juice on top of the banana liqueur.",
+      "Finally, layer the peach schnapps on top of the orange juice."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Banana liqueur",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Peach schnapps",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 25,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            192,
+            203
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bumble Bee",
+    "description": "The Bumble Bee is a visually striking layered shot that resembles the colors of a bumblebee. This cocktail showcases the art of layering spirits, creating a delightful presentation that is as enjoyable to look at as it is to drink. The combination of Baileys Irish Cream, Kahlua, and Sambuca offers a rich and sweet flavor profile, making it a favorite among those who appreciate both aesthetics and taste.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Pour the Baileys into the shot glass.",
+      "Take an upside down spoon and touch it to the inside wall of the glass.",
+      "Carefully add the Kahlua over the back of the spoon.",
+      "Repeat this process for the Sambuca.",
+      "If done properly, the alcohol will stay separated and resemble a bumble bee. Enjoy!"
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 25,
+          "ph": 5.0,
+          "opacity": 0.8,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sambuca",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 38,
+          "brix": 20,
+          "ph": 5.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Baby Eskimo",
+    "description": "The Baby Eskimo is a delightful cocktail that combines the rich flavors of Kahlua with the creamy texture of milk and vanilla ice cream. This drink is perfect for those looking for a light and refreshing option after a heavier cocktail. Its origins are rooted in the desire for a sweet, dessert-like beverage that can be enjoyed at any time.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Leave ice-cream out for about 10 minutes.",
+      "Add Kahlua and milk to the glass.",
+      "Stir with a chopstick, butter knife, or spoon.",
+      "Consume immediately and often."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla ice-cream",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 6.0,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            240,
+            200
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Boston Sour",
+    "description": "The Boston Sour is a classic cocktail that combines the rich flavors of blended whiskey with the tartness of lemon juice and the smooth texture of egg white. This drink is a variation of the traditional whiskey sour, adding a frothy element that enhances its appeal. The addition of a cherry and a slice of lemon not only garnishes the drink but also adds a touch of elegance.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Shake juice of lemon, powdered sugar, blended whiskey, and egg white with cracked ice.",
+      "Strain into a whiskey sour glass.",
+      "Add the slice of lemon and top with the cherry before serving."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Blended whiskey",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg white",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon slice",
+        "category": "garnish",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cherry",
+        "category": "garnish",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bahama Mama",
+    "description": "The Bahama Mama is a tropical cocktail that embodies the essence of island life. Originating in the Bahamas, this vibrant drink combines a medley of rums with fruity flavors, making it a popular choice for beachgoers and cocktail enthusiasts alike. Its colorful presentation and refreshing taste transport you to a sunny paradise with every sip.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Add 90 ml of Rum, 30 ml of Dark Rum, 30 ml of Banana liqueur, 30 ml of Grenadine, 60 ml of Pineapple Juice, 60 ml of Orange Juice, and 30 ml of Sweet and Sour into a mixing glass.",
+      "Mix it all together and pour over a bunch of ice in a highball glass.",
+      "Top with club soda to taste and drink with a straw."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dark Rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Banana liqueur",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple Juice",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Juice",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet and Sour",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 3.0,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Club Soda",
+        "category": "modifier",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  }
+]

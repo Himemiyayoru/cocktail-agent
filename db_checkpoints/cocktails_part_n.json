@@ -1,0 +1,526 @@
+[
+  {
+    "name": "Negroni",
+    "description": "The Negroni is a classic Italian cocktail that dates back to the early 20th century. It is believed to have been invented in Florence, Italy, when Count Camillo Negroni requested a stronger version of his favorite cocktail, the Americano. The Negroni is known for its perfect balance of bitter and sweet flavors, making it a timeless favorite among cocktail enthusiasts.",
+    "glass_type": "rocks",
+    "method": "stirred",
+    "instructions": [
+      "Fill an old-fashioned glass with ice.",
+      "Add gin, Campari, and sweet vermouth to the glass.",
+      "Stir gently to combine the ingredients.",
+      "Garnish with an orange slice or twist and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Campari",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 15,
+          "ph": 4,
+          "opacity": 0.3,
+          "color_rgb": [
+            150,
+            75,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "New York Sour",
+    "description": "The New York Sour is a classic cocktail that dates back to the 1880s. It combines the rich flavors of blended whiskey with the tartness of lemon juice and a touch of sweetness from sugar, topped with a float of red wine. This drink not only offers a delightful balance of flavors but also presents a beautiful layered appearance, making it a favorite among cocktail enthusiasts.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Shake blended whiskey, lemon juice, and sugar with ice.",
+      "Strain into a rocks glass.",
+      "Float claret on top.",
+      "Garnish with a half-slice of lemon and a cherry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Blended whiskey",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Claret (Red wine)",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon (garnish)",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cherry (garnish)",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Nutty Irishman",
+    "description": "The Nutty Irishman is a delightful cocktail that combines the rich flavors of Irish cream and hazelnut liqueur, creating a creamy and nutty experience. This drink is perfect for those who enjoy sweet, dessert-like cocktails and has become a favorite in many bars and homes alike.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a highball glass with ice.",
+      "Pour in 30 ml of Baileys Irish Cream.",
+      "Add 30 ml of Frangelico.",
+      "Top with 30 ml of milk."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            230,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Frangelico",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 25,
+          "ph": 5.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            153,
+            101,
+            21
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "National Aquarium",
+    "description": "The National Aquarium cocktail is a vibrant and refreshing drink that captures the essence of a tropical paradise. With its blend of rum, vodka, gin, and blue curacao, this cocktail is as visually stunning as it is delicious, reminiscent of the colorful marine life found in aquariums. Perfect for summer gatherings or beach parties, it brings a splash of fun to any occasion.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Pour all ingredients into a shaker filled with ice.",
+      "Shake well to combine and chill the mixture.",
+      "Strain and serve over ice in a rocks glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blue Curacao",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 6,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            102,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sour mix",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon-lime soda",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "New York Lemonade",
+    "description": "The New York Lemonade is a refreshing cocktail that combines the zesty flavors of lemon with the smoothness of Absolut Citron and the sweetness of Grand Marnier. This cocktail is perfect for summer evenings and is often enjoyed in chic cocktail bars across New York City. The rim of the glass is sugared to enhance the citrus notes, making each sip a delightful experience.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Serve in a chilled cocktail glass.",
+      "Lemon and sugar the rim.",
+      "Stir and strain the mixture into the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Absolut Citron",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grand Marnier",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            102,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "sweetened Lemon juice",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Club soda",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Nuked Hot Chocolate",
+    "description": "The Nuked Hot Chocolate is a cozy beverage that combines the rich flavors of cocoa with the creamy texture of milk. This comforting drink is perfect for chilly evenings and is quick to prepare using a microwave. The origins of hot chocolate date back to ancient Mesoamerica, where cacao was consumed as a frothy drink. Today, it has evolved into a beloved treat enjoyed worldwide.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix cocoa powder, sugar, and vanilla extract in a coffee mug.",
+      "Add 30 ml of milk and stir to combine.",
+      "Microwave the mug for about 30-50 seconds.",
+      "Stir until the heated cocoa dissolves.",
+      "Fill the mug with an additional 360 ml of milk.",
+      "Nuke for 1-2 minutes, depending on wattage and personal preference."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Cocoa powder",
+        "category": "modifier",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 50,
+          "ph": 6.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            70,
+            40,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla extract",
+        "category": "modifier",
+        "volume_ml": 2.5,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 20,
+          "ph": 5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            220,
+            185
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "juice",
+        "volume_ml": 390,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 6.7,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      }
+    ]
+  }
+]

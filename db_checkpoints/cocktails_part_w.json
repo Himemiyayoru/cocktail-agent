@@ -1,0 +1,909 @@
+[
+  {
+    "name": "Whisky Mac",
+    "description": "The Whisky Mac is a classic cocktail that combines the robust flavors of Scotch whisky with the spicy sweetness of green ginger wine. Originating in the early 20th century, this drink is a favorite among whisky enthusiasts and is often enjoyed as a warming beverage during colder months.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour the Scotch into the Collins glass.",
+      "Add the green ginger wine."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Scotch",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.1,
+          "color_rgb": [
+            178,
+            134,
+            82
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Green Ginger Wine",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 10,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "White Lady",
+    "description": "The White Lady is a classic cocktail that dates back to the early 20th century, often associated with the Savoy Cocktail Book. This elegant drink combines gin, triple sec, and lemon juice, creating a refreshing and balanced flavor profile that has stood the test of time.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Add all ingredients into a cocktail shaker filled with ice.",
+      "Shake well and strain into a large cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 40,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple Sec",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 20,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Wine Punch",
+    "description": "Wine Punch is a refreshing and fruity beverage that has been enjoyed for centuries, often served at gatherings and celebrations. This delightful mix combines the rich flavors of red wine with the zesty brightness of citrus and tropical juices, making it a perfect choice for warm weather or festive occasions.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Combine all of the ingredients in a large pitcher.",
+      "Pour the mixture over a block of ice in a Collins glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 200
+    },
+    "components": [
+      {
+        "ingredient_name": "Red wine",
+        "category": "spirit",
+        "volume_ml": 750,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange",
+        "category": "fruit",
+        "volume_ml": 300,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Wine Cooler",
+    "description": "The Wine Cooler is a refreshing cocktail that combines the elegance of wine with the effervescence of soda. Originating in the 1970s, this drink became popular for its light and fruity flavor, making it a perfect choice for warm weather gatherings.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix wine and soft drink.",
+      "Pour into glass.",
+      "Add ice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "White or Red Wine",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 0,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            200,
+            200
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon-lime Soda",
+        "category": "modifier",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Winter Rita",
+    "description": "The Winter Rita is a seasonal twist on the classic margarita, incorporating the bitter notes of Campari and the aromatic essence of rosemary. This cocktail balances the bright acidity of lime and orange juices with the warmth of tequila, making it a refreshing yet complex drink perfect for winter gatherings.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Salt rim of the highball glass.",
+      "Combine tequila, Campari, lime juice, orange juice, and rosemary syrup in a shaker.",
+      "Shake with ice until well chilled.",
+      "Strain over fresh ice in the prepared glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Tequila",
+        "category": "spirit",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Campari",
+        "category": "liqueur",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Rosemary Syrup",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Salt",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Whiskey Sour",
+    "description": "The Whiskey Sour is a classic cocktail that dates back to the 1860s, embodying the perfect balance of sweet and sour flavors. Traditionally made with whiskey, lemon juice, and sugar, this drink has evolved over the years, often garnished with a cherry and a slice of lemon. Its refreshing taste makes it a favorite among cocktail enthusiasts.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Shake blended whiskey, lemon juice, and powdered sugar with ice.",
+      "Strain into a chilled old-fashioned glass filled with ice if served on the rocks.",
+      "Garnish with a cherry and a half slice of lemon."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Blended whiskey",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.1,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "syrup",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cherry",
+        "category": "modifier",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 4,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon slice",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "White Russian",
+    "description": "The White Russian is a classic cocktail that gained immense popularity in the late 20th century, particularly after its feature in the cult film 'The Big Lebowski'. This creamy concoction combines the robust flavors of coffee liqueur with the smoothness of vodka, topped off with a splash of light cream for a rich finish.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Pour vodka and coffee liqueur over ice cubes in an old-fashioned glass.",
+      "Fill with light cream and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coffee liqueur",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light cream",
+        "category": "modifier",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            224
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Winter Paloma",
+    "description": "Everyone’s favourite Paloma gets a delicious Indian makeover. Tequila reposado infused with “Timur Pepper” which has citrusy & grapefruit notes and is grown at the foothills of Himalaya. It also produces a slightly numbing and tingling sensation on your lip when consumed. We have also spiced up the fresh grapefruit juice with the warming spice blend from Himalaya. The combination of all these interesting elements has allowed us to elevate your Paloma sipping experience.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a highball glass with ice.",
+      "Pour in 60 ml of tequila reposado.",
+      "Add the juice of 1 lime (approximately 30 ml).",
+      "Add 15 ml of agave syrup.",
+      "Top with grapefruit juice (approximately 150 ml).",
+      "Add a dash of pepper to taste."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Tequila Reposado",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grapefruit Juice",
+        "category": "juice",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            102,
+            102
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Agave Syrup",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 75,
+          "ph": 4.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Timur Pepper",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "White Wine Sangria",
+    "description": "White Wine Sangria is a refreshing and fruity beverage that originated in Spain. Traditionally made with red wine, this variation uses white wine for a lighter taste, perfect for warm weather gatherings. The addition of fresh fruits and a splash of soda water makes it a delightful choice for summer parties.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Chop the lemon, lime, and other fruits into large chunks.",
+      "Fill the pitcher with the white wine.",
+      "Mix in the apple brandy.",
+      "Top to taste with soda water."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 200
+    },
+    "components": [
+      {
+        "ingredient_name": "Lime",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "White Wine",
+        "category": "spirit",
+        "volume_ml": 750,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 20,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Strawberries",
+        "category": "fruit",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Apple",
+        "category": "fruit",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Apple Brandy",
+        "category": "spirit",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 15,
+          "ph": 4.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda Water",
+        "category": "modifier",
+        "volume_ml": 200,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Whitecap Margarita",
+    "description": "The Whitecap Margarita is a delightful twist on the classic margarita, incorporating the creamy sweetness of coconut cream. This refreshing cocktail is perfect for warm weather, evoking the essence of tropical beaches. Blending the ingredients creates a smooth and frothy texture, making it a favorite among those who enjoy a creamy cocktail experience.",
+    "glass_type": "coupe",
+    "method": "blend",
+    "instructions": [
+      "Place all ingredients in a blender.",
+      "Blend until smooth."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Tequila",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cream of coconut",
+        "category": "modifier",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Fresh Lime juice",
+        "category": "juice",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ice",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Waikiki Beachcomber",
+    "description": "The Waikiki Beachcomber is a delightful cocktail that captures the essence of tropical paradise. Originating from the mid-20th century, this drink combines the refreshing flavors of gin and triple sec with the sweetness of pineapple juice, making it a perfect choice for summer gatherings or a relaxing evening by the beach.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            200,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  }
+]

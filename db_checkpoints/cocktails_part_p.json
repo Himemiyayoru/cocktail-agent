@@ -1,0 +1,1889 @@
+[
+  {
+    "name": "Paloma",
+    "description": "The Paloma is a refreshing Mexican cocktail that combines the vibrant flavors of tequila with the sweetness of grapefruit soda. Its origins are somewhat murky, but it has become a staple in bars across Mexico and beyond, often enjoyed on warm days for its crisp and invigorating taste.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Stir together the tequila and grape soda.",
+      "Serve over ice in a Collins glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Grape Soda",
+        "category": "modifier",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            128
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tequila",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Paradise",
+    "description": "The Paradise cocktail is a classic drink that dates back to the early 20th century, often associated with the golden age of cocktails. Its delightful combination of gin, apricot brandy, and orange juice creates a refreshing and fruity experience, perfect for any occasion.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake together gin, apricot brandy, and orange juice over ice.",
+      "Strain into a chilled coupe glass and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 210,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Apricot Brandy",
+        "category": "liqueur",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            102
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pink Gin",
+    "description": "The Pink Gin is a classic cocktail that dates back to the 19th century, originally enjoyed by British naval officers. The drink is characterized by its simple yet elegant combination of gin and aromatic bitters, which gives it a distinctive flavor and a hint of color. Traditionally served without ice, the Pink Gin highlights the botanicals of the gin while the bitters add complexity.",
+    "glass_type": "coupe",
+    "method": "build",
+    "instructions": [
+      "Pour the bitters into a wine glass.",
+      "Swirl the glass to coat the inside with the bitters, shake out the excess.",
+      "Pour the gin into the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Bitters",
+        "category": "modifier",
+        "volume_ml": 3,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 10,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pegu Club",
+    "description": "The Pegu Club is a classic cocktail that dates back to the British colonial era in Burma. Named after the Pegu Club, a social club for British expatriates, this cocktail combines gin with orange curaçao and lime juice, creating a refreshing and balanced drink that has stood the test of time.",
+    "glass_type": "martini",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a chilled cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Curacao",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura Bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 44.7,
+          "brix": 20,
+          "ph": 5,
+          "opacity": 0.2,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 15,
+          "ph": 4,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pink Lady",
+    "description": "The Pink Lady is a classic cocktail that dates back to the early 20th century, known for its delicate pink hue and frothy texture. It combines gin with grenadine and cream, creating a refreshing yet rich drink that has charmed cocktail enthusiasts for generations.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light cream",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            224
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg white",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pink Moon",
+    "description": "The Pink Moon cocktail is a delightful blend of floral and fruity flavors, inspired by the beauty of spring blooms. This refreshing drink combines the botanical notes of gin with the tropical sweetness of coconut liqueur, balanced by the tartness of lime juice and the fragrant elderflower cordial. Perfect for a warm evening, this cocktail is garnished with fresh blackberries and edible flowers, making it as visually appealing as it is delicious.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Slowly shake the gin, coconut liqueur, elderflower cordial, and lime juice in a shaker with ice.",
+      "Strain the mixture into a square whiskey glass.",
+      "Top with fresh ice.",
+      "Garnish with blackberries and add flowers and a green leaf for a special look."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            240,
+            240,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coconut Liqueur",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 6,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Elderflower Cordial",
+        "category": "syrup",
+        "volume_ml": 25,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 40,
+          "ph": 5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            228,
+            225
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Penicillin",
+    "description": "The Penicillin cocktail is a modern classic that combines the smoky flavors of Islay Scotch with the brightness of lemon and the sweetness of honey and ginger. Created in the early 2000s by bartender Sam Ross, this drink pays homage to the medicinal qualities of its namesake while delivering a delightful balance of flavors.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Shake blended Scotch, lemon juice, honey syrup, and ginger syrup with ice.",
+      "Strain over large ice in a chilled rocks glass.",
+      "Float smoky Scotch on top.",
+      "Garnish with candied ginger."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Blended Scotch",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            150,
+            100,
+            50
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Honey Syrup",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 75,
+          "ph": 3.9,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger Syrup",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Islay Single Malt Scotch",
+        "category": "spirit",
+        "volume_ml": 7.5,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            100,
+            50,
+            20
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pisco Sour",
+    "description": "The Pisco Sour is a classic cocktail originating from Peru, known for its refreshing citrus flavor and frothy texture. It combines the unique spirit of Pisco with the tartness of lemon juice and the sweetness of sugar, topped with a delicate layer of egg white foam. This cocktail has a rich history, often associated with Peruvian national pride and celebrated in various festivals.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Vigorously shake and strain contents in a cocktail shaker with ice cubes.",
+      "Pour into the glass and garnish with bitters."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Pisco",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            230,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg White",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Porto Flip",
+    "description": "The Porto Flip is a classic cocktail that combines the rich flavors of brandy and port with the creamy texture of egg yolk. This drink dates back to the 19th century and showcases the luxurious ingredients that were popular in that era, making it a delightful choice for those who appreciate vintage cocktails.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake ingredients together in a mixer with ice.",
+      "Strain into glass, garnish and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Brandy",
+        "category": "spirit",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            150,
+            75,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Port",
+        "category": "spirit",
+        "volume_ml": 270,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.7,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg Yolk",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pina Colada",
+    "description": "The Piña Colada is a classic tropical cocktail that originated in Puerto Rico in the 1950s. It combines the flavors of rum, coconut, and pineapple, creating a refreshing and creamy drink that has become synonymous with beach vacations and summer getaways.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Mix with crushed ice in blender until smooth.",
+      "Pour into chilled glass, garnish and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coconut milk",
+        "category": "modifier",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 6,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple",
+        "category": "juice",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pink Penocha",
+    "description": "The Pink Penocha is a vibrant punch that combines the bold flavors of vodka and peach schnapps with the refreshing citrus notes of orange and cranberry juices. This party favorite is perfect for gatherings, offering a sweet and fruity experience that is sure to please a crowd. Its origins are often traced back to summer celebrations where large batches of punch are a staple.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix all ingredients into a punch bowl.",
+      "Keep iced and stir frequently."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 500
+    },
+    "components": [
+      {
+        "ingredient_name": "Everclear",
+        "category": "spirit",
+        "volume_ml": 750,
+        "physics_baseline": {
+          "abv": 95,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 1750,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Peach schnapps",
+        "category": "liqueur",
+        "volume_ml": 1750,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 3785,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cranberry juice",
+        "category": "juice",
+        "volume_ml": 3785,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pure Passion",
+    "description": "The Pure Passion cocktail is a vibrant blend of tropical flavors, combining the sweetness of Passoa with the tartness of lime juice and the rich notes of rum. This drink is perfect for summer gatherings or a refreshing evening sip, garnished with mint for an aromatic touch.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Mix up all ingredients with a cocktail stirrer.",
+      "Serve with crushed ice.",
+      "Garnish with mint and edible flour if available."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 40,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Passoa",
+        "category": "liqueur",
+        "volume_ml": 20,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            153,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Passion Fruit Syrup",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 40,
+          "ph": 3.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Peach Bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            182,
+            193
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Popped Cherry",
+    "description": "The Popped Cherry cocktail is a vibrant and fruity drink that combines the smoothness of vodka with the sweet and tart flavors of cherry liqueur, cranberry juice, and orange juice. This refreshing concoction is perfect for summer gatherings or a cheerful evening with friends. The addition of a popped cherry not only enhances the visual appeal but also adds a delightful burst of flavor.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a highball glass with ice.",
+      "Pour in the vodka, cherry liqueur, cranberry juice, and orange juice.",
+      "Gently stir to combine.",
+      "Garnish with a popped cherry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cherry liqueur",
+        "category": "liqueur",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            200,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cranberry juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 2.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Poppy Cocktail",
+    "description": "The Poppy Cocktail is a delightful blend of gin and white crème de cacao, offering a refreshing and slightly sweet experience. This cocktail has roots in the early 20th century, showcasing the elegance of gin-based drinks that were popular during the cocktail renaissance.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "White Creme de Cacao",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 6,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Port Wine Flip",
+    "description": "The Port Wine Flip is a delightful cocktail that combines the rich flavors of port wine with the creamy texture of light cream and the richness of egg. This classic drink dates back to the 19th century, showcasing the elegance of port wine in a unique and indulgent way. Traditionally served in a whiskey sour glass, it is garnished with a sprinkle of nutmeg, adding a warm spice that complements the drink's sweetness.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients (except nutmeg) with ice.",
+      "Strain into a whiskey sour glass.",
+      "Sprinkle nutmeg on top and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Port",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light cream",
+        "category": "modifier",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Whole Egg",
+        "category": "modifier",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Nutmeg",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Planter's Punch",
+    "description": "Planter's Punch is a classic Caribbean cocktail that embodies the vibrant flavors of tropical fruits and rum. Originating in the 19th century, it has become a staple in tiki culture and is celebrated for its refreshing taste and colorful presentation. The combination of dark rum, citrus juices, and orgeat syrup creates a delightful balance of sweetness and acidity, making it a perfect drink for warm weather.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Pour all ingredients, except the bitters, into a shaker filled with ice.",
+      "Shake well.",
+      "Pour into a large glass filled with ice.",
+      "Add Angostura bitters on top.",
+      "Garnish with a cocktail cherry and pineapple."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 200
+    },
+    "components": [
+      {
+        "ingredient_name": "Dark rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orgeat syrup",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 6.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.4,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 44,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pineapple Paloma",
+    "description": "The Pineapple Paloma is a tropical twist on the classic Paloma cocktail, which traditionally features tequila and grapefruit juice. This refreshing drink combines the zesty flavors of lime and grapefruit with the sweetness of pineapple, making it a perfect choice for warm weather. The salted rim adds a savory contrast that enhances the overall experience.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Rub the rim of each glass with a lime slice and dip into salt.",
+      "Add ice to the glass.",
+      "Pour in the tequila, grapefruit juice, and fresh lime juice.",
+      "Top with pineapple soda.",
+      "Give it a quick stir.",
+      "Garnish with fresh pineapple or lime."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Tequila",
+        "category": "spirit",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grapefruit Juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            102,
+            102
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Fresh Lime Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple Soda",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 4.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pornstar Martini",
+    "description": "The Pornstar Martini is a modern classic cocktail that emerged in the early 2000s, known for its vibrant flavors and playful presentation. It combines the tropical notes of passion fruit with the smoothness of vodka, creating a delightful balance that is both refreshing and indulgent. Traditionally served with a shot of prosecco on the side, this cocktail has become a favorite in bars around the world.",
+    "glass_type": "martini",
+    "method": "shaken",
+    "instructions": [
+      "Pour all ingredients into a mixing glass with ice cubes.",
+      "Shake well.",
+      "Strain into a chilled martini cocktail glass.",
+      "Cut passion fruit in half and use as garnish.",
+      "Pour prosecco into a chilled shot glass and serve alongside the martini."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Passoa",
+        "category": "liqueur",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Passion fruit juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Prosecco",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 11,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Planter’s Punch",
+    "description": "Planter’s Punch is a classic Caribbean cocktail that embodies the vibrant flavors of tropical fruits and rum. Originating in the 19th century, it has become a staple in tiki culture and is celebrated for its refreshing taste and colorful presentation. Traditionally served in a highball glass, this punch is perfect for warm weather and festive gatherings.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Squeeze an orange and strain the juice.",
+      "Put all the ingredients in a shaker filled with ice.",
+      "Shake for at least 12 seconds.",
+      "Strain into a highball glass.",
+      "Decorate with a pineapple wedge or fruit of your choice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Dark Rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            75,
+            40,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple Juice",
+        "category": "juice",
+        "volume_ml": 35,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            215,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.0,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar Syrup",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura Bitters",
+        "category": "modifier",
+        "volume_ml": 4,
+        "physics_baseline": {
+          "abv": 44,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            100,
+            50,
+            50
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Port And Starboard",
+    "description": "The Port And Starboard cocktail is a visually striking drink that showcases the art of layering. Traditionally served in a pousse café glass, this cocktail features the vibrant red of grenadine and the lush green of crème de menthe, creating a beautiful contrast that is as delightful to look at as it is to sip. This drink is a testament to the creativity of mixologists who enjoy crafting visually appealing cocktails.",
+    "glass_type": "coupe",
+    "method": "build",
+    "instructions": [
+      "Pour grenadine into the bottom of a pousse-cafe glass.",
+      "Carefully layer the green crème de menthe on top of the grenadine by pouring it slowly over the back of a spoon."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Green Creme de Menthe",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Port Wine Cocktail",
+    "description": "The Port Wine Cocktail is a classic drink that showcases the rich, sweet flavors of port wine, complemented by the warmth of brandy. This cocktail has its roots in the 19th century, when fortified wines were popular in mixed drinks, offering a delightful balance of sweetness and complexity.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Stir ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Port",
+        "category": "spirit",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Brandy",
+        "category": "spirit",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Psych Vitamin Light",
+    "description": "The Psych Vitamin Light is a refreshing cocktail that combines the vibrant flavors of orange, apple, and pineapple juices. This drink is perfect for those looking for a fruity and revitalizing beverage, often enjoyed during warm weather or as a healthy alternative at brunch. The combination of these juices not only provides a burst of flavor but also a wealth of vitamins, making it a popular choice for health-conscious drinkers.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Combine orange juice, apple juice, and pineapple juice in a shaker.",
+      "Shake well with ice until chilled.",
+      "Strain into a Collins glass filled with ice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Apple juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.8,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 14,
+          "ph": 3.4,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            102
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pink Panty Pulldowns",
+    "description": "The Pink Panty Pulldowns is a playful and refreshing cocktail that has gained popularity in summer parties and gatherings. Its vibrant pink color and sweet, citrusy flavor make it a favorite among those looking for a fun and easy-to-drink beverage. The combination of vodka and pink lemonade creates a delightful balance, while the addition of Sprite adds a fizzy twist.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Combine vodka, pink lemonade, and Sprite in a shaker.",
+      "Shake well to mix the ingredients thoroughly.",
+      "Pour into a Collins glass filled with ice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Sprite",
+        "category": "modifier",
+        "volume_ml": 1000,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pink lemonade",
+        "category": "juice",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            105,
+            180
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Passion Fruit Martini",
+    "description": "The Passion Fruit Martini is a vibrant and tropical cocktail that combines the smoothness of vodka with the sweet and tangy flavors of passion fruit. This cocktail has gained popularity in modern cocktail culture, often enjoyed for its refreshing taste and eye-catching presentation. The addition of sugar syrup balances the tartness of the passion fruit, making it a delightful choice for any occasion.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Pour vodka, sugar syrup, and passion fruit juice into a mixing glass.",
+      "Stir gently to combine the ingredients.",
+      "Strain into a chilled coupe glass.",
+      "Garnish with half a passion fruit piece."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar Syrup",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Passion Fruit Juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pineapple Gingerale Smoothie",
+    "description": "The Pineapple Gingerale Smoothie is a refreshing blend that combines the tropical sweetness of pineapple with the spicy kick of ginger. This smoothie is perfect for hot summer days or as a revitalizing drink any time of the year. The combination of flavors not only tantalizes the taste buds but also offers a burst of vitamins and minerals.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Peel and chop the pineapple into smaller pieces.",
+      "Peel and slice the ginger.",
+      "Add the pineapple and ginger to a blender.",
+      "Blend until smooth and liquified."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Ginger",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 5.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            215,
+            0
+          ]
+        }
+      }
+    ]
+  }
+]

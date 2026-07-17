@@ -1,0 +1,1817 @@
+[
+  {
+    "name": "A1",
+    "description": "The A1 cocktail is a classic blend that showcases the botanical notes of gin, complemented by the orange flavors of Grand Marnier and the tartness of lemon juice, with a hint of sweetness from grenadine. This cocktail is perfect for those who enjoy a refreshing yet sophisticated drink.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Pour all ingredients into a cocktail shaker.",
+      "Mix well and serve over ice into a chilled glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 52,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grand Marnier",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 8,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 4,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "ABC",
+    "description": "The ABC shot is a visually stunning layered shot that combines the nutty sweetness of Amaretto, the creamy richness of Baileys Irish Cream, and the smooth warmth of Cognac. This shot is not only a treat for the eyes but also a delightful blend of flavors that make it a popular choice for celebrations and gatherings.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Pour Amaretto into the shot glass until it fills one third.",
+      "Slowly layer Baileys Irish Cream on top of the Amaretto by pouring it over the back of a spoon.",
+      "Finally, layer Cognac on top of the Baileys using the same spoon technique."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 24,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 35,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cognac",
+        "category": "spirit",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            210,
+            180,
+            140
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ace",
+    "description": "The Ace cocktail is a delightful blend that showcases the smoothness of gin complemented by the sweetness of grenadine and the richness of cream and egg white. This drink is a testament to the creativity of mixologists who have long experimented with textures and flavors, resulting in a cocktail that is both refreshing and indulgent.",
+    "glass_type": "martini",
+    "method": "shaken",
+    "instructions": [
+      "Shake all the ingredients in a cocktail shaker with ice.",
+      "Strain into a cold martini glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            240,
+            240,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Heavy cream",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Fresh Egg White",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "ACID",
+    "description": "The ACID cocktail is a potent shot that combines high-proof rums with a chaser, often enjoyed for its intense flavor and kick. The use of Bacardi 151, known for its high alcohol content, makes this drink a favorite among those seeking a bold experience. The addition of a chaser like Coke or Dr Pepper helps to balance the strong flavors.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Pour in the Bacardi 151 proof rum first.",
+      "Follow with Wild Turkey.",
+      "Serve with a Coke or Dr Pepper chaser."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Bacardi 151 proof rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 75.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Wild Turkey",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 50.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "AT&T",
+    "description": "The AT&T cocktail is a refreshing highball that combines the crispness of vodka and gin with the effervescence of tonic water. This drink is perfect for warm weather and social gatherings, embodying the spirit of connection and enjoyment, much like its namesake.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour Absolut Vodka and Gin over ice in a highball glass.",
+      "Add Tonic water and stir gently."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Absolut Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tonic water",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Adam",
+    "description": "The Adam cocktail is a classic blend that showcases the rich flavors of dark rum, balanced with the tartness of lemon juice and a hint of sweetness from grenadine. This cocktail is a testament to the creativity of mixologists who have long experimented with rum-based drinks, making it a delightful choice for any occasion.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "In a shaker half-filled with ice cubes, combine all of the ingredients.",
+      "Shake well.",
+      "Strain into a cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Dark rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            50,
+            25,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "A. J.",
+    "description": "The A. J. is a classic cocktail that showcases the unique flavor of Applejack, a type of apple brandy. This refreshing drink combines the sweetness of apple with the tartness of grapefruit juice, creating a balanced and invigorating experience. Perfect for those who appreciate fruit-forward cocktails with a historical twist.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Applejack",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            200,
+            150,
+            100
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grapefruit juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            100,
+            100
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Affair",
+    "description": "The Affair cocktail is a vibrant and refreshing drink that combines the sweetness of strawberry schnapps with the citrusy notes of orange juice and the tartness of cranberry juice. This delightful mix is topped with club soda, making it a perfect choice for warm weather gatherings or casual get-togethers. Its colorful appearance and fruity flavor profile make it a favorite among those looking for a light and enjoyable cocktail.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour strawberry schnapps, orange juice, and cranberry juice over ice in a highball glass.",
+      "Top with club soda and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Strawberry schnapps",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            127
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cranberry juice",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 2.5,
+          "opacity": 0.4,
+          "color_rgb": [
+            220,
+            20,
+            60
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Club soda",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Avalon",
+    "description": "This refreshing cocktail, created by Timo Haimi, took first prize in the 1991 Finlandia Vodka Long Drink Competition. The combination of Finlandia Vodka, fruity juices, and a splash of lemonade creates a vibrant drink that is both visually appealing and delicious, garnished with a spiraled cucumber skin and a red cherry for an extra touch of zest.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a tall glass with ice.",
+      "Layer the Finlandia Vodka, lemon juice, apple juice, and Pisang Ambon in the glass.",
+      "Top up with lemonade.",
+      "Stir slightly to combine the ingredients.",
+      "Garnish with a spiraled cucumber skin and a red cherry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Finlandia Vodka",
+        "category": "spirit",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pisang Ambon",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Apple juice",
+        "category": "juice",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemonade",
+        "category": "modifier",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Apello",
+    "description": "The Apello is a refreshing cocktail that combines the bright flavors of citrus juices with a hint of sweetness from the maraschino cherry. This drink is perfect for warm weather and is often enjoyed in a tall Collins glass, making it a delightful choice for any occasion.",
+    "glass_type": "highball",
+    "method": "stirred",
+    "instructions": [
+      "Combine orange juice, grapefruit juice, and apple juice in a mixing glass.",
+      "Stir gently to mix the ingredients.",
+      "Strain into a Collins glass filled with ice.",
+      "Garnish with a maraschino cherry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 40,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grapefruit juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            192,
+            203
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Apple juice",
+        "category": "juice",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino cherry",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 25,
+          "ph": 4.0,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Almeria",
+    "description": "The Almeria cocktail is a delightful blend of dark rum and Kahlua, enriched with the creamy texture of egg white. This cocktail hails from the mid-20th century, showcasing the era's fascination with rich flavors and innovative techniques in mixology. The use of egg white not only adds a frothy texture but also enhances the drink's visual appeal, making it a classic choice for cocktail enthusiasts.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "In a shaker half-filled with ice cubes, combine all of the ingredients.",
+      "Shake well.",
+      "Strain into a cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Dark rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            50,
+            25,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 5.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            80,
+            40,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg white",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Abilene",
+    "description": "The Abilene cocktail is a refreshing blend that showcases the tropical flavors of dark rum, peach nectar, and orange juice. This drink is perfect for warm weather, evoking the sunny vibes of summer with every sip. Its origins are rooted in the classic cocktail culture, where fruity flavors were celebrated for their ability to complement spirits.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour all of the ingredients into a highball glass almost filled with ice cubes.",
+      "Stir well."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Dark rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            50,
+            25,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Peach nectar",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.7,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Addison",
+    "description": "The Addison is a classic cocktail that embodies the elegance of the martini era. With its simple yet refined combination of gin and vermouth, it showcases the balance of botanical flavors and herbal notes, making it a timeless choice for cocktail enthusiasts.",
+    "glass_type": "martini",
+    "method": "shaken",
+    "instructions": [
+      "Shake together all the ingredients.",
+      "Strain into a cold glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vermouth",
+        "category": "modifier",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Aviation",
+    "description": "The Aviation cocktail is a classic drink that dates back to the early 20th century, known for its beautiful pale blue hue and floral notes. It combines gin with maraschino liqueur and lemon juice, creating a refreshing and slightly tart flavor profile. The cocktail is often garnished with a cherry, adding a touch of sweetness to balance the drink's acidity.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Add all ingredients into a cocktail shaker filled with ice.",
+      "Shake well and strain into a cocktail glass.",
+      "Garnish with a cherry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 135,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino Liqueur",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 20,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Applecar",
+    "description": "The Applecar is a delightful cocktail that showcases the crisp flavors of apple and citrus, combining Applejack and Triple Sec with fresh lemon juice. This refreshing drink is perfect for those who enjoy a balance of sweetness and tartness, making it a classic choice for cocktail enthusiasts.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Applejack",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            200,
+            100
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            220,
+            180
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Affinity",
+    "description": "The Affinity cocktail is a classic drink that beautifully balances the smoky richness of Scotch with the herbal complexity of sweet and dry vermouths, accented by a hint of orange bitters. This cocktail dates back to the early 20th century and is a testament to the versatility of Scotch whisky in mixed drinks.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "In a mixing glass half-filled with ice cubes, combine all of the ingredients.",
+      "Stir well.",
+      "Strain into a cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Scotch",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.2,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            224
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Acapulco",
+    "description": "The Acapulco cocktail is a refreshing blend that captures the essence of tropical flavors, combining light rum and triple sec with the tartness of lime juice. This cocktail is often associated with the vibrant beach culture of Acapulco, Mexico, and is a delightful choice for those looking to enjoy a taste of the tropics. The addition of egg white gives it a smooth texture and a frothy top, making it a visually appealing drink.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Combine light rum, triple sec, lime juice, sugar, and egg white in a shaker.",
+      "Add ice to the shaker and shake well until chilled.",
+      "Strain the mixture into an old-fashioned glass over ice cubes.",
+      "Garnish with a sprig of mint and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg white",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Mint",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Alexander",
+    "description": "The Alexander is a classic cocktail that dates back to the early 20th century, often associated with the Prohibition era. It combines the smoothness of gin with the sweetness of white crème de cacao and the richness of cream, creating a delightful and indulgent drink. Traditionally garnished with a sprinkle of nutmeg, it offers a warm, aromatic finish.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain contents into a cocktail glass.",
+      "Sprinkle nutmeg on top and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            240,
+            240,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "White Creme de Cacao",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light Cream",
+        "category": "modifier",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Nutmeg",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Avalanche",
+    "description": "The Avalanche is a creamy cocktail that combines the rich flavors of Crown Royal and Kahlua, creating a delightful blend that is both smooth and indulgent. This drink is perfect for those who enjoy a sweet and creamy experience, reminiscent of a winter wonderland.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a highball glass with ice.",
+      "Pour in the Crown Royal and Kahlua.",
+      "Top off with cream and stir gently."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Crown Royal",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 40,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cream",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Allegheny",
+    "description": "The Allegheny cocktail is a classic drink that showcases the harmonious blend of bourbon and dry vermouth, enhanced by the fruity notes of blackberry brandy and the refreshing acidity of lemon juice. This cocktail is a nod to the rich cocktail culture of the early 20th century, embodying the spirit of innovation and flavor that defined the era.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients (except lemon peel) with ice.",
+      "Strain into a cocktail glass.",
+      "Top with the twist of lemon peel and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bourbon",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blackberry Brandy",
+        "category": "liqueur",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            128
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Americano",
+    "description": "The Americano is a classic cocktail that dates back to the 1860s, originally known as the 'Milano-Torino' due to its ingredients hailing from Milan and Turin. It gained popularity in the United States during Prohibition, when Americans sought lighter, refreshing drinks. The combination of bitter Campari, sweet vermouth, and a splash of soda creates a delightful balance, making it a perfect aperitif.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour the Campari and sweet vermouth over ice in a Collins glass.",
+      "Add a splash of soda water.",
+      "Garnish with a half orange slice and a twist of lemon peel."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Campari",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "red Sweet Vermouth",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 15,
+          "ph": 3.2,
+          "opacity": 0.4,
+          "color_rgb": [
+            150,
+            30,
+            30
+          ]
+        }
+      },
+      {
+        "ingredient_name": "soda water",
+        "category": "modifier",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "lemon peel",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "orange peel",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Algonquin",
+    "description": "The Algonquin is a classic cocktail that dates back to the early 20th century, named after the Algonquin Hotel in New York City, where it was popular among literary figures and actors. This cocktail combines the warmth of blended whiskey with the herbal notes of dry vermouth and the tropical sweetness of pineapple juice, creating a refreshing yet sophisticated drink.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Combine all ingredients in a shaker with ice.",
+      "Shake well to chill and mix the ingredients.",
+      "Strain the mixture into a chilled cocktail glass.",
+      "Serve immediately."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Blended whiskey",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 3,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            224
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Artillery",
+    "description": "The Artillery cocktail is a classic drink that showcases the harmonious blend of gin and sweet vermouth, enhanced by the complexity of bitters. This cocktail has roots in the early 20th century, often enjoyed by those who appreciate a refined yet straightforward libation.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Stir all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 20,
+          "ph": 4,
+          "opacity": 0.2,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Afterglow",
+    "description": "The Afterglow cocktail is a vibrant and refreshing drink that captures the essence of tropical flavors. With its bright colors and fruity profile, it evokes the feeling of a sunset, making it a perfect choice for summer gatherings or beach parties. The combination of grenadine, orange juice, and pineapple juice creates a delightful balance of sweetness and acidity, reminiscent of a warm evening glow.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix the grenadine, orange juice, and pineapple juice in a shaker.",
+      "Serve over ice in a highball glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.4,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Addington",
+    "description": "The Addington is a classic cocktail that showcases the harmonious blend of sweet and dry vermouths, topped with a refreshing splash of soda water. This drink is a nod to the elegance of cocktail culture, often enjoyed in sophisticated settings.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Mix both the sweet vermouth and dry vermouth in a shaker.",
+      "Strain into a cold coupe glass.",
+      "Top up with a squirt of soda water."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 50
+    },
+    "components": [
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            150,
+            75,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda Water",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  }
+]

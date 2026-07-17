@@ -1,0 +1,975 @@
+[
+  {
+    "name": "Egg Cream",
+    "description": "The Egg Cream is a classic New York City beverage that combines chocolate syrup, milk, and soda water. Despite its name, it contains neither egg nor cream. Originating in the Jewish communities of Brooklyn in the late 19th century, it has become a nostalgic treat for many, evoking memories of soda fountains and diners.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix chocolate syrup and whole milk in a glass.",
+      "Add soda water and stir gently.",
+      "Serve with a straw."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Chocolate syrup",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 5.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            70,
+            40,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Whole Milk",
+        "category": "juice",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 6.7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda Water",
+        "category": "modifier",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Egg Nog #4",
+    "description": "Egg Nog is a classic holiday drink that dates back to the 14th century, originally made with milk, eggs, and spices. This rich and creamy version combines the flavors of rum and bourbon, making it a festive favorite during the winter months. Traditionally served in a punch bowl, it brings people together for celebration and cheer.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "In a small mixer bowl, beat egg yolks until blended.",
+      "Gradually add 60 ml sugar, beating at high speed until thick and lemon colored.",
+      "Stir in 480 ml milk, followed by 120 ml light rum, 120 ml bourbon, vanilla extract, and salt.",
+      "Chill thoroughly.",
+      "Whip 240 ml cream.",
+      "Wash beaters well.",
+      "In a large mixer bowl, beat egg whites until soft peaks form.",
+      "Gradually add remaining 60 ml sugar, beating to stiff peaks.",
+      "Fold yolk mixture and whipped cream into egg whites.",
+      "Serve immediately, sprinkling nutmeg over each serving."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Egg yolk",
+        "category": "modifier",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "juice",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bourbon",
+        "category": "spirit",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla extract",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Salt",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Whipping cream",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.5,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg white",
+        "category": "modifier",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ground Nutmeg",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "English Highball",
+    "description": "The English Highball is a refreshing cocktail that combines the richness of brandy with the botanical notes of gin and the sweetness of vermouth, topped off with carbonated water. This drink is a classic example of the highball style, which emphasizes simplicity and balance. The addition of a lemon twist adds a zesty aroma, making it a delightful choice for any occasion.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour brandy, gin, and sweet vermouth into a highball glass over ice cubes.",
+      "Fill with carbonated water.",
+      "Add the twist of lemon peel.",
+      "Stir gently and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Brandy",
+        "category": "spirit",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            178,
+            34,
+            34
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Carbonated Water",
+        "category": "modifier",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Peel",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Espresso Martini",
+    "description": "The Espresso Martini is a modern classic that combines the rich flavors of coffee with the smoothness of vodka. Created in the 1980s by bartender Dick Bradsell in London, this cocktail was designed to provide a caffeine kick alongside a delightful buzz, making it a favorite among night owls and cocktail enthusiasts alike.",
+    "glass_type": "martini",
+    "method": "shaken",
+    "instructions": [
+      "Pour ingredients into shaker filled with ice.",
+      "Shake vigorously.",
+      "Strain into chilled martini glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar syrup",
+        "category": "syrup",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Espresso Rumtini",
+    "description": "The Espresso Rumtini is a delightful fusion of rich espresso and smooth rum, creating a cocktail that is both invigorating and indulgent. This drink combines the bold flavors of coffee with the sweetness of vanilla, making it a perfect after-dinner treat. The addition of chocolate powder and coffee beans as garnish adds a touch of elegance and enhances the coffee aroma, making it a favorite among coffee lovers.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Combine the rum, vanilla syrup, espresso, and coffee in a shaker.",
+      "Shake well until chilled.",
+      "Strain into a chilled coupe glass.",
+      "Garnish with chocolate powder and coffee beans."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla syrup",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Espresso",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coffee",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Egg Nog - Healthy",
+    "description": "Egg Nog has a rich history dating back to the medieval period, originally enjoyed by the aristocracy. This healthier version substitutes traditional ingredients with lighter options, making it a delightful treat for the holiday season without the guilt.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Whip egg substitute and sugar together.",
+      "Combine with the two kinds of milk, vanilla, and rum.",
+      "Mix well.",
+      "Chill overnight.",
+      "Sprinkle with nutmeg before serving."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Egg substitute",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 7,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Skimmed Condensed milk",
+        "category": "milk",
+        "volume_ml": 390,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            240,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Skimmed Milk",
+        "category": "milk",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla extract",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 10,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Nutmeg",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "English Rose Cocktail",
+    "description": "The English Rose Cocktail is a delightful blend of spirits that evokes the charm of classic cocktail culture. With its sweet and floral notes, this drink is perfect for those who appreciate a touch of elegance in their glass. The sugar-rimmed glass adds a playful sweetness that complements the sophisticated flavors of gin and apricot brandy.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Rub the rim of a coupe glass with lemon juice and dip the rim in powdered sugar.",
+      "Shake all ingredients (except cherry) with ice.",
+      "Strain the mixture into the sugar-rimmed glass.",
+      "Top with the cherry and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Apricot brandy",
+        "category": "spirit",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            200,
+            100
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "spirit",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            200,
+            200,
+            150
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.0,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cherry",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Elderflower Caipirinha",
+    "description": "The Elderflower Caipirinha is a delightful twist on the classic Brazilian cocktail, the Caipirinha. By incorporating elderflower cordial, this refreshing drink gains a floral sweetness that perfectly complements the tartness of lime and the unique flavor of cachaça. This cocktail is perfect for warm weather and brings a taste of the tropics to any gathering.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Take the glass and muddle the lime in it.",
+      "Fill the glass with crushed ice and add the Cachaca.",
+      "Stir well and top with some more crushed ice.",
+      "Garnish with lime and enjoy!"
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Cachaca",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 38,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Elderflower cordial",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            228,
+            225
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Egg-Nog - Classic Cooked",
+    "description": "Eggnog has a rich history dating back to medieval Europe, where it was originally a drink for the wealthy, made with eggs, milk, and spices. This classic cooked version ensures a creamy, safe-to-consume beverage that has become a staple during the holiday season in many cultures.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "In a large saucepan, beat together eggs, sugar, and salt, if desired.",
+      "Stir in 480 ml of the milk.",
+      "Cook over low heat, stirring constantly, until the mixture is thick enough to coat a metal spoon and reaches 71 degrees Celsius.",
+      "Remove from heat and stir in the remaining 480 ml of milk and vanilla.",
+      "Cover and refrigerate until thoroughly chilled, several hours or overnight.",
+      "Just before serving, pour into a bowl or pitcher.",
+      "Garnish or add stir-ins as desired and serve immediately."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Egg",
+        "category": "modifier",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Salt",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "juice",
+        "volume_ml": 960,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla extract",
+        "category": "liqueur",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 10,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Empellón Cocina's Fat-Washed Mezcal",
+    "description": "This unique cocktail showcases the rich flavors of fat-washed mezcal, a technique that infuses the spirit with the savory essence of pork fat. Originating from the culinary traditions of Mexico, this drink combines smoky mezcal with the sweetness of chocolate liqueur and a hint of heat from habanero tincture, creating a complex and delightful experience.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Combine mezcal and chocolate liqueur in a mixing glass with ice.",
+      "Stir for 45 seconds.",
+      "Strain into a chilled coupe.",
+      "Carefully 'sink' the coffee liqueur down the inside of the coupe over a spoon.",
+      "Garnish with 5 drops of habanero tincture."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Ilegal Joven Mezcal",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 6.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            230,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Chocolate Liqueur",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 5.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            102,
+            51,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coffee Liqueur",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 25,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            51,
+            25,
+            0
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,944 @@
+[
+  {
+    "name": "Kir",
+    "description": "The Kir is a classic French aperitif that combines the rich, fruity flavor of crème de cassis with the effervescence of Champagne. Named after Félix Kir, a former mayor of Dijon, this cocktail has been enjoyed since the mid-20th century as a refreshing start to any meal.",
+    "glass_type": "flute",
+    "method": "build",
+    "instructions": [
+      "Add the crème de cassis to the bottom of the glass.",
+      "Top up with Champagne."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Crème de Cassis",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Champagne",
+        "category": "wine",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Karsk",
+    "description": "Karsk is a traditional Norwegian drink that combines coffee and grain alcohol, famously known for its unique method of preparation involving a copper coin. The drink is said to be a way to measure the alcohol content by the visibility of the coin, making it a fun and interactive experience. This specialty has deep roots in Norwegian culture and is often enjoyed in social settings.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Put a copper coin in a coffee cup.",
+      "Fill the cup with coffee until the coin is no longer visible.",
+      "Add grain alcohol until the coin reappears."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Coffee",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 5,
+          "opacity": 0.1,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grain alcohol",
+        "category": "spirit",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 95,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kamikaze",
+    "description": "The Kamikaze is a classic cocktail that originated in the 1970s and quickly became a favorite in bars around the world. Its name, which means 'divine wind' in Japanese, reflects the drink's potent mix of vodka, triple sec, and lime juice, delivering a refreshing yet strong flavor that is perfect for those looking for a quick and zesty drink.",
+    "glass_type": "martini",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients together with ice.",
+      "Strain into glass, garnish and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kir Royale",
+    "description": "The Kir Royale is a classic French cocktail that elegantly combines the rich, fruity flavors of crème de cassis with the effervescence of champagne. Traditionally served in a flute, this drink is a celebration of the vibrant blackcurrant liqueur, which adds a beautiful color and depth to the sparkling wine. It is often enjoyed as an aperitif, making it a popular choice for special occasions and festive gatherings.",
+    "glass_type": "flute",
+    "method": "build",
+    "instructions": [
+      "Pour crème de cassis into the champagne flute.",
+      "Gently pour champagne on top."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Crème de Cassis",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Champagne",
+        "category": "spirit",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kiwi Lemon",
+    "description": "The Kiwi Lemon cocktail is a refreshing blend that combines the tropical sweetness of kiwi liqueur with the zesty bitterness of lemon. This drink is perfect for warm days and is often garnished with a slice of kiwi for an added touch of elegance. Its vibrant flavors and eye-catching appearance make it a favorite among cocktail enthusiasts.",
+    "glass_type": "highball",
+    "method": "stirred",
+    "instructions": [
+      "Mix kiwi liqueur and bitter lemon in a highball glass.",
+      "Stir gently to combine.",
+      "Garnish with a slice of kiwi."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Kiwi liqueur",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            76,
+            175,
+            80
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bitter lemon",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kurant Tea",
+    "description": "Kurant Tea is a delightful fusion of Absolut Kurant vodka and Turkish apple tea, creating a refreshing and slightly sweet beverage. This cocktail combines the rich berry notes of blackcurrant with the warm, comforting flavors of apple tea, making it a perfect drink for cozy gatherings or a relaxing afternoon. The addition of sugar is optional, allowing for customization based on personal taste.",
+    "glass_type": "flute",
+    "method": "build",
+    "instructions": [
+      "Pour 120 ml of Absolut Kurant into a comfortably big tea-cup.",
+      "Add 180 ml of not too hot apple tea.",
+      "If desired, add sugar to taste.",
+      "Enjoy!"
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Absolut Kurant",
+        "category": "spirit",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            75,
+            0,
+            130
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Turkish apple tea",
+        "category": "juice",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7.0,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kioki Coffee",
+    "description": "Kioki Coffee is a delightful blend of coffee, Kahlua, and brandy, topped with whipped cream. This warm cocktail has its roots in the coffee culture of the 20th century, often enjoyed as a comforting after-dinner drink.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Stir the Kahlua and brandy together in a coffee mug.",
+      "Add hot coffee to taste.",
+      "Top with whipped cream."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Brandy",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            150,
+            75,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coffee",
+        "category": "modifier",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 1,
+          "ph": 5.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kiwi Martini",
+    "description": "The kiwi martini is a very fun vodka cocktail and it is one of the best drinks that makes use of fresh fruit. Though there are a few recipes floating around, this is one of the easiest and it is an absolutely delightful green martini to drink. It's a drink that anyone can mix up in minutes and a perfect cocktail to show off your favorite vodka.",
+    "glass_type": "martini",
+    "method": "shaken",
+    "instructions": [
+      "Muddle slices of kiwi with simple syrup in a mixing glass.",
+      "Add vodka and ice, then shake well.",
+      "Strain into a chilled martini glass.",
+      "Garnish with a slice of kiwi."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Kiwi",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            76,
+            175,
+            80
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar Syrup",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kiss me Quick",
+    "description": "The Kiss me Quick cocktail is a refreshing blend that combines the tartness of cranberry vodka with the sweetness of Apfelkorn and the effervescence of Schweppes Russchian. This drink is perfect for a summer day or a lively gathering, offering a fruity and bubbly experience that is sure to please. Its vibrant colors and refreshing taste make it a popular choice among cocktail enthusiasts.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a highball glass with ice cubes.",
+      "Pour in the cranberry vodka, Apfelkorn, Schweppes Russchian, and apple juice.",
+      "Stir gently to mix the ingredients."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Cranberry vodka",
+        "category": "spirit",
+        "volume_ml": 40,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Apfelkorn",
+        "category": "liqueur",
+        "volume_ml": 20,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 25,
+          "ph": 4.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Schweppes Russchian",
+        "category": "modifier",
+        "volume_ml": 70,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Apple juice",
+        "category": "juice",
+        "volume_ml": 80,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kool-Aid Shot",
+    "description": "The Kool-Aid Shot is a vibrant and playful cocktail that combines the sweetness of fruit liqueurs with the kick of vodka. This drink is reminiscent of childhood flavors, making it a fun choice for parties and gatherings. Its colorful appearance and sweet taste make it a favorite among those looking for a nostalgic yet spirited experience.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Pour vodka, amaretto, sloe gin, and triple sec into a large glass.",
+      "Add ice to the glass.",
+      "Stir the mixture gently.",
+      "Top with cranberry juice to taste."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 28,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sloe gin",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 26,
+          "brix": 20,
+          "ph": 4,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 25,
+          "ph": 5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cranberry juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 2.5,
+          "opacity": 0.6,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kool First Aid",
+    "description": "The Kool First Aid is a vibrant and playful shot that combines the nostalgic flavors of Tropical Kool-Aid with the potent kick of light 151 proof rum. This cocktail is perfect for parties and gatherings, where its bright color and sweet taste can bring a sense of fun and excitement. The drink is meant to be consumed quickly, making it a favorite among those looking for a quick burst of flavor and energy.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Add Tropical Kool-Aid to a double shot glass.",
+      "Top with light 151 proof rum.",
+      "Slam and shoot."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Light 151 proof rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 75.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tropical Kool-Aid",
+        "category": "syrup",
+        "volume_ml": 3,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kentucky B And B",
+    "description": "The Kentucky B And B is a classic cocktail that beautifully marries the rich, robust flavors of bourbon with the herbal sweetness of Benedictine. This drink is a nod to the Southern tradition of sipping fine spirits, often enjoyed as a digestif after a hearty meal.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Pour the bourbon into a brandy snifter.",
+      "Add the Benedictine to the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Bourbon",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 5,
+          "ph": 5,
+          "opacity": 0.1,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Benedictine",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.3,
+          "color_rgb": [
+            184,
+            134,
+            11
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kentucky Colonel",
+    "description": "The Kentucky Colonel is a classic cocktail that showcases the rich flavors of bourbon complemented by the herbal notes of Benedictine. This drink is a nod to the Southern tradition of bourbon consumption, and its name pays homage to the honorary title given to individuals for their contributions to the state of Kentucky. The addition of a lemon twist adds a refreshing citrus aroma, making it a delightful choice for bourbon enthusiasts.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "In a shaker half-filled with ice cubes, combine the bourbon and Benedictine.",
+      "Shake well and strain into a cocktail glass.",
+      "Garnish with a twist of lemon peel."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Bourbon",
+        "category": "spirit",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Benedictine",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 5.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            184,
+            134,
+            11
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kool-Aid Slammer",
+    "description": "The Kool-Aid Slammer is a playful and vibrant shot that combines the nostalgic flavor of grape Kool-Aid with the kick of vodka. This fun drink is perfect for parties, where the visual separation of the two liquids adds an element of surprise before the slam. Originating from the 1980s, it captures the essence of youthful exuberance and creativity in cocktail crafting.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Fill half the shot glass with the Kool-Aid first.",
+      "Put a paper towel over the top of the glass and slowly pour in the vodka.",
+      "Ensure the two liquids remain separated.",
+      "Slam it down and enjoy the taste of Kool-Aid!"
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Grape Kool-Aid",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            128
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kiwi Papaya Smoothie",
+    "description": "The Kiwi Papaya Smoothie is a refreshing tropical blend that combines the tartness of kiwi with the sweetness of papaya. This vibrant drink not only tantalizes the taste buds but also offers a wealth of vitamins and nutrients, making it a popular choice for health enthusiasts. Smoothies like this one have gained popularity in recent decades as a quick and nutritious option for breakfast or a snack.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Throw everything into a blender and liquify."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Kiwi",
+        "category": "juice",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.1,
+          "opacity": 0.5,
+          "color_rgb": [
+            76,
+            175,
+            80
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Papaya",
+        "category": "juice",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 5.5,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kill the cold Smoothie",
+    "description": "The 'Kill the Cold Smoothie' is a soothing beverage that combines the warming properties of ginger and the refreshing zest of lemon. This drink is perfect for combating colds and boosting immunity, drawing on traditional remedies that have been cherished for centuries. The addition of cardamom enhances the flavor profile, making it not only beneficial but also delicious.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Juice the ginger and lemon.",
+      "Add the juice to hot water.",
+      "Optionally, add cardamom to taste."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Ginger Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 5.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Hot Water",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  }
+]

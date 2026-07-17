@@ -1,0 +1,276 @@
+[
+  {
+    "name": "155 Belmont",
+    "description": "The 155 Belmont is a vibrant cocktail that combines the rich flavors of dark and light rum with the refreshing zest of orange juice. This drink is a nod to the classic tiki cocktails that emerged in the mid-20th century, celebrating the tropical flavors and the art of blending spirits. Perfect for a summer day or a festive gathering, it’s served in a wine glass, making it a unique choice for cocktail enthusiasts.",
+    "glass_type": "coupe",
+    "method": "blend",
+    "instructions": [
+      "Blend all ingredients with ice until smooth.",
+      "Serve in a wine glass.",
+      "Garnish with a carrot."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Dark rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            70,
+            30,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 5,
+          "ph": 4.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "110 in the shade",
+    "description": "The '110 in the Shade' cocktail is a refreshing and bold drink that combines the vibrant flavors of tequila with the crispness of lager. This drink is perfect for hot summer days, evoking the feeling of lounging in the sun with a cold beverage in hand. The combination of beer and tequila creates a unique flavor profile that is both invigorating and satisfying.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Drop shooter in glass.",
+      "Fill with beer."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Lager",
+        "category": "beer",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 5,
+          "brix": 5,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tequila",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "151 Florida Bushwacker",
+    "description": "The 151 Florida Bushwacker is a tropical delight that combines the flavors of rum, chocolate, and coconut, blended to creamy perfection. Originating from the beaches of Florida, this cocktail is a decadent treat that captures the essence of summer in every sip.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Combine all ingredients in a blender.",
+      "Blend until smooth.",
+      "Garnish with chocolate shavings if desired."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Malibu rum",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 21,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bacardi 151 proof rum",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 75.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dark Creme de Cacao",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 35,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            102,
+            51,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cointreau",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coconut liqueur",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 5.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla ice-cream",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  }
+]

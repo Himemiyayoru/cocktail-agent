@@ -1,0 +1,1923 @@
+[
+  {
+    "name": "Frosé",
+    "description": "Frosé, a delightful frozen cocktail, combines the refreshing taste of rosé wine with the sweetness of strawberries and a hint of lemon. This slushy drink has gained popularity in recent years, especially during warm weather, as a perfect way to enjoy wine in a new, fun form. The process of freezing rosé and blending it with a strawberry syrup creates a unique texture and flavor profile that is both refreshing and indulgent.",
+    "glass_type": "coupe",
+    "method": "blend",
+    "instructions": [
+      "Pour rosé into a 13x9\" pan and freeze until almost solid, at least 6 hours.",
+      "Meanwhile, bring sugar and 120 ml water to a boil in a medium saucepan; cook, stirring constantly, until sugar dissolves, about 3 minutes. Add strawberries, remove from heat, and let sit 30 minutes to infuse syrup with strawberry flavor. Strain through a fine-mesh sieve into a small bowl; cover and chill until cold, about 30 minutes.",
+      "Scrape rosé into a blender. Add lemon juice, 105 ml strawberry syrup, and 240 ml crushed ice and purée until smooth. Transfer blender jar to freezer and freeze until frosé is thickened, 25–35 minutes.",
+      "Blend again until frosé is slushy. Divide among glasses."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Rosé",
+        "category": "spirit",
+        "volume_ml": 750,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 10,
+          "ph": 3.3,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            182,
+            193
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Strawberries",
+        "category": "juice",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Frappé",
+    "description": "The Frappé is a refreshing coffee drink that originated in Greece, known for its frothy texture and invigorating taste. Traditionally enjoyed during warm weather, it combines coffee, milk, and sugar, creating a delightful beverage that can be sipped leisurely. The drink's unique frothiness is achieved through blending, making it a popular choice for coffee lovers seeking a cool treat.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Mix together the black coffee, milk, and sugar.",
+      "Blend at the highest blender speed for about 1 minute.",
+      "Pour into a highball glass and drink with a straw."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Black Coffee",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Foxy Lady",
+    "description": "The Foxy Lady is a delightful cocktail that combines the nutty sweetness of Amaretto with the rich, chocolatey flavor of Creme de Cacao, all balanced by the creamy texture of light cream. This cocktail is perfect for those who enjoy dessert-like drinks and has a charming history tied to the playful and flirtatious spirit of the 1960s cocktail culture.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a chilled cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 5.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Creme de Cacao",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 35,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light cream",
+        "category": "modifier",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "French 75",
+    "description": "The French 75 is a classic cocktail that dates back to World War I, named after the French 75mm field gun. This effervescent drink combines gin, lemon juice, and sugar, topped with Champagne, creating a refreshing and celebratory beverage that has stood the test of time.",
+    "glass_type": "flute",
+    "method": "shaken",
+    "instructions": [
+      "Combine gin, sugar, and lemon juice in a cocktail shaker filled with ice.",
+      "Shake vigorously and strain into a chilled champagne glass.",
+      "Top up with Champagne and stir gently."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Superfine Sugar",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Chilled Champagne",
+        "category": "spirit",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino Cherry",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 4,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Figgy Thyme",
+    "description": "The Figgy Thyme cocktail is a delightful blend of fresh figs and aromatic thyme, combined with honey vodka for a touch of sweetness. This refreshing drink is topped with tonic water, making it a perfect choice for warm evenings. The use of fresh ingredients and the unique flavor profile pays homage to the craft of mixology, where nature's bounty meets creative spirit.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "In a lewis bag, crush up some ice.",
+      "Pour the crushed ice into a collins glass.",
+      "In a cocktail shaker, muddle the figs and thyme together.",
+      "Add honey vodka and lemon juice to the shaker, along with a large ice cube.",
+      "Shake until well chilled, and strain into the glass with ice.",
+      "Top with tonic water and add 2 dashes of angostura bitters.",
+      "Garnish with sliced figs and thyme."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Honey",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 80,
+          "ph": 3.9,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Figs",
+        "category": "modifier",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 6.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            128,
+            0,
+            128
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Thyme",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            34,
+            139,
+            34
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura Bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 44.7,
+          "brix": 20,
+          "ph": 4.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            128,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tonic Water",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Frisco Sour",
+    "description": "The Frisco Sour is a delightful cocktail that combines the warmth of blended whiskey with the herbal complexity of Benedictine, balanced by the tartness of fresh citrus. This drink is a nod to the classic sour cocktails that have been enjoyed since the 19th century, showcasing the art of mixing spirits with fresh juices for a refreshing experience.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients (except slices of lemon and lime) with ice.",
+      "Strain into a whiskey sour glass.",
+      "Decorate with the slices of lemon and lime and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Blended whiskey",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            178,
+            134,
+            82
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Benedictine",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            115,
+            85
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon slice",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime slice",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Fruit Shake",
+    "description": "The Fruit Shake is a delightful blend of creamy yogurt and fresh fruits, perfect for a refreshing treat. Originating from the trend of fruit smoothies in the 20th century, this shake combines the natural sweetness of bananas and oranges with the tangy flavor of yogurt, creating a nutritious and delicious beverage.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Combine the fruit yogurt, banana, frozen orange juice, and textural fruit in a blender.",
+      "Add ice and blend until smooth."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 180
+    },
+    "components": [
+      {
+        "ingredient_name": "Fruit Yogurt",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Banana",
+        "category": "fruit",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Frozen Orange Juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Textural Fruit",
+        "category": "fruit",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 5.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            192,
+            203
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ice",
+        "category": "modifier",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Fruit Cooler",
+    "description": "The Fruit Cooler is a refreshing beverage that combines the sweetness of strawberries and apple juice with the tartness of lemon. This drink is perfect for warm days and is a great way to enjoy fresh fruits. The recipe has its roots in classic fruit punches, which have been enjoyed for centuries, often served at gatherings and celebrations.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Toss strawberries with sugar, and let sit overnight in refrigerator.",
+      "Cut lemon, reserve two slices. Juice the rest.",
+      "Mix together the lemon juice, strawberries, apple juice, and soda water.",
+      "Add slices of lemon for decoration.",
+      "In glasses, put ice cubes and a slice of apple.",
+      "Pour drink in, and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Frozen Apple Juice",
+        "category": "juice",
+        "volume_ml": 355,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Strawberries",
+        "category": "fruit",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Apple",
+        "category": "fruit",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            128,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda Water",
+        "category": "modifier",
+        "volume_ml": 1000,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Freddy Kruger",
+    "description": "The Freddy Kruger is a bold shot that combines the herbal complexity of Jägermeister with the sweet anise flavor of Sambuca and the clean finish of vodka. This shot is perfect for those looking to embrace the spirit of Halloween or simply enjoy a unique blend of flavors in a single gulp.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Pour 15 ml of Jägermeister into a shot glass.",
+      "Add 15 ml of Sambuca.",
+      "Top with 15 ml of vodka."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Jägermeister",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            50,
+            30,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sambuca",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 38,
+          "brix": 30,
+          "ph": 4.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Funk and Soul",
+    "description": "The Funk and Soul cocktail is a vibrant and refreshing drink that captures the essence of Caribbean flavors with a twist of fruitiness. Originating from the fusion of classic rum cocktails, this drink is perfect for those looking to enjoy a taste of the tropics. The use of Jamaican rum adds authenticity, while the combination of apricot nectar and pomegranate juice provides a delightful sweetness and tartness.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix all ingredients together.",
+      "Strain into a Collins glass.",
+      "Top with soda water."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Apricot Nectar",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pomegranate Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.6,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda Water",
+        "category": "modifier",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Fuzzy Asshole",
+    "description": "The Fuzzy Asshole is a playful cocktail that combines the warmth of coffee with the fruity sweetness of Peach Schnapps. This unique drink is perfect for those who enjoy a comforting beverage with a twist, making it a fun choice for gatherings or a cozy night in.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill the coffee mug half full with hot coffee (approximately 120ml).",
+      "Fill the other half with Peach Schnapps (approximately 120ml).",
+      "Stir gently and enjoy while hot."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Coffee",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Peach Schnapps",
+        "category": "liqueur",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "French Martini",
+    "description": "The French Martini is a delightful cocktail that combines the smoothness of vodka with the fruity flavors of raspberry liqueur and pineapple juice. This drink gained popularity in the 1980s and is often associated with the glamorous nightlife of Paris. Its vibrant color and refreshing taste make it a favorite among cocktail enthusiasts.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Pour all ingredients into a shaker with ice cubes.",
+      "Shake well and strain into a chilled cocktail glass.",
+      "Squeeze oil from lemon peel onto the drink."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 135,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Raspberry Liqueur",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            127
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple Juice",
+        "category": "juice",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "French Negroni",
+    "description": "The French Negroni is a delightful twist on the classic Negroni, substituting the traditional Campari with Lillet, a French aperitif. This variation offers a smoother, more floral profile while retaining the cocktail's signature bitterness. The drink is perfect for those who appreciate a sophisticated balance of flavors, making it a popular choice in cocktail bars around the world.",
+    "glass_type": "martini",
+    "method": "stirred",
+    "instructions": [
+      "Add ice to a shaker and pour in all ingredients.",
+      "Using a bar spoon, stir 40 to 45 revolutions or until thoroughly chilled.",
+      "Strain into a martini glass or over ice into a rocks glass.",
+      "Garnish with orange twist."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lillet",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            221,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            178,
+            34,
+            34
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Peel",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Fahrenheit 5000",
+    "description": "The Fahrenheit 5000 is a fiery shot that combines the heat of Tabasco sauce with the spicy kick of Firewater and the peppery notes of Absolut Peppar. This cocktail is perfect for those who enjoy a bold and adventurous drinking experience, reminiscent of the spicy cocktails that emerged in the late 20th century as bartenders began to experiment with heat and flavor.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Cover the bottom of a shot glass with Tabasco sauce.",
+      "Fill the shot glass halfway with Firewater.",
+      "Top off the shot glass with Absolut Peppar."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Firewater",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 50,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Absolut Peppar",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tabasco sauce",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 3,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Flying Dutchman",
+    "description": "The Flying Dutchman is a classic cocktail that showcases the harmonious blend of gin and triple sec. This drink is reminiscent of the maritime legends of the Flying Dutchman ship, said to be doomed to sail the seas forever. Its crisp and refreshing profile makes it a timeless choice for cocktail enthusiasts.",
+    "glass_type": "rocks",
+    "method": "stirred",
+    "instructions": [
+      "In an old-fashioned glass almost filled with ice cubes, combine the gin and triple sec.",
+      "Stir well."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Frozen Daiquiri",
+    "description": "The Frozen Daiquiri is a delightful twist on the classic cocktail, blending the refreshing flavors of lime and rum with a frosty texture. Originating in Cuba, this cocktail has become a favorite in tropical locales and is often enjoyed on warm days. The addition of triple sec adds a hint of sweetness, while the crushed ice creates a slushy consistency that is both fun and refreshing.",
+    "glass_type": "flute",
+    "method": "blend",
+    "instructions": [
+      "Combine all ingredients (except for the cherry) in an electric blender.",
+      "Blend at a low speed for five seconds.",
+      "Blend at a high speed until firm.",
+      "Pour contents into a champagne flute.",
+      "Top with the cherry and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            200,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cherry",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Crushed Ice",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Fruit Flip-Flop",
+    "description": "The Fruit Flip-Flop is a refreshing and creamy beverage that combines the tanginess of yogurt with the sweetness of fruit juice. This delightful concoction is perfect for warm days and is reminiscent of summer picnics. Blending these ingredients creates a smooth texture that is both satisfying and invigorating.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Place all ingredients in the blender jar.",
+      "Cover and whiz on medium speed until well blended.",
+      "Pour into one tall, two medium, or three small glasses and enjoy."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Yoghurt",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            224
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Fruit juice",
+        "category": "juice",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Flying Scotchman",
+    "description": "The Flying Scotchman is a classic cocktail that beautifully marries the smoky notes of Scotch whisky with the herbal complexity of sweet vermouth. This drink is a nod to the era of cocktail innovation in the early 20th century, showcasing the balance of flavors that define many timeless recipes.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Scotch",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            128,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar syrup",
+        "category": "syrup",
+        "volume_ml": 1.25,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "French Connection",
+    "description": "The French Connection is a classic cocktail that beautifully marries the rich flavors of Cognac and the sweet, nutty notes of Amaretto. This drink is said to have gained popularity in the 1970s, partly due to its mention in the film of the same name. It's a simple yet elegant concoction that showcases the depth of its ingredients.",
+    "glass_type": "rocks",
+    "method": "stirred",
+    "instructions": [
+      "Pour all ingredients directly into an old fashioned glass filled with ice cubes.",
+      "Stir gently."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Cognac",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 28,
+          "brix": 30,
+          "ph": 4.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            165,
+            42,
+            42
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Flaming Dr. Pepper",
+    "description": "The Flaming Dr. Pepper is a daring cocktail that combines the sweetness of amaretto with the boldness of Bacardi 151, creating a drink that is both flavorful and visually striking. Traditionally served in a Collins glass, this cocktail is often ignited before serving, adding an element of excitement to any gathering. The drink's name pays homage to the popular soft drink, Dr. Pepper, which adds a unique twist to the mix.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Add Amaretto, Bacardi, and vodka into a Collins glass.",
+      "Top with Dr. Pepper and beer.",
+      "Carefully ignite the Bacardi 151 on top before serving."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 24,
+          "brix": 30,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bacardi 151 proof rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 75.5,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dr. Pepper",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Beer",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 5,
+          "brix": 4,
+          "ph": 4.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Flaming Lamborghini",
+    "description": "The Flaming Lamborghini is a visually stunning cocktail that combines the rich flavors of coffee liqueur and anise with the creamy texture of Baileys and the vibrant color of Blue Curacao. This drink is designed to be consumed quickly through a straw while on fire, creating a thrilling experience for adventurous drinkers. Its origins are often attributed to the flamboyant cocktail culture of the 1980s and 1990s, where showmanship and spectacle were key elements of the drinking experience.",
+    "glass_type": "martini",
+    "method": "build",
+    "instructions": [
+      "Pour the Sambuca and Kahlua into the cocktail glass.",
+      "Place the Baileys and Blue Curacao into two separate shot glasses on either side of the cocktail glass.",
+      "Light the concoction in the cocktail glass.",
+      "Drink through the straw quickly.",
+      "As you reach the bottom of the glass, pour the Baileys and Blue Curacao into the cocktail glass to extinguish the fire and continue drinking until it's all gone."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            80,
+            40,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sambuca",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 38,
+          "brix": 25,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blue Curacao",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 4.0,
+          "opacity": 0.8,
+          "color_rgb": [
+            0,
+            102,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Flander's Flake-Out",
+    "description": "The Flander's Flake-Out is a whimsical cocktail that combines the anise-flavored liqueur Sambuca with the sweet, rooty notes of Sarsaparilla. This drink is a nod to the playful side of mixology, perfect for those looking to explore unique flavor combinations. The use of a Collins glass adds a refreshing touch, making it ideal for warm evenings.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour 75 ml of Sambuca into the Collins glass.",
+      "Add 225 ml of Sarsaparilla to the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Sambuca",
+        "category": "liqueur",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 38,
+          "brix": 30,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sarsaparilla",
+        "category": "soda",
+        "volume_ml": 225,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 4.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            50,
+            25,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Frozen Mint Daiquiri",
+    "description": "The Frozen Mint Daiquiri is a refreshing twist on the classic daiquiri, combining the bright flavors of lime and mint with the smoothness of light rum. This cocktail is perfect for warm weather, offering a cool and invigorating experience. The use of crushed ice gives it a slushy texture, making it a delightful choice for summer gatherings.",
+    "glass_type": "rocks",
+    "method": "blend",
+    "instructions": [
+      "Combine all ingredients with 240 ml of crushed ice in an electric blender.",
+      "Blend at a low speed for a short length of time.",
+      "Pour into an old-fashioned glass and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 240
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Mint",
+        "category": "modifier",
+        "volume_ml": 6,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Frozen Pineapple Daiquiri",
+    "description": "The Frozen Pineapple Daiquiri is a tropical twist on the classic daiquiri, blending the sweetness of fresh pineapple with the zesty brightness of lime juice. This refreshing cocktail is perfect for warm weather and evokes the laid-back vibes of beachside bars. The use of crushed ice gives it a slushy texture, making it a delightful treat on a hot day.",
+    "glass_type": "coupe",
+    "method": "blend",
+    "instructions": [
+      "Combine all ingredients with 240 ml of crushed ice in an electric blender.",
+      "Blend at a low speed for a short length of time.",
+      "Pour into a cocktail glass and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 240
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  }
+]

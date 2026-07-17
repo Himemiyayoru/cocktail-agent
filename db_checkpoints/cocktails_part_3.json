@@ -1,0 +1,215 @@
+[
+  {
+    "name": "3 Wise Men",
+    "description": "The '3 Wise Men' is a bold cocktail that combines three iconic American whiskies: Jack Daniels, Johnnie Walker, and Jim Beam. This drink is often enjoyed as a shot or a quick slam, embodying the spirit of camaraderie and celebration. Its origins are rooted in the party culture, where the combination of these whiskies creates a powerful and flavorful experience.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour 10 ml of Jack Daniels into a Collins glass.",
+      "Pour 10 ml of Johnnie Walker into the same glass.",
+      "Pour 10 ml of Jim Beam into the glass.",
+      "Slam it to the head."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Jack Daniels",
+        "category": "spirit",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Johnnie Walker",
+        "category": "spirit",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Jim Beam",
+        "category": "spirit",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "3-Mile Long Island Iced Tea",
+    "description": "The 3-Mile Long Island Iced Tea is a playful twist on the classic Long Island Iced Tea, known for its potent mix of spirits and refreshing cola. This cocktail is a favorite for those looking to enjoy a vibrant drink that packs a punch, perfect for summer gatherings or a night out. The addition of sweet and sour balances the strong spirits, making it a delightful choice for adventurous drinkers.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a 414ml Collins glass with ice.",
+      "Pour in the gin, light rum, tequila, triple sec, and vodka.",
+      "Fill 2/3 of the glass with Coca-Cola.",
+      "Top off with sweet and sour mix to fill the glass.",
+      "Add a dash of bitters and garnish with a lemon wedge."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 200
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tequila",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            200,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coca-Cola",
+        "category": "modifier",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet and sour mix",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            100,
+            50,
+            50
+          ]
+        }
+      }
+    ]
+  }
+]

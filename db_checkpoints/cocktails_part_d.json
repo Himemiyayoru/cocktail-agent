@@ -1,0 +1,1260 @@
+[
+  {
+    "name": "Derby",
+    "description": "The Derby is a classic cocktail that dates back to the early 20th century, often associated with the Kentucky Derby horse race. This refreshing drink combines the herbal notes of gin with the subtle sweetness of peach bitters, making it a delightful choice for warm weather or any festive occasion.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Pour all ingredients into a mixing glass with ice.",
+      "Stir.",
+      "Strain into a cocktail glass.",
+      "Garnish with a sprig of fresh mint in the drink."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Peach Bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 10,
+          "ph": 4,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            200,
+            150
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Fresh Mint Leaves",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            34,
+            139,
+            34
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Diesel",
+    "description": "The Diesel cocktail is a unique blend that combines the refreshing qualities of lager and cider with the rich, fruity notes of blackcurrant cordial. This drink is particularly popular in the UK, where it is often enjoyed in pubs. The combination of these ingredients creates a visually striking drink that resembles the dark color of a Guinness, making it a favorite among those who appreciate both flavor and aesthetics.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour the lager into the pint glass.",
+      "Add the blackcurrant cordial.",
+      "Top up with cider."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Lager",
+        "category": "spirit",
+        "volume_ml": 284,
+        "physics_baseline": {
+          "abv": 5,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cider",
+        "category": "spirit",
+        "volume_ml": 284,
+        "physics_baseline": {
+          "abv": 5,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blackcurrant cordial",
+        "category": "liqueur",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 50,
+          "ph": 3.0,
+          "opacity": 0.8,
+          "color_rgb": [
+            128,
+            0,
+            128
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Daiquiri",
+    "description": "The Daiquiri is a classic cocktail that originated in Cuba, named after a beach and a nearby village. It became popular in the early 20th century and is known for its refreshing combination of rum, lime juice, and sugar. This cocktail has been a favorite among many, including famous figures like Ernest Hemingway.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Pour all ingredients into shaker with ice cubes.",
+      "Shake well.",
+      "Strain in chilled cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Danbooka",
+    "description": "The Danbooka is a unique concoction that combines the rich, robust flavor of coffee with the potent kick of Everclear. This drink is perfect for those looking to energize their evening with a spirited twist. The origins of this drink are rooted in the creative mixology of coffee cocktails, where caffeine meets alcohol for an invigorating experience.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Pour the coffee into a coffee mug.",
+      "Add Everclear to the coffee.",
+      "Mix well to combine the flavors."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Coffee",
+        "category": "modifier",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Everclear",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 95,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Downshift",
+    "description": "The Downshift cocktail is a vibrant and refreshing drink that combines the sweetness of fruit punch with the crispness of Sprite and the kick of tequila, topped off with a float of Bacardi 151 for an extra punch. This cocktail is perfect for summer gatherings or a fun night out, embodying the spirit of tropical flavors and lively celebrations.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Start with the Sprite.",
+      "Next comes the tequila.",
+      "After that, add the Minute Maid Fruit Punch.",
+      "Then float the Bacardi 151 on top."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Minute Maid Fruit Punch",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sprite",
+        "category": "soda",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tequila",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bacardi 151",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 75.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dragonfly",
+    "description": "The Dragonfly cocktail is a refreshing highball that combines the botanical notes of gin with the spicy sweetness of ginger ale. This drink is perfect for warm weather and is often garnished with a lime wedge to enhance its zesty profile. Its origins can be traced back to the classic highball drinks that gained popularity in the early 20th century, showcasing the versatility of gin in mixed drinks.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "In a highball glass almost filled with ice cubes, combine the gin and ginger ale.",
+      "Stir well.",
+      "Garnish with the lime wedge."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger ale",
+        "category": "syrup",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dry Martini",
+    "description": "The Dry Martini is a classic cocktail that has stood the test of time, often associated with sophistication and elegance. Its origins date back to the late 19th century, and it has been a favorite of many, including the iconic character James Bond. The balance of gin and dry vermouth creates a refreshing yet potent drink, often garnished with an olive or a twist of lemon peel.",
+    "glass_type": "martini",
+    "method": "stirred",
+    "instructions": [
+      "Pour all ingredients into a mixing glass with ice cubes.",
+      "Stir well.",
+      "Strain into a chilled martini cocktail glass.",
+      "Squeeze oil from lemon peel onto the drink, or garnish with an olive."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            230,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Olive",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dry Rob Roy",
+    "description": "The Dry Rob Roy is a classic cocktail that pays homage to the Rob Roy, a drink named after the Scottish folk hero. This variation uses dry vermouth instead of sweet, creating a drier and more sophisticated flavor profile. It's a favorite among those who appreciate the boldness of Scotch whisky balanced with the herbal notes of vermouth.",
+    "glass_type": "martini",
+    "method": "stirred",
+    "instructions": [
+      "In a mixing glass half-filled with ice cubes, combine the Scotch and dry vermouth.",
+      "Stir well.",
+      "Strain into a cocktail glass.",
+      "Garnish with the lemon twist."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Scotch",
+        "category": "spirit",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            178,
+            134,
+            82
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "liqueur",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dirty Nipple",
+    "description": "The Dirty Nipple is a fun and visually striking layered shot that combines the rich flavors of coffee liqueur, anise, and creamy Irish whiskey. This shot is perfect for parties and celebrations, showcasing the art of layering drinks for a stunning presentation.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Pour Kahlua into the shot glass until it is about one-third full.",
+      "Slowly layer Sambuca on top of the Kahlua by pouring it over the back of a spoon.",
+      "Finally, layer Baileys Irish Cream on top of the Sambuca using the same spoon technique."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sambuca",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 38,
+          "brix": 25,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dirty Martini",
+    "description": "The Dirty Martini is a classic cocktail that adds a savory twist to the traditional martini with the inclusion of olive brine. This drink has its roots in the early 20th century and has become a staple in cocktail culture, often enjoyed for its briny flavor and smooth finish. The addition of olive brine not only enhances the flavor but also gives the drink its characteristic 'dirty' appearance.",
+    "glass_type": "martini",
+    "method": "shaken",
+    "instructions": [
+      "Pour the vodka, dry vermouth, and olive brine into a cocktail shaker with a handful of ice and shake well.",
+      "Rub the rim of a martini glass with the wedge of lemon.",
+      "Strain the contents of the cocktail shaker into the glass and add the olive."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 70,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            230,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Olive Brine",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 2,
+          "ph": 4.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            200,
+            200,
+            150
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Wedge",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Olive",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Darkwood Sling",
+    "description": "The Darkwood Sling is a delightful cocktail that showcases the rich flavors of cherry liqueur, balanced with the refreshing notes of soda and orange juice. Originating from the classic sling family of cocktails, this drink offers a modern twist that appeals to both traditionalists and adventurous drinkers alike.",
+    "glass_type": "coupe",
+    "method": "build",
+    "instructions": [
+      "Add 30 ml of Cherry Heering to the glass.",
+      "Add 30 ml of Soda water to the glass.",
+      "Add 30 ml of Orange juice to the glass.",
+      "Fill the glass with ice cubes."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Cherry Heering",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 24,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            150,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda water",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dark and Stormy",
+    "description": "The Dark and Stormy is a classic cocktail that originated in Bermuda, combining the rich flavors of dark rum with the spicy zest of ginger beer. Traditionally garnished with a lime wedge, this drink is a refreshing choice for those who enjoy a bit of sweetness balanced with a hint of spice.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a highball glass with ice.",
+      "Add 150 ml of dark rum.",
+      "Top with 300 ml of ginger beer.",
+      "Garnish with a lime wedge."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Dark Rum",
+        "category": "spirit",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            70,
+            30,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger Beer",
+        "category": "modifier",
+        "volume_ml": 300,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            215,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dark Caipirinha",
+    "description": "The Dark Caipirinha is a Brazilian cocktail that takes the classic Caipirinha and adds a rich depth with demerara sugar. This drink celebrates the vibrant flavors of lime and the unique character of cachaça, a spirit made from fermented sugarcane juice. The muddling of sugar with lime releases essential oils and juices, creating a refreshing and invigorating experience.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Muddle the sugar into the lime wedges in a highball glass.",
+      "Fill the glass with ice cubes.",
+      "Pour the cachaça into the glass.",
+      "Stir well."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "demerara sugar",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 80,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "lime",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "cachaça",
+        "category": "spirit",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Duchamp's Punch",
+    "description": "Duchamp's Punch is a refreshing cocktail that combines the vibrant flavors of Pisco with the tartness of lime and the sweetness of pineapple syrup. Named after the famous artist Marcel Duchamp, this cocktail embodies creativity and a playful spirit, making it a perfect choice for art lovers and cocktail enthusiasts alike.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients.",
+      "Double strain in a chilled double old fashioned glass with a big ice cube.",
+      "Garnish with a couple of lavender sprigs."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Pisco",
+        "category": "spirit",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 25,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple Syrup",
+        "category": "syrup",
+        "volume_ml": 25,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "St. Germain",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 20,
+          "ph": 5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            228,
+            225
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura Bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 44,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            128,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pepper",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lavender",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            200,
+            162,
+            200
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Damned if you do",
+    "description": "The 'Damned if you do' is a bold shot that combines the warmth of whiskey with the fiery sweetness of Hot Damn, a cinnamon schnapps. This cocktail is perfect for those who enjoy a quick, spirited drink that packs a punch and warms the soul.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Pour whiskey into shot glass.",
+      "Add Hot Damn to the shot glass.",
+      "Put in mouth.",
+      "Repeat as deemed necessary."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Whiskey",
+        "category": "spirit",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Hot Damn",
+        "category": "liqueur",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dubonnet Cocktail",
+    "description": "The Dubonnet Cocktail is a classic drink that showcases the rich, herbal flavors of Dubonnet Rouge, a fortified wine that has been enjoyed since the 19th century. This cocktail combines the sweetness of Dubonnet with the botanical notes of gin, creating a balanced and sophisticated drink that is perfect for any occasion.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Stir all ingredients (except lemon peel) with ice.",
+      "Strain into a cocktail glass.",
+      "Add the twist of lemon peel and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Dubonnet Rouge",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 14.5,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            50,
+            25,
+            25
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Drinking Chocolate",
+    "description": "Drinking chocolate has a rich history dating back to the ancient Mesoamerican cultures, where cacao was revered as a sacred drink. This luxurious beverage combines the creaminess of milk and cream with the deep flavors of dark chocolate, often enhanced with spices like cinnamon and vanilla. It's a comforting treat that warms the soul, perfect for chilly evenings or as a decadent dessert.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Heat the cream and milk with the cinnamon and vanilla bean very slowly for 15-20 minutes.",
+      "Remove the cinnamon stick and vanilla bean.",
+      "Add the finely chopped dark chocolate and mix until fully melted.",
+      "Serve topped with some very dense fresh whipped cream."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Heavy cream",
+        "category": "modifier",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            240,
+            220
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 6.7,
+          "opacity": 0.7,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cinnamon stick",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla bean",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Finely chopped dark chocolate",
+        "category": "modifier",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 50,
+          "ph": 5.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            54,
+            69,
+            79
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Fresh whipped cream",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 25,
+          "ph": 6.0,
+          "opacity": 0.9,
+          "color_rgb": [
+            255,
+            250,
+            250
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Death in the Afternoon",
+    "description": "The Death in the Afternoon is a cocktail that combines the potent herbal flavors of absinthe with the effervescence of champagne. It is said to have been created by the famous American author Ernest Hemingway, who enjoyed this drink during his afternoons in Paris. The combination of these two ingredients creates a unique experience that is both refreshing and intoxicating.",
+    "glass_type": "coupe",
+    "method": "build",
+    "instructions": [
+      "Pour the absinthe into a chilled coupe glass.",
+      "Top with champagne."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Absinthe",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 55,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Champagne",
+        "category": "wine",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  }
+]

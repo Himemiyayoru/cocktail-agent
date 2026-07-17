@@ -1,0 +1,1937 @@
+[
+  {
+    "name": "Casino",
+    "description": "The Casino cocktail is a classic drink that dates back to the early 20th century, often associated with the glamorous world of speakeasies and cocktail lounges. Its combination of gin, maraschino liqueur, and citrus creates a refreshing yet complex flavor profile, making it a favorite among cocktail enthusiasts.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Pour all ingredients into a shaker with ice cubes.",
+      "Shake well.",
+      "Strain into a chilled cocktail glass.",
+      "Garnish with a lemon twist and a maraschino cherry.",
+      "Serve without a straw."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino liqueur",
+        "category": "liqueur",
+        "volume_ml": 1.25,
+        "physics_baseline": {
+          "abv": 32,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            228,
+            225
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 1.25,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cherry",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 4,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Cafe Savoy",
+    "description": "The Cafe Savoy is a delightful blend of coffee and spirits, originating from the rich coffee culture of Europe. This cocktail combines the warmth of coffee with the creamy texture of milk and the sweetness of triple sec, creating a comforting drink perfect for any time of day.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill the coffee mug almost to the top with coffee.",
+      "Add milk, triple sec, and brandy.",
+      "Stir to combine."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Coffee",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Brandy",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Caipirinha",
+    "description": "The Caipirinha is Brazil's national cocktail, celebrated for its refreshing taste and simplicity. It combines the vibrant flavors of fresh lime with the unique spirit of Cachaça, a sugarcane liquor that embodies the essence of Brazilian culture. Traditionally enjoyed in a casual setting, this cocktail is a perfect representation of the country's festive spirit.",
+    "glass_type": "rocks",
+    "method": "muddle",
+    "instructions": [
+      "Place lime and sugar into an old fashioned glass and muddle them together using a muddler or a wooden spoon.",
+      "Fill the glass with ice.",
+      "Add the Cachaça."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cachaça",
+        "category": "spirit",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 38,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            230,
+            180
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Cream Soda",
+    "description": "Cream Soda is a delightful and refreshing cocktail that combines the warmth of spiced rum with the effervescence of ginger ale. This drink has roots in the classic soda fountain beverages of the early 20th century, where soda was often mixed with spirits to create a fizzy treat. The addition of spiced rum adds a unique twist, making it a perfect choice for those who enjoy a sweet and spicy flavor profile.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour 30ml of Spiced Rum into a highball glass with ice.",
+      "Fill the glass with Ginger Ale to the top."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Spiced Rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            200,
+            100,
+            50
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger Ale",
+        "category": "modifier",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Cuba Libra",
+    "description": "The Cuba Libra, often referred to as the Cuban Libre, is a classic cocktail that combines the rich flavors of dark rum with the refreshing zest of lime and the effervescence of Coca-Cola. Its origins trace back to the early 20th century, during the Cuban War of Independence, where it was said to be a drink of choice among American soldiers and locals alike. The drink symbolizes freedom and has become a staple in bars around the world.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill tall glass with ice cubes.",
+      "Add dark rum.",
+      "Rub cut edge of lime on rim of glass then squeeze juice into glass.",
+      "Fill with Coca-Cola.",
+      "Garnish with lime slice.",
+      "Enjoy!"
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Dark rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            70,
+            30,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coca-Cola",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 2.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            30,
+            30,
+            30
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Cherry Rum",
+    "description": "The Cherry Rum cocktail is a delightful blend of light rum and cherry brandy, enriched with a touch of cream. This drink combines the tropical notes of rum with the sweet, fruity essence of cherries, creating a smooth and indulgent experience. Perfect for a summer evening or a festive gathering, this cocktail showcases the versatility of rum and the charm of cherry flavors.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 37,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cherry brandy",
+        "category": "liqueur",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light cream",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Cuba Libre",
+    "description": "The Cuba Libre is a classic cocktail that originated in Cuba during the late 19th century. It combines the refreshing flavors of lime and cola with the smoothness of light rum, making it a popular choice for those seeking a simple yet satisfying drink. The name translates to 'Free Cuba,' reflecting the drink's historical ties to Cuban independence.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a highball glass with ice.",
+      "Add 60 ml of light rum.",
+      "Squeeze the juice of half a lime into the glass.",
+      "Top off with Coca-Cola to taste.",
+      "Garnish with a lime wedge."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coca-Cola",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Corn n Oil",
+    "description": "The Corn n Oil cocktail is a classic drink that hails from the Caribbean, combining the vibrant flavors of lime and falernum with the rich depth of aged rums. This cocktail is a testament to the region's rum heritage, showcasing the unique characteristics of both Añejo and blackstrap rums. The muddling of fresh lime adds a refreshing citrus note, while the bitters provide a complex finish, making it a delightful choice for rum enthusiasts.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Cut the half lime in half again.",
+      "Add the lime, falernum, and bitters to a rocks glass. Muddle.",
+      "Add the Añejo rum.",
+      "Add ice and stir.",
+      "Float the blackstrap rum on top.",
+      "Serve with a straw."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Lime",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Falernum",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 11,
+          "brix": 25,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura Bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 44,
+          "brix": 20,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            100,
+            50,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Añejo Rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            200,
+            100
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blackstrap Rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            50,
+            25,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Citrus Coke",
+    "description": "The Citrus Coke is a refreshing cocktail that combines the zesty notes of Bacardi Limon with the classic taste of Coca-Cola. This drink is perfect for warm days and casual gatherings, offering a delightful twist on the traditional rum and cola.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour half of the Coca-Cola into a highball glass.",
+      "Add Bacardi Limon.",
+      "Top off with the remaining Coca-Cola.",
+      "Stir gently and enjoy!"
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Bacardi Limon",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coca-Cola",
+        "category": "modifier",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Casa Blanca",
+    "description": "The Casa Blanca is a classic cocktail that embodies the spirit of the tropics with its refreshing blend of light rum and citrus flavors. Originating in the mid-20th century, this cocktail is a delightful choice for those seeking a taste of paradise in a glass.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino liqueur",
+        "category": "liqueur",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 20,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Clover Club",
+    "description": "The Clover Club is a classic cocktail that dates back to the late 19th century, originating from a private men's club in Philadelphia. This delightful drink combines the botanical notes of gin with the sweetness of grenadine and the tartness of lemon juice, all beautifully emulsified with egg white for a frothy texture. It's a perfect representation of the pre-Prohibition cocktail culture.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Dry shake ingredients to emulsify.",
+      "Add ice and shake again.",
+      "Strain into a chilled coupe glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            240,
+            240,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg White",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Caipirissima",
+    "description": "The Caipirissima is a delightful twist on the classic Caipirinha, substituting cachaça with white rum. This refreshing cocktail hails from Brazil and showcases the vibrant flavors of lime and sugar, making it a perfect summer drink. The Caipirissima is known for its balance of sweetness and tartness, providing a tropical escape with every sip.",
+    "glass_type": "highball",
+    "method": "muddle",
+    "instructions": [
+      "Muddle the lime wedges and sugar in a glass to release the lime juice.",
+      "Add the white rum and stir to combine.",
+      "Fill the glass with crushed ice and stir again to chill.",
+      "Garnish with a lime wheel if desired."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Lime",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "White Rum",
+        "category": "spirit",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "City Slicker",
+    "description": "The City Slicker is a classic cocktail that embodies the sophistication of urban nightlife. With its blend of brandy and triple sec, it offers a delightful balance of sweetness and tartness, making it a perfect choice for those looking to enjoy a refined drink. The addition of lemon juice adds a refreshing citrus note, enhancing the overall experience.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "In a shaker half-filled with ice cubes, combine all of the ingredients.",
+      "Shake well.",
+      "Strain into a cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Brandy",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 25,
+          "ph": 3.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Campari Beer",
+    "description": "The Campari Beer is a refreshing and slightly bitter cocktail that combines the herbal complexity of Campari with the crispness of lager. This drink is a perfect example of how Italian aperitivo culture can blend with casual beer enjoyment, creating a unique and flavorful experience.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Use a 450 ml beer mug.",
+      "Add 45 ml of Campari first.",
+      "Fill the glass with lager."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Campari",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lager",
+        "category": "beer",
+        "volume_ml": 405,
+        "physics_baseline": {
+          "abv": 5,
+          "brix": 4,
+          "ph": 4.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Chicago Fizz",
+    "description": "The Chicago Fizz is a delightful cocktail that combines the smoothness of light rum with the rich sweetness of port, balanced by the tartness of lemon juice. This refreshing drink is shaken to create a frothy texture from the egg white, making it a unique and enjoyable experience. The addition of carbonated water gives it a lively finish, perfect for warm evenings.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients (except carbonated water) with ice.",
+      "Strain into a highball glass over two ice cubes.",
+      "Fill with carbonated water, stir, and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 60
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Port",
+        "category": "fortified wine",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg white",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Carbonated water",
+        "category": "modifier",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Cosmopolitan",
+    "description": "The Cosmopolitan, often referred to as the 'Cosmo', gained popularity in the 1990s and is a quintessential cocktail of the modern era. Its vibrant pink hue and refreshing taste have made it a favorite among cocktail enthusiasts. The drink is a perfect blend of vodka, lime juice, Cointreau, and cranberry juice, creating a balanced and sophisticated flavor profile.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Add all ingredients into a cocktail shaker filled with ice.",
+      "Shake well and double strain into a large cocktail glass.",
+      "Garnish with a lime wheel."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 37,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cointreau",
+        "category": "liqueur",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cranberry juice",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Coffee-Vodka",
+    "description": "The Coffee-Vodka liqueur is a delightful blend of rich coffee and smooth vodka, steeped with vanilla for an aromatic experience. This recipe harks back to the tradition of infusing spirits with flavors, a practice that has been enjoyed for centuries. The combination of coffee and vodka creates a unique liqueur that can be enjoyed on its own or used in cocktails.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Boil water and sugar until dissolved.",
+      "Turn off heat and slowly add dry instant coffee, stirring continuously.",
+      "Add a chopped vanilla bean to the vodka.",
+      "Combine the cooled sugar syrup and coffee solution with the vodka.",
+      "Cover tightly and shake vigorously each day for 3 weeks.",
+      "Strain and filter the mixture.",
+      "Let the sugar mixture cool completely before adding to vodka to prevent evaporation.",
+      "Optionally, add about 5 ml of glycerine for a smoother feel."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "White Sugar",
+        "category": "syrup",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Instant Coffee",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla Bean",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 450,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Caramel Coloring",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.1,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Casino Royale",
+    "description": "The Casino Royale is a classic cocktail that embodies the elegance and sophistication of the James Bond era. This drink combines the refreshing notes of gin and lemon with the unique sweetness of maraschino liqueur, creating a delightful balance that is both invigorating and indulgent. The addition of egg yolk adds a rich texture, making it a luxurious choice for cocktail enthusiasts.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "In a shaker half-filled with ice cubes, combine all of the ingredients.",
+      "Shake well.",
+      "Strain into a sour glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            240,
+            240,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino liqueur",
+        "category": "liqueur",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 20,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg yolk",
+        "category": "modifier",
+        "volume_ml": 18,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Corpse Reviver",
+    "description": "The Corpse Reviver is a classic cocktail that dates back to the early 20th century, often associated with the revival of spirits after a long night. This refreshing drink combines gin, triple sec, Lillet Blanc, and lemon juice, with a hint of absinthe for an aromatic finish. It was originally intended as a morning pick-me-up, but has since become a beloved staple in cocktail culture.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Rinse a cocktail glass with absinthe and discard the excess.",
+      "In a shaker, combine gin, triple sec, Lillet Blanc, lemon juice, and a dash of absinthe.",
+      "Shake well with ice.",
+      "Strain into the prepared cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple Sec",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lillet Blanc",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 15,
+          "ph": 3.2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Absinthe",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 55,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Chocolate Milk",
+    "description": "The Chocolate Milk is a fun and indulgent shot that combines the rich flavors of chocolate liqueur and creamy milk, topped with a hint of amaretto. This playful drink is perfect for parties and celebrations, offering a delightful twist on traditional shots. The layering of ingredients creates a visually appealing presentation, making it a favorite among dessert lovers.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Pour the milk into the bottom of the shot glass.",
+      "Carefully layer the chocolate liqueur on top of the milk.",
+      "Add a dash of amaretto on top.",
+      "Do not mix. SLAM IT!"
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Chocolate liqueur",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            102,
+            51,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 24,
+          "brix": 25,
+          "ph": 6.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            153,
+            101,
+            21
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Clove Cocktail",
+    "description": "The Clove Cocktail is a classic drink that combines the herbal sweetness of sweet vermouth with the fruity notes of sloe gin and muscatel wine. This cocktail is a delightful representation of the early 20th-century cocktail culture, where vermouth-based drinks were all the rage. Its unique flavor profile makes it a sophisticated choice for any cocktail enthusiast.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Stir all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sloe gin",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 26,
+          "brix": 20,
+          "ph": 3.0,
+          "opacity": 0.4,
+          "color_rgb": [
+            128,
+            0,
+            128
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Muscatel Wine",
+        "category": "wine",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 18,
+          "brix": 25,
+          "ph": 3.2,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Coffee Liqueur",
+    "description": "Coffee liqueur is a rich and flavorful spirit that combines the boldness of coffee with the sweetness of sugar and the warmth of vanilla. This delightful concoction has its roots in the coffee culture of the 20th century and has become a popular ingredient in cocktails and desserts alike. The process of making coffee liqueur involves simmering coffee, sugar, and water to create a syrup, which is then blended with vodka and aged for a few weeks to develop its complex flavors.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Combine coffee, sugar, and water in a pot.",
+      "Simmer the mixture for 1 hour and let it cool.",
+      "Add vanilla extract and vodka to the cooled mixture.",
+      "Transfer to a sealed jar and age for 2 to 3 weeks."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Instant Coffee",
+        "category": "modifier",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.5,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla Extract",
+        "category": "liqueur",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 25,
+          "ph": 5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 600,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 950,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "juice",
+        "volume_ml": 600,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Coke and Drops",
+    "description": "The Coke and Drops cocktail is a refreshing blend that combines the classic taste of Coca-Cola with a zesty twist from lemon juice. This simple yet delightful drink is perfect for those who enjoy a fizzy beverage with a hint of citrus. The addition of lemon juice not only enhances the flavor but also adds a touch of elegance when garnished with a lemon slice.",
+    "glass_type": "coupe",
+    "method": "build",
+    "instructions": [
+      "Take a cocktail glass.",
+      "Pour 100 ml of Coca-Cola into the glass.",
+      "Add 7 ml of lemon juice.",
+      "Garnish with a lemon slice on the rim of the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Coca-Cola",
+        "category": "modifier",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            30,
+            30,
+            30
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Chocolate Drink",
+    "description": "The Chocolate Drink is a comforting and indulgent beverage that has been enjoyed for centuries, originating from ancient Mesoamerican cultures where cacao was revered. This rich drink combines melted chocolate with creamy milk, creating a luscious treat perfect for warming up on a chilly day.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Melt the chocolate bar in a small amount of boiling water.",
+      "Add milk to the melted chocolate.",
+      "Cook over low heat, whipping gently until heated well. Do not let it boil!",
+      "Serve in a coffee mug."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Chocolate",
+        "category": "modifier",
+        "volume_ml": 125,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 6.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            102,
+            51,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "liquid",
+        "volume_ml": 750,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "liquid",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            0,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Cranberry Punch",
+    "description": "Cranberry Punch is a delightful and refreshing beverage that has been a staple at gatherings and celebrations. Its vibrant color and sweet-tart flavor make it a favorite for parties, especially during the holiday season. The combination of cranberry and pineapple juices, along with a hint of almond flavoring, creates a unique and festive punch that is sure to please a crowd.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Combine cranberry juice, sugar, pineapple juice, and almond flavoring in a large bowl.",
+      "Stir until the sugar is dissolved and chill the mixture.",
+      "Just before serving, add ginger ale to the punch.",
+      "Add an ice ring to keep the punch cold."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 500
+    },
+    "components": [
+      {
+        "ingredient_name": "Cranberry juice",
+        "category": "juice",
+        "volume_ml": 960,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            220,
+            20,
+            60
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 360,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 960,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            215,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Almond flavoring",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger ale",
+        "category": "soda",
+        "volume_ml": 960,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  }
+]

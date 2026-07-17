@@ -1,0 +1,2015 @@
+[
+  {
+    "name": "Smut",
+    "description": "The Smut cocktail is a playful blend of fruity and fizzy flavors, combining the richness of red wine with the sweetness of peach schnapps, the refreshing taste of Pepsi Cola, and the citrusy zing of orange juice. This drink is perfect for those looking for a unique and refreshing beverage to enjoy on a warm day.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Combine red wine, peach schnapps, Pepsi Cola, and orange juice in a mixing glass.",
+      "Stir gently to mix the ingredients.",
+      "Serve in a chilled highball glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Red wine",
+        "category": "spirit",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Peach schnapps",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 25,
+          "ph": 3.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pepsi Cola",
+        "category": "modifier",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 2.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Spritz",
+    "description": "The Spritz is a classic Italian cocktail that originated in the Veneto region. It combines the refreshing qualities of Prosecco with the bitter notes of Campari, making it a perfect aperitif. Traditionally enjoyed in the summer, this vibrant drink is often garnished with an orange slice or an olive, adding a touch of elegance to its presentation.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Fill an Old-Fashioned glass with ice.",
+      "Pour in the Prosecco and Campari.",
+      "Add a splash of soda water.",
+      "Garnish as desired and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Prosecco",
+        "category": "wine",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 11,
+          "brix": 10,
+          "ph": 3.2,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            221,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Campari",
+        "category": "spirit",
+        "volume_ml": 40,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 20,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda Water",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Scooter",
+    "description": "The Scooter is a delightful cocktail that combines the rich flavors of brandy and amaretto with the smoothness of light cream. This creamy concoction is perfect for those who enjoy a sweet and indulgent drink, often served in elegant settings. Its origins are somewhat obscure, but it reflects the classic cocktail culture of the mid-20th century, where creamy cocktails gained popularity.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients well with cracked ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 50
+    },
+    "components": [
+      {
+        "ingredient_name": "Brandy",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.1,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 28,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.2,
+          "color_rgb": [
+            165,
+            42,
+            42
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light cream",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Sangria",
+    "description": "Sangria is a traditional Spanish punch that combines red wine with a variety of fruits, spices, and sometimes liqueurs. Its origins can be traced back to the 18th century, and it has become a popular beverage worldwide, especially during warm weather. The addition of spices like cloves and cinnamon adds depth and warmth to this refreshing drink.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix all ingredients together in a pitcher.",
+      "Refrigerate to chill.",
+      "Add cloves and cinnamon sticks to taste.",
+      "Serve in wine glasses."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Red wine",
+        "category": "spirit",
+        "volume_ml": 750,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 2.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cloves",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            210,
+            105,
+            30
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Stinger",
+    "description": "The Stinger is a classic cocktail that dates back to the early 20th century, often associated with the post-Prohibition era. It combines the warmth of brandy with the refreshing minty notes of white crème de menthe, making it a delightful after-dinner drink. Traditionally served in a cocktail glass, it can also be enjoyed on the rocks for a more casual experience.",
+    "glass_type": "martini",
+    "method": "stirred",
+    "instructions": [
+      "Pour brandy and white crème de menthe into a mixing glass with ice.",
+      "Stir well to chill the mixture.",
+      "Strain into a chilled cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Brandy",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.1,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "White Creme de Menthe",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Sazerac",
+    "description": "The Sazerac is a classic cocktail that originated in New Orleans in the 19th century. It is known for its unique combination of flavors, featuring the herbal notes of absinthe and the sweetness of sugar, balanced by the boldness of bourbon. Traditionally served in an old-fashioned glass, this cocktail is a true representation of the city's rich cocktail culture.",
+    "glass_type": "rocks",
+    "method": "stirred",
+    "instructions": [
+      "Rinse a chilled old-fashioned glass with the absinthe.",
+      "Add crushed ice to the glass and set it aside.",
+      "Stir the remaining ingredients (Ricard, sugar, Peychaud bitters, water, and bourbon) over ice in a mixing glass.",
+      "Discard the ice and any excess absinthe from the prepared glass.",
+      "Strain the drink into the glass.",
+      "Add the lemon peel for garnish."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 50
+    },
+    "components": [
+      {
+        "ingredient_name": "Ricard",
+        "category": "liqueur",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 10,
+          "ph": 6.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Superfine Sugar",
+        "category": "syrup",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Peychaud Bitters",
+        "category": "modifier",
+        "volume_ml": 6,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 20,
+          "ph": 5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bourbon",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 5,
+          "ph": 5.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Peel",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Sidecar",
+    "description": "The Sidecar is a classic cocktail that dates back to World War I, believed to have originated in either Paris or London. This refreshing drink combines the rich flavors of Cognac with the citrusy brightness of lemon juice and the sweetness of Cointreau, making it a timeless favorite among cocktail enthusiasts.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Pour all ingredients into a cocktail shaker filled with ice.",
+      "Shake well and strain into a cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Cognac",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cointreau",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 3,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Snowday",
+    "description": "The Snowday cocktail is a delightful blend of spirits that evokes the warmth of a cozy winter day. With the smoothness of vodka, the herbal complexity of Amaro Montenegro, and the rich sweetness of Ruby Port, this drink is perfect for sipping by the fire. The addition of blood orange and a hint of Angostura bitters adds a refreshing twist, making it a unique choice for any occasion.",
+    "glass_type": "rocks",
+    "method": "stirred",
+    "instructions": [
+      "Stir all ingredients with ice.",
+      "Strain into a chilled rocks glass over fresh ice.",
+      "Express orange peel over drink and garnish."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Amaro Montenegro",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 23,
+          "brix": 20,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ruby Port",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blood Orange Juice",
+        "category": "juice",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            69,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura Bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 44.7,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Spice 75",
+    "description": "The Spice 75 is a delightful twist on the classic French 75, incorporating a spiced syrup that adds warmth and complexity to the cocktail. Originating from the cocktail renaissance, this drink combines the effervescence of champagne with the rich flavors of rum and lime, making it a perfect choice for festive occasions.",
+    "glass_type": "flute",
+    "method": "shaken",
+    "instructions": [
+      "Gently warm 60g golden caster sugar in a pan with 30ml water and 1ml allspice. Cook gently until the sugar has dissolved, then leave the mixture to cool.",
+      "Strain through a sieve lined with a coffee filter (or a double layer of kitchen paper).",
+      "Pour 60ml of the spiced syrup into a cocktail shaker along with 200ml rum and 90ml lime juice.",
+      "Shake with ice and strain between six flute glasses.",
+      "Top up with 600ml champagne and garnish each with an orange twist."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 180
+    },
+    "components": [
+      {
+        "ingredient_name": "Spiced Syrup",
+        "category": "syrup",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 200,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Champagne",
+        "category": "wine",
+        "volume_ml": 600,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Allspice",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Twist",
+        "category": "garnish",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Snowball",
+    "description": "The Snowball is a classic cocktail that combines the rich, creamy texture of Advocaat with the refreshing fizz of lemonade. Originating in the UK, this drink became popular in the 1970s and is often associated with festive occasions. Its bright, cheerful appearance and zesty lemon garnish make it a delightful choice for any gathering.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Place one ice cube in the glass.",
+      "Add 45 ml of Advocaat.",
+      "Fill up the glass with approximately 240 ml of cold lemonade.",
+      "Decorate with a slice of lemon.",
+      "Serve at once."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 30
+    },
+    "components": [
+      {
+        "ingredient_name": "Advocaat",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 14,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemonade",
+        "category": "juice",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon slice",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Shot-gun",
+    "description": "The Shot-gun is a bold and spirited cocktail that combines the rich flavors of three iconic American whiskeys. This layered shot is perfect for those who appreciate the distinct profiles of Jack Daniels, Jim Beam, and Wild Turkey, creating a unique tasting experience that celebrates the heritage of American whiskey distillation.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Pour 30 ml of Jack Daniels into a shot glass.",
+      "Pour 30 ml of Jim Beam into the shot glass.",
+      "Float 30 ml of Wild Turkey on top."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Jack Daniels",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Jim Beam",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Wild Turkey",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 50.5,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Salty Dog",
+    "description": "The Salty Dog is a refreshing cocktail that combines the tartness of grapefruit juice with the botanical notes of gin, creating a delightful balance of flavors. Traditionally served in a highball glass, this drink is often enjoyed on warm days, making it a popular choice for summer gatherings. The addition of salt enhances the citrus notes, giving it a unique twist.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour all ingredients over ice cubes in a highball glass.",
+      "Stir well and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Grapefruit juice",
+        "category": "juice",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Salt",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Stone Sour",
+    "description": "The Stone Sour is a classic cocktail that combines the fruity flavors of apricot brandy and orange juice with the tartness of sweet and sour mix. This drink has its roots in the whiskey sour family, showcasing the versatility of fruit liqueurs in cocktails. It is a refreshing choice for those who enjoy a balance of sweet and tangy flavors.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a chilled whiskey sour glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Apricot brandy",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet and sour",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 3.0,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Sea Breeze",
+    "description": "The Sea Breeze is a refreshing cocktail that emerged in the 1920s and gained popularity in the 1970s. It combines the crispness of vodka with the tartness of cranberry and grapefruit juices, making it a perfect drink for warm weather. The cocktail is often associated with beach vacations and sunny days, embodying a laid-back, coastal lifestyle.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a highball glass with ice.",
+      "Pour in the vodka, cranberry juice, and grapefruit juice.",
+      "Garnish with a lime wedge."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cranberry Juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            220,
+            20,
+            60
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grapefruit Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 3.0,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            192,
+            203
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Scotch Sour",
+    "description": "The Scotch Sour is a delightful twist on the classic sour cocktail, combining the rich flavors of Scotch whisky with the tartness of lime juice and the sweetness of powdered sugar. This cocktail showcases the versatility of Scotch, making it a refreshing choice for whisky lovers. The addition of a lemon slice and cherry not only enhances the presentation but also adds a hint of citrus aroma, making each sip a delightful experience.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Shake Scotch, lime juice, and powdered sugar with ice.",
+      "Strain into a whiskey sour glass.",
+      "Decorate with 1/2 slice lemon and top with the cherry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Scotch",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.1,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered Sugar",
+        "category": "syrup",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Slice",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cherry",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Sweet Tooth",
+    "description": "The Sweet Tooth cocktail is a delightful blend of rich chocolate liqueur and creamy milk, creating a dessert-like drink that satisfies any sweet craving. Originating from the trend of dessert cocktails, this drink is perfect for those who enjoy indulgent flavors in a refreshing format.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Put 60 ml of Godiva liqueur into a highball glass.",
+      "Add approximately 240 ml of milk, or to taste."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Godiva Liqueur",
+        "category": "liqueur",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 5.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            102,
+            51,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Screwdriver",
+    "description": "The Screwdriver is a classic cocktail that combines vodka and orange juice, creating a refreshing and easy-to-make drink. Its origins date back to the 1940s, when American oil workers in the Persian Gulf would mix their vodka with orange juice using a screwdriver as a stirring tool. This simple yet effective cocktail has since become a staple in bars around the world.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a highball glass with ice.",
+      "Pour 60 ml of vodka over the ice.",
+      "Top with orange juice to taste.",
+      "Garnish and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Sherry Flip",
+    "description": "The Sherry Flip is a classic cocktail that combines the rich flavors of cream sherry with the creamy texture of light cream and egg. This delightful drink dates back to the 19th century and showcases the versatility of sherry in cocktails. Traditionally served in a Nick and Nora glass, it is garnished with a sprinkle of nutmeg, adding a warm spice that complements the drink's sweetness.",
+    "glass_type": "nicknora",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients (except nutmeg) with ice.",
+      "Strain into a Nick and Nora glass.",
+      "Sprinkle nutmeg on top and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Cream Sherry",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light Cream",
+        "category": "modifier",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Whole Egg",
+        "category": "modifier",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.6,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Nutmeg",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Sol Y Sombra",
+    "description": "The English translation of the name of this drink is 'Sun and Shade', and after sampling this drink, you'll understand why. This cocktail combines the rich, warming qualities of brandy with the sweet, herbal notes of anisette, creating a delightful balance that reflects its name.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Shake ingredients with ice.",
+      "Strain into a brandy snifter.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Brandy",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Anisette",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Shark Attack",
+    "description": "The Shark Attack cocktail is a refreshing and vibrant drink that combines the zesty flavor of lemonade with the smoothness of vodka. Perfect for summer gatherings, this cocktail is known for its fun and playful presentation, often served in a pitcher for sharing. The combination of lemonade and vodka creates a delightful balance of sweetness and tartness, making it a favorite among party-goers.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix lemonade and water according to instructions on back of can.",
+      "If the instructions say to add 130 ml of water, do so.",
+      "Mix into pitcher.",
+      "Add 450 ml of Vodka (Absolut).",
+      "Mix well.",
+      "Pour into glass of crushed ice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Lemonade",
+        "category": "juice",
+        "volume_ml": 355,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 900,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka (Absolut)",
+        "category": "spirit",
+        "volume_ml": 450,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "San Francisco",
+    "description": "The San Francisco cocktail is a vibrant and fruity drink that captures the essence of the city’s lively spirit. With its layers of flavors and colors, this cocktail is not only refreshing but also visually stunning, making it a perfect choice for summer gatherings or festive occasions.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Take a tall glass and put in a few ice cubes.",
+      "Pour the vodka over the ice.",
+      "Fill the glass with orange juice.",
+      "Add the crème de banane carefully.",
+      "Slowly pour in the grenadine along the side of the glass to create a layered effect.",
+      "Garnish with an orange slice and a strawberry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 20,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Creme de Banane",
+        "category": "liqueur",
+        "volume_ml": 20,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            225,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Juice",
+        "category": "juice",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Space Odyssey",
+    "description": "The Space Odyssey cocktail is a vibrant and tropical drink that takes you on a flavor journey through the cosmos. Combining the boldness of Bacardi 151 with the sweetness of Malibu rum and refreshing pineapple juice, this cocktail is topped with orange juice and a splash of grenadine for a stunning visual effect. Garnished with cherries, it’s a perfect drink for summer parties or a night of stargazing.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill the highball glass with ice.",
+      "Pour in 30 ml of Bacardi 151 proof rum.",
+      "Add 30 ml of Malibu rum.",
+      "Add 30 ml of pineapple juice.",
+      "Top with approximately 90 ml of orange juice.",
+      "Add a splash of grenadine for color.",
+      "Garnish with cherries."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Bacardi 151 proof rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 75.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Malibu rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 21,
+          "brix": 10,
+          "ph": 5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cherries",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 4,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Sherry Eggnog",
+    "description": "Sherry Eggnog is a delightful twist on the classic eggnog, incorporating the rich flavors of cream sherry. This festive drink has roots in traditional holiday celebrations, where eggnog was often spiced and served to warm the spirits during winter gatherings. The addition of sherry adds a unique depth, making it a perfect choice for cozy evenings.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Shake sherry, powdered sugar, and egg with ice.",
+      "Strain into a Collins glass.",
+      "Fill with milk and stir.",
+      "Sprinkle nutmeg on top and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Cream Sherry",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            200,
+            150,
+            100
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Whole Egg",
+        "category": "modifier",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Nutmeg",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Sweet Bananas",
+    "description": "The Sweet Bananas cocktail is a delightful blend of creamy milk and ripe bananas, sweetened with honey. This refreshing drink is perfect for warm days and brings a taste of tropical bliss to your glass. Its origins can be traced back to the trend of fruit-based cocktails that gained popularity in the mid-20th century, celebrating the natural sweetness of fruits.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Place all ingredients in the blender jar.",
+      "Cover and whiz on medium speed until well blended.",
+      "Pour into one tall, two medium, or three small glasses and enjoy."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Banana",
+        "category": "modifier",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Honey",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 80,
+          "ph": 3.9,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            215,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Sweet Sangria",
+    "description": "Sweet Sangria is a refreshing and fruity beverage that has its roots in Spain, where it is traditionally made with red wine and a variety of fruits. This delightful drink is perfect for summer gatherings and parties, offering a vibrant mix of flavors that can be customized with seasonal fruits. The addition of soda, like Fresca, adds a fizzy twist, making it a popular choice for those looking to enjoy a light and refreshing cocktail.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Dissolve the sugar in hot water and cool.",
+      "Peel the citrus fruits and break them into wedges.",
+      "Mix the wine, sugar syrup, fruit, and Fresca in a pitcher.",
+      "Put the mixture in the fridge for a few hours.",
+      "Serve in tall glasses with a straw."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Red wine",
+        "category": "spirit",
+        "volume_ml": 1500,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Hot Water",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            173,
+            216,
+            230
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Apple",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 2.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 2.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Fresca",
+        "category": "soda",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  }
+]

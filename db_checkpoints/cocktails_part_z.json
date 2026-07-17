@@ -1,0 +1,855 @@
+[
+  {
+    "name": "Zorro",
+    "description": "The Zorro cocktail is a delightful blend of rich flavors, combining the anise notes of Sambuca, the creamy sweetness of Baileys Irish Cream, and the refreshing minty essence of White Creme de Menthe. Traditionally served in a coffee mug, this drink is perfect for those who enjoy a warm, comforting beverage with a twist.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Add Sambuca, Baileys Irish Cream, and White Creme de Menthe into a coffee mug.",
+      "Pour hot black coffee into the mug until nearly full.",
+      "Top with a generous dollop of whipped cream."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Sambuca",
+        "category": "spirit",
+        "volume_ml": 20,
+        "physics_baseline": {
+          "abv": 38,
+          "brix": 30,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 20,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "White Creme de Menthe",
+        "category": "liqueur",
+        "volume_ml": 20,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 40,
+          "ph": 5.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Zinger",
+    "description": "The Zinger is a vibrant and refreshing cocktail that combines the fruity notes of Peachtree schnapps with the citrusy fizz of Surge Cola. This drink is perfect for those looking for a sweet and energizing experience, reminiscent of the fun and carefree spirit of the early 2000s. It's a drink that brings back memories of summer parties and spontaneous gatherings.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Get a shot glass and pour in three shots of the Peachtree schnapps.",
+      "Do the same with the Surge Cola.",
+      "Down it like Scheetz would."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Peachtree schnapps",
+        "category": "spirit",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Surge",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Zoksel",
+    "description": "The Zoksel is a playful and refreshing concoction that combines various fizzy beverages with a hint of fruitiness. This cocktail is a testament to the creativity of mixology, where the boundaries of traditional cocktails are pushed to create something unique and enjoyable. The addition of lemon adds a zesty twist, making it a perfect drink for warm days or casual gatherings.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour the beer into a highball glass.",
+      "Add the root beer and lemonade.",
+      "Top with Coca-Cola and 7-Up.",
+      "Drizzle in the Creme de Cassis.",
+      "Garnish with a slice of lemon."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Beer",
+        "category": "spirit",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 5,
+          "brix": 5,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Root beer",
+        "category": "syrup",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemonade",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coca-Cola",
+        "category": "syrup",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 11,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "7-Up",
+        "category": "syrup",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Creme de Cassis",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon",
+        "category": "juice",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Zombie",
+    "description": "The Zombie cocktail, created by Donn Beach in the 1930s, is a potent blend of rums and fruit juices, designed to transport you to a tropical paradise. Its vibrant flavors and colorful presentation make it a favorite among tiki enthusiasts. The cocktail is famously known for its high alcohol content and is often garnished with fresh fruit and mint.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Blend at high speed for no more than 5 seconds.",
+      "Pour into a glass.",
+      "Add ice cubes to fill.",
+      "Add the garnish."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gold rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            102
+          ]
+        }
+      },
+      {
+        "ingredient_name": "151 proof rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 75.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pernod",
+        "category": "liqueur",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 6,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura Bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 44.7,
+          "brix": 20,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            64,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Zambeer",
+    "description": "The Zambeer is a unique cocktail that combines the anise-flavored liqueur Sambuca with the sweet, fizzy notes of root beer. This refreshing drink is perfect for those who enjoy a blend of herbal and sweet flavors, making it a delightful choice for warm evenings or casual gatherings.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix sambuca with root beer in a Collins glass.",
+      "Stir gently to combine.",
+      "Add ice cubes to fill the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Sambuca",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 38,
+          "brix": 30,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Root beer",
+        "category": "soda",
+        "volume_ml": 300,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Zorbatini",
+    "description": "The Zorbatini is a delightful twist on the classic Martini, incorporating the unique anise flavor of Ouzo, a traditional Greek spirit. This cocktail is perfect for those looking to explore new flavors while enjoying the elegance of a Martini. Garnished with a green olive, it offers a refreshing and aromatic experience.",
+    "glass_type": "martini",
+    "method": "stirred",
+    "instructions": [
+      "Pour the Stoli Vodka and Ouzo into a mixing glass filled with ice.",
+      "Stir well until chilled.",
+      "Strain into a chilled cocktail glass.",
+      "Garnish with a green olive."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Stoli Vodka",
+        "category": "spirit",
+        "volume_ml": 37,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ouzo",
+        "category": "spirit",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 5,
+          "ph": 6,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Zenmeister",
+    "description": "The Zenmeister is a unique cocktail that combines the herbal complexity of Jägermeister with the sweet, fizzy notes of root beer. This drink is perfect for those looking to explore the fusion of herbal liqueurs and classic sodas, creating a refreshing and intriguing experience.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour 15 ml of Jägermeister into a Collins glass.",
+      "Add 15 ml of root beer.",
+      "Mix together gently and enjoy."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Jägermeister",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            50,
+            30,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Root beer",
+        "category": "soda",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            100,
+            50,
+            20
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Zipperhead",
+    "description": "The Zipperhead is a vibrant cocktail that showcases the beautiful layering of flavors, with the rich raspberry notes of Chambord complemented by the clean profile of vodka and topped with refreshing soda water. This drink is a visual delight and a refreshing choice for any occasion.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Fill glass with rocks.",
+      "Add straw before putting in liquor.",
+      "Layer the ingredients in order: add Chambord first, followed by vodka, and top with soda water."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Chambord raspberry liqueur",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 16.5,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            64
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda water",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Zima Blaster",
+    "description": "The Zima Blaster is a vibrant cocktail that combines the refreshing taste of Zima, a clear malt beverage, with the rich, fruity notes of Chambord raspberry liqueur. This drink became popular in the 1990s, embodying the era's love for sweet and colorful cocktails. Perfect for summer gatherings or a nostalgic trip back in time, the Zima Blaster is sure to delight with its unique flavor profile.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill the hurricane glass with ice.",
+      "Pour in 90 ml of Chambord raspberry liqueur.",
+      "Fill the glass with 360 ml of Zima.",
+      "Mix gently and enjoy."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Zima",
+        "category": "modifier",
+        "volume_ml": 360,
+        "physics_baseline": {
+          "abv": 5,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Chambord raspberry liqueur",
+        "category": "liqueur",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 16.5,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            64
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Zizi Coin-coin",
+    "description": "The Zizi Coin-coin is a refreshing cocktail that combines the vibrant flavors of Cointreau and fresh citrus juice. Originating from the sunny shores of the Mediterranean, this drink is perfect for warm evenings and is often enjoyed in a stylish margarita glass. The addition of lemon or lime slices not only enhances the flavor but also adds a beautiful visual appeal.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Pour 150 ml of Cointreau over ice in the glass.",
+      "Add 60 ml of fresh lemon (or lime) juice.",
+      "Stir gently to combine the ingredients.",
+      "Garnish with slices of lemon or lime in the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Cointreau",
+        "category": "liqueur",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Zimadori Zinger",
+    "description": "The Zimadori Zinger is a refreshing cocktail that combines the unique flavors of Midori melon liqueur with the crispness of Zima, a clear, fruit-flavored beer. This drink is perfect for warm weather and is often garnished with a cherry for a pop of color and sweetness. Its vibrant green hue and fruity taste make it a favorite among those looking for a light and fun beverage.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour Zima into a Collins glass over ice.",
+      "Pour the shot of Midori melon liqueur over the Zima.",
+      "Do not stir.",
+      "Garnish with a cherry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Midori melon liqueur",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Zima",
+        "category": "modifier",
+        "volume_ml": 360,
+        "physics_baseline": {
+          "abv": 5,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Zippy's Revenge",
+    "description": "Zippy's Revenge is a playful cocktail that combines the nostalgic flavors of grape Kool-Aid with the warmth of rum and the sweetness of amaretto. This vibrant drink is perfect for summer gatherings or a fun night in, evoking memories of childhood while delivering a refreshing kick.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Mix Kool-Aid with water to taste until desired sweetness is achieved.",
+      "Add 60 ml of Rum and 60 ml of Amaretto to the Kool-Aid mixture.",
+      "Shake well to dissolve the sugar in the Kool-Aid.",
+      "Serve cold over ice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 28,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grape Kool-Aid",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.0,
+          "opacity": 0.8,
+          "color_rgb": [
+            128,
+            0,
+            128
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ziemes Martini Apfelsaft",
+    "description": "The Ziemes Martini Apfelsaft is a refreshing twist on the classic martini, incorporating the crisp sweetness of apple juice with the herbal complexity of vermouth. This cocktail is perfect for those who enjoy a lighter, fruitier drink, and it showcases the versatility of vermouth in mixology.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour 120 ml of vermouth into a Collins glass.",
+      "Add 480 ml of apple juice.",
+      "Serve without ice, ensuring the apple juice is at room temperature."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Vermouth",
+        "category": "spirit",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            200,
+            180,
+            140
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Apple Juice",
+        "category": "juice",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            220,
+            180
+          ]
+        }
+      }
+    ]
+  }
+]

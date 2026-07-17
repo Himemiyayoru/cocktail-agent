@@ -1,0 +1,150 @@
+[
+  {
+    "name": "747",
+    "description": "The 747 is a delightful shot that combines the rich flavors of coffee liqueur, creamy Irish whiskey, and hazelnut liqueur. This cocktail is perfect for those who enjoy a sweet and indulgent treat, reminiscent of a dessert in a glass. Its unique blend of ingredients creates a harmonious balance that is sure to please any palate.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Pour Kahlua into the shot glass.",
+      "Add Baileys Irish Cream on top of the Kahlua.",
+      "Finish with Frangelico on top of the Baileys.",
+      "Serve immediately without chilling or layering."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            78,
+            43,
+            43
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 35,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Frangelico",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 25,
+          "ph": 5.0,
+          "opacity": 0.4,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "747 Drink",
+    "description": "The 747 Drink is a refreshing cocktail that combines the crispness of vodka with the tartness of lime and cranberry, topped off with the effervescence of Sprite. This drink is perfect for warm weather and is often enjoyed in social settings, making it a popular choice for parties and gatherings.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a Collins glass with ice.",
+      "Pour in vodka, lime cordial, and cranberry juice.",
+      "Fill up with Sprite.",
+      "Garnish with a lime wheel or some cranberries."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Roses sweetened lime juice",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            200,
+            255,
+            200
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cranberry Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sprite",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  }
+]

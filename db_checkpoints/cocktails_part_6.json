@@ -1,0 +1,68 @@
+[
+  {
+    "name": "69 Special",
+    "description": "The 69 Special is a refreshing cocktail that combines the crispness of gin with the sweetness of 7-Up, making it a perfect choice for warm weather. This drink is a nod to the classic Collins cocktails, often enjoyed for their light and bubbly nature. The addition of lemon juice adds a zesty twist, enhancing the overall flavor profile.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour 60 ml of dry gin into a Collins glass.",
+      "Add 120 ml of 7-Up.",
+      "Add 22 ml of lemon juice for flavor.",
+      "If desired, top up the glass with more 7-Up."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Dry Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "7-Up",
+        "category": "syrup",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  }
+]

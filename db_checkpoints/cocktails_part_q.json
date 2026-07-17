@@ -1,0 +1,537 @@
+[
+  {
+    "name": "Quentin",
+    "description": "The Quentin cocktail is a delightful blend of dark rum, Kahlua, and cream, creating a rich and indulgent drink. This cocktail is perfect for those who enjoy a sweet and creamy experience, with a hint of nutmeg to elevate the flavors. Its origins are rooted in the classic cocktail movement, where the combination of spirits and liqueurs with cream became a popular choice for dessert-like drinks.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "In a shaker half-filled with ice cubes, combine the dark rum, Kahlua, and light cream.",
+      "Shake well.",
+      "Strain into a cocktail glass and garnish with grated nutmeg."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Dark rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            50,
+            25,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 5.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            80,
+            40,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light cream",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 25,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            240,
+            220
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grated nutmeg",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            150,
+            75,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Queen Bee",
+    "description": "The Queen Bee cocktail is a delightful blend of coffee brandy and lime vodka, with a touch of cream sherry that adds a unique depth. This cocktail, with its intriguing combination of flavors, is perfect for those who appreciate a sweet yet tangy drink. The use of coffee brandy brings a rich, aromatic quality, while the lime vodka adds a refreshing zest, making it a favorite among cocktail enthusiasts.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Coffee brandy",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 15,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime vodka",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cream Sherry",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Quick F**K",
+    "description": "The Quick F**K is a playful layered shot that combines the rich coffee flavor of Kahlua, the sweet and fruity notes of Midori, and the creamy texture of Baileys Irish Cream. This vibrant shot is perfect for parties and celebrations, showcasing a beautiful gradient of colors that tantalizes the eyes as much as the taste buds.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "In a shot glass, add 30ml of Kahlua first.",
+      "Then, carefully layer 30ml of Midori on top.",
+      "Finally, top it off with 30ml of Baileys Irish Cream."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            75,
+            38,
+            25
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Midori melon liqueur",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 40,
+          "ph": 3.0,
+          "opacity": 0.8,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 25,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Quick-sand",
+    "description": "The Quick-sand cocktail is a refreshing blend that combines the herbal notes of black sambuca with the vibrant sweetness of orange juice. This drink is perfect for those who enjoy a fruity cocktail with a hint of anise, and the addition of pulp gives it a delightful texture. Its origins are rooted in the desire for a quick and easy drink that doesn't compromise on flavor.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour 250 ml of orange juice into a highball glass.",
+      "Add 25 ml of black sambuca to the orange juice.",
+      "Stir gently to mix the sambuca with the orange juice, ensuring the pulp is well distributed."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Black Sambuca",
+        "category": "spirit",
+        "volume_ml": 25,
+        "physics_baseline": {
+          "abv": 38,
+          "brix": 30,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Juice",
+        "category": "juice",
+        "volume_ml": 250,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Queen Charlotte",
+    "description": "The Queen Charlotte cocktail is a refreshing blend that pays homage to the elegance of the British monarchy. Named after Queen Charlotte, the wife of King George III, this drink combines the rich flavors of red wine with the sweetness of grenadine and the effervescence of lemon-lime soda, making it a delightful choice for any occasion.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour red wine and grenadine into a Collins glass over ice cubes.",
+      "Fill with lemon-lime soda, stir, and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Red wine",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 3.0,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon-lime soda",
+        "category": "modifier",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Queen Elizabeth",
+    "description": "The Queen Elizabeth cocktail is a classic drink that embodies the elegance and sophistication of its namesake. This cocktail combines the herbal notes of dry vermouth with the botanicals of gin and the unique sweetness of Benedictine, creating a balanced and refined beverage that has stood the test of time.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Stir all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Benedictine",
+        "category": "liqueur",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Quaker's Cocktail",
+    "description": "The Quaker's Cocktail is a classic drink that combines the smoothness of light rum and brandy with the tartness of lemon and the sweetness of raspberry syrup. This cocktail reflects the innovative spirit of the early 20th century, where bartenders experimented with various ingredients to create balanced and refreshing drinks.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Brandy",
+        "category": "spirit",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.1,
+          "color_rgb": [
+            150,
+            75,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Raspberry syrup",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Quarter Deck Cocktail",
+    "description": "The Quarter Deck Cocktail is a classic drink that embodies the spirit of nautical adventures. With its refreshing lime and the unique flavor of cream sherry, this cocktail is a delightful tribute to the sea and the sailors who navigated it. The combination of light rum and sherry creates a harmonious balance, making it a perfect choice for warm evenings.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Stir all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cream Sherry",
+        "category": "liqueur",
+        "volume_ml": 11,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  }
+]

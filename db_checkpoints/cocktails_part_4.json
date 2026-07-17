@@ -1,0 +1,50 @@
+[
+  {
+    "name": "410 Gone",
+    "description": "The 410 Gone is a refreshing cocktail that combines the sweet and fruity notes of peach vodka with the classic fizz of Coca-Cola. This drink is perfect for warm days and casual gatherings, offering a delightful balance of flavors that is both easy to make and enjoyable to sip.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour 60-90 ml of peach vodka into a Collins glass.",
+      "Top with Coca-Cola to taste, filling the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Peach Vodka",
+        "category": "spirit",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coca-Cola",
+        "category": "modifier",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 2.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  }
+]

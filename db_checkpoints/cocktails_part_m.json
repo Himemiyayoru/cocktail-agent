@@ -1,0 +1,2145 @@
+[
+  {
+    "name": "Melya",
+    "description": "The Melya is a delightful concoction that marries the rich flavors of espresso with the sweetness of honey and the depth of cocoa. This drink is reminiscent of a classic Italian mocha, but with a unique twist that highlights the interplay between the ingredients. The process of mixing the cocoa and honey creates a visually stunning effect, resembling dark chocolate sauce, which adds to the overall experience of this warm beverage.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Brew espresso.",
+      "In a coffee mug, place 5 ml of unsweetened powdered cocoa.",
+      "Cover a teaspoon (5 ml) with honey and drizzle it into the cup.",
+      "Stir while the coffee brews to create a dusty, sticky mass.",
+      "Pour hot espresso over the honey, stirring to dissolve.",
+      "Serve with cream."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Espresso",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 5,
+          "opacity": 0.2,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Unsweetened Honey",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 80,
+          "ph": 3.9,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cocoa Powder",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            70,
+            40,
+            20
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mojito",
+    "description": "The Mojito is a classic Cuban cocktail that dates back to the 16th century. It combines the refreshing flavors of mint and lime with the sweetness of sugar and the kick of rum, making it a perfect drink for warm weather. Traditionally enjoyed by locals and tourists alike, the Mojito has become a staple in bars around the world.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Muddle mint leaves with sugar and lime juice in the bottom of a highball glass.",
+      "Add a splash of soda water.",
+      "Fill the glass with cracked ice.",
+      "Pour the light rum over the ice.",
+      "Top with more soda water.",
+      "Garnish with a mint sprig and serve with a straw."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Mint leaves",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda water",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mimosa",
+    "description": "The Mimosa is a classic brunch cocktail that combines the effervescence of Champagne with the refreshing sweetness of orange juice. Its origins can be traced back to the early 20th century in France, where it became a popular choice for celebratory occasions and leisurely weekend gatherings.",
+    "glass_type": "flute",
+    "method": "build",
+    "instructions": [
+      "Ensure both ingredients are well chilled.",
+      "Pour the chilled orange juice into the Champagne flute.",
+      "Top with chilled Champagne.",
+      "Serve cold."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Chilled Champagne",
+        "category": "spirit",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 0,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mai Tai",
+    "description": "The Mai Tai is a classic tiki cocktail that originated in the 1940s, often associated with the tropical paradise of Hawaii. Its name is derived from the Tahitian phrase 'Maita'i roa ae,' meaning 'good' or 'excellent.' This cocktail combines the flavors of rum, almond syrup, and citrus, creating a refreshing and vibrant drink that transports you to a beachside oasis.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into glass.",
+      "Garnish and serve with straw."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orgeat syrup",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 25,
+          "ph": 5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet and sour",
+        "category": "juice",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cherry",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Martini",
+    "description": "The Martini is a classic cocktail that has become synonymous with sophistication and elegance. Its origins can be traced back to the late 19th century, and it has been a favorite among cocktail enthusiasts ever since. Traditionally made with gin and dry vermouth, the Martini can be garnished with either a twist of lemon or an olive, allowing for a personal touch in its presentation.",
+    "glass_type": "martini",
+    "method": "stirred",
+    "instructions": [
+      "Pour all ingredients into a mixing glass with ice cubes.",
+      "Stir well.",
+      "Strain into a chilled martini cocktail glass.",
+      "Squeeze oil from lemon peel onto the drink, or garnish with an olive."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            230,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Olive",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 1.0,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Michelada",
+    "description": "The Michelada is a refreshing Mexican cocktail that combines the flavors of beer with savory ingredients like tomato juice and lime. Often enjoyed as a remedy for hangovers, this drink is a perfect blend of spicy, tangy, and umami flavors, making it a popular choice for brunch or a hot day.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Rim a pint glass with salt and chill it.",
+      "In the glass, mix the beer with tomato juice, lime juice, Worcestershire sauce, soy sauce, and hot sauce.",
+      "Stir gently to combine the ingredients."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Beer",
+        "category": "spirit",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 5,
+          "brix": 5,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tomato Juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 4.2,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Hot Sauce",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 2,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Worcestershire Sauce",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            100,
+            50,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soy Sauce",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            50,
+            25,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Manhattan",
+    "description": "The Manhattan is a classic cocktail that dates back to the 19th century, originating from the Manhattan Club in New York City. It is a sophisticated blend of whiskey and sweet vermouth, often garnished with a cherry and a twist of orange peel. This cocktail embodies the elegance of the era and remains a staple in bars around the world.",
+    "glass_type": "martini",
+    "method": "stirred",
+    "instructions": [
+      "Fill a mixing glass with ice.",
+      "Add the sweet vermouth and blended bourbon to the mixing glass.",
+      "Stir the mixture until well chilled.",
+      "Strain the cocktail into a chilled martini glass.",
+      "Garnish with a maraschino cherry and a twist of orange peel."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 60
+    },
+    "components": [
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blended Bourbon",
+        "category": "spirit",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 44.7,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino cherry",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 25,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange peel",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Margarita",
+    "description": "The Margarita is a classic cocktail that originated in Mexico, traditionally made with tequila, lime juice, and orange liqueur. Its refreshing taste and the iconic salted rim make it a favorite among cocktail enthusiasts. The drink's origins are somewhat murky, with various stories attributing its creation to different individuals and locations, but it has become a staple in bars around the world.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Rub the rim of the glass with the lime slice to make the salt stick to it.",
+      "Moisten only the outer rim and sprinkle the salt on it.",
+      "Shake the tequila, triple sec, and lime juice with ice.",
+      "Carefully pour the mixture into the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Tequila",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mauresque",
+    "description": "The Mauresque is a refreshing cocktail that hails from the Mediterranean region, combining the aniseed flavors of Ricard with the nutty sweetness of orgeat syrup. Traditionally enjoyed in the summer, this drink is perfect for cooling off on a hot day. Its unique flavor profile and vibrant appearance make it a favorite among those who appreciate a taste of the South of France.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour the Ricard (or pastis)",
+      "Pour the orgeat syrup",
+      "Finally pour the water and add ice cubes at your convenience."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Ricard",
+        "category": "spirit",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 0,
+          "ph": 6.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orgeat Syrup",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 6.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mint Julep",
+    "description": "The Mint Julep is a classic Southern cocktail, famously associated with the Kentucky Derby. This refreshing drink combines the aromatic essence of fresh mint with the warmth of bourbon, creating a perfect balance for warm weather. Traditionally served in a silver cup, the Mint Julep is a symbol of hospitality and celebration.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "In a highball glass, gently muddle the mint, powdered sugar, and water.",
+      "Fill the glass with cracked ice.",
+      "Add bourbon and stir well until the glass is well frosted.",
+      "Garnish with a mint sprig."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Fresh Mint",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            34,
+            139,
+            34
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bourbon",
+        "category": "spirit",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            173,
+            216,
+            230
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mudslinger",
+    "description": "The Mudslinger is a vibrant and refreshing punch that combines the sweetness of Southern Comfort with the citrusy zing of orange juice and the fizzy kick of Pepsi Cola. This cocktail is perfect for gatherings and celebrations, offering a delightful blend of flavors that is sure to please a crowd.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Add all contents to a large jug or punch bowl.",
+      "Stir well!"
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 200
+    },
+    "components": [
+      {
+        "ingredient_name": "Southern Comfort",
+        "category": "spirit",
+        "volume_ml": 750,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 20,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 1000,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pepsi Cola",
+        "category": "modifier",
+        "volume_ml": 750,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 2.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Martinez 2",
+    "description": "The Martinez is often considered a precursor to the modern Martini, with its origins tracing back to the mid-19th century. This cocktail combines gin with sweet vermouth and a hint of maraschino liqueur, creating a complex and aromatic drink that has stood the test of time.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Add all ingredients to a mixing glass.",
+      "Fill with ice.",
+      "Stir until chilled.",
+      "Strain into a chilled coupe glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino Liqueur",
+        "category": "liqueur",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 20,
+          "ph": 4,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            228,
+            225
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura Bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 44,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Moranguito",
+    "description": "The Moranguito is a vibrant shot that combines the herbal complexity of absinthe with the boldness of tequila and the sweetness of grenadine. This layered shot is not only visually appealing but also offers a unique flavor profile that tantalizes the taste buds. The drink's origins are rooted in the creative cocktail culture, where mixologists experiment with bold flavors and striking presentations.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Pour the absinthe into the shot glass.",
+      "Layer the tequila on top of the absinthe.",
+      "Finally, add the grenadine syrup to create a beautiful layered effect."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Absinthe",
+        "category": "spirit",
+        "volume_ml": 12,
+        "physics_baseline": {
+          "abv": 55,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tequila",
+        "category": "spirit",
+        "volume_ml": 12,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 6,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Miami Vice",
+    "description": "The Miami Vice is a vibrant cocktail that combines the tropical flavors of a Piña Colada and a Daiquiri, creating a visually stunning layered drink. This cocktail is a nod to the vibrant nightlife of Miami and is perfect for those looking to escape to a tropical paradise.",
+    "glass_type": "coupe",
+    "method": "blend",
+    "instructions": [
+      "First, blend the frozen Piña Colada mix with 75 ml of Bacardi 151 proof rum and ice, then set aside.",
+      "Second, blend the frozen Daiquiri mix with 75 ml of Bacardi 151 proof rum and ice.",
+      "Third, while the mixtures are still frozen, carefully layer the Piña Colada mix followed by the Daiquiri mix in the glass, ensuring they do not mix together."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Bacardi 151 proof rum",
+        "category": "spirit",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 75.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "frozen Piña Colada mix",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "frozen Daiquiri mix",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Moscow Mule",
+    "description": "The Moscow Mule is a classic cocktail that originated in the United States in the 1940s. It became popular due to its refreshing taste and the unique presentation in a copper mug. The combination of vodka, ginger beer, and lime juice creates a zesty and invigorating drink that has stood the test of time.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Combine vodka and ginger beer in a highball glass filled with ice.",
+      "Add lime juice.",
+      "Stir gently.",
+      "Garnish."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger ale",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mulled Wine",
+    "description": "Mulled wine is a warm, spiced wine beverage that has been enjoyed for centuries, particularly during the colder months. Its origins can be traced back to ancient Rome, where wine was heated and spiced for health benefits. Over time, this comforting drink has evolved, incorporating various spices and fruits, making it a staple in winter festivities across Europe.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Simmer 720 ml of water with 240 ml of sugar, 12 cloves, 2 cinnamon sticks, and the peel of 1 lemon in a stainless steel pot for 10 minutes.",
+      "Add 750 ml of red wine and heat to a 'coffee temperature' without boiling.",
+      "Finally, stir in 60 ml of brandy."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 720,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cloves",
+        "category": "modifier",
+        "volume_ml": 12,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon peel",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Red wine",
+        "category": "spirit",
+        "volume_ml": 750,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Brandy",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 10,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Masala Chai",
+    "description": "Masala Chai, a traditional Indian spiced tea, is a beloved beverage known for its aromatic blend of spices and rich flavors. Originating from the Indian subcontinent, this tea has been enjoyed for centuries, often served in homes and tea stalls alike. The combination of spices not only enhances the flavor but also offers various health benefits, making it a comforting drink for many.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Bring 480 ml of water to boil.",
+      "Add all the ingredients and boil again for about 15 seconds.",
+      "Let stand for a minute.",
+      "Warm milk in a pot.",
+      "Filter tea into cups.",
+      "Add milk and sugar."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tea",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dried Ginger",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            210,
+            180,
+            140
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Crushed Cardamom",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cloves",
+        "category": "modifier",
+        "volume_ml": 3,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            210,
+            105,
+            30
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Black Pepper",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 6.7,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Munich Mule",
+    "description": "The Munich Mule is a refreshing twist on the classic Moscow Mule, incorporating gin for a botanical flair. This cocktail is perfect for warm days, combining the zesty brightness of lime with the spicy effervescence of ginger beer. The addition of cucumber adds a crisp, cooling element, making it a delightful choice for any occasion.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill glass with ice.",
+      "Pour Gin and Lime Juice over the ice.",
+      "Fill glass with Ginger Beer.",
+      "Garnish with chopped Cucumber and Lime slice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            240,
+            240,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 20,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger Beer",
+        "category": "modifier",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Chopped Cucumber",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 2,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            144,
+            238,
+            144
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Chopped Lime",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mocha-Berry",
+    "description": "The Mocha-Berry is a delightful fusion of rich coffee and the fruity essence of Chambord, creating a comforting and indulgent drink. This cocktail is perfect for cozy evenings or as a sweet treat after dinner. The addition of cocoa powder enhances the chocolate notes, while the whipped cream adds a luxurious finish.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour 180 ml of coffee into an Irish coffee cup.",
+      "Add 60 ml of Chambord raspberry liqueur.",
+      "Mix in 30 ml of cocoa powder until well combined.",
+      "Top off with whipped cream to taste."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Coffee",
+        "category": "modifier",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Chambord raspberry liqueur",
+        "category": "liqueur",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 16,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            128,
+            0,
+            64
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cocoa powder",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 1.0,
+          "color_rgb": [
+            70,
+            40,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Whipped cream",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mango Mojito",
+    "description": "The Mango Mojito is a tropical twist on the classic Cuban cocktail, combining the refreshing flavors of mint and lime with the sweetness of ripe mango. This vibrant drink is perfect for summer gatherings and brings a taste of the tropics to any occasion.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Squeeze the juice from 45ml (1½ limes) and blend with the mango to give a smooth purée.",
+      "Cut the rest of the limes into quarters, then cut each wedge in half again.",
+      "Put 2 pieces of lime in a highball glass for each person and add 5ml (1 teaspoon) of caster sugar and 5-6 mint leaves to each glass.",
+      "Muddle the lime, sugar, and mint together to release the flavors.",
+      "Divide the mango purée between the glasses and add 30ml of white rum.",
+      "Add a handful of crushed ice to each glass and stir well to mix everything together.",
+      "Top up with soda water to serve and garnish with extra mint, if desired."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Mango Purée",
+        "category": "juice",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "White Rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Caster Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Mint Leaves",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda Water",
+        "category": "modifier",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mojito Extra",
+    "description": "The Mojito Extra is a refreshing twist on the classic Mojito, incorporating the rich flavors of Jamaican Dark rum. This cocktail is a celebration of Caribbean culture, where the combination of mint, citrus, and rum creates a vibrant and invigorating drink. The addition of Angostura bitters adds a complex layer of flavor, making it a delightful choice for warm weather.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Put mint with lemon juice in a glass.",
+      "Mash the mint with a spoon to release its oils.",
+      "Add ice to the glass.",
+      "Pour in the Jamaican Dark rum.",
+      "Fill up with club soda.",
+      "Top it with Angostura bitters."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Mint",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            34,
+            139,
+            34
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Jamaican Dark rum",
+        "category": "spirit",
+        "volume_ml": 125,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Club soda",
+        "category": "modifier",
+        "volume_ml": 125,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura bitters",
+        "category": "liqueur",
+        "volume_ml": 8,
+        "physics_baseline": {
+          "abv": 44,
+          "brix": 20,
+          "ph": 3,
+          "opacity": 0.2,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Monkey Gland",
+    "description": "The Monkey Gland is a classic cocktail that dates back to the 1920s, named after a surgical procedure that was believed to rejuvenate vitality. This drink combines gin with the herbal notes of Benedictine, the sweetness of grenadine, and the citrus brightness of orange juice, creating a unique and flavorful concoction that reflects the adventurous spirit of the Prohibition era.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake well over ice cubes in a shaker.",
+      "Strain into a chilled cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Benedictine",
+        "category": "liqueur",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.3,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.0,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Midnight Mint",
+    "description": "The Midnight Mint is a decadent cocktail that combines the rich flavors of Baileys Irish Cream with the refreshing notes of White Creme de Menthe and the luxurious texture of double cream. This cocktail is perfect for those who enjoy a sweet, creamy drink with a hint of mint, making it a delightful choice for after dinner or a special occasion. The addition of chocolate flakes adds an indulgent touch, making this cocktail not only delicious but visually appealing as well.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "If available, rim the cocktail glass with sugar syrup then dip into chocolate flakes or powder.",
+      "Add Baileys Irish Cream, White Creme de Menthe, and double cream into a shaker with ice.",
+      "Shake well then strain into the cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            200,
+            150,
+            100
+          ]
+        }
+      },
+      {
+        "ingredient_name": "White Creme de Menthe",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 40,
+          "ph": 5.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            200,
+            255,
+            200
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Double Cream",
+        "category": "modifier",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 35,
+          "ph": 6.0,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mary Pickford",
+    "description": "The Mary Pickford is a classic cocktail named after the famous silent film actress. This delightful drink combines the tropical flavors of light rum and pineapple juice with the sweetness of maraschino liqueur and grenadine, creating a refreshing and vibrant cocktail that captures the essence of the Roaring Twenties.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake the light rum, pineapple juice, maraschino liqueur, and grenadine with ice.",
+      "Strain into a chilled large cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino liqueur",
+        "category": "liqueur",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 32,
+          "brix": 25,
+          "ph": 4,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.0,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino cherry",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Monkey Wrench",
+    "description": "The Monkey Wrench is a refreshing cocktail that combines the tropical notes of light rum with the tartness of grapefruit juice, creating a delightful balance. This drink is perfect for warm weather and is a great example of how rum can be paired with citrus for a vibrant flavor profile.",
+    "glass_type": "rocks",
+    "method": "stirred",
+    "instructions": [
+      "Pour all of the ingredients into an old-fashioned glass almost filled with ice cubes.",
+      "Stir well."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grapefruit juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 44,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            100,
+            50,
+            50
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,867 @@
+[
+  {
+    "name": "Ipamena",
+    "description": "The Ipamena is a refreshing cocktail that combines the tartness of lime with the sweetness of passion fruit and the effervescence of ginger ale. This drink is a delightful twist on the classic Caipirinha, showcasing the vibrant flavors of tropical fruits. Its origins are rooted in Brazil, where the use of fresh ingredients and lively flavors are celebrated.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Cut half a lime into pieces and place in a shaker.",
+      "Add the brown sugar and crush the lime pieces.",
+      "Measure 120 ml of passion fruit juice and add it to the shaker.",
+      "Fill the shaker with ice cubes.",
+      "Close the shaker and shake vigorously.",
+      "Pour the liquid into a highball glass.",
+      "Top up with ginger ale.",
+      "Stir with a teaspoon and garnish the rim of the glass with a slice of lime."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Lime",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Brown sugar",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 6.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Passion fruit juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger ale",
+        "category": "soda",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ice Pick",
+    "description": "The Ice Pick is a refreshing cocktail that combines the smoothness of vodka with the invigorating qualities of iced tea. This drink is perfect for warm weather and is often enjoyed as a simple yet satisfying choice for those looking to cool down. Its origins can be traced back to the mid-20th century, where it became popular in various summer gatherings and barbecues.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour 45 ml of vodka into a Collins glass.",
+      "Fill the glass with 180 ml of iced tea.",
+      "Stir in lemon juice to taste."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Iced tea",
+        "category": "juice",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Iced Coffee",
+    "description": "Iced Coffee is a refreshing beverage that combines the rich flavors of coffee with the sweetness of sugar and the creaminess of milk. This drink has become a staple in many cafes and homes, especially during warm weather. The method of mixing and shaking creates a delightful foam that enhances the drinking experience.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Mix together instant coffee and sugar in hot water until dissolved.",
+      "Add cold milk and shake well.",
+      "For a frothier texture, use a blender or milk shake maker.",
+      "Serve in a coffee mug."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Instant Coffee",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Hot Water",
+        "category": "modifier",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cold Milk",
+        "category": "modifier",
+        "volume_ml": 960,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Irish Cream",
+    "description": "Irish Cream is a delightful blend of rich flavors that originated in Ireland, combining the smoothness of whiskey with the creaminess of dairy. This indulgent liqueur has become a staple in cocktails and desserts alike, offering a sweet and creamy experience that is both comforting and luxurious.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix Scotch and milk in a glass.",
+      "Add half-and-half to the mixture.",
+      "Add the sweetened condensed milk.",
+      "Finish by adding the coconut syrup and chocolate syrup."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Scotch",
+        "category": "spirit",
+        "volume_ml": 300,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Half-and-half",
+        "category": "modifier",
+        "volume_ml": 375,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweetened Condensed Milk",
+        "category": "modifier",
+        "volume_ml": 396,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 75,
+          "ph": 6.0,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coconut Syrup",
+        "category": "syrup",
+        "volume_ml": 3,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Chocolate Syrup",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 5.0,
+          "opacity": 0.7,
+          "color_rgb": [
+            102,
+            51,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Irish Coffee",
+    "description": "Irish Coffee is a classic cocktail that combines the rich flavors of coffee with the warmth of Irish whiskey, sweetened with sugar and topped with a layer of whipped cream. This delightful drink originated in the 1940s at Foynes, a small airport in Ireland, where it was created to warm up weary travelers. It has since become a beloved staple in bars and cafes around the world.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Heat the coffee, Irish whiskey, and sugar together in a pot; do not boil.",
+      "Pour the mixture into an Irish coffee cup.",
+      "Top with whipped cream and serve hot."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Irish whiskey",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            150,
+            100,
+            50
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coffee",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            100,
+            50,
+            30
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Whipped cream",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Irish Spring",
+    "description": "The Irish Spring cocktail is a refreshing blend that combines the smoothness of Irish whiskey with the fruity notes of peach brandy and orange juice. This drink is perfect for warm weather, evoking the essence of spring with its vibrant flavors and colorful presentation. Garnished with a slice of orange and a cherry, it not only tastes delightful but also looks appealing.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour all ingredients (except orange slice and cherry) into a collins glass over ice cubes.",
+      "Garnish with the slice of orange and add the cherry on top.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Irish whiskey",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            200,
+            150,
+            100
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Peach brandy",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            200,
+            150
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet and sour",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 25,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Imperial Fizz",
+    "description": "The Imperial Fizz is a refreshing cocktail that combines the smoothness of light rum and blended whiskey with the tartness of lemon juice and a touch of sweetness from powdered sugar. This fizzy drink is perfect for warm days and has roots in the classic fizz cocktails that gained popularity in the late 19th century.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients (except carbonated water) with ice.",
+      "Strain into a highball glass over two ice cubes.",
+      "Fill with carbonated water, stir, and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 60
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blended whiskey",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Carbonated water",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Irish Russian",
+    "description": "The Irish Russian is a delightful fusion of flavors that combines the smoothness of vodka, the sweetness of Kahlua, and the rich, creamy texture of Guinness stout. This cocktail is a playful nod to the classic White Russian, but with an Irish twist, making it a unique choice for those who appreciate both spirits. The careful layering of ingredients creates a visually appealing drink that is as enjoyable to look at as it is to sip.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Add vodka to the highball glass.",
+      "Pour in Kahlua.",
+      "Add a dash of Coca-Cola.",
+      "Carefully fill the glass with Guinness stout to prevent excess foam."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coca-Cola",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Guinness stout",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 4.2,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Imperial Cocktail",
+    "description": "The Imperial Cocktail is a refreshing and vibrant drink that showcases the delightful bitterness of Aperol balanced with the tartness of lime juice and the botanical notes of gin. This cocktail is a perfect representation of the modern aperitif culture, inviting you to enjoy its bright flavors before a meal.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a chilled cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 40,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Aperol",
+        "category": "liqueur",
+        "volume_ml": 40,
+        "physics_baseline": {
+          "abv": 11,
+          "brix": 15,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            102,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Iced Coffee Fillip",
+    "description": "The Iced Coffee Fillip is a delightful blend of coffee and Kahlua, perfect for a refreshing pick-me-up. This cocktail combines the rich flavors of strong cold coffee with the sweet, coffee-flavored liqueur, Kahlua, creating a smooth and indulgent drink. Traditionally enjoyed in a coffee mug, this cocktail is ideal for warm days or as a dessert drink.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix together Kahlua and strong cold coffee in a coffee mug.",
+      "Chill before serving."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            77,
+            38,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Strong cold Coffee",
+        "category": "modifier",
+        "volume_ml": 200,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 1,
+          "ph": 5,
+          "opacity": 0.1,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Irish Curdling Cow",
+    "description": "The Irish Curdling Cow is a whimsical cocktail that combines the creamy richness of Irish cream with the boldness of bourbon and vodka, topped off with a splash of refreshing orange juice. This drink is a delightful blend of flavors that pays homage to the classic Irish cream liqueur, making it a fun and indulgent choice for any occasion.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour Baileys Irish Cream, Bourbon, and Vodka into a highball glass.",
+      "Add ice to the glass.",
+      "Mix in the orange juice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            240,
+            220
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bourbon",
+        "category": "spirit",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  }
+]

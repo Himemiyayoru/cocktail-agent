@@ -1,0 +1,1354 @@
+[
+  {
+    "name": "H.D.",
+    "description": "The H.D. cocktail is a delightful blend of whisky, Baileys Irish Cream, and coffee, creating a rich and creamy drink that warms the soul. This cocktail is perfect for those who enjoy the comforting flavors of coffee combined with the smoothness of cream and the boldness of whisky. Its origins are rooted in the tradition of combining spirits with coffee, a practice that has been enjoyed for centuries.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour 120 ml of coffee into a beer mug.",
+      "Add 120 ml of Baileys Irish Cream.",
+      "Top with 120 ml of whisky."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Whisky",
+        "category": "spirit",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            150,
+            75,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coffee",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 1,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Honey Bee",
+    "description": "The Honey Bee cocktail is a delightful blend of sweetness and tartness, showcasing the versatility of white rum. This refreshing drink has roots in tropical cocktail culture, where rum is often paired with honey and citrus to create a harmonious balance. Perfect for summer evenings or a casual gathering, the Honey Bee is sure to please any palate.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake ingredients with crushed ice until well chilled.",
+      "Strain into a chilled coupe glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 50
+    },
+    "components": [
+      {
+        "ingredient_name": "White Rum",
+        "category": "spirit",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Honey",
+        "category": "syrup",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 80,
+          "ph": 3.9,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Hot Toddy",
+    "description": "The Hot Toddy is a classic warm cocktail that has been enjoyed for centuries, often associated with soothing colds and winter nights. Its origins can be traced back to Scotland, where it was originally made with whisky, hot water, and sugar. Over time, variations have emerged, incorporating honey and spices, making it a comforting drink perfect for chilly evenings.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Whisk the whisky and honey together and split between 2 heatproof glasses.",
+      "Add half of the cinnamon stick to each glass, then top up with 200ml boiling water.",
+      "Add a splash of lemon juice to each glass, then taste and adjust to your preference.",
+      "Finish each with a slice of lemon, studded with a clove, and serve immediately."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Whiskey",
+        "category": "spirit",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Honey",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 80,
+          "ph": 3.9,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            215,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cloves",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Herbal Flame",
+    "description": "The Herbal Flame is a delightful concoction that combines the fiery kick of Hot Damn with the soothing sweetness of tea. This cocktail is reminiscent of Southern hospitality, where sweet tea reigns supreme. The addition of cinnamon not only enhances the flavor but also adds a warm, aromatic touch, making it perfect for gatherings or a cozy evening.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour 150 ml of Hot Damn into the bottom of a mason jar.",
+      "Fill the rest of the jar with sweet tea, approximately 300 ml.",
+      "Stir with a spoon, straw, or a cinnamon stick, and leave the stick in for added flavor."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Hot Damn",
+        "category": "spirit",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 50,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet Tea",
+        "category": "juice",
+        "volume_ml": 300,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 6.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Horse's Neck",
+    "description": "The Horse's Neck is a classic cocktail that dates back to the late 19th century, known for its refreshing combination of brandy and ginger ale, garnished with a long twist of lemon peel. This drink not only offers a delightful flavor profile but also showcases the elegance of a well-prepared highball.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour brandy and ginger ale directly into a highball glass with ice cubes.",
+      "Stir gently.",
+      "Garnish with a long strip of lemon zest.",
+      "If desired, add dashes of Angostura Bitters."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Brandy",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            150,
+            75,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger ale",
+        "category": "soda",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura Bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 44,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            100,
+            50,
+            50
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon peel",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Happy Skipper",
+    "description": "The Happy Skipper is a delightful cocktail that pays homage to the whimsical spirit of 'Gilligan's Island.' With its refreshing blend of spiced rum and ginger ale, it evokes the nostalgic flavors of cream soda, making it a perfect drink for a sunny day. The name reflects the playful character of 'The Captain' in the show, bringing a touch of fun to your glass.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour Captain Morgan's Spiced Rum over ice.",
+      "Fill the glass to the top with Ginger Ale.",
+      "Garnish with a lime wedge."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Captain Morgan's Spiced Rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            178,
+            118,
+            66
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger Ale",
+        "category": "modifier",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Hunter's Moon",
+    "description": "The Hunter's Moon is a delightful cocktail that captures the essence of autumn evenings, combining the botanical notes of gin with the sweetness of vermouth and the tartness of blackberries. Traditionally enjoyed during the harvest season, this drink is a celebration of nature's bounty, perfect for gatherings under the moonlight.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Put the Bombay Sapphire, Martini Bianco, sugar syrup, and blackberries in a cocktail shaker with lots of ice.",
+      "Shake vigorously.",
+      "Pour into a balloon glass.",
+      "Top up with lemonade.",
+      "Garnish with a wedge of orange."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Vermouth",
+        "category": "modifier",
+        "volume_ml": 25,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            230,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino Cherry",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 24,
+          "brix": 30,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar Syrup",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemonade",
+        "category": "juice",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blackberries",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.2,
+          "opacity": 0.4,
+          "color_rgb": [
+            128,
+            0,
+            128
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Halloween Punch",
+    "description": "Halloween Punch is a festive concoction that brings together the flavors of autumn with a delightful mix of cherry juice, spices, and optional vodka. Traditionally served during Halloween gatherings, this punch is perfect for both adults and children, with the option to adjust the spice level. The longer it sits, the more the flavors meld, creating a truly enchanting drink.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Tip the cherry juice, orange peel, chili, cinnamon sticks, cloves, and ginger into a large saucepan.",
+      "Simmer for 5 minutes, then turn off the heat.",
+      "Leave to cool, then chill for at least 4 hours, or up to 2 days.",
+      "When ready to serve, pour the juice into a jug.",
+      "Serve in glass bottles or glasses and pop a straw in each.",
+      "If adding vodka, do so at this stage.",
+      "Dangle a fangs sweet from each glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Cherry Juice",
+        "category": "juice",
+        "volume_ml": 1000,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            220,
+            20,
+            60
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Peel",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Red Chili Flakes",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cloves",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 0,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 0,
+          "opacity": 0.0,
+          "color_rgb": [
+            210,
+            180,
+            140
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 600,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Havana Cocktail",
+    "description": "The Havana Cocktail is a refreshing drink that captures the essence of tropical Cuba. With its vibrant flavors of light rum and pineapple juice, it evokes the sunny beaches and lively atmosphere of Havana. This cocktail is perfect for those looking to escape to a tropical paradise, even if just for a moment.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "In a shaker half-filled with ice cubes, combine all of the ingredients.",
+      "Shake well.",
+      "Strain into a cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Halloween Punch",
+    "description": "Halloween Punch is a whimsical concoction that embodies the spirit of the spooky season. This punch combines the sweetness of grape juice with the effervescence of carbonated soft drinks, topped with scoops of colorful sherbet that create a delightfully eerie appearance. As the sherbet melts, it forms a 'nasty film' on the surface, making it a perfect centerpiece for any Halloween gathering.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour grape juice into a punch bowl.",
+      "Add an equal volume of carbonated soft drink (club soda, ginger ale, or lemon-lime soda).",
+      "Scoop orange and lime sherbet and float them on top of the punch.",
+      "Allow the sherbet to melt slightly, creating a film while retaining some bubbles."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Grape Juice",
+        "category": "juice",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            128
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Carbonated Soft Drink",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Sherbet",
+        "category": "syrup",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 5.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Sherbet",
+        "category": "syrup",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 5.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Homemade Kahlua",
+    "description": "Homemade Kahlua is a rich coffee liqueur that originated in Mexico. This delightful concoction combines the bold flavors of coffee with the sweetness of sugar and corn syrup, creating a perfect addition to cocktails or enjoyed on its own. The process of letting it mature enhances its flavors, making it a beloved homemade treat.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Dissolve sugar in 600 ml of boiling water and add corn syrup.",
+      "Dissolve the instant coffee in the remaining 450 ml of water.",
+      "Pour the syrup and coffee mixture into a gallon jug.",
+      "Let it cool.",
+      "Add vodka and vanilla extract when the mixture is cold.",
+      "For the best result, let the mixture 'mature' for 4-5 weeks."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 625,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Corn syrup",
+        "category": "syrup",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 75,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Instant Coffee",
+        "category": "modifier",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla extract",
+        "category": "liqueur",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 25,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Boiling Water",
+        "category": "modifier",
+        "volume_ml": 600,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 750,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Hot Creamy Bush",
+    "description": "The Hot Creamy Bush is a delightful blend of Irish whiskey and Baileys Irish cream, combined with hot coffee to create a warming and indulgent drink. This cocktail is perfect for chilly evenings or as a comforting after-dinner treat. The rich flavors of the whiskey and cream complement the robust coffee, making it a favorite among those who enjoy a cozy beverage.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Combine Irish whiskey, Baileys Irish cream, and hot coffee in an Irish coffee cup."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Irish whiskey",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            200,
+            150,
+            100
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Baileys Irish cream",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            240,
+            220
+          ]
+        }
+      },
+      {
+        "ingredient_name": "hot Coffee",
+        "category": "modifier",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 1,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            100,
+            50,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Harvey Wallbanger",
+    "description": "The Harvey Wallbanger is a classic cocktail that emerged in the 1970s, combining the refreshing flavors of vodka and orange juice with a unique herbal twist from Galliano. Its name is said to have originated from a fictional character who was known for his wild antics, making it a popular choice for those looking to enjoy a fun and vibrant drink.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Stir the vodka and orange juice with ice in the glass.",
+      "Float the Galliano on top.",
+      "Garnish and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Galliano",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            215,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Hawaiian Cocktail",
+    "description": "The Hawaiian Cocktail is a delightful blend of gin and tropical flavors, capturing the essence of paradise in a glass. This refreshing drink combines the botanical notes of gin with the sweetness of triple sec and the vibrant taste of pineapple juice, making it a perfect choice for summer gatherings or a taste of the tropics any time of year.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            240,
+            240,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            200,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Hemingway Special",
+    "description": "The Hemingway Special is a refreshing cocktail that pays homage to the famous author Ernest Hemingway, known for his love of rum and tropical flavors. This drink combines the tartness of grapefruit and lime with the sweetness of maraschino liqueur, creating a balanced and invigorating experience.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Pour all ingredients into a shaker with ice.",
+      "Shake well and strain into a chilled coupe glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 360,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grapefruit Juice",
+        "category": "juice",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            153,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino Liqueur",
+        "category": "liqueur",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 32,
+          "brix": 25,
+          "ph": 4.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Highland Fling Cocktail",
+    "description": "The Highland Fling Cocktail is a classic drink that showcases the rich flavors of Scotch whisky, balanced with the sweetness of vermouth and a hint of citrus from orange bitters. This cocktail is a nod to the traditional Scottish spirit, making it a perfect choice for whisky enthusiasts and those looking to explore the depth of flavors in a well-crafted drink.",
+    "glass_type": "martini",
+    "method": "stirred",
+    "instructions": [
+      "Stir all ingredients (except olive) with ice.",
+      "Strain into a cocktail glass.",
+      "Add the olive and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Scotch",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.1,
+          "color_rgb": [
+            178,
+            134,
+            82
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            150,
+            75,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 0,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Olive",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Hot Chocolate to Die for",
+    "description": "This indulgent hot chocolate recipe combines rich chocolate with creamy half-and-half, creating a luxurious treat perfect for cold days. The addition of butter and vanilla enhances the flavor, while mini marshmallows provide a delightful finish. This recipe is a modern twist on classic hot chocolate, elevating it to a decadent experience.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Melt the chocolate, butter, and vanilla in a double boiler.",
+      "When just smooth, stir in the cream."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Fine Chocolate",
+        "category": "modifier",
+        "volume_ml": 360,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            70,
+            40,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Butter",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla Extract",
+        "category": "modifier",
+        "volume_ml": 2.5,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 10,
+          "ph": 6,
+          "opacity": 0.5,
+          "color_rgb": [
+            150,
+            75,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Half-and-half",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 6.5,
+          "opacity": 0.9,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Mini Marshmallows",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 80,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  }
+]

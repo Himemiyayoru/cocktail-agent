@@ -1,0 +1,2022 @@
+[
+  {
+    "name": "GG",
+    "description": "The GG cocktail is a refreshing drink that combines the herbal sweetness of Galliano with the spicy effervescence of ginger ale. This simple yet delightful concoction is perfect for warm days and casual gatherings, showcasing the unique flavor profile of Galliano, a liqueur that has been enjoyed since the early 20th century.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour the Galliano liqueur over ice.",
+      "Fill the remainder of the glass with ginger ale."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Galliano",
+        "category": "liqueur",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 25,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger ale",
+        "category": "modifier",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gimlet",
+    "description": "The Gimlet is a classic cocktail that dates back to the late 19th century, originally created as a way to prevent scurvy among sailors by mixing gin with lime juice. Its crisp and refreshing flavor has made it a favorite among cocktail enthusiasts.",
+    "glass_type": "martini",
+    "method": "shaken",
+    "instructions": [
+      "Add all the ingredients to a shaker and fill with ice.",
+      "Shake, and strain into a chilled cocktail glass or an Old Fashioned glass filled with fresh ice.",
+      "Garnish with a lime wheel."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            240,
+            240,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar Syrup",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 65,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Godchild",
+    "description": "The Godchild cocktail is a delightful blend of vodka, amaretto, and heavy cream, creating a rich and creamy drink that is both indulgent and refreshing. This cocktail is often served in a champagne flute, making it a perfect choice for celebrations or special occasions.",
+    "glass_type": "flute",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients well with cracked ice.",
+      "Strain into a champagne flute.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 50
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 28,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Heavy cream",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gin Fizz",
+    "description": "The Gin Fizz is a classic cocktail that dates back to the late 19th century, known for its refreshing qualities and effervescence. It combines the botanical flavors of gin with the tartness of lemon juice and a touch of sweetness from powdered sugar, topped off with bubbly soda water. This cocktail is a favorite for its simplicity and invigorating taste, making it a staple in bars around the world.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice cubes, except soda water.",
+      "Pour into glass.",
+      "Top with soda water."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Carbonated Water",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gin Sour",
+    "description": "The Gin Sour is a classic cocktail that dates back to the 19th century, showcasing the refreshing combination of gin and citrus. This drink is a delightful balance of tartness from the lemon juice and sweetness from the sugar, making it a perfect choice for warm weather or any occasion that calls for a refreshing sip.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "In a shaker half-filled with ice cubes, combine the gin, lemon juice, and superfine sugar.",
+      "Shake well until chilled.",
+      "Strain into a rocks glass.",
+      "Garnish with an orange slice and a maraschino cherry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Superfine Sugar",
+        "category": "syrup",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange slice",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino cherry",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gagliardo",
+    "description": "The Gagliardo is a delightful cocktail that combines the fruity essence of peach vodka with the tartness of lemon juice, complemented by the herbal notes of Galliano and the floral sweetness of rose syrup. This cocktail hails from the American/Internet Bar del Pozzo in Pavia, Italy, showcasing a blend of flavors that is both refreshing and aromatic.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Combine peach vodka, lemon juice, Galliano, and rose syrup in a shaker.",
+      "Shake well to mix and chill the ingredients.",
+      "Strain into a chilled coupe glass and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Peach Vodka",
+        "category": "spirit",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Galliano",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 25,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Rose Syrup",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            105,
+            180
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Godmother",
+    "description": "The Godmother cocktail is a delightful blend of vodka and amaretto, offering a smooth and slightly sweet flavor profile. This drink is a variation of the classic Godfather, substituting vodka for whiskey, making it a popular choice for those who prefer a lighter spirit. Its origins can be traced back to the mid-20th century, reflecting the cocktail culture's evolution during that time.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Pour vodka and amaretto into an old-fashioned glass over ice.",
+      "Serve immediately."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 28,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.3,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Godfather",
+    "description": "The Godfather cocktail is a classic drink that combines the smoky flavors of Scotch whisky with the sweet, nutty notes of Amaretto. This cocktail is said to have been popularized in the 1970s, possibly inspired by the iconic film of the same name. It's a simple yet sophisticated drink that appeals to both whisky lovers and those who enjoy a sweeter profile.",
+    "glass_type": "rocks",
+    "method": "stirred",
+    "instructions": [
+      "Pour all ingredients directly into an old fashioned glass filled with ice cubes.",
+      "Stir gently."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Scotch",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 28,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            165,
+            42,
+            42
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gluehwein",
+    "description": "Gluehwein, or mulled wine, is a traditional German beverage enjoyed during the winter months, especially around Christmas. It combines red wine with various spices and citrus, creating a warm, aromatic drink that is perfect for cold evenings. The process of mulling wine dates back centuries, with roots in ancient Rome, where wine was often spiced and heated for health benefits and enjoyment.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Boil sugar and spices in water, leave in the water for 30 minutes.",
+      "Strain the spiced water and mix with the wine.",
+      "Heat slowly until short of boiling temperature.",
+      "To remove alcohol, let it boil for a while.",
+      "You may add lemon or orange juice to taste.",
+      "Serve in an Irish coffee cup."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Red wine",
+        "category": "spirit",
+        "volume_ml": 1000,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 125,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "category": "spice",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cloves",
+        "category": "spice",
+        "volume_ml": 3,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon peel",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gin Tonic",
+    "description": "The Gin Tonic is a classic cocktail that has been enjoyed for centuries, originating from the British colonial era when gin was mixed with tonic water to combat malaria. This refreshing drink combines the botanical flavors of gin with the crispness of tonic water, making it a favorite for warm weather and social gatherings.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a highball glass with ice.",
+      "Pour the gin over the ice.",
+      "Top with tonic water.",
+      "Squeeze a lemon wedge over the drink and garnish with another lemon wedge."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 40,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tonic Water",
+        "category": "modifier",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Peel",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gin Toddy",
+    "description": "The Gin Toddy is a delightful twist on the classic hot toddy, traditionally made with whiskey. This refreshing cocktail combines the botanical notes of gin with the sweetness of powdered sugar and a hint of citrus from lemon peel. It's a perfect drink for those who enjoy a lighter, more aromatic beverage.",
+    "glass_type": "rocks",
+    "method": "stirred",
+    "instructions": [
+      "Mix powdered sugar and water in an old-fashioned glass.",
+      "Add gin and one ice cube.",
+      "Stir, add the twist of lemon peel, and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 30
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            240,
+            240,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "syrup",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon peel",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gin Smash",
+    "description": "The Gin Smash is a refreshing cocktail that dates back to the 19th century, combining the botanical flavors of gin with the sweetness of sugar and the freshness of mint. This drink is a delightful way to enjoy gin, especially during warm weather, and showcases the classic technique of muddling to release the flavors of fresh ingredients.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Muddle sugar with carbonated water and mint sprigs in an old-fashioned glass.",
+      "Add gin and 1 ice cube.",
+      "Stir, add the orange slice and the cherry, and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 30
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Carbonated water",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Mint",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange slice",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cherry",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gin Daisy",
+    "description": "The Gin Daisy is a classic cocktail that dates back to the late 19th century, showcasing the refreshing combination of gin and citrus. This drink is a delightful balance of sweet and tart flavors, making it a perfect choice for warm weather or any festive occasion. The addition of grenadine adds a beautiful hue and a touch of sweetness, while the garnish of cherry and orange slice enhances its visual appeal.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "In a shaker half-filled with ice cubes, combine the gin, lemon juice, sugar, and grenadine.",
+      "Shake well.",
+      "Pour into an old-fashioned glass and garnish with the cherry and the orange slice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Superfine Sugar",
+        "category": "syrup",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino cherry",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange slice",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 3,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gin Lemon",
+    "description": "The Gin Lemon is a refreshing cocktail that combines the crispness of gin with the tartness of lemon juice, making it a perfect drink for warm weather. This cocktail is simple yet elegant, often garnished with a slice of lemon and sometimes enhanced with fresh mint leaves for an aromatic touch. Its origins can be traced back to classic gin cocktails, where the bright flavors of citrus were used to complement the botanicals in gin.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill the highball glass with ice cubes.",
+      "Pour the gin and lemon juice over the ice.",
+      "Gently mix the ingredients.",
+      "Garnish with a slice of lemon and optionally add mint leaves."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 80,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Peel",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gin Sling",
+    "description": "The Gin Sling is a refreshing cocktail that combines the botanical notes of gin with the tartness of lemon and the sweetness of sugar. This drink has its roots in the classic sling family of cocktails, which date back to the 19th century. The addition of orange peel adds a fragrant twist, making it a delightful choice for warm weather.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Dissolve powdered sugar in a mixture of water and lemon juice.",
+      "Add gin to the mixture.",
+      "Pour into an old-fashioned glass over ice cubes.",
+      "Stir gently.",
+      "Add a twist of orange peel and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Peel",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Greyhound",
+    "description": "The Greyhound is a classic cocktail that dates back to the 1920s, originally served in a highball glass. It combines the clean, crisp flavor of vodka with the tartness of grapefruit juice, making it a refreshing choice for warm weather. The drink's name is said to be inspired by the Greyhound bus line, symbolizing speed and travel.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Add the vodka to a Collins glass filled with ice.",
+      "Top with grapefruit juice and stir."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grapefruit Juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gin Rickey",
+    "description": "The Gin Rickey is a classic cocktail that dates back to the late 19th century, named after Colonel Joe Rickey, a Washington D.C. lobbyist. This refreshing drink combines the crispness of gin with the tartness of citrus and a splash of soda, making it a perfect thirst-quencher for warm days.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Half-fill a tall glass with ice.",
+      "Mix the gin and grenadine together and pour over the ice.",
+      "Add the lime or lemon juice.",
+      "Top off with soda water.",
+      "Decorate the glass with lime and/or lemon slices."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda Water",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gin Squirt",
+    "description": "The Gin Squirt is a refreshing cocktail that combines the botanical notes of gin with the sweetness of grenadine and powdered sugar, topped off with bubbly carbonated water. This drink is perfect for warm days and is often garnished with fresh fruit, adding a tropical flair to its presentation.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Stir gin, grenadine, and powdered sugar with ice.",
+      "Strain into a highball glass over ice cubes.",
+      "Fill with carbonated water and stir.",
+      "Decorate with pineapple chunks and strawberries, then serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "modifier",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Carbonated water",
+        "category": "modifier",
+        "volume_ml": 200,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple chunks",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Strawberries",
+        "category": "juice",
+        "volume_ml": 20,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 3.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Grand Blue",
+    "description": "The Grand Blue is a vibrant cocktail that combines the tropical flavors of Malibu rum and peach schnapps with the striking color of Blue Curacao. This refreshing drink is perfect for summer gatherings or beach parties, evoking the essence of a sunny day by the ocean.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Pour the Malibu rum into the old fashioned glass.",
+      "Add the peach schnapps.",
+      "Pour in the Blue Curacao.",
+      "Top with sweet and sour mix."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Malibu rum",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 21,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Peach schnapps",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blue Curacao",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            102,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet and sour",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gin Cooler",
+    "description": "The Gin Cooler is a refreshing cocktail that combines the botanical flavors of gin with the effervescence of carbonated water. This drink is perfect for warm weather, offering a light and invigorating experience. The addition of citrus peels enhances the aroma, making it a delightful choice for any occasion.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Stir powdered sugar and 60 ml carbonated water in a collins glass.",
+      "Fill glass with ice and add 60 ml gin.",
+      "Fill with carbonated water and stir.",
+      "Add the lemon peel and the orange spiral so that the end of the orange spiral dangles over the rim of the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Carbonated water",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange spiral",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon peel",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gin Swizzle",
+    "description": "The Gin Swizzle is a refreshing cocktail that combines the bright acidity of lime juice with the herbal notes of gin, creating a delightful drink perfect for warm weather. Originating from the Caribbean, the swizzle method involves stirring with ice to chill and dilute the drink, resulting in a frosty finish.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "In a shaker half-filled with ice cubes, combine the lime juice, sugar, gin, and bitters.",
+      "Shake well.",
+      "Almost fill a highball glass with ice cubes.",
+      "Stir until the glass is frosted.",
+      "Strain the mixture from the shaker into the glass.",
+      "Add the club soda."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Superfine Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Club soda",
+        "category": "modifier",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Grass Skirt",
+    "description": "The Grass Skirt is a tropical cocktail that embodies the spirit of summer with its fruity flavors and vibrant colors. Originating from tiki culture, this drink combines gin with the sweetness of triple sec and pineapple juice, creating a refreshing escape reminiscent of a beachside paradise.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "In a shaker half-filled with ice cubes, combine the gin, triple sec, pineapple juice, and grenadine.",
+      "Shake well.",
+      "Pour into an old-fashioned glass and garnish with the pineapple slice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple slice",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Grasshopper",
+    "description": "The Grasshopper is a classic cocktail that dates back to the 1920s, originally created in New Orleans. This vibrant green drink is a delightful blend of mint and chocolate flavors, making it a popular choice for dessert cocktails. Its creamy texture and refreshing taste have made it a staple in cocktail culture.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Pour ingredients into a cocktail shaker with ice.",
+      "Shake briskly and then strain into a chilled cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Green Creme de Menthe",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "White Creme de Cacao",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 6,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light cream",
+        "category": "modifier",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Grim Reaper",
+    "description": "The Grim Reaper cocktail is a bold and striking drink that combines the rich coffee flavor of Kahlua with the intense potency of Bacardi 151. The addition of grenadine not only adds a sweet touch but also creates a visually stunning red tint over the ice, reminiscent of a dark and mysterious theme. This cocktail is perfect for those who dare to embrace the darker side of mixology.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Mix Kahlua and Bacardi 151 in an old-fashioned glass.",
+      "Quickly add ice to the glass.",
+      "Pour grenadine over the ice to give it a red tint."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bacardi 151 proof rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 75.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.0,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Gin and Soda",
+    "description": "The Gin and Soda is a classic highball cocktail that combines the crispness of gin with the refreshing effervescence of soda water. This drink is perfect for warm weather and is often garnished with a lime wedge to enhance its zesty flavor. Its simplicity and refreshing qualities have made it a favorite among cocktail enthusiasts for generations.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour the Gin and Soda water into a highball glass almost filled with ice cubes.",
+      "Stir well.",
+      "Garnish with the lime wedge."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            240,
+            240,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda Water",
+        "category": "modifier",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime",
+        "category": "juice",
+        "volume_ml": 7,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -1,9 +1,15 @@
-# Python 忽略项
-.venv/
-__pycache__/
-.idea/
-*.db
+# Python Backend
+backend/.venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
 
-# Node.js / 前端忽略项
-cocktail-app/node_modules/
-cocktail-app/.expo/
+# React Native / Expo Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+
+# OS generated files
+.DS_Store
+Thumbs.db

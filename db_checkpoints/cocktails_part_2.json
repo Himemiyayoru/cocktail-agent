@@ -1,0 +1,131 @@
+[
+  {
+    "name": "252",
+    "description": "The 252 is a potent shot that combines the high-proof Bacardi 151 with the bold flavor of Wild Turkey bourbon. This cocktail is designed for those looking for a quick and intense experience, often consumed in a single gulp. Its origins are rooted in the party scene, where quick shots are favored for their immediate effects.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Add both ingredients to shot glass.",
+      "Shoot and enjoy responsibly."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Bacardi 151 proof rum",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 75.5,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Wild Turkey",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 50.5,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "24k nightmare",
+    "description": "The 24k Nightmare is a potent shot that combines the fiery cinnamon flavor of Goldschlager with the herbal complexity of Jägermeister and the minty kick of Rumple Minze, all rounded off by the high-proof Bacardi 151. This cocktail is not for the faint of heart, delivering a bold experience that is both sweet and intense, perfect for those looking to make a statement.",
+    "glass_type": "shot",
+    "method": "shaken",
+    "instructions": [
+      "Add all ingredients into a shaker filled with ice.",
+      "Shake well to combine and chill.",
+      "Strain into a shot glass and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 30
+    },
+    "components": [
+      {
+        "ingredient_name": "Goldschlager",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 43.5,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            215,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Jägermeister",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 25,
+          "ph": 4.0,
+          "opacity": 0.4,
+          "color_rgb": [
+            0,
+            100,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Rumple Minze",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 50,
+          "brix": 20,
+          "ph": 5.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bacardi 151 proof rum",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 75.5,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  }
+]

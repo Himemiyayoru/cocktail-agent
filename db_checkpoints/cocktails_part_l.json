@@ -1,0 +1,1865 @@
+[
+  {
+    "name": "Limeade",
+    "description": "Limeade is a refreshing beverage that has roots in the classic lemonade, but with a zesty twist from fresh limes. This drink is perfect for hot summer days and is often enjoyed as a non-alcoholic option at gatherings. The combination of tart lime juice and sweet sugar creates a delightful balance, while the effervescence of seltzer water adds a refreshing sparkle.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "In a large glass, put the lime juice and sugar, and stir well.",
+      "Add cold seltzer water to fill the glass.",
+      "Put the lime peels in the glass.",
+      "Drink and repeat until limes or soda run out."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Seltzer Water",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Peel",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lunch Box",
+    "description": "The Lunch Box cocktail is a playful and refreshing drink that combines the crispness of beer with the sweetness of orange juice and the nutty flavor of Amaretto. This drink is often enjoyed during casual gatherings and is known for its fun presentation, where the shot is dropped into the beer, creating a delightful mix of flavors.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a pint glass almost full with beer.",
+      "Carefully add orange juice to fill the glass, leaving some space at the top.",
+      "Take the shot of Amaretto and drop it into the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Beer",
+        "category": "spirit",
+        "volume_ml": 450,
+        "physics_baseline": {
+          "abv": 5,
+          "brix": 2,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 28,
+          "brix": 30,
+          "ph": 5.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lemon Drop",
+    "description": "The Lemon Drop is a classic cocktail that emerged in the 1970s, known for its refreshing citrus flavor and sweet rim. It combines the sharpness of lemon with the smoothness of vodka and the orange notes of Cointreau, making it a favorite for those who enjoy a balance of sweet and tart.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Rim a chilled cocktail glass with sugar.",
+      "Shake the vodka, Cointreau, and lemon juice with ice.",
+      "Strain into the prepared cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cointreau",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lemon Shot",
+    "description": "The Lemon Shot is a vibrant and playful cocktail that combines the herbal sweetness of Galliano with the zesty brightness of Absolut Citron. Topped with a sugared lemon wedge and a flaming layer of high-proof rum, this shot is designed to be consumed quickly, offering a burst of sweet lemonade flavor that tantalizes the taste buds. This cocktail is perfect for parties and celebrations, bringing a fun twist to traditional shots.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Mix Galliano and Absolut Citron in a shot glass.",
+      "Lay a lemon wedge sprinkled with sugar over the glass.",
+      "Pour 151 proof rum over the wedge and glass.",
+      "Light the rum with a lighter and let it burn for a second.",
+      "Do the shot quickly and suck on the lemon."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Galliano",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 25,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Absolut Citron",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 5,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon wedge",
+        "category": "modifier",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bacardi Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "151 proof rum",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 75.5,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Long Vodka",
+    "description": "The Long Vodka is a refreshing cocktail that combines the clean taste of vodka with the zesty brightness of lime and the effervescence of tonic water. This drink is a modern classic, perfect for warm weather and social gatherings, showcasing the versatility of vodka as a base spirit.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Shake a tall glass with ice cubes and Angostura bitters, coating the inside of the glass.",
+      "Pour the vodka into the glass.",
+      "Add 1 slice of lime and squeeze juice from the remainder into the glass.",
+      "Mix with tonic water and stir."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura bitters",
+        "category": "modifier",
+        "volume_ml": 4,
+        "physics_baseline": {
+          "abv": 44.7,
+          "brix": 20,
+          "ph": 4,
+          "opacity": 0.2,
+          "color_rgb": [
+            100,
+            50,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Schweppes Tonic water",
+        "category": "syrup",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ice",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lassi Khara",
+    "description": "Lassi Khara is a savory Indian yogurt drink that combines the cooling properties of yogurt with the aromatic flavors of spices and herbs. Traditionally enjoyed in the hot summer months, this refreshing beverage is often served alongside spicy meals to balance the heat. The addition of curry leaves and asafoetida gives it a unique twist, making it a delightful accompaniment to any Indian feast.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Blend the yogurt and cold water in a blender until frothy.",
+      "Add torn curry leaves and serve cold."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Yoghurt",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cold Water",
+        "category": "modifier",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Salt",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Asafoetida",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lassi Raita",
+    "description": "Lassi Raita is a refreshing yogurt-based drink that hails from the Indian subcontinent. Traditionally enjoyed during the hot summer months, it serves as a cooling accompaniment to spicy dishes or can be enjoyed on its own. The addition of lime adds a delightful tartness, while the sugar balances the flavors, making it a perfect summer treat.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Blend the yoghurt and ice cubes together until the yoghurt becomes more liquid.",
+      "Add sugar to taste.",
+      "Optionally, add lime for a slightly tart taste.",
+      "Add a dash of salt."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Yoghurt",
+        "category": "modifier",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 4.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ice",
+        "category": "modifier",
+        "volume_ml": 180,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Salt",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lemouroudji",
+    "description": "The Lemouroudji is a refreshing beverage that combines the zesty brightness of lemon with the spicy kick of ginger and cayenne pepper. This drink is inspired by traditional herbal infusions, where ingredients are steeped to extract their flavors, creating a unique and invigorating experience.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Juice the lemons.",
+      "Peel and grate the ginger.",
+      "Place the grated ginger and a liberal dash of cayenne pepper into a piece of cheesecloth, and tie it into a knot.",
+      "Let soak in the water for 15 minutes.",
+      "Add the sugar and lemon juice.",
+      "Chill, and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Ginger",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 3785,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 65,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cayenne Pepper",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Loch Lomond",
+    "description": "The Loch Lomond is a classic cocktail that beautifully marries the smoky notes of Scotch whisky with the sweetness of Drambuie and the herbal complexity of dry vermouth. Named after the picturesque Scottish lake, this drink evokes the spirit of Scotland in every sip.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "In a mixing glass half-filled with ice cubes, combine the Scotch, Drambuie, and vermouth.",
+      "Stir well.",
+      "Strain into a cocktail glass.",
+      "Garnish with the lemon twist."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Scotch",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            178,
+            134,
+            82
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Drambuie",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon peel",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "London Town",
+    "description": "The London Town cocktail is a classic drink that showcases the elegance of gin combined with the sweetness of Maraschino liqueur and the aromatic complexity of orange bitters. This cocktail is a nod to the sophisticated drinking culture of London, where gin has long been a favored spirit. Its refreshing yet nuanced flavor profile makes it a timeless choice for cocktail enthusiasts.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "In a mixing glass half-filled with ice cubes, combine all of the ingredients.",
+      "Stir well.",
+      "Strain into a cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino liqueur",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 32,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            228,
+            225
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 45,
+          "brix": 0,
+          "ph": 3,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lassi - Mango",
+    "description": "The Mango Lassi is a traditional Indian drink that combines the creamy texture of yogurt with the sweetness of ripe mangoes. This refreshing beverage is often enjoyed during the hot summer months and is known for its cooling properties. It can also be adapted with various fruits like strawberries and bananas for a delightful twist.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Put the mango, yogurt, sugar, and iced water in a blender.",
+      "Blend until smooth and creamy.",
+      "Pour over crushed ice in a highball glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Mango",
+        "category": "fruit",
+        "volume_ml": 300,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Yoghurt",
+        "category": "modifier",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 4.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Iced Water",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            173,
+            216,
+            230
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lassi - Sweet",
+    "description": "Lassi is a traditional Indian yogurt-based drink that has been enjoyed for centuries. This sweet version is a refreshing blend of yogurt, sugar, and lemon juice, perfect for cooling down on a hot day. Its frothy texture and sweet flavor make it a delightful accompaniment to spicy meals.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Put all ingredients into a blender.",
+      "Blend until nice and frothy.",
+      "Serve chilled."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Yoghurt",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cold Water",
+        "category": "modifier",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Salt",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Limona Corona",
+    "description": "The Limona Corona is a playful twist on the classic beer cocktail, combining the refreshing taste of Corona with the zesty notes of Bacardi Limon rum. This drink is perfect for summer gatherings, offering a unique way to enjoy beer with a citrusy kick. The method of mixing directly in the bottle adds an element of fun and surprise, making it a favorite among party-goers.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Open the Corona.",
+      "Fill the empty space in the neck of the bottle with Bacardi Limon.",
+      "Plug the bottle with your thumb or the palm of your hand.",
+      "Turn the bottle upside-down to mix the rum and beer.",
+      "Turn the bottle rightside-up, unplug, and drink."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Corona",
+        "category": "beer",
+        "volume_ml": 355,
+        "physics_baseline": {
+          "abv": 4.6,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bacardi Limon",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lord And Lady",
+    "description": "The Lord And Lady cocktail is a delightful blend of dark rum and Tia Maria, a coffee liqueur that adds depth and richness to the drink. This cocktail is perfect for those who appreciate the complex flavors of rum paired with the smooth, sweet notes of coffee. Traditionally served in an old-fashioned glass, it embodies a classic elegance that has stood the test of time.",
+    "glass_type": "rocks",
+    "method": "stirred",
+    "instructions": [
+      "Pour the dark rum and Tia Maria into an old-fashioned glass almost filled with ice cubes.",
+      "Stir well."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Dark rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            70,
+            30,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tia Maria",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 5.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            50,
+            25,
+            20
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lady Love Fizz",
+    "description": "The Lady Love Fizz is a delightful cocktail that combines the refreshing qualities of gin with the creamy texture of light cream and the zesty brightness of lemon. This cocktail is a classic example of the fizz category, which became popular in the late 19th century, showcasing the balance of spirits and aeration from carbonated water. The addition of egg white gives it a smooth mouthfeel and a frothy top, making it a favorite among cocktail enthusiasts.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients (except carbonated water) with ice.",
+      "Strain into a cocktail glass over two ice cubes.",
+      "Fill with carbonated water, stir, and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 60
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light cream",
+        "category": "modifier",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            240,
+            220
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg white",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Carbonated water",
+        "category": "modifier",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Long Island Tea",
+    "description": "The Long Island Tea is a classic cocktail that emerged in the 1970s, known for its potent mix of spirits that create a surprisingly refreshing drink despite its high alcohol content. Its name is a misnomer, as it contains no tea; rather, it is a blend of several spirits topped with a splash of cola for color, reminiscent of iced tea.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Combine all ingredients (except cola) in a highball glass.",
+      "Pour over ice.",
+      "Add a splash of Coca-Cola for color.",
+      "Decorate with a slice of lemon and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tequila",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coca-Cola",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 2.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lone Tree Cooler",
+    "description": "The Lone Tree Cooler is a refreshing cocktail that embodies the spirit of summer with its light and bubbly nature. Originating from the classic Collins family of drinks, it combines the crispness of gin and dry vermouth with the effervescence of carbonated water, making it a perfect choice for warm days. The addition of citrus twists adds a fragrant aroma and a touch of elegance.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Stir powdered sugar and 60 ml of carbonated water in a Collins glass.",
+      "Fill the glass with ice.",
+      "Add 60 ml of gin and 60 ml of dry vermouth, and stir.",
+      "Fill with carbonated water and stir again.",
+      "Add the twist of lemon peel and the orange spiral so that the end dangles over the rim of the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Carbonated water",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            230,
+            230,
+            230
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            200,
+            200,
+            200
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange spiral",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon peel",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lone Tree Cocktail",
+    "description": "The Lone Tree Cocktail is a classic drink that embodies the elegance of the early 20th century cocktail culture. With its harmonious blend of sweet vermouth and gin, it offers a refreshing yet sophisticated experience, perfect for any occasion.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "Stir ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Sweet Vermouth",
+        "category": "liqueur",
+        "volume_ml": 22,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 15,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lazy Coconut Paloma",
+    "description": "The Lazy Coconut Paloma is a refreshing twist on the classic Paloma, combining the tropical sweetness of coconut liqueur with the tartness of grapefruit juice. This cocktail is perfect for warm days, evoking a laid-back beach vibe with every sip. The addition of soda water adds a fizzy lift, making it a delightful choice for those looking to unwind.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour the coconut liqueur into a highball glass.",
+      "Add the grapefruit juice.",
+      "Top with soda water.",
+      "Garnish with a large grapefruit slice against the inside of the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Coconut Liqueur",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 20,
+          "ph": 5.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grapefruit Juice",
+        "category": "juice",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda Water",
+        "category": "modifier",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Long Island Iced Tea",
+    "description": "The Long Island Iced Tea is a classic cocktail that originated in the 1970s in Long Island, New York. Despite its name, it contains no tea; instead, it combines a variety of spirits and is topped with a splash of cola for color. This drink is known for its potent mix of alcohol and refreshing citrus notes, making it a popular choice for summer gatherings.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix all contents in a highball glass.",
+      "Stir gently.",
+      "Add a dash of Coca-Cola for coloring.",
+      "Garnish with a twist of lemon or lime peel."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tequila",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coca-Cola",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon peel",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lemon Elderflower Spritzer",
+    "description": "The Lemon Elderflower Spritzer is a refreshing cocktail that combines the floral notes of elderflower with the zesty brightness of lemon. This drink is perfect for warm weather and is often enjoyed as a light and bubbly option at gatherings. The elderflower cordial adds a unique sweetness that complements the crispness of the vodka and soda water, making it a delightful choice for any occasion.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour elderflower cordial into the highball glass.",
+      "Add vodka to the glass.",
+      "Pour soda water over the mixture.",
+      "Top with fresh lemon juice.",
+      "Stir gently and enjoy!"
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Elderflower cordial",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda Water",
+        "category": "modifier",
+        "volume_ml": 110,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Fresh Lemon Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Lassi - A South Indian Drink",
+    "description": "Lassi is a traditional South Indian drink made from buttermilk, which is yogurt whisked with water. It is known for its refreshing qualities and can be enjoyed in various consistencies, from thin to thick. This drink is often flavored with spices like cumin and mint, making it a delightful accompaniment to spicy meals.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Blend the plain yogurt and cold water together for 3 seconds.",
+      "Add ground roasted cumin seed, salt, and dried mint to the mixture.",
+      "Blend again briefly to combine all ingredients.",
+      "Serve cold in a highball glass."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Plain Yoghurt",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 4.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cold Water",
+        "category": "modifier",
+        "volume_ml": 375,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ground Roasted Cumin Seed",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Salt",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dried Mint",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            34,
+            139,
+            34
+          ]
+        }
+      }
+    ]
+  }
+]

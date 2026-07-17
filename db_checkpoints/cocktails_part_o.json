@@ -1,0 +1,1211 @@
+[
+  {
+    "name": "Orgasm",
+    "description": "The Orgasm cocktail is a delightful blend of creamy liqueurs and spirits that creates a rich and indulgent experience. Originating in the mid-20th century, this cocktail is often enjoyed for its smooth texture and sweet flavor profile, making it a popular choice for dessert or as a luxurious treat.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a chilled cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "white Creme de Cacao",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 6.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 24,
+          "brix": 35,
+          "ph": 5.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 25,
+          "ph": 4.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Light cream",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            224
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Old Pal",
+    "description": "The Old Pal is a classic cocktail that dates back to the early 20th century, often associated with the Prohibition era. It combines the bold flavors of rye whiskey with the bitter notes of Campari and the herbal complexity of dry vermouth, creating a balanced and sophisticated drink. The cocktail is typically served in a Nick and Nora glass, making it a stylish choice for any occasion.",
+    "glass_type": "nicknora",
+    "method": "stirred",
+    "instructions": [
+      "Chill the Nick and Nora glass.",
+      "Add rye whiskey, Campari, and dry vermouth to a mixing glass.",
+      "Fill the mixing glass 2/3 full with ice.",
+      "Stir for about 20 seconds.",
+      "Empty the chilled cocktail glass and strain the mixture into the glass.",
+      "Garnish with a twist of lemon peel."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Rye whiskey",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.1,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Campari",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 4,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Old Cuban",
+    "description": "The Old Cuban is a delightful cocktail that marries the refreshing qualities of mint and lime with the effervescence of Prosecco. Originating from the vibrant cocktail culture of Cuba, this drink is a modern classic that showcases the elegance of rum and the sophistication of sparkling wine. Its origins can be traced back to the early 2000s, crafted by renowned mixologist Audrey Saunders, who sought to create a drink that embodies the spirit of celebration.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake a handful of mint with 60ml white rum, 30ml sugar syrup, 30ml lime juice, and 2ml angostura bitters with ice.",
+      "Double strain into a coupe glass.",
+      "Top with 60ml of prosecco."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "White Rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar Syrup",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura Bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 44,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            128,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Prosecco",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 11,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Orangeade",
+    "description": "Orangeade is a refreshing beverage that combines the tartness of lemon juice with the sweetness of orange juice, creating a delightful drink perfect for warm days. This drink has roots in classic lemonade recipes but has evolved to incorporate the vibrant flavor of oranges, making it a popular choice in summer gatherings and picnics.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Place some ice cubes in a highball glass.",
+      "Add lemon juice, orange juice, and sugar syrup to the glass.",
+      "Stir well to combine the ingredients.",
+      "Top up with cold soda water.",
+      "Serve with a drinking straw."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar syrup",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda water",
+        "category": "modifier",
+        "volume_ml": 200,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Orange Whip",
+    "description": "The Orange Whip is a delightful cocktail that combines the refreshing taste of orange juice with the smoothness of rum and vodka, topped off with a creamy finish. This drink gained popularity in the 1970s and is often associated with beachside relaxation and summer vibes.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour orange juice, rum, vodka, and cream over ice in a Collins glass.",
+      "Stir gently to combine the ingredients."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cream",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Orange Crush",
+    "description": "The Orange Crush is a vibrant and refreshing shot that combines the zesty flavors of orange juice with the kick of vodka and the sweetness of triple sec. This cocktail is a favorite at parties and bars, known for its bright color and fruity taste, making it a perfect choice for those looking to enjoy a burst of citrus in a single gulp.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Add all ingredients to a tumbler.",
+      "Pour as a shot."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Orange Oasis",
+    "description": "The Orange Oasis is a refreshing cocktail that combines the rich flavors of cherry brandy and gin with the vibrant zest of orange juice, topped off with a splash of ginger ale. This drink is perfect for warm days, evoking a sense of tropical paradise with every sip.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Shake cherry brandy, gin, and orange juice with ice.",
+      "Strain into a highball glass over ice cubes.",
+      "Fill with ginger ale, stir, and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Cherry brandy",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 20,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            200,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger ale",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 8,
+          "ph": 3.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Old Fashioned",
+    "description": "The Old Fashioned is a classic cocktail that dates back to the early 19th century. It is known for its simplicity and elegance, combining the rich flavors of bourbon with the sweetness of sugar and the aromatic complexity of bitters. This cocktail has stood the test of time and remains a favorite among cocktail enthusiasts.",
+    "glass_type": "rocks",
+    "method": "stirred",
+    "instructions": [
+      "Place sugar cube in old fashioned glass and saturate with bitters.",
+      "Add a dash of plain water and muddle until dissolved.",
+      "Fill the glass with ice cubes.",
+      "Add bourbon."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Bourbon",
+        "category": "spirit",
+        "volume_ml": 135,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Angostura bitters",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 44.7,
+          "brix": 20,
+          "ph": 3.0,
+          "opacity": 0.1,
+          "color_rgb": [
+            101,
+            67,
+            33
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "syrup",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Oreo Mudslide",
+    "description": "The Oreo Mudslide is a decadent dessert cocktail that combines the rich flavors of vodka, coffee liqueur, and Irish cream with the nostalgic taste of Oreo cookies and vanilla ice cream. This indulgent drink is perfect for those who enjoy a sweet treat with a kick, and it has become a popular choice in bars and restaurants alike.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Blend Vodka, Kahlua, Bailey's, ice cream, and the Oreo well in a blender.",
+      "Pour into a large frosted glass.",
+      "Garnish with whipped cream and a cherry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla Ice Cream",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            250,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Oreo Cookie",
+        "category": "modifier",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 50,
+          "ph": 6,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Oatmeal Cookie",
+    "description": "The Oatmeal Cookie shot is a delightful blend of flavors reminiscent of the beloved dessert. Combining the rich coffee notes of Kahlua, the creamy sweetness of Baileys, and the buttery essence of Butterscotch schnapps, this drink is a treat for the senses. Originally intended as a shot, it can also be enjoyed as a full-sized cocktail over ice for a more leisurely experience.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Combine Kahlua, Baileys, Butterscotch schnapps, Jagermeister, and Goldschlager in a mixing glass.",
+      "Stir gently to mix the ingredients thoroughly.",
+      "Pour into a shot glass or serve over ice in a larger glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Kahlua",
+        "category": "liqueur",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            111,
+            78,
+            55
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Butterscotch Schnapps",
+        "category": "liqueur",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 40,
+          "ph": 5.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            204,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Jagermeister",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 25,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            51,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Goldschlager",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 43,
+          "brix": 20,
+          "ph": 4.5,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            215,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Orange Push-up",
+    "description": "The Orange Push-up is a delightful tropical cocktail that combines the flavors of spiced rum and orange juice, reminiscent of a classic summer treat. This refreshing drink is blended to perfection, making it a smooth and enjoyable experience that truly melts in your mouth. Perfect for warm days and festive gatherings, it’s garnished with a cheerful orange and cherry flag.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Combine liquors in a blender.",
+      "Add a half scoop of ice and blend.",
+      "Garnish with an orange and cherry flag."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Spiced rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sour mix",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Orange Rosemary Collins",
+    "description": "The Orange Rosemary Collins is a refreshing twist on the classic Tom Collins, incorporating the aromatic essence of rosemary and the bright flavors of orange and lemon. This cocktail is perfect for warm weather, offering a delightful balance of herbal and citrus notes. The addition of rosemary syrup elevates the drink, making it a unique choice for those looking to explore new flavor combinations.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Add the gin to the bottom of the highball glass.",
+      "Pour in the rosemary syrup.",
+      "Top equally with orange juice and lemon juice.",
+      "Finish by topping with soda water.",
+      "Garnish with orange slices and a sprig of rosemary."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            240,
+            240,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Rosemary Syrup",
+        "category": "syrup",
+        "volume_ml": 25,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 5.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            200,
+            200,
+            150
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda Water",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Orange Scented Hot Chocolate",
+    "description": "This delightful beverage combines the rich flavors of bittersweet chocolate with the aromatic essence of orange, creating a warm and comforting drink perfect for chilly evenings. The process of whisking and heating not only enhances the texture but also brings out the vibrant flavors, making it a favorite among chocolate lovers.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Combine all ingredients in a heavy medium saucepan.",
+      "Stir over low heat until chocolate melts.",
+      "Increase heat and bring just to a boil, stirring often.",
+      "Remove from heat and whisk until frothy.",
+      "Return to heat and bring to boil again.",
+      "Remove from heat, whisk until frothy.",
+      "Repeat heating and whisking once again.",
+      "Discard orange peel.",
+      "Pour hot chocolate into coffee mugs."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Milk",
+        "category": "juice",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bittersweet Chocolate",
+        "category": "spirit",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 50,
+          "ph": 5.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            70,
+            40,
+            30
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange Peel",
+        "category": "modifier",
+        "volume_ml": 6,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Instant Espresso",
+        "category": "syrup",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ground Nutmeg",
+        "category": "modifier",
+        "volume_ml": 0.5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Owen's Grandmother's Revenge",
+    "description": "Owen's Grandmother's Revenge is a playful concoction that combines the boldness of whiskey with the refreshing qualities of beer and frozen lemonade. This drink is a testament to the creativity of home bartenders, blending flavors that evoke nostalgia and fun gatherings. Perfect for summer parties or a casual get-together, this cocktail is sure to leave a lasting impression.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Add whiskey, beer, and frozen lemonade into the blender.",
+      "Add crushed ice and blend until smooth."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Whiskey",
+        "category": "spirit",
+        "volume_ml": 360,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Beer",
+        "category": "spirit",
+        "volume_ml": 360,
+        "physics_baseline": {
+          "abv": 5,
+          "brix": 5,
+          "ph": 4,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Frozen Lemonade",
+        "category": "juice",
+        "volume_ml": 360,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 2.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Crushed Ice",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,2058 @@
+[
+  {
+    "name": "Rose",
+    "description": "The Rose cocktail is a classic drink that beautifully balances the herbal notes of dry vermouth with the botanical flavors of gin and the sweetness of apricot brandy and grenadine. This cocktail has a rich history, often associated with the elegance of the early 20th century cocktail culture, making it a timeless choice for any occasion.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake together dry vermouth, gin, apricot brandy, lemon juice, and grenadine in a cocktail shaker.",
+      "Strain into a chilled coupe glass.",
+      "Garnish and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Dry Vermouth",
+        "category": "spirit",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 5,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            220
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Apricot Brandy",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            200,
+            150
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.0,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered Sugar",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Radler",
+    "description": "The Radler is a refreshing German beverage that combines beer with a citrus soda, traditionally enjoyed during warm weather. Its origins date back to the early 20th century when a Bavarian innkeeper created it for cyclists ('Radler' means 'cyclist' in German) to quench their thirst without getting too intoxicated.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour beer into a highball glass.",
+      "Slowly add the 7-Up (or Sprite)."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Beer",
+        "category": "spirit",
+        "volume_ml": 360,
+        "physics_baseline": {
+          "abv": 5,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "7-Up",
+        "category": "syrup",
+        "volume_ml": 360,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Rum Sour",
+    "description": "The Rum Sour is a delightful twist on the classic sour cocktail, blending the smoothness of light rum with the tartness of fresh lemon juice. This refreshing drink has its roots in the early 20th century, showcasing the versatility of rum in cocktail culture. Traditionally served in a whiskey sour glass, it is often garnished with a slice of orange and a maraschino cherry, adding a touch of color and flavor.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "In a shaker half-filled with ice cubes, combine the light rum, lemon juice, and superfine sugar.",
+      "Shake well to mix and chill the ingredients.",
+      "Strain into a rocks glass and garnish with an orange slice and a maraschino cherry."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Superfine sugar",
+        "category": "syrup",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino cherry",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Rum Punch",
+    "description": "Rum Punch is a classic party drink that combines the tropical flavors of rum with the refreshing zest of fruit juices and ginger ale. This delightful concoction has roots in Caribbean culture, where it is often enjoyed during celebrations and gatherings. Its vibrant colors and fruity taste make it a favorite for summer parties and festive occasions.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix all ingredients in a punch bowl.",
+      "Serve chilled over crushed ice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 200
+    },
+    "components": [
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger ale",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Frozen Fruit punch",
+        "category": "juice",
+        "volume_ml": 355,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Frozen Orange juice",
+        "category": "juice",
+        "volume_ml": 355,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Rum Toddy",
+    "description": "The Rum Toddy is a classic warm cocktail that combines the rich flavors of rum with the sweetness of sugar and the refreshing zest of lemon. Traditionally enjoyed as a comforting drink, it has roots in the early 19th century when hot drinks were popular for their soothing properties. This cocktail is perfect for chilly evenings or as a delightful after-dinner treat.",
+    "glass_type": "rocks",
+    "method": "stirred",
+    "instructions": [
+      "Dissolve powdered sugar in water in an old-fashioned glass.",
+      "Add rum and one ice cube and stir.",
+      "Add the twist of lemon peel and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 28
+    },
+    "components": [
+      {
+        "ingredient_name": "Light or Dark Rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered Sugar",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            0,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Peel",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Royal Fizz",
+    "description": "The Royal Fizz is a delightful cocktail that combines the refreshing qualities of gin with the richness of egg, creating a frothy and invigorating drink. This cocktail is a variation of the classic fizz, which has its roots in the 19th century, known for its effervescence and lively character. The addition of cola adds a unique twist, making it a modern favorite.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients (except cola) with ice and strain into a chilled collins glass.",
+      "Fill with cola and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            240,
+            240,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sweet and sour",
+        "category": "juice",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg",
+        "category": "modifier",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coca-Cola",
+        "category": "soda",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Rum Cooler",
+    "description": "The Rum Cooler is a refreshing cocktail that combines the smoothness of rum with the zesty flavors of lemon-lime soda. This drink is perfect for warm weather and is often enjoyed at beach parties or backyard barbecues. Its origins can be traced back to the classic highball cocktails, where spirits are mixed with soda for a light and effervescent experience.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a Collins glass almost to the top with ice cubes.",
+      "Pour the rum over the ice.",
+      "Add the lemon-lime soda.",
+      "Stir well to combine.",
+      "Garnish with a lemon wedge."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Light or Dark Rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon-lime soda",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon",
+        "category": "juice",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Rum Runner",
+    "description": "The Rum Runner is a tropical cocktail that originated in the Florida Keys during the 1950s. It was named after the rum runners who smuggled alcohol during Prohibition. This vibrant drink combines the flavors of rum and various fruit juices, making it a refreshing choice for warm weather.",
+    "glass_type": "coupe",
+    "method": "build",
+    "instructions": [
+      "Mix all ingredients in a cocktail glass.",
+      "Add ice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Malibu rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 21,
+          "brix": 10,
+          "ph": 4.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blackberry brandy",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            128
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Pineapple juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 3.5,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cranberry juice",
+        "category": "juice",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 2.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            220,
+            20,
+            60
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Rusty Nail",
+    "description": "The Rusty Nail is a classic cocktail that dates back to the 1930s, combining the smoky flavors of Scotch whisky with the sweet, herbal notes of Drambuie. This drink is often enjoyed as a warming nightcap, perfect for sipping by the fire.",
+    "glass_type": "rocks",
+    "method": "stirred",
+    "instructions": [
+      "Pour the Scotch and Drambuie into an old-fashioned glass almost filled with ice cubes.",
+      "Stir well.",
+      "Garnish with the lemon twist."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Scotch",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            221,
+            185
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Drambuie",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon peel",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Red Snapper",
+    "description": "The Red Snapper is a delightful cocktail that combines the smoothness of Crown Royal with the sweet nuttiness of Amaretto and the tartness of cranberry juice. This vibrant drink is perfect for those who enjoy a balanced flavor profile and a touch of sweetness. Its origins are often debated, but it has become a popular choice in bars and gatherings alike.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Combine Crown Royal, Amaretto, and Cranberry juice in a shaker.",
+      "Shake well to mix the ingredients thoroughly.",
+      "Strain into an old-fashioned glass filled with ice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Crown Royal",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 6.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 28,
+          "brix": 30,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cranberry juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 2.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Royal Bitch",
+    "description": "The Royal Bitch is a layered shot that combines the nutty sweetness of Frangelico with the smoothness of Crown Royal. This visually striking shot is perfect for celebrations and adds a touch of elegance to any gathering. The contrasting flavors create a delightful experience for the palate.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Pour Frangelico into a shot glass as the base layer.",
+      "Carefully layer Crown Royal on top of the Frangelico."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Frangelico",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 4.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Crown Royal",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 6.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            215,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Royal Flush",
+    "description": "The Royal Flush is a vibrant cocktail that combines the smoothness of Crown Royal Canadian whisky with the fruity flavors of peach schnapps, Chambord raspberry liqueur, and cranberry juice. This cocktail is a favorite for its refreshing taste and colorful presentation, making it a popular choice at parties and gatherings.",
+    "glass_type": "rocks",
+    "method": "shaken",
+    "instructions": [
+      "Pour all the ingredients into a tumbler over ice.",
+      "Strain into the glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Crown Royal",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 6.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            221,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Peach schnapps",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 3.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Chambord raspberry liqueur",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 16.5,
+          "brix": 35,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            102,
+            0,
+            51
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cranberry juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 2.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Rum Cobbler",
+    "description": "The Rum Cobbler is a refreshing cocktail that dates back to the 19th century, showcasing the versatility of rum. Originally popular in the southern United States, this drink combines the sweetness of sugar and fruit with the effervescence of club soda, making it a delightful choice for warm weather.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "In an old-fashioned glass, dissolve the sugar in the club soda.",
+      "Add crushed ice until the glass is almost full.",
+      "Add the dark rum.",
+      "Stir well.",
+      "Garnish with the cherry and the orange and lemon slices."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Superfine Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Club Soda",
+        "category": "modifier",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Dark Rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            100,
+            50,
+            25
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino Cherry",
+        "category": "modifier",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ruby Tuesday",
+    "description": "The Ruby Tuesday cocktail is a refreshing blend of gin and cranberry juice, with a touch of grenadine for sweetness. This vibrant drink is perfect for any occasion, evoking the spirit of casual gatherings and summer evenings. Its bright color and crisp flavor make it a favorite among cocktail enthusiasts.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour gin and cranberry juice into a highball glass filled with ice cubes.",
+      "Add grenadine and stir gently."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cranberry Juice",
+        "category": "juice",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 12,
+          "ph": 2.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            220,
+            20,
+            60
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 6,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 65,
+          "ph": 3.0,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Rail Splitter",
+    "description": "The Rail Splitter is a refreshing cocktail that combines the sweetness of sugar syrup with the tartness of lemon juice, topped off with the effervescence of ginger ale. This drink is a nod to the rustic charm of the American frontier, evoking images of log cabins and the great outdoors.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Mix sugar syrup with lemon juice in a tall glass.",
+      "Fill up with ginger ale."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Sugar syrup",
+        "category": "syrup",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.3,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Ginger ale",
+        "category": "modifier",
+        "volume_ml": 200,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            223,
+            186
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Rosemary Blue",
+    "description": "The Rosemary Blue is a refreshing cocktail that combines the botanical notes of gin with the vibrant color of Blue Curacao, enhanced by the aromatic essence of rosemary. This drink is perfect for summer evenings, offering a delightful balance of flavors and a stunning visual appeal.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Add the Bombay Sapphire, Blue Curacao, rosemary sprig and gently squeezed lemon wedge to a balloon glass. Swirl well to combine.",
+      "Fill with cubed ice and top with the Fever-Tree Light Tonic Water.",
+      "Gently fold with a bar spoon to mix."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Bombay Sapphire Gin",
+        "category": "spirit",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 47,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            0,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Blue Curacao",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 6,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            0,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Fever-Tree Light Tonic Water",
+        "category": "modifier",
+        "volume_ml": 100,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ramos Gin Fizz",
+    "description": "Ramos Gin Fizz was once drunk as an invigorating drink or even as a breakfast, try it as an aperitif and after dinner and you will discover a little gem now lost.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Prepare all the ingredients on the counter to be able to work well and quickly, especially the cream and egg white.",
+      "Pour all the ingredients into a shaker.",
+      "Shake vigorously for 1 minute: cream and egg white must be mixed perfectly, so don't rush.",
+      "Now open the shaker and put some ice and shake for 1-2 minutes.",
+      "Pour into a highball glass, add a splash of soda and garnish to taste."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 135,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar Syrup",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 65,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cream",
+        "category": "modifier",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg White",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.5,
+          "opacity": 0.1,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla Extract",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 20,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda Water",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Royal Gin Fizz",
+    "description": "The Royal Gin Fizz is a classic cocktail that dates back to the late 19th century, known for its refreshing and effervescent qualities. This drink combines the botanical notes of gin with the tartness of lemon and the richness of egg, creating a delightful balance of flavors. The addition of carbonated water gives it a lively finish, making it a perfect choice for warm weather or festive occasions.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients (except carbonated water) with ice.",
+      "Strain into a highball glass over two ice cubes.",
+      "Fill with carbonated water, stir, and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 60
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            240,
+            240,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg",
+        "category": "modifier",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Carbonated Water",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Rum Milk Punch",
+    "description": "Rum Milk Punch is a classic cocktail that dates back to the 18th century, combining the smoothness of light rum with the creamy texture of milk. Traditionally enjoyed during festive occasions, this drink is often garnished with a sprinkle of nutmeg, adding a warm spice that complements the sweetness of the punch. Its rich history and delightful flavor make it a timeless favorite.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients (except nutmeg) with ice.",
+      "Strain into a Collins glass.",
+      "Sprinkle nutmeg on top and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Nutmeg",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Raspberry Julep",
+    "description": "The Raspberry Julep is a refreshing twist on the classic Mint Julep, incorporating the sweet and tart flavors of raspberries. This cocktail is perfect for warm weather, offering a delightful balance of minty freshness and fruity sweetness. Traditionally served in a cordial glass, it showcases the vibrant colors of its ingredients and is garnished with a sprig of mint for an aromatic finish.",
+    "glass_type": "coupe",
+    "method": "build",
+    "instructions": [
+      "Softly muddle the mint leaves and raspberry syrup in the bottom of the cup.",
+      "Add crushed ice and Bourbon to the cup and then stir.",
+      "Top with more ice and garnish with a mint sprig."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Bourbon",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Raspberry syrup",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Mint leaves",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Rum Screwdriver",
+    "description": "The Rum Screwdriver is a tropical twist on the classic screwdriver cocktail, which traditionally features vodka. This refreshing drink combines the smoothness of light rum with the vibrant citrus notes of orange juice, making it a perfect choice for warm weather or a casual gathering. The origins of the screwdriver date back to the 1940s, but the addition of rum gives it a unique flair that transports you to a beachside paradise.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour light rum into a highball glass over ice cubes.",
+      "Add orange juice.",
+      "Stir gently and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange juice",
+        "category": "juice",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Raspberry Cooler",
+    "description": "The Raspberry Cooler is a refreshing cocktail that combines the fruity essence of raspberry vodka with the effervescence of lemon-lime soda. This drink is perfect for warm days and casual gatherings, offering a delightful balance of sweetness and tartness. Its vibrant color and refreshing taste make it a popular choice among summer cocktails.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a highball glass almost to the top with ice cubes.",
+      "Pour the raspberry vodka over the ice.",
+      "Add the lemon-lime soda.",
+      "Stir well to combine the ingredients."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Raspberry vodka",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 10,
+          "ph": 4.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            127
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon-lime soda",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Rum Old-fashioned",
+    "description": "The Rum Old-fashioned is a tropical twist on the classic Old-fashioned cocktail, traditionally made with whiskey. This version incorporates light rum and a touch of high-proof rum for an added kick, while the bitters and sugar provide a balanced sweetness. The twist of lime peel adds a refreshing citrus aroma, making it a delightful drink for rum enthusiasts.",
+    "glass_type": "rocks",
+    "method": "stirred",
+    "instructions": [
+      "Stir powdered sugar, water, and bitters in an old-fashioned glass until the sugar has dissolved.",
+      "Add ice cubes to the glass.",
+      "Pour in the light rum.",
+      "Add the twist of lime peel.",
+      "Float the 151 proof rum on top and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Light rum",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      },
+      {
+        "ingredient_name": "151 proof rum",
+        "category": "spirit",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 75.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Bitters",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 44,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            100,
+            50,
+            50
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Twist of Lime peel",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Russian Spring Punch",
+    "description": "The Russian Spring Punch is a refreshing cocktail that combines the boldness of vodka with the sweetness of crème de cassis and the tartness of lemon juice, topped off with sparkling wine. This cocktail is a delightful nod to the classic punch, offering a vibrant and effervescent experience perfect for spring gatherings.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour the vodka, crème de cassis, sugar syrup, and lemon juice into a highball glass.",
+      "Top with sparkling wine."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Crème de Cassis",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            32
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar Syrup",
+        "category": "syrup",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon Juice",
+        "category": "juice",
+        "volume_ml": 75,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sparkling Wine",
+        "category": "modifier",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 12,
+          "brix": 10,
+          "ph": 3.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Radioactive Long Island Iced Tea",
+    "description": "The Radioactive Long Island Iced Tea is a vibrant twist on the classic Long Island Iced Tea, featuring a colorful mix of spirits and liqueurs that create a visually striking and flavorful cocktail. This drink is known for its potent combination of alcohol and sweet flavors, making it a favorite among adventurous cocktail enthusiasts. The addition of Chambord and Midori gives it a unique fruity profile, while the various spirits provide a robust backbone.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour all ingredients over ice in a very tall glass.",
+      "Sip cautiously."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Tequila",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Triple sec",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 30,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            204,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Chambord raspberry liqueur",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 16.5,
+          "brix": 40,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            64
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Midori melon liqueur",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 50,
+          "ph": 3.2,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Malibu rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 21,
+          "brix": 20,
+          "ph": 6,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  }
+]

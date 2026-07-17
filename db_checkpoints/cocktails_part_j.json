@@ -1,0 +1,1016 @@
+[
+  {
+    "name": "Jam Donut",
+    "description": "The Jam Donut is a delightful shot that combines the rich, creamy flavor of Baileys Irish Cream with the fruity sweetness of Chambord raspberry liqueur. This cocktail is reminiscent of the classic jam-filled pastry, making it a fun and indulgent treat for any occasion.",
+    "glass_type": "shot",
+    "method": "layered",
+    "instructions": [
+      "Coat the rim of a shot glass with sugar using sugar syrup to stick.",
+      "Add the Chambord raspberry liqueur to the shot glass.",
+      "Carefully layer the Baileys Irish Cream on top.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Baileys Irish Cream",
+        "category": "liqueur",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 17,
+          "brix": 30,
+          "ph": 6.5,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            240
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Chambord Raspberry Liqueur",
+        "category": "liqueur",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 16.5,
+          "brix": 35,
+          "ph": 3.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            128,
+            0,
+            64
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar Syrup",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar",
+        "category": "modifier",
+        "volume_ml": 2,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Jitterbug",
+    "description": "The Jitterbug is a delightful cocktail that combines the crispness of gin and vodka with the sweetness of grenadine and sugar, creating a refreshing drink perfect for any occasion. Its origins are somewhat murky, but it evokes the lively spirit of the 1920s, a time when cocktails were all the rage and social gatherings were filled with energy and excitement.",
+    "glass_type": "coupe",
+    "method": "build",
+    "instructions": [
+      "Wet the cocktail glass and dip the rim in sugar.",
+      "Add ice to the glass.",
+      "Pour in the gin, vodka, grenadine, lime juice, and sugar syrup.",
+      "Top off with soda water."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 100
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 3,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar syrup",
+        "category": "syrup",
+        "volume_ml": 3,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 70,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Soda water",
+        "category": "modifier",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Sugar (for rim)",
+        "category": "modifier",
+        "volume_ml": 1,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Jackhammer",
+    "description": "The Jackhammer is a bold cocktail that combines the rich flavors of Jack Daniels whiskey with the sweet, nutty notes of Amaretto. This drink is served over ice in a Collins glass, making it a refreshing choice for those who enjoy a strong yet sweet beverage. The combination of these spirits creates a unique flavor profile that is both inviting and potent.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Fill a Collins glass with ice.",
+      "Pour 30 ml of Jack Daniels over the ice.",
+      "Add 30 ml of Amaretto.",
+      "Serve immediately and enjoy responsibly."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Jack Daniels",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.0,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Amaretto",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 28,
+          "brix": 30,
+          "ph": 5.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            165,
+            42,
+            42
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Jelly Bean",
+    "description": "The Jelly Bean cocktail is a delightful blend that captures the essence of the classic candy. With its fruity and herbal notes, this drink is reminiscent of the sweet and slightly licorice flavor of jelly beans. Perfect for those who enjoy a playful twist in their cocktails.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Pour equal parts of Blackberry brandy and Anis into a mixing glass.",
+      "Stir gently to combine.",
+      "Strain into a shot glass."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Blackberry brandy",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 15,
+          "brix": 25,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            128
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Anis",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 25,
+          "brix": 30,
+          "ph": 5.0,
+          "opacity": 0.3,
+          "color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Jello shots",
+    "description": "Jello shots are a fun and colorful party treat that combines the playful texture of gelatin with the kick of alcohol. Originating in the 1950s, these shots have become a staple at celebrations, offering a nostalgic nod to childhood while delivering a spirited twist.",
+    "glass_type": "shot",
+    "method": "build",
+    "instructions": [
+      "Boil 720 ml of water.",
+      "Add 3 packages of jello to the boiling water and mix until completely dissolved.",
+      "Add 480 ml of vodka to the mixture and stir well.",
+      "Pour the mixture into plastic shot glasses.",
+      "Chill in the refrigerator until firm.",
+      "Enjoy your jello shots!"
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Vodka",
+        "category": "spirit",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Jello",
+        "category": "modifier",
+        "volume_ml": 0,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 20,
+          "ph": 4,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Water",
+        "category": "modifier",
+        "volume_ml": 720,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Jamaica Kiss",
+    "description": "The Jamaica Kiss is a tropical delight that combines the rich flavors of coffee liqueur and Jamaican rum with the creamy texture of milk. This cocktail is perfect for those who enjoy a sweet and smooth drink, reminiscent of the Caribbean's vibrant culture and laid-back lifestyle. Blending these ingredients creates a refreshing and indulgent experience, ideal for warm weather or a festive gathering.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Fill a highball glass with ice cubes.",
+      "Add 30 ml of Coffee liqueur.",
+      "Add 30 ml of Jamaican Light rum.",
+      "Fill the glass with approximately 240 ml of milk.",
+      "Blend until smooth and serve immediately."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Coffee liqueur",
+        "category": "liqueur",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 25,
+          "ph": 5.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            80,
+            40,
+            20
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Jamaican Light rum",
+        "category": "spirit",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 37.5,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            220,
+            180
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 240,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "John Collins",
+    "description": "The John Collins is a classic cocktail that dates back to the 19th century, named after a bartender named John Collins who worked at Limmer's Old House in London. This refreshing drink combines bourbon, lemon juice, sugar, and club soda, making it a perfect choice for warm weather. The addition of a maraschino cherry and orange garnish adds a touch of elegance and flavor.",
+    "glass_type": "highball",
+    "method": "build",
+    "instructions": [
+      "Pour bourbon, lemon juice, and superfine sugar into a highball glass filled with ice.",
+      "Stir gently to combine the ingredients.",
+      "Top with club soda and garnish with a maraschino cherry and an orange slice."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 150
+    },
+    "components": [
+      {
+        "ingredient_name": "Bourbon",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 6,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Superfine Sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Club soda",
+        "category": "modifier",
+        "volume_ml": 90,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Maraschino cherry",
+        "category": "modifier",
+        "volume_ml": 10,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 15,
+          "ph": 3,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Orange",
+        "category": "modifier",
+        "volume_ml": 20,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 3,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            165,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Japanese Fizz",
+    "description": "The Japanese Fizz is a delightful cocktail that combines the smoothness of blended whiskey with the refreshing zest of lemon and the unique sweetness of port. This cocktail is a perfect representation of the fusion of Western and Eastern flavors, showcasing the elegance of Japanese mixology. The addition of egg white gives it a frothy texture, making it a visually appealing drink.",
+    "glass_type": "highball",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients (except carbonated water) with ice and strain into a highball glass over two ice cubes.",
+      "Fill with carbonated water, stir, and serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 60
+    },
+    "components": [
+      {
+        "ingredient_name": "Blended whiskey",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lemon juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Powdered sugar",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 100,
+          "ph": 7.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Port",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 20,
+          "brix": 30,
+          "ph": 3.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            128,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Egg white",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7.0,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Carbonated water",
+        "category": "modifier",
+        "volume_ml": 120,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 5.0,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Jamaican Coffee",
+    "description": "Jamaican Coffee is a delightful blend of rich coffee and rum, topped with a creamy layer of whipped cream. This cocktail combines the robust flavors of strong black coffee with the smoothness of rum, creating a perfect drink for coffee lovers. Traditionally enjoyed in a champagne flute, it offers a unique twist on the classic coffee experience.",
+    "glass_type": "flute",
+    "method": "build",
+    "instructions": [
+      "Stir the rum, coffee, and water together.",
+      "Top with the whipped cream.",
+      "Sprinkle with a pinch of well ground coffee and drink with a straw."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Rum",
+        "category": "spirit",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            255,
+            204,
+            153
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Strong Black Coffee",
+        "category": "juice",
+        "volume_ml": 50,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 5,
+          "opacity": 0.3,
+          "color_rgb": [
+            51,
+            25,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Cold Water",
+        "category": "modifier",
+        "volume_ml": 150,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Whipped Cream",
+        "category": "modifier",
+        "volume_ml": 30,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 6,
+          "opacity": 1.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Just a Moonmint",
+    "description": "The Just a Moonmint is a delightful blend of creamy milk, rich chocolate, and refreshing mint, creating a nostalgic treat reminiscent of childhood milkshakes. This cocktail is perfect for warm days or as a sweet indulgence any time of year.",
+    "glass_type": "highball",
+    "method": "blend",
+    "instructions": [
+      "Place all ingredients in the blender jar.",
+      "Cover and whiz on medium speed until well blended.",
+      "Pour into one tall, two medium, or three small glasses and enjoy."
+    ],
+    "ice_logic": {
+      "uses_ice": false,
+      "ice_in_glass_grams": 0
+    },
+    "components": [
+      {
+        "ingredient_name": "Milk",
+        "category": "modifier",
+        "volume_ml": 480,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 6.7,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Chocolate syrup",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 5.0,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Mint syrup",
+        "category": "syrup",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 50,
+          "ph": 5.5,
+          "opacity": 0.3,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Jewel Of The Nile",
+    "description": "The Jewel Of The Nile is a classic cocktail that showcases the herbal complexity of Chartreuse, a liqueur made by Carthusian monks in France. This drink combines the botanical notes of gin with the unique flavors of both Green and Yellow Chartreuse, creating a vibrant and aromatic experience that transports you to the lush landscapes of Egypt.",
+    "glass_type": "coupe",
+    "method": "stirred",
+    "instructions": [
+      "In a mixing glass half-filled with ice cubes, combine all of the ingredients.",
+      "Stir well.",
+      "Strain into a cocktail glass."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Gin",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 7,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Green Chartreuse",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 55,
+          "brix": 25,
+          "ph": 5,
+          "opacity": 0.5,
+          "color_rgb": [
+            0,
+            128,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Yellow Chartreuse",
+        "category": "liqueur",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 30,
+          "ph": 5,
+          "opacity": 0.4,
+          "color_rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Jack Rose Cocktail",
+    "description": "The Jack Rose Cocktail is a classic drink that dates back to the early 20th century, often associated with the Prohibition era. It showcases the vibrant flavors of apple brandy, complemented by the sweetness of grenadine and the tartness of lime juice. This cocktail has a rich history, often enjoyed by those seeking a taste of sophistication during a time of restraint.",
+    "glass_type": "coupe",
+    "method": "shaken",
+    "instructions": [
+      "Shake all ingredients with ice.",
+      "Strain into a cocktail glass.",
+      "Serve."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 120
+    },
+    "components": [
+      {
+        "ingredient_name": "Apple brandy",
+        "category": "spirit",
+        "volume_ml": 45,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4,
+          "opacity": 0.1,
+          "color_rgb": [
+            200,
+            100,
+            50
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Grenadine",
+        "category": "syrup",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 60,
+          "ph": 3.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            255,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Lime juice",
+        "category": "juice",
+        "volume_ml": 15,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 5,
+          "ph": 2,
+          "opacity": 0.0,
+          "color_rgb": [
+            255,
+            255,
+            204
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Jack's Vanilla Coke",
+    "description": "Jack's Vanilla Coke is a delightful twist on the classic whiskey and cola combination, enhanced with the rich flavor of vanilla. This cocktail brings together the smoothness of Tennessee whiskey with the sweetness of Coca-Cola, creating a refreshing drink perfect for any occasion. The addition of vanilla extract adds a unique depth, making it a favorite among those who enjoy a sweet and flavorful beverage.",
+    "glass_type": "rocks",
+    "method": "build",
+    "instructions": [
+      "Pour 60 ml of Tennessee whiskey into the old-fashioned glass.",
+      "Add 5 ml of vanilla extract.",
+      "Fill the glass with Coca-Cola until it reaches approximately 300 ml.",
+      "Add 3-5 ice cubes to taste.",
+      "Stir the drink with a stirrer to mix the vanilla extract thoroughly."
+    ],
+    "ice_logic": {
+      "uses_ice": true,
+      "ice_in_glass_grams": 75
+    },
+    "components": [
+      {
+        "ingredient_name": "Tennessee whiskey",
+        "category": "spirit",
+        "volume_ml": 60,
+        "physics_baseline": {
+          "abv": 40,
+          "brix": 0,
+          "ph": 4.5,
+          "opacity": 0.5,
+          "color_rgb": [
+            139,
+            69,
+            19
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Vanilla extract",
+        "category": "modifier",
+        "volume_ml": 5,
+        "physics_baseline": {
+          "abv": 35,
+          "brix": 30,
+          "ph": 6.0,
+          "opacity": 0.2,
+          "color_rgb": [
+            255,
+            228,
+            196
+          ]
+        }
+      },
+      {
+        "ingredient_name": "Coca-Cola",
+        "category": "juice",
+        "volume_ml": 300,
+        "physics_baseline": {
+          "abv": 0,
+          "brix": 10,
+          "ph": 2.5,
+          "opacity": 0.8,
+          "color_rgb": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  }
+]
