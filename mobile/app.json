@@ -15,7 +15,8 @@
         "backgroundColor": "#000000",
         "foregroundImage": "./assets/images/icon.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.bob.specialblend"
     },
     "web": {
       "output": "static",
@@ -34,7 +35,13 @@
     ],
     "experiments": {
       "typedRoutes": true,
-      "reactCompiler": true
+      "reactCompiler": false
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "634f7083-b0c8-4b5b-8c2a-45a72130fae2"
+      }
     }
   }
 }
