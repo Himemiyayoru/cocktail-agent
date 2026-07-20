@@ -4,13 +4,15 @@ import time
 import os
 import string
 from openai import OpenAI
+from dotenv import load_dotenv
+load_dotenv()
 
 # ==========================================
 # Configuration
 # ==========================================
 TCDB_API_URL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f="
-openai.api_key = os.getenv("OPENAI_API_KEY")
-client = OpenAI(api_key=API_KEY)
+openai_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=openai_key)
 MODEL_NAME = "gpt-4o-mini"
 
 SYSTEM_PROMPT = """

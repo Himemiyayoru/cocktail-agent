@@ -3,23 +3,31 @@ import math
 import tempfile
 import os
 import uvicorn
-import whisper
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
-from openai import AsyncOpenAI
+from openai import AsyncOpenAI, OpenAI
+from dotenv import load_dotenv
+
+# 加载环境变量
+load_dotenv()
 
 # ==========================================
-# 1. Local Model Initialization (Ollama & Whisper)
+# 1. Cloud Model Initialization (Groq & OpenAI)
 # ==========================================
-client = AsyncOpenAI(
-    base_url="http://localhost:11434/v1",
-    api_key="bob-is-local"
+# Bob 的大脑 (Groq Llama 3)
+groq_client = AsyncOpenAI(
+    base_url="https://api.groq.com/openai/v1",
+    api_key=os.getenv("GROQ_API_KEY")
 )
 
-print("[SYSTEM] Loading local Whisper hearing model (Base version)...")
-whisper_model = whisper.load_model("base")
+# Bob 的耳朵 (OpenAI Whisper API)
+openai_client = OpenAI(
+    api_key=os.getenv("OPENAI_API_KEY")
+)
+
+print("[SYSTEM] Cloud APIs initialized successfully.")
 
 app = FastAPI(title="Bob's Special Blend API", version="2.0")
 
@@ -231,7 +239,7 @@ def run_physics_simulation(recipe_name: str, method: str, components: List[dict]
     }
 
 # ==========================================
-# 6. Whisper Audio Transcription
+# 6. Whisper Audio Transcription (Cloud)
 # ==========================================
 @app.post("/api/v2/transcribe")
 async def transcribe_audio(audio_file: UploadFile = File(...)):
@@ -240,9 +248,13 @@ async def transcribe_audio(audio_file: UploadFile = File(...)):
         tmp_path = tmp.name
 
     try:
-        print(f"[AUDIO] Parsing audio stream: {audio_file.filename}")
-        result = whisper_model.transcribe(tmp_path)
-        text = result.get("text", "").strip()
+        print(f"[AUDIO] Sending audio stream to Cloud Whisper: {audio_file.filename}")
+        with open(tmp_path, "rb") as f:
+            result = openai_client.audio.transcriptions.create(
+                model="whisper-1",
+                file=f
+            )
+        text = result.text.strip()
         print(f"[AUDIO] Transcription success: {text}")
         return {"status": "success", "text": text}
     except Exception as e:
@@ -281,8 +293,8 @@ async def chat_with_bob(req: BobChatRequest):
     """
 
     try:
-        response = await client.chat.completions.create(
-            model="llama3",
+        response = await groq_client.chat.completions.create(
+            model="llama3-8b-8192",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": req.user_message}

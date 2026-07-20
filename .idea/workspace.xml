@@ -5,72 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b469d8dc-ba04-4b4e-af81-1b913fbf189f" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_v1_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/.claude/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/.vscode/extensions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/AGENTS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/CLAUDE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/expo.icon/Assets/expo-symbol 2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/expo.icon/Assets/grid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/expo.icon/icon.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/android-icon-background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/android-icon-foreground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/android-icon-monochrome.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/expo-badge-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/expo-badge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/expo-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/logo-glow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/react-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/react-logo@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/react-logo@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/splash-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/tabIcons/explore.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/tabIcons/explore@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/tabIcons/explore@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/tabIcons/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/tabIcons/home@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/tabIcons/home@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/assets/images/tutorial-web.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/scripts/reset-project.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/app/(tabs)/_layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/app/(tabs)/bob.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/app/(tabs)/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/app/(tabs)/inventory.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/app/_layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/app/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/app/recipe/[id].tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/components/animated-icon.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/components/animated-icon.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/components/animated-icon.web.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/components/app-tabs.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/components/app-tabs.web.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/components/external-link.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/components/hint-row.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/components/themed-text.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/components/themed-view.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/components/ui/collapsible.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/components/web-badge.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/constants/theme.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/context/ThemeContext.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/global.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/hooks/use-color-scheme.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/hooks/use-color-scheme.web.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/src/hooks/use-theme.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cocktail-app/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seed_db.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seed_recipes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/data_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/data_pipeline.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
