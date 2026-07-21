@@ -126,7 +126,7 @@ export default function SearchScreen() {
   const fetchRecipes = async () => {
     try {
       // TODO: Ensure the IP address matches your local network or production server
-      const response = await fetch('http://192.168.0.237:8000/api/v2/recipes');
+      const response = await fetch('https://bobs-special-blend.onrender.com/api/v2/recipes');
       const json = await response.json();
       if (json.status === 'success') {
         setAllRecipes(json.data);
