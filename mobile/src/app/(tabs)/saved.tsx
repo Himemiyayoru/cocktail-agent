@@ -18,7 +18,7 @@ export default function SavedScreen() {
 
   // Fetch latest recipe menu on mount to compare IDs
   useEffect(() => {
-    fetch('http://192.168.0.237:8000/api/v2/recipes')
+    fetch('https://bobs-special-blend.onrender.com/api/v2/recipes')
       .then(res => res.json())
       .then(json => {
         if (json.status === 'success') setAllRecipes(json.data);

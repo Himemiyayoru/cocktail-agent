@@ -8,7 +8,7 @@ import { useFavorites } from '../../hooks/useFavorites';
 import RealDrinkImage from '../../components/RealDrinkImage';
 
 // API Base URL (Split string to prevent unwanted markdown parsing in some environments)
-const API_BASE = 'http://' + '192.168.0.237:8000';
+const API_BASE = 'https://bobs-special-blend.onrender.com';
 
 interface PhysicsBaseline { abv: number; brix: number; opacity: number; color_rgb: number[]; }
 interface Component { ingredient_name: string; category: string; volume_ml: number; physics_baseline: PhysicsBaseline; }

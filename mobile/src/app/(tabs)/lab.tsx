@@ -9,7 +9,7 @@ import { CocktailGridCard } from './library';
 import { useFavorites } from '../../hooks/useFavorites';
 
 // API Base URL (Broken string avoids unwanted markdown linking in environments)
-const API_BASE = 'http://' + '192.168.0.237:8000';
+const API_BASE = 'https://bobs-special-blend.onrender.com';
 
 export default function LabScreen() {
   const { colors, isDark } = useTheme();

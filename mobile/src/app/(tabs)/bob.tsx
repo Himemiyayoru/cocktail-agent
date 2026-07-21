@@ -119,7 +119,7 @@ export default function BobScreen() {
       const formData = new FormData();
       formData.append('audio_file', { uri: uri, name: 'voice.m4a', type: 'audio/m4a' } as any);
       
-      const res = await fetch('http://192.168.0.237:8000/api/v2/transcribe', { method: 'POST', body: formData });
+      const res = await fetch('https://bobs-special-blend.onrender.com/api/v2/transcribe', { method: 'POST', body: formData });
       const json = await res.json();
       
       if (json.status === 'success') setInputText(json.text);
@@ -137,7 +137,7 @@ export default function BobScreen() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://192.168.0.237:8000/api/v2/chat_with_bob', {
+      const response = await fetch('https://bobs-special-blend.onrender.com/api/v2/chat_with_bob', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user_message: userText })

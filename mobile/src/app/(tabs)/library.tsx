@@ -106,7 +106,7 @@ export default function LibraryScreen() {
 
   const fetchRecipes = async () => {
     try {
-      const response = await fetch('http://192.168.0.237:8000/api/v2/recipes');
+      const response = await fetch('https://bobs-special-blend.onrender.com/api/v2/recipes');
       const json = await response.json();
       if (json.status === 'success') setRecipes(json.data);
     } catch (error) { console.error("Fetch library failed", error); } 
