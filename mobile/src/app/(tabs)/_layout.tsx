@@ -87,7 +87,7 @@ export default function TabLayout() {
         }}
       >
         <Tabs.Screen name="library" options={{ title: 'LIBRARY', tabBarIcon: ({ color }) => <SvgIcon name="library" color={color} /> }} />
-        <Tabs.Screen name="lab" options={{ title: 'LAB', tabBarIcon: ({ color }) => <SvgIcon name="lab" color={color} /> }} />
+        <Tabs.Screen name="lab" options={{ title: 'MY CABINET', tabBarIcon: ({ color }) => <SvgIcon name="lab" color={color} /> }} />
         <Tabs.Screen name="search" options={{ title: 'SEARCH', tabBarIcon: ({ color }) => <SvgIcon name="search" color={color} /> }} />
         <Tabs.Screen name="bob" options={{ title: 'ASK BOB', tabBarIcon: ({ color }) => <SvgIcon name="bob" color={color} /> }} />
         

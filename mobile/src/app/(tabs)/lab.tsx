@@ -167,8 +167,8 @@ export default function LabScreen() {
     <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top + 20 }]}>
       
       <View style={styles.header}>
-        <Text style={[styles.title, { color: colors.text }]}>THE LAB</Text>
-        <Text style={[styles.subtitle, { color: colors.subtext }]}>MY INVENTORY</Text>
+        <Text style={[styles.title, { color: colors.text }]}>MY CABINET</Text>
+        <Text style={[styles.subtitle, { color: colors.subtext }]}>LIQUOR COLLECTION</Text>
       </View>
 
       <View style={[styles.statsCard, { backgroundColor: colors.card, borderColor: colors.border }]}>
