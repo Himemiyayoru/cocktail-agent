@@ -65,13 +65,8 @@ function RootLayoutNav() {
 
 export default function RootLayout() {
   
-  // Control splash screen visibility duration
   useEffect(() => {
-    const timer = setTimeout(async () => {
-      await SplashScreen.hideAsync();
-    }, 1500);
-
-    return () => clearTimeout(timer); // Prevent memory leaks on unmount
+    SplashScreen.hideAsync().catch(() => {});
   }, []);
 
   return (

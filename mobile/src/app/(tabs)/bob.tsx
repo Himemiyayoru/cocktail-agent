@@ -5,48 +5,12 @@ import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { Audio } from 'expo-av'; 
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
-import { Image } from 'expo-image';
-
-// ==========================================
-// Bob's Optimized Thumbnail Component
-// ==========================================
-const globalBobImageCache: Record<string, string | null> = {};
+import { DrinkPhoto } from '../../components/DrinkPhoto';
 
 function BobDrinkThumbnail({ drinkName, size = 60, colors }: { drinkName: string, size?: number, colors: any }) {
-  const [imgUrl, setImgUrl] = useState<string | null>(globalBobImageCache[drinkName] || null);
-
-  useEffect(() => {
-    if (globalBobImageCache[drinkName] !== undefined) {
-      setImgUrl(globalBobImageCache[drinkName]);
-      return;
-    }
-    let isMounted = true;
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${encodeURIComponent(drinkName)}`)
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.drinks && data.drinks.length > 0) {
-          const exactMatch = data.drinks.find((d: any) => d.strDrink.toLowerCase() === drinkName.toLowerCase());
-          const bestDrink = exactMatch || data.drinks[0];
-          const url = bestDrink.strDrinkThumb + '/preview';
-          globalBobImageCache[drinkName] = url;
-          if (isMounted) setImgUrl(url);
-        } else {
-          globalBobImageCache[drinkName] = null;
-          if (isMounted) setImgUrl(null);
-        }
-      })
-      .catch(() => { if (isMounted) setImgUrl(null); });
-      
-    return () => { isMounted = false; };
-  }, [drinkName]);
-
   return (
     <View style={[styles.thumbnailContainer, { width: size, height: size, backgroundColor: colors.background, borderColor: colors.border }]}>
-      {imgUrl ? (
-        <Image source={{ uri: imgUrl }} style={{ width: '100%', height: '100%' }} contentFit="cover" cachePolicy="disk" transition={200} />
-      ) : (
-        <Ionicons name="wine-outline" size={size * 0.5} color={colors.subtext} opacity={0.5} />
-      )}
+      <DrinkPhoto name={drinkName} style={{ width: '100%', height: '100%' }} iconColor={colors.subtext} iconSize={size * 0.5} />
     </View>
   );
 }

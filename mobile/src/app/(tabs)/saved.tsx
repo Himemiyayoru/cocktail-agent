@@ -1,34 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, FlatList, ActivityIndicator } from 'react-native';
 import { useTheme } from '../../context/ThemeContext';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { CocktailGridCard } from './library';
 import { useFavorites } from '../../hooks/useFavorites';
+import { RECIPE_INDEX } from '../../data/catalog';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function SavedScreen() {
-  const { colors, isDark } = useTheme();
+  const { colors } = useTheme();
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  const { favorites, toggleFavorite } = useFavorites();
-
-  const [allRecipes, setAllRecipes] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // Fetch latest recipe menu on mount to compare IDs
-  useEffect(() => {
-    fetch('https://bobs-special-blend.onrender.com/api/v2/recipes')
-      .then(res => res.json())
-      .then(json => {
-        if (json.status === 'success') setAllRecipes(json.data);
-        setIsLoading(false);
-      })
-      .catch(() => setIsLoading(false));
-  }, []);
-
-  // Filter saved recipes from the full list
-  const savedRecipes = allRecipes.filter(r => favorites.includes(r.id));
+  const { favorites, toggleFavorite, loaded } = useFavorites();
+  const savedRecipes = RECIPE_INDEX.filter(r => favorites.includes(r.id));
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top + 20 }]}>
@@ -36,7 +21,7 @@ export default function SavedScreen() {
         <Text style={[styles.title, { color: colors.text }]}>SAVED</Text>
       </View>
 
-      {isLoading ? (
+      {!loaded ? (
         <View style={styles.centerContainer}><ActivityIndicator size="large" color={colors.primary} /></View>
       ) : savedRecipes.length === 0 ? (
         <View style={styles.emptyContainer}>

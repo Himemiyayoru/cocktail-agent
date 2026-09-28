@@ -1,46 +1,15 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, FlatList, ActivityIndicator, ScrollView } from 'react-native';
+import React, { useMemo } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import { useTheme } from '../../context/ThemeContext';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { Image } from 'expo-image';
-import { useFavorites } from '../../hooks/useFavorites'; 
-
-const globalLibraryImageCache: Record<string, string | null> = {};
+import { useFavorites } from '../../hooks/useFavorites';
+import { DrinkPhoto } from '../../components/DrinkPhoto';
+import { RECIPE_INDEX } from '../../data/catalog';
 
 // Upgraded Card with favorite state and toggle event mapping
 export function CocktailGridCard({ item, onPress, colors, width = '48%' as any, isFavorite = false, onToggleFavorite }: { item: any, onPress: () => void, colors: any, width?: any, isFavorite?: boolean, onToggleFavorite?: () => void }) {
-  const [imgUrl, setImgUrl] = useState<string | null>(globalLibraryImageCache[item.name] || null);
-  const [loading, setLoading] = useState<boolean>(globalLibraryImageCache[item.name] === undefined);
-
-  useEffect(() => {
-    if (globalLibraryImageCache[item.name] !== undefined) {
-      setImgUrl(globalLibraryImageCache[item.name]);
-      setLoading(false);
-      return;
-    }
-    let isMounted = true;
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${encodeURIComponent(item.name)}`)
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.drinks && data.drinks.length > 0) {
-          const url = data.drinks[0].strDrinkThumb + '/preview';
-          globalLibraryImageCache[item.name] = url;
-          if (isMounted) setImgUrl(url);
-        } else {
-          globalLibraryImageCache[item.name] = null;
-          if (isMounted) setImgUrl(null);
-        }
-      })
-      .catch(() => {
-        globalLibraryImageCache[item.name] = null;
-        if (isMounted) setImgUrl(null);
-      })
-      .finally(() => { if (isMounted) setLoading(false); });
-    return () => { isMounted = false; };
-  }, [item.name]);
-
   return (
     <TouchableOpacity style={[styles.cardContainer, { backgroundColor: colors.card, borderColor: colors.border, width: width }]} onPress={onPress} activeOpacity={0.8}>
       <View style={[styles.imageWrapper, { backgroundColor: colors.background }]}>
@@ -56,13 +25,7 @@ export function CocktailGridCard({ item, onPress, colors, width = '48%' as any, 
           </TouchableOpacity>
         )}
 
-        {loading ? (
-          <ActivityIndicator size="small" color={colors.primary} />
-        ) : imgUrl ? (
-          <Image source={{ uri: imgUrl }} style={styles.image} contentFit="cover" cachePolicy="disk" transition={300} />
-        ) : (
-          <Ionicons name="wine-outline" size={40} color={colors.subtext} opacity={0.3} />
-        )}
+        <DrinkPhoto name={item.name} style={styles.image} iconColor={colors.subtext} iconSize={40} />
       </View>
       <View style={styles.textWrapper}>
         <Text style={[styles.drinkName, { color: colors.text }]} numberOfLines={1} adjustsFontSizeToFit>{item.name}</Text>
@@ -93,35 +56,21 @@ export const getSmartCategory = (recipe: any) => {
 };
 
 export default function LibraryScreen() {
-  const { colors, isDark } = useTheme();
+  const { colors } = useTheme();
   const insets = useSafeAreaInsets();
   const router = useRouter();
   
   const { favorites, toggleFavorite } = useFavorites();
 
-  const [recipes, setRecipes] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => { fetchRecipes(); }, []);
-
-  const fetchRecipes = async () => {
-    try {
-      const response = await fetch('https://bobs-special-blend.onrender.com/api/v2/recipes');
-      const json = await response.json();
-      if (json.status === 'success') setRecipes(json.data);
-    } catch (error) { console.error("Fetch library failed", error); } 
-    finally { setIsLoading(false); }
-  };
-
   const groupedRecipes = useMemo(() => {
     const groups: Record<string, any[]> = {};
-    recipes.forEach(recipe => {
+    RECIPE_INDEX.forEach(recipe => {
       const cat = getSmartCategory(recipe);
       if (!groups[cat]) groups[cat] = [];
       groups[cat].push(recipe);
     });
     return Object.keys(groups).map(key => ({ title: key, data: groups[key] })).sort((a, b) => b.data.length - a.data.length);
-  }, [recipes]);
+  }, []);
 
   const handleRecipePress = (id: number) => { router.push(`/recipe/${id}`); };
   const handleSeeAll = (categoryTitle: string) => { router.push(`/category/${encodeURIComponent(categoryTitle)}`); };
@@ -132,15 +81,14 @@ export default function LibraryScreen() {
         <Text style={[styles.title, { color: colors.text }]}>THE LIBRARY</Text>
       </View>
 
-      {isLoading ? (
-        <View style={styles.centerContainer}><ActivityIndicator size="large" color={colors.primary} /></View>
-      ) : (
         <FlatList
           data={groupedRecipes}
           keyExtractor={(item) => item.title}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{ paddingBottom: 100 }}
-          initialNumToRender={3}
+          initialNumToRender={2}
+          maxToRenderPerBatch={2}
+          windowSize={3}
           renderItem={({ item: group }) => (
             <View style={styles.sectionContainer}>
               <View style={styles.sectionHeader}>
@@ -156,7 +104,9 @@ export default function LibraryScreen() {
                 showsHorizontalScrollIndicator={false}
                 data={group.data}
                 keyExtractor={(item) => item.id.toString()}
-                initialNumToRender={4}
+                initialNumToRender={3}
+                maxToRenderPerBatch={3}
+                windowSize={3}
                 contentContainerStyle={{ paddingHorizontal: 20 }}
                 renderItem={({ item }) => (
                   <View style={{ marginRight: 16 }}>
@@ -174,7 +124,6 @@ export default function LibraryScreen() {
             </View>
           )}
         />
-      )}
     </View>
   );
 }

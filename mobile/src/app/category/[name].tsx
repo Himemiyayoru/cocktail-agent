@@ -1,48 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, FlatList, ActivityIndicator, TouchableOpacity } from 'react-native';
+import React, { useMemo } from 'react';
+import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useTheme } from '../../context/ThemeContext';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { CocktailGridCard, getSmartCategory } from '../(tabs)/library';
-import { useFavorites } from '../../hooks/useFavorites'; 
+import { useFavorites } from '../../hooks/useFavorites';
+import { RECIPE_INDEX } from '../../data/catalog'; 
 
 export default function CategoryScreen() {
   const { name } = useLocalSearchParams();
-  const { colors, isDark } = useTheme();
+  const { colors } = useTheme();
   const insets = useSafeAreaInsets();
   const router = useRouter();
   
   // Initialize favorites state and toggle function
   const { favorites, toggleFavorite } = useFavorites(); 
 
-  const [recipes, setRecipes] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // Safely extract the category name from URL parameters
   const categoryName = Array.isArray(name) ? name[0] : (name || '');
-
-  useEffect(() => {
-    if (!categoryName) return;
-    fetchCategoryRecipes();
-  }, [categoryName]);
-
-  const fetchCategoryRecipes = async () => {
-    try {
-      // TODO: Ensure the IP address matches your local network or production server
-      const response = await fetch('https://bobs-special-blend.onrender.com/api/v2/recipes');
-      const json = await response.json();
-      
-      if (json.status === 'success') {
-        const filtered = json.data.filter((recipe: any) => getSmartCategory(recipe) === categoryName);
-        setRecipes(filtered);
-      }
-    } catch (error) { 
-      console.error("Fetch category recipes failed", error); 
-    } finally { 
-      setIsLoading(false); 
-    }
-  };
+  const recipes = useMemo(
+    () => RECIPE_INDEX.filter((recipe) => getSmartCategory(recipe) === categoryName),
+    [categoryName]
+  );
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
@@ -55,11 +34,6 @@ export default function CategoryScreen() {
         <View style={{ width: 28 }} /> 
       </View>
 
-      {isLoading ? (
-        <View style={styles.centerContainer}>
-          <ActivityIndicator size="large" color={colors.primary} />
-        </View>
-      ) : (
         <FlatList
           data={recipes}
           keyExtractor={(item) => item.id.toString()}
@@ -67,6 +41,9 @@ export default function CategoryScreen() {
           columnWrapperStyle={styles.rowWrapper}
           contentContainerStyle={styles.listContent}
           showsVerticalScrollIndicator={false}
+          initialNumToRender={8}
+          maxToRenderPerBatch={8}
+          windowSize={5}
           renderItem={({ item }) => (
             <CocktailGridCard 
               item={item} 
@@ -79,7 +56,6 @@ export default function CategoryScreen() {
             />
           )}
         />
-      )}
     </View>
   );
 }

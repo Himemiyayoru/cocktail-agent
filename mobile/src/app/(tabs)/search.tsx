@@ -1,78 +1,16 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, FlatList, ActivityIndicator, Keyboard } from 'react-native';
+import React, { useState, useMemo } from 'react';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, FlatList, Keyboard } from 'react-native';
 import { useTheme } from '../../context/ThemeContext';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { Image } from 'expo-image';
+import { DrinkPhoto } from '../../components/DrinkPhoto';
+import { RECIPE_INDEX, RecipeSnippet } from '../../data/catalog';
 
-// ==========================================
-// Global memory cache to prevent redundant API calls during scroll
-// ==========================================
-const globalImageCache: Record<string, string | null> = {};
-
-// ==========================================
-// Optimized list thumbnail component (Disk cache enabled)
-// ==========================================
 function SearchThumbnail({ drinkName, size = 50, colors }: { drinkName: string, size?: number, colors: any }) {
-  const [imgUrl, setImgUrl] = useState<string | null>(globalImageCache[drinkName] || null);
-  const [loading, setLoading] = useState<boolean>(globalImageCache[drinkName] === undefined);
-
-  useEffect(() => {
-    if (globalImageCache[drinkName] !== undefined) {
-      setImgUrl(globalImageCache[drinkName]);
-      setLoading(false);
-      return;
-    }
-
-    let isMounted = true;
-    
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${encodeURIComponent(drinkName)}`)
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.drinks && data.drinks.length > 0) {
-          const url = data.drinks[0].strDrinkThumb + '/preview';
-          globalImageCache[drinkName] = url;
-          if (isMounted) setImgUrl(url);
-        } else {
-          globalImageCache[drinkName] = null;
-          if (isMounted) setImgUrl(null);
-        }
-      })
-      .catch(() => {
-        globalImageCache[drinkName] = null;
-        if (isMounted) setImgUrl(null);
-      })
-      .finally(() => {
-        if (isMounted) setLoading(false);
-      });
-
-    return () => { isMounted = false; };
-  }, [drinkName]);
-
-  if (loading) {
-    return (
-      <View style={[styles.thumbnailContainer, { width: size, height: size, backgroundColor: colors.background, borderColor: colors.border }]}>
-        <ActivityIndicator size="small" color={colors.primary} />
-      </View>
-    );
-  }
-
-  if (imgUrl) {
-    return (
-      <Image 
-        source={{ uri: imgUrl }} 
-        style={[styles.thumbnailContainer, { width: size, height: size, borderColor: colors.border }]} 
-        contentFit="cover"
-        cachePolicy="disk"
-        transition={200}
-      />
-    );
-  }
-
   return (
     <View style={[styles.thumbnailContainer, { width: size, height: size, backgroundColor: colors.background, borderColor: colors.border }]}>
-      <Ionicons name="wine-outline" size={size * 0.5} color={colors.subtext} />
+      <DrinkPhoto name={drinkName} style={{ width: '100%', height: '100%' }} iconColor={colors.subtext} iconSize={size * 0.5} />
     </View>
   );
 }
@@ -80,12 +18,6 @@ function SearchThumbnail({ drinkName, size = 50, colors }: { drinkName: string, 
 // ==========================================
 // Main Search Screen Component
 // ==========================================
-interface RecipeSnippet {
-  id: number;
-  name: string;
-  glass_type: string;
-}
-
 // Levenshtein distance algorithm for fuzzy searching
 const getLevenshteinDistance = (a: string, b: string): number => {
   const matrix = Array.from({ length: a.length + 1 }, () => Array(b.length + 1).fill(0));
@@ -116,27 +48,6 @@ export default function SearchScreen() {
   const themePrimary = isDark ? colors.primary : '#111111';
 
   const [searchQuery, setSearchQuery] = useState('');
-  const [allRecipes, setAllRecipes] = useState<RecipeSnippet[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    fetchRecipes();
-  }, []);
-
-  const fetchRecipes = async () => {
-    try {
-      // TODO: Ensure the IP address matches your local network or production server
-      const response = await fetch('https://bobs-special-blend.onrender.com/api/v2/recipes');
-      const json = await response.json();
-      if (json.status === 'success') {
-        setAllRecipes(json.data);
-      }
-    } catch (error) {
-      console.error("Fetch recipes failed", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   const searchResults = useMemo(() => {
     if (!searchQuery.trim()) {
@@ -144,13 +55,13 @@ export default function SearchScreen() {
     }
 
     const query = searchQuery.trim().toLowerCase();
-    const exactMatches = allRecipes.filter(recipe => recipe.name.toLowerCase().includes(query));
+    const exactMatches = RECIPE_INDEX.filter(recipe => recipe.name.toLowerCase().includes(query));
 
     if (exactMatches.length > 0) {
       return { type: 'exact', data: exactMatches };
     }
 
-    const fuzzyMatches = allRecipes.map(recipe => {
+    const fuzzyMatches = RECIPE_INDEX.map(recipe => {
       const distance = getLevenshteinDistance(query, recipe.name.toLowerCase());
       return { ...recipe, distance };
     })
@@ -162,7 +73,7 @@ export default function SearchScreen() {
     }
 
     return { type: 'not_found', data: [] };
-  }, [searchQuery, allRecipes]);
+  }, [searchQuery]);
 
   const handleRecipePress = (id: number) => {
     Keyboard.dismiss();
@@ -214,11 +125,6 @@ export default function SearchScreen() {
         </View>
       </View>
 
-      {isLoading ? (
-        <View style={styles.centerContainer}>
-          <ActivityIndicator size="large" color={themePrimary} />
-        </View>
-      ) : (
         <View style={{ flex: 1 }}>
           
           {searchResults.type === 'empty' && (
@@ -265,7 +171,6 @@ export default function SearchScreen() {
           )}
 
         </View>
-      )}
     </View>
   );
 }

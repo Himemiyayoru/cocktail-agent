@@ -17,6 +17,10 @@ load_dotenv()
 # ==========================================
 # 1. Cloud Model Initialization (Groq & OpenAI)
 # ==========================================
+# Groq decommissioned llama-3.1-8b-instant on 2026-08-16.
+# gpt-oss-20b is the recommended replacement and supports JSON mode.
+GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
+
 # Initialize asynchronous client for Groq (LLM engine)
 groq_client = AsyncOpenAI(
     base_url="https://api.groq.com/openai/v1",
@@ -366,20 +370,26 @@ async def chat_with_bob(req: BobChatRequest, request: Request):
     """
 
     try:
-        # Request generation from Groq with a strict token limit to control costs
+        # reasoning_format=hidden keeps chain-of-thought out of the JSON body.
+        # max_completion_tokens must cover that reasoning plus the reply.
         response = await groq_client.chat.completions.create(
-            model="llama-3.1-8b-instant",
+            model=GROQ_MODEL,
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": req.user_message}
             ],
             temperature=0.5,
-            max_tokens=150,  # Enforce maximum token usage per request
-            response_format={"type": "json_object"}
+            max_completion_tokens=512,
+            response_format={"type": "json_object"},
+            extra_body={
+                "reasoning_effort": "low",
+                "reasoning_format": "hidden",
+            },
         )
 
-        # Parse and clean up potential markdown formatting from the LLM output
-        raw_content = response.choices[0].message.content.strip()
+        raw_content = (response.choices[0].message.content or "").strip()
+        if not raw_content:
+            raise RuntimeError("Model returned an empty reply")
 
         if raw_content.startswith("```json"):
             raw_content = raw_content[7:]

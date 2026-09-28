@@ -4,6 +4,7 @@ import { useFocusEffect } from 'expo-router';
 
 export function useFavorites() {
   const [favorites, setFavorites] = useState<number[]>([]);
+  const [loaded, setLoaded] = useState(false);
 
   const loadFavorites = async () => {
     try {
@@ -11,6 +12,8 @@ export function useFavorites() {
       if (stored) setFavorites(JSON.parse(stored));
     } catch (e) {
       console.error("Failed to load favorites", e);
+    } finally {
+      setLoaded(true);
     }
   };
 
@@ -39,5 +42,5 @@ export function useFavorites() {
     }
   };
 
-  return { favorites, toggleFavorite };
+  return { favorites, toggleFavorite, loaded };
 }

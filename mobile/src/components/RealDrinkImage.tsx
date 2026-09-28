@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { View, Image, ActivityIndicator, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../context/ThemeContext'; // Corrected relative path
+import { useTheme } from '../context/ThemeContext';
+import { DrinkPhoto } from './DrinkPhoto';
+import { drinkImageUrl } from '../data/catalog';
 
 interface RealDrinkImageProps {
   drinkName: string;
@@ -9,63 +10,24 @@ interface RealDrinkImageProps {
 }
 
 export default function RealDrinkImage({ drinkName, size = 150 }: RealDrinkImageProps) {
-  const { colors, isDark } = useTheme();
-  const [imageUrl, setImageUrl] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { colors } = useTheme();
+  const imageUrl = drinkImageUrl(drinkName);
 
-  useEffect(() => {
-    // Early exit if no drink name is provided
-    if (!drinkName) {
-      setLoading(false);
-      return;
-    }
-
-    const fetchRealImage = async () => {
-      try {
-        // Fetch real image from TheCocktailDB public API
-        const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${encodeURIComponent(drinkName)}`);
-        const data = await response.json();
-
-        // Extract high-resolution image URL (strDrinkThumb) if found
-        if (data && data.drinks && data.drinks.length > 0) {
-          setImageUrl(data.drinks[0].strDrinkThumb);
-        } else {
-          setImageUrl(null); // Fallback for custom or obscure recipes
-        }
-      } catch (error) {
-        console.error("Failed to fetch real image:", error);
-        setImageUrl(null);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchRealImage();
-  }, [drinkName]);
-
-  // 1. Loading State
-  if (loading) {
-    return (
-      <View style={[styles.container, { width: size, height: size, backgroundColor: colors.card, borderColor: colors.border }]}>
-        <ActivityIndicator color={colors.primary} />
-      </View>
-    );
-  }
-
-  // 2. Success State: Image Found
   if (imageUrl) {
     return (
-      <Image 
-        source={{ uri: imageUrl }} 
-        style={[styles.container, { width: size, height: size, borderColor: colors.border }]} 
+      <DrinkPhoto
+        name={drinkName}
+        preview={false}
+        style={[styles.container, { width: size, height: size, borderColor: colors.border }]}
+        iconColor={colors.subtext}
+        iconSize={size * 0.3}
       />
     );
   }
 
-  // 3. Fallback State: Graceful degradation for missing assets
   return (
     <View style={[styles.container, { width: size, height: size, backgroundColor: colors.card, borderColor: colors.border }]}>
-      <Ionicons name="image-outline" size={size * 0.3} color={colors.subtext} opacity={0.5} />
+      <Ionicons name="image-outline" size={size * 0.3} color={colors.subtext} />
       <Text style={{ color: colors.subtext, fontSize: size * 0.08, marginTop: 5, textAlign: 'center' }}>
         No Photo
       </Text>
