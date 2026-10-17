@@ -8,7 +8,13 @@
     "scheme": "cocktailapp",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/images/icon.png"
+      "bundleIdentifier": "com.bob.specialblend",
+      "supportsTablet": true,
+      "icon": "./assets/images/icon.png",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Allow Bob's Special Blend to use the microphone so you can talk to Bob.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -29,7 +35,9 @@
         {
           "backgroundColor": "#000000",
           "image": "./assets/images/splash.png",
-          "resizeMode": "cover"
+          "resizeMode": "contain",
+          "android": { "imageWidth": 288 },
+          "ios": { "imageWidth": 700 }
         }
       ]
     ],

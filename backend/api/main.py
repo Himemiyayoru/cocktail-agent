@@ -4,12 +4,17 @@ import tempfile
 import os
 import time
 import uvicorn
-from fastapi import FastAPI, HTTPException, UploadFile, File, Request
+from fastapi import FastAPI, HTTPException, UploadFile, File, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-from typing import List
+from pydantic import BaseModel, Field
+from typing import List, Optional
 from openai import AsyncOpenAI, OpenAI
 from dotenv import load_dotenv
+
+if __package__:
+    from .recommendations import find_exact_recipe, match_recipes, normalize_inventory, normalize_name, rank_substitutes
+else:
+    from recommendations import find_exact_recipe, match_recipes, normalize_inventory, normalize_name, rank_substitutes
 
 # Load environment variables from .env file
 load_dotenv()
@@ -21,18 +26,20 @@ load_dotenv()
 # gpt-oss-20b is the recommended replacement and supports JSON mode.
 GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
 
-# Initialize asynchronous client for Groq (LLM engine)
+# Catalog, inventory, and substitution tools remain available without AI keys.
+groq_api_key = (os.getenv("GROQ_API_KEY") or "").strip()
+openai_api_key = (os.getenv("OPENAI_API_KEY") or "").strip()
 groq_client = AsyncOpenAI(
     base_url="https://api.groq.com/openai/v1",
-    api_key=os.getenv("GROQ_API_KEY")
-)
+    api_key=groq_api_key,
+) if groq_api_key else None
 
 # Initialize synchronous client for OpenAI (Whisper API)
 openai_client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY")
-)
+    api_key=openai_api_key,
+) if openai_api_key else None
 
-print("[SYSTEM] Cloud APIs initialized successfully.")
+print("[SYSTEM] Optional cloud clients configured.")
 
 # Initialize FastAPI application
 app = FastAPI(title="Bob's Special Blend API", version="2.0")
@@ -67,7 +74,7 @@ except Exception as e:
 INGREDIENTS_DICT = {}
 for drink in COCKTAILS_DB:
     for comp in drink.get("components", []):
-        name_lower = comp["ingredient_name"].lower()
+        name_lower = normalize_name(comp["ingredient_name"])
         if name_lower not in INGREDIENTS_DICT:
             INGREDIENTS_DICT[name_lower] = {
                 "original_name": comp["ingredient_name"],
@@ -92,7 +99,9 @@ class SimulateDBRequest(BaseModel):
 
 
 class BobChatRequest(BaseModel):
-    user_message: str
+    user_message: str = Field(min_length=1, max_length=4000)
+    inventory: Optional[List[str]] = None
+    use_inventory: bool = False
 
 
 class MatchRequest(BaseModel):
@@ -140,78 +149,27 @@ def get_all_ingredients():
 @app.post("/api/v2/match")
 def match_cocktails(req: MatchRequest):
     """Match user's inventory against the recipe database to find makeable cocktails."""
-    user_inv_set = set([i.lower() for i in req.inventory])
-    perfect_matches = []
-    almost_matches = []
-
-    for idx, c in enumerate(COCKTAILS_DB):
-        recipe_comps = c.get("components", [])
-        if not recipe_comps:
-            continue
-
-        req_ings = set([comp["ingredient_name"].lower() for comp in recipe_comps])
-        missing = req_ings - user_inv_set
-        missing_count = len(missing)
-
-        missing_original = [comp["ingredient_name"] for comp in recipe_comps if
-                            comp["ingredient_name"].lower() in missing]
-
-        recipe_summary = {
-            "id": idx,
-            "name": c.get("name"),
-            "glass_type": c.get("glass_type"),
-            "missing_count": missing_count,
-            "missing_ingredients": missing_original
-        }
-
-        # Categorize matches based on missing ingredient count
-        if missing_count == 0:
-            perfect_matches.append(recipe_summary)
-        elif missing_count <= 2:
-            almost_matches.append(recipe_summary)
-
-    # Sort 'almost matches' so the closest ones appear first
-    almost_matches.sort(key=lambda x: x["missing_count"])
-
-    return {
-        "status": "success",
-        "perfect_matches": perfect_matches,
-        "almost_matches": almost_matches
-    }
-
-
-def color_distance(rgb1, rgb2):
-    """Calculate the Euclidean distance between two RGB color vectors."""
-    return math.sqrt(sum((a - b) ** 2 for a, b in zip(rgb1, rgb2)))
+    return {"status": "success", **match_recipes(COCKTAILS_DB, req.inventory)}
 
 
 @app.get("/api/v2/substitute")
-def find_substitute(ingredient: str, limit: int = 3):
-    """Find the best ingredient substitutes based on physical properties (ABV, Brix, pH, Color)."""
-    target = INGREDIENTS_DICT.get(ingredient.lower())
+def find_substitute(
+    ingredient: str,
+    limit: int = Query(default=3, ge=1, le=20),
+    inventory: Optional[List[str]] = Query(default=None),
+):
+    """Offer same-category alternatives, prioritizing ingredients already owned."""
+    target = INGREDIENTS_DICT.get(normalize_name(ingredient))
     if not target:
         raise HTTPException(status_code=404, detail="Ingredient not found in database")
 
-    candidates = []
-    for name, data in INGREDIENTS_DICT.items():
-        if name == ingredient.lower() or data["category"] != target["category"]:
-            continue
-
-        # Calculate absolute differences across physical properties
-        diff_abv = abs(target["physics"]["abv"] - data["physics"]["abv"])
-        diff_brix = abs(target["physics"]["brix"] - data["physics"]["brix"])
-        diff_ph = abs(target["physics"]["ph"] - data["physics"]["ph"]) * 5  # Apply weight to pH
-        c_dist = color_distance(target["physics"]["color_rgb"], data["physics"]["color_rgb"]) / 25.5
-
-        # Compute a normalized match score (Higher is better)
-        candidates.append({
-            "ingredient_name": data["original_name"],
-            "match_score": max(0, 100 - int((diff_abv + diff_brix + diff_ph + c_dist) * 2)),
-            "physics_baseline": data["physics"]
-        })
-
-    candidates.sort(key=lambda x: x["match_score"], reverse=True)
-    return {"status": "success", "target": target["original_name"], "substitutes": candidates[:limit]}
+    candidates = rank_substitutes(INGREDIENTS_DICT, ingredient, inventory or [])
+    return {
+        "status": "success",
+        "target": target["original_name"],
+        "substitutes": candidates[:limit],
+        "score_description": "Physical similarity only (ABV, sugar, acidity, and color). Flavor and recipe balance may change.",
+    }
 
 
 # ==========================================
@@ -287,6 +245,8 @@ def run_physics_simulation(recipe_name: str, method: str, components: List[dict]
 @app.post("/api/v2/transcribe")
 async def transcribe_audio(request: Request, audio_file: UploadFile = File(...)):
     """Process incoming audio files and transcribe them using OpenAI's Whisper API."""
+    if openai_client is None:
+        raise HTTPException(status_code=503, detail="Voice transcription is unavailable. You can still type your message.")
     # --- Rate Limiting Logic ---
     client_ip = request.client.host
     current_time = time.time()
@@ -329,6 +289,32 @@ async def transcribe_audio(request: Request, audio_file: UploadFile = File(...))
 @app.post("/api/v2/chat_with_bob")
 async def chat_with_bob(req: BobChatRequest, request: Request):
     """Handle conversational AI requests via Groq, incorporating rate limiting and strict JSON output formatting."""
+    inventory = req.inventory or []
+    candidates = list(enumerate(COCKTAILS_DB))
+    if req.use_inventory:
+        if not normalize_inventory(inventory):
+            return {
+                "status": "success",
+                "bob_says": "Your cabinet is empty. Add the ingredients you have in My Cabinet, or turn off 'Use only my cabinet' to explore the full menu.",
+                "recommendation_status": "empty_inventory",
+            }
+        makeable_ids = {item["id"] for item in match_recipes(COCKTAILS_DB, inventory)["perfect_matches"]}
+        candidates = [(recipe_id, recipe) for recipe_id, recipe in candidates if recipe_id in makeable_ids]
+        if not candidates:
+            return {
+                "status": "success",
+                "bob_says": "I don't have a complete recipe for what's in your cabinet yet. Check the missing ingredients in My Cabinet, add more supplies, or turn off 'Use only my cabinet' to explore the full menu.",
+                "recommendation_status": "no_available_recipes",
+            }
+    if not candidates:
+        return {
+            "status": "success",
+            "bob_says": "The recipe catalog is unavailable right now. Please try again later.",
+            "recommendation_status": "no_available_recipes",
+        }
+    if groq_client is None:
+        raise HTTPException(status_code=503, detail="Bob's chat is unavailable. You can still browse recipes and match your cabinet.")
+
     # --- Rate Limiting Logic ---
     client_ip = request.client.host
     current_time = time.time()
@@ -346,14 +332,20 @@ async def chat_with_bob(req: BobChatRequest, request: Request):
     IP_RATE_LIMIT[client_ip]["count"] += 1
     # ---------------------------
 
-    cocktail_names = [c["name"] for c in COCKTAILS_DB]
+    cocktail_names = [recipe["name"] for _, recipe in candidates]
     available_cocktails_str = ", ".join(cocktail_names)
+    inventory_rule = (
+        "The menu has already been filtered to recipes the customer can make with their shelf. Do not suggest any other drink or extra ingredients."
+        if req.use_inventory else
+        "The customer is exploring the full menu. Do not claim they already own the required ingredients."
+    )
 
     system_prompt = f"""
     You are Bob, a veteran bartender who has been working at this corner bar for 30 years. You have sharp hospitality instincts, know how to read your customers' emotions, and speak directly, a bit roughly, but with genuine empathy.
 
     [Available Cocktail Menu]:
     {available_cocktails_str}
+    {inventory_rule}
 
     [Bob's Rules of Conduct]:
     1. EMPATHY FIRST: Respond to the customer's mood like an old friend. Console them if they are sad, celebrate if they are happy.
@@ -399,44 +391,41 @@ async def chat_with_bob(req: BobChatRequest, request: Request):
             raw_content = raw_content[:-3]
 
         bob_recipe = json.loads(raw_content.strip())
-        rec_name = bob_recipe.get("recommended_cocktail_name", "").strip()
+        if not isinstance(bob_recipe, dict):
+            raise ValueError("Model reply must be an object")
+        rec_name = bob_recipe.get("recommended_cocktail_name", "")
+        bob_comment = bob_recipe.get("bob_comment")
+        if not isinstance(rec_name, str) or not isinstance(bob_comment, str) or not bob_comment.strip():
+            raise ValueError("Model reply fields are invalid")
 
-        matched_recipe = None
-        matched_id = None
-
-        # Cross-reference recommended cocktail with the local database
-        if rec_name:
-            for idx, c in enumerate(COCKTAILS_DB):
-                if c["name"].lower() == rec_name.lower():
-                    matched_recipe = c
-                    matched_id = idx
-                    break
-
-            # Fallback: Fuzzy matching if exact name match fails
-            if not matched_recipe:
-                for idx, c in enumerate(COCKTAILS_DB):
-                    if rec_name.lower() in c["name"].lower() or c["name"].lower() in rec_name.lower():
-                        matched_recipe = c
-                        matched_id = idx
-                        break
-
-        if matched_recipe:
+        matched = find_exact_recipe(candidates, rec_name)
+        if rec_name.strip() and matched is None:
+            # Discard the explanation too: it may recommend the unverified drink.
             return {
                 "status": "success",
-                "bob_says": bob_recipe.get("bob_comment", "Here you go."),
+                "bob_says": "I couldn't verify that recommendation against the available menu. Try asking again, or pick a recipe from the library.",
+                "recommendation_status": "unavailable_recommendation",
+            }
+        if matched is not None:
+            matched_id, matched_recipe = matched
+            return {
+                "status": "success",
+                "bob_says": bob_comment.strip(),
                 "recipe_id": matched_id,
                 "recipe_name": matched_recipe["name"],
-                "glass_type": matched_recipe.get("glass_type", "Standard")
+                "glass_type": matched_recipe.get("glass_type", "Standard"),
+                "recommendation_status": "recommended",
             }
         else:
             return {
                 "status": "success",
-                "bob_says": bob_recipe.get("bob_comment", "I'm just here to chat."),
+                "bob_says": bob_comment.strip(),
+                "recommendation_status": "no_recommendation",
             }
 
     except Exception as e:
         print(f"[ERROR] Bob Cognitive Core failure: {e}")
-        raise HTTPException(status_code=500, detail=f"Bob is sleeping... ({str(e)})")
+        raise HTTPException(status_code=502, detail="Bob couldn't finish that reply. Please try again, or browse recipes while chat is unavailable.") from e
 
 
 if __name__ == "__main__":

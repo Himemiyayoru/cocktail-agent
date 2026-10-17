@@ -105,7 +105,7 @@ export default function SearchScreen() {
     <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top + 20 }]}>
       
       <View style={styles.header}>
-        <Text style={[styles.title, { color: colors.text }]}>SEARCH</Text>
+            <Text style={[styles.title, { color: colors.text, paddingRight: 52 }]}>SEARCH</Text>
         <View style={[styles.searchBarContainer, { backgroundColor: colors.card, borderColor: themePrimary }]}>
           <Ionicons name="search" size={24} color={colors.subtext} style={styles.searchIcon} />
           <TextInput
@@ -166,7 +166,7 @@ export default function SearchScreen() {
             <View style={styles.centerContainer}>
               <Text style={{ fontSize: 40, marginBottom: 10 }}>🍸</Text>
               <Text style={[styles.emptyText, { color: colors.text, fontWeight: 'bold' }]}>No match found</Text>
-              <Text style={[styles.emptyText, { color: colors.subtext, fontSize: 14 }]}>Maybe you can ask Bob to invent it!</Text>
+              <Text style={[styles.emptyText, { color: colors.subtext, fontSize: 14 }]}>Try another name or ask Bob for a suggestion from the catalog.</Text>
             </View>
           )}
 

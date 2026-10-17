@@ -130,7 +130,7 @@ export default function LibraryScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  header: { paddingHorizontal: 20, marginBottom: 15 },
+  header: { paddingLeft: 20, paddingRight: 72, marginBottom: 15 },
   title: { fontSize: 28, fontWeight: '900', letterSpacing: 2 },
   centerContainer: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   sectionContainer: { marginBottom: 30 },

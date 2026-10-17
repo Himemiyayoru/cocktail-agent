@@ -1,46 +1,24 @@
-import { useState, useCallback } from 'react';
+import { useCallback, useSyncExternalStore } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from 'expo-router';
+import { createPersistentListStore } from '../lib/persistentListStore';
+
+const store = createPersistentListStore<number>(
+  AsyncStorage,
+  '@cocktail_favorites',
+  (value): value is number => typeof value === 'number' && Number.isSafeInteger(value) && value >= 0,
+  'saved cocktails',
+);
 
 export function useFavorites() {
-  const [favorites, setFavorites] = useState<number[]>([]);
-  const [loaded, setLoaded] = useState(false);
-
-  const loadFavorites = async () => {
-    try {
-      const stored = await AsyncStorage.getItem('@cocktail_favorites');
-      if (stored) setFavorites(JSON.parse(stored));
-    } catch (e) {
-      console.error("Failed to load favorites", e);
-    } finally {
-      setLoaded(true);
-    }
+  const state = useSyncExternalStore(store.subscribe, store.getSnapshot, store.getSnapshot);
+  useFocusEffect(useCallback(() => { void store.load(); }, []));
+  return {
+    favorites: state.items,
+    toggleFavorite: store.toggle,
+    loaded: state.loaded,
+    saving: state.saving,
+    error: state.error,
+    retry: store.retry,
   };
-
-  // Reload favorite data every time the screen comes into focus to ensure cross-tab synchronization
-  useFocusEffect(
-    useCallback(() => {
-      loadFavorites();
-    }, [])
-  );
-
-  const toggleFavorite = async (id: number) => {
-    try {
-      const stored = await AsyncStorage.getItem('@cocktail_favorites');
-      let current = stored ? JSON.parse(stored) : [];
-      
-      if (current.includes(id)) {
-        current = current.filter((fid: number) => fid !== id); // Remove from favorites
-      } else {
-        current.push(id); // Add to favorites
-      }
-      
-      setFavorites(current);
-      await AsyncStorage.setItem('@cocktail_favorites', JSON.stringify(current));
-    } catch (e) {
-      console.error("Failed to save favorite", e);
-    }
-  };
-
-  return { favorites, toggleFavorite, loaded };
 }

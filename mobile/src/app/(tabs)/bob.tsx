@@ -1,11 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, ScrollView, ActivityIndicator, KeyboardAvoidingView, Platform, Image as RNImage, Keyboard } from 'react-native';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, ScrollView, ActivityIndicator, KeyboardAvoidingView, Platform, Image as RNImage, Keyboard, Switch } from 'react-native';
 import { useTheme } from '../../context/ThemeContext';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { Audio } from 'expo-av'; 
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { DrinkPhoto } from '../../components/DrinkPhoto';
+import { useInventory } from '../../hooks/useInventory';
+import { apiRequest } from '../../lib/api';
 
 function BobDrinkThumbnail({ drinkName, size = 60, colors }: { drinkName: string, size?: number, colors: any }) {
   return (
@@ -42,8 +44,19 @@ export default function BobScreen() {
   const inputRef = useRef<TextInput>(null);
   const [inputMode, setInputMode] = useState<'text' | 'voice'>('text');
   
-  const [recording, setRecording] = useState<Audio.Recording | null>(null);
+  const recordingRef = useRef<Audio.Recording | null>(null);
+  const holdingMic = useRef(false);
+  const startingMic = useRef(false);
+  const micSessionBusy = useRef(false);
+  const mounted = useRef(true);
+  const chatRequest = useRef<AbortController | null>(null);
+  const transcriptionRequest = useRef<AbortController | null>(null);
+  const { inventory, loaded: inventoryLoaded, error: inventoryError } = useInventory();
+  const [useCabinet, setUseCabinet] = useState(false);
+  const [requestError, setRequestError] = useState<string | null>(null);
+  const [failedRequest, setFailedRequest] = useState<{ text: string; inventory: string[]; useCabinet: boolean } | null>(null);
   const [isRecording, setIsRecording] = useState(false);
+  const [isMicBusy, setIsMicBusy] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
 
   useEffect(() => {
@@ -53,78 +66,130 @@ export default function BobScreen() {
     return () => hideSub.remove();
   }, []);
 
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      mounted.current = false;
+      holdingMic.current = false;
+      chatRequest.current?.abort();
+      transcriptionRequest.current?.abort();
+      recordingRef.current?.stopAndUnloadAsync().catch(() => {});
+    };
+  }, []);
+
   async function handlePressIn() {
+    if (micSessionBusy.current || startingMic.current || recordingRef.current || loading || isTranscribing) return;
+    micSessionBusy.current = true;
+    setIsMicBusy(true);
+    holdingMic.current = true;
+    startingMic.current = true;
+    setRequestError(null);
+    let started = false;
     try {
       const permission = await Audio.requestPermissionsAsync();
-      if (permission.status !== 'granted') return;
+      if (permission.status !== 'granted') {
+        if (mounted.current) setRequestError('Microphone access is off. You can type instead.');
+        return;
+      }
+      if (!holdingMic.current || !mounted.current) return;
       await Audio.setAudioModeAsync({ allowsRecordingIOS: true, playsInSilentModeIOS: true });
       const { recording } = await Audio.Recording.createAsync(Audio.RecordingOptionsPresets.HIGH_QUALITY);
-      setRecording(recording);
+      if (!holdingMic.current || !mounted.current) {
+        await recording.stopAndUnloadAsync();
+        await Audio.setAudioModeAsync({ allowsRecordingIOS: false });
+        return;
+      }
+      recordingRef.current = recording;
+      started = true;
       setIsRecording(true);
-    } catch (err) { console.error('Failed to start recording', err); }
+    } catch {
+      if (mounted.current) setRequestError('Recording could not start. Please try again or type.');
+    } finally {
+      startingMic.current = false;
+      if (!started) {
+        await Audio.setAudioModeAsync({ allowsRecordingIOS: false }).catch(() => {});
+        micSessionBusy.current = false;
+        if (mounted.current) setIsMicBusy(false);
+      }
+    }
   }
 
   async function handlePressOut() {
+    holdingMic.current = false;
+    const recording = recordingRef.current;
     if (!recording) return;
+    recordingRef.current = null;
     setIsRecording(false);
     try {
       await recording.stopAndUnloadAsync();
+      await Audio.setAudioModeAsync({ allowsRecordingIOS: false });
       const uri = recording.getURI();
-      setRecording(null); 
-      if (uri) processAudioTranscription(uri);
-    } catch (error) { console.error('Failed to stop recording', error); }
+      if (uri && mounted.current) await processAudioTranscription(uri);
+    } catch {
+      if (mounted.current) setRequestError('Recording could not be read. Please try again.');
+    } finally {
+      await Audio.setAudioModeAsync({ allowsRecordingIOS: false }).catch(() => {});
+      micSessionBusy.current = false;
+      if (mounted.current) setIsMicBusy(false);
+    }
   }
 
   async function processAudioTranscription(uri: string) {
     setIsTranscribing(true);
-    setInputMode('text'); 
-    setInputText("Transcribing..."); 
+    setInputMode('text');
+    setRequestError(null);
+    const controller = new AbortController();
+    transcriptionRequest.current = controller;
     try {
       const formData = new FormData();
-      formData.append('audio_file', { uri: uri, name: 'voice.m4a', type: 'audio/m4a' } as any);
-      
-      const res = await fetch('https://bobs-special-blend.onrender.com/api/v2/transcribe', { method: 'POST', body: formData });
-      const json = await res.json();
-      
-      if (json.status === 'success') setInputText(json.text);
-      else throw new Error("Transcription failed.");
+      if (Platform.OS === 'web') {
+        const blob = await (await fetch(uri)).blob();
+        formData.append('audio_file', blob, blob.type.includes('webm') ? 'voice.webm' : 'voice.m4a');
+      } else {
+        formData.append('audio_file', { uri, name: 'voice.m4a', type: 'audio/m4a' } as any);
+      }
+      const json = await apiRequest<{ status: string; text: string }>('/api/v2/transcribe', { method: 'POST', body: formData, signal: controller.signal }, 45000);
+      if (mounted.current && !controller.signal.aborted) setInputText(json.text);
     } catch (error) {
-      setInputText(""); 
-    } finally { setIsTranscribing(false); }
+      if (mounted.current && !controller.signal.aborted) setRequestError(error instanceof Error ? error.message : 'Transcription failed. Please try again.');
+    } finally {
+      transcriptionRequest.current = null;
+      if (mounted.current) setIsTranscribing(false);
+    }
   }
 
-  const sendMessage = async () => {
-    if (!inputText.trim()) return;
-    const userText = inputText;
-    setMessages(prev => [...prev, { id: Date.now().toString(), role: 'user', text: userText }]);
-    setInputText('');
+  const sendMessage = async (retry = false) => {
+    if (chatRequest.current || micSessionBusy.current || isTranscribing || isRecording) return;
+    const pending = retry && failedRequest ? failedRequest : { text: inputText.trim(), inventory: [...inventory], useCabinet };
+    if (!pending.text || (pending.useCabinet && (!inventoryLoaded || inventoryError))) return;
+    if (!retry) {
+      setMessages(prev => [...prev, { id: `user-${Date.now()}`, role: 'user', text: pending.text }]);
+      setInputText('');
+    }
+    const controller = new AbortController();
+    chatRequest.current = controller;
     setLoading(true);
-
+    setRequestError(null);
+    setFailedRequest(null);
     try {
-      const response = await fetch('https://bobs-special-blend.onrender.com/api/v2/chat_with_bob', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ user_message: userText })
-      });
-      const json = await response.json();
-      
-      if (json.status === 'success') {
-        const bobMsg: Message = {
-          id: (Date.now() + 1).toString(),
-          role: 'bob',
-          text: json.bob_says,
-          recipe_id: json.recipe_id,
-          recipe_name: json.recipe_name,
-          glass_type: json.glass_type
-        };
-        setMessages(prev => [...prev, bobMsg]);
-      } else {
-        throw new Error(json.detail || "Bob is ignoring you.");
+      const json = await apiRequest<{ status: string; bob_says: string; recipe_id?: number; recipe_name?: string; glass_type?: string }>('/api/v2/chat_with_bob', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user_message: pending.text, inventory: pending.inventory, use_inventory: pending.useCabinet }),
+        signal: controller.signal,
+      }, 45000);
+      if (typeof json.bob_says !== 'string') throw new Error('Bob could not reply. Please try again.');
+      if (mounted.current && !controller.signal.aborted) setMessages(prev => [...prev, {
+        id: `bob-${Date.now()}`, role: 'bob', text: json.bob_says,
+        recipe_id: json.recipe_id, recipe_name: json.recipe_name, glass_type: json.glass_type,
+      }]);
+    } catch (error) {
+      if (mounted.current) {
+        setRequestError(controller.signal.aborted ? 'Request cancelled. Your message is available to retry.' : error instanceof Error ? error.message : 'Bob could not reply. Please try again.');
+        setFailedRequest(pending);
       }
-    } catch (error: any) {
-      setMessages(prev => [...prev, { id: (Date.now() + 1).toString(), role: 'bob', text: `[SYSTEM ERROR] ${error.message}` }]);
     } finally {
-      setLoading(false);
+      chatRequest.current = null;
+      if (mounted.current) setLoading(false);
     }
   };
 
@@ -166,17 +231,26 @@ export default function BobScreen() {
   return (
     <KeyboardAvoidingView 
       style={{ flex: 1, backgroundColor: colors.background }} 
-      behavior={Platform.OS === 'ios' ? 'padding' : 'padding'}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       keyboardVerticalOffset={0} 
     >
       <View style={[styles.container, { paddingTop: insets.top }]}>
         
-        <View style={[styles.fixedHeader, { backgroundColor: colors.background, borderBottomColor: colors.border }]}>
+        <View style={[styles.fixedHeader, { backgroundColor: colors.background, borderBottomColor: colors.border, paddingRight: 72 }]}>
           <View>
             <Text style={{ fontSize: 24, fontWeight: '900', color: colors.text, letterSpacing: 1 }}>ASK BOB</Text>
             <Text style={{ fontSize: 12, color: colors.subtext }}>Your AI Bartender</Text>
           </View>
         </View>
+
+        <View style={[styles.cabinetRow, { borderBottomColor: colors.border }]}>
+          <View style={{ flex: 1 }}>
+            <Text style={{ color: colors.text, fontWeight: '600' }}>Use only my cabinet</Text>
+            <Text style={{ color: colors.subtext, fontSize: 12 }}>{useCabinet ? `${inventory.length} ingredients · only complete recipes` : 'Explore the full recipe catalog'}</Text>
+          </View>
+          <Switch accessibilityLabel="Use only my cabinet" value={useCabinet} onValueChange={setUseCabinet} disabled={loading || !inventoryLoaded} />
+        </View>
+        {useCabinet && inventoryError && <Text accessibilityRole="alert" style={{ color: colors.text, padding: 16 }}>Your cabinet could not be saved or loaded. Open My Cabinet to retry.</Text>}
 
         <ScrollView 
           ref={scrollViewRef} 
@@ -189,12 +263,18 @@ export default function BobScreen() {
             <View style={styles.loadingContainer}>
               <ActivityIndicator size="small" color={themePrimary} />
               <Text style={[styles.loadingText, { color: colors.subtext }]}>Bob is mixing...</Text>
+              <TouchableOpacity accessibilityRole="button" onPress={() => chatRequest.current?.abort()} style={{ padding: 12 }}><Text style={{ color: colors.text }}>Cancel</Text></TouchableOpacity>
             </View>
           )}
         </ScrollView>
 
-        <View style={[styles.inputContainer, { backgroundColor: colors.card, borderTopColor: colors.border, paddingBottom: Platform.OS === 'ios' ? insets.bottom + 10 : 16 }]}>
-          <TouchableOpacity style={styles.modeButton} onPress={() => setInputMode(prev => prev === 'text' ? 'voice' : 'text')} disabled={isTranscribing || loading}>
+        {requestError && <View accessibilityRole="alert" style={[styles.errorRow, { backgroundColor: colors.card, borderColor: colors.border }]}>
+          <Text style={{ color: colors.text, flex: 1 }}>{requestError}</Text>
+          {failedRequest && <TouchableOpacity accessibilityRole="button" disabled={loading} onPress={() => sendMessage(true)} style={{ padding: 12 }}><Text style={{ color: themePrimary, fontWeight: '700' }}>Retry</Text></TouchableOpacity>}
+        </View>}
+        {isTranscribing && <Text accessibilityLiveRegion="polite" style={{ color: colors.subtext, paddingHorizontal: 20 }}>Transcribing — review the text before sending.</Text>}
+        <View style={[styles.inputContainer, { backgroundColor: colors.card, borderTopColor: colors.border, paddingBottom: 12 }]}>
+          <TouchableOpacity style={styles.modeButton} onPress={() => setInputMode(prev => prev === 'text' ? 'voice' : 'text')} disabled={isMicBusy || isTranscribing || loading}>
             {inputMode === 'text' ? <Ionicons name="mic-outline" size={26} color={colors.text} /> : <MaterialIcons name="keyboard" size={26} color={colors.text} />}
           </TouchableOpacity>
 
@@ -204,7 +284,7 @@ export default function BobScreen() {
               style={[styles.input, { color: colors.text, backgroundColor: colors.background, borderColor: colors.border }]}
               value={inputText}
               onChangeText={setInputText}
-              onSubmitEditing={sendMessage}
+              onSubmitEditing={() => sendMessage()}
               editable={!isTranscribing}
               placeholder="Tell Bob what you want..."
               placeholderTextColor={colors.subtext}
@@ -215,14 +295,14 @@ export default function BobScreen() {
               onPressIn={handlePressIn} onPressOut={handlePressOut} activeOpacity={0.7}
             >
               <Text style={[styles.holdToTalkText, { color: isRecording ? themePrimaryText : colors.text }]}>
-                {isRecording ? "Release to Send" : "Hold to Talk"}
+                {isRecording ? "Release to Transcribe" : "Hold to Talk"}
               </Text>
             </TouchableOpacity>
           )}
           
           <TouchableOpacity 
             style={[styles.sendButton, { backgroundColor: inputText.trim() && inputMode === 'text' ? themePrimary : colors.border, opacity: inputMode === 'text' ? 1 : 0 }]} 
-            onPress={sendMessage} disabled={!inputText.trim() || loading || isTranscribing || inputMode === 'voice'}
+            accessibilityLabel="Send message" onPress={() => sendMessage()} disabled={!inputText.trim() || loading || isTranscribing || inputMode === 'voice' || (useCabinet && (!inventoryLoaded || !!inventoryError))}
           >
             <Ionicons name="send" size={18} color={inputText.trim() ? themePrimaryText : colors.subtext} />
           </TouchableOpacity>
@@ -234,6 +314,8 @@ export default function BobScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
+  cabinetRow: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 20, paddingVertical: 12, borderBottomWidth: 1, gap: 12 },
+  errorRow: { flexDirection: 'row', alignItems: 'center', marginHorizontal: 16, marginBottom: 8, padding: 12, borderRadius: 10, borderWidth: 1 },
   fixedHeader: { 
     flexDirection: 'row', 
     justifyContent: 'flex-start',

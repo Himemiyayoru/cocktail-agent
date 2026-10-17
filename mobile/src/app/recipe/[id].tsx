@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, ScrollView, TouchableOpacity, Modal } from 'react-native';
+import { useState, useEffect, useRef } from 'react';
+import { View, Text, StyleSheet, ActivityIndicator, ScrollView, TouchableOpacity, Modal, TextInput, KeyboardAvoidingView, Platform } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../context/ThemeContext';
@@ -7,12 +8,44 @@ import Svg, { Defs, ClipPath, Path, Rect, Ellipse, G } from 'react-native-svg';
 import { useFavorites } from '../../hooks/useFavorites';
 import RealDrinkImage from '../../components/RealDrinkImage';
 
-// API Base URL (Split string to prevent unwanted markdown parsing in some environments)
-const API_BASE = 'https://bobs-special-blend.onrender.com';
+import { useInventory } from '../../hooks/useInventory';
+import { useSavedBlends } from '../../hooks/useSavedBlends';
+import { apiRequest } from '../../lib/api';
+import {
+  createRecipeState, selectGlass, adjustSlotVolume, substituteSlot, scaleVolumesToCapacity,
+  formatVolume, ingredientKey, isRecipeDetail,
+  type RecipeDetail, type RecipeSlot, type PhysicsBaseline, type GlassKey, type SavedBlend,
+} from '../../lib/recipe';
 
-interface PhysicsBaseline { abv: number; brix: number; opacity: number; color_rgb: number[]; }
-interface Component { ingredient_name: string; category: string; volume_ml: number; physics_baseline: PhysicsBaseline; }
-interface RecipeDetail { id: number; name: string; method: string; components: Component[]; instructions?: string[]; glass_type?: string; description?: string; }
+interface SubstituteCandidate {
+  ingredient_name: string;
+  category?: string;
+  physics_baseline: PhysicsBaseline;
+  in_inventory?: boolean;
+  match_score?: number | string;
+  isOriginal?: boolean;
+}
+
+function AmountInput({ value, onChange, color, borderColor, label }: { value: number; onChange: (value: number) => void; color: string; borderColor: string; label: string }) {
+  const [draft, setDraft] = useState(formatVolume(value));
+  useEffect(() => {
+    setDraft(previous => Number(previous) === value ? previous : formatVolume(value));
+  }, [value]);
+  return <TextInput
+    accessibilityLabel={label}
+    keyboardType="decimal-pad"
+    selectTextOnFocus
+    value={draft}
+    onChangeText={text => {
+      if (!/^\d*\.?\d*$/.test(text)) return;
+      setDraft(text);
+      const next = text === '' || text === '.' ? 0 : Number(text);
+      if (Number.isFinite(next)) onChange(next);
+    }}
+    onBlur={() => setDraft(formatVolume(value))}
+    style={[styles.amountInput, { color, borderColor }]}
+  />;
+}
 
 const RY = 0.16;
 const GLASS_SHAPES: Record<string, any> = {
@@ -26,219 +59,243 @@ const GLASS_SHAPES: Record<string, any> = {
 };
 
 export default function RecipeLabScreen() {
-  const { id } = useLocalSearchParams(); 
-  const router = useRouter(); 
-  const { favorites, toggleFavorite } = useFavorites();
-  const isFavorite = favorites.includes(Number(id));
-  const { colors, isDark } = useTheme(); 
-  
+  const params = useLocalSearchParams<{ id: string; versionId?: string }>();
+  const routeId = Array.isArray(params.id) ? params.id[0] : params.id;
+  const versionId = Array.isArray(params.versionId) ? params.versionId[0] : params.versionId;
+  const router = useRouter();
+  const { favorites, toggleFavorite, error: favoriteError } = useFavorites();
+  const { inventory, loaded: inventoryLoaded, error: inventoryError, retry: retryInventory } = useInventory();
+  const inventoryNames = new Set(inventory.map(ingredientKey));
+  const { loadById, saveBlend } = useSavedBlends();
+  const isFavorite = favorites.includes(Number(routeId));
+  const { colors, isDark } = useTheme();
+  const insets = useSafeAreaInsets();
+
   const [recipe, setRecipe] = useState<RecipeDetail | null>(null);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
   const [viewMode, setViewMode] = useState<'photo' | 'physics'>('photo');
-
-  const [originalComponents, setOriginalComponents] = useState<Component[]>([]);
-  const [components, setComponents] = useState<Component[]>([]);
-
+  const [originalComponents, setOriginalComponents] = useState<RecipeSlot[]>([]);
+  const [components, setComponents] = useState<RecipeSlot[]>([]);
   const [initialVolumes, setInitialVolumes] = useState<Record<string, number>>({});
   const [volumes, setVolumes] = useState<Record<string, number>>({});
-  const [baseVolumes, setBaseVolumes] = useState<Record<string, number> | null>(null);
-  
-  const [initialGlass, setInitialGlass] = useState<string>('rocks');
-  const [selectedGlass, setSelectedGlass] = useState<string>('rocks');
-  const [isMixedMode, setIsMixedMode] = useState<boolean>(true);
-
-  // Track the index of the slot being modified, rather than the name, to handle duplicate ingredients or precision swaps
+  const [initialGlass, setInitialGlass] = useState<GlassKey>('rocks');
+  const [selectedGlass, setSelectedGlass] = useState<GlassKey>('rocks');
+  const [isMixedMode, setIsMixedMode] = useState(true);
+  const [savedVersion, setSavedVersion] = useState<SavedBlend | null>(null);
+  const [versionName, setVersionName] = useState('');
+  const [saving, setSaving] = useState(false);
+  const savingRef = useRef(false);
+  const [saveMessage, setSaveMessage] = useState<string | null>(null);
+  const [saveError, setSaveError] = useState<string | null>(null);
   const [showSubModal, setShowSubModal] = useState(false);
   const [subTargetIndex, setSubTargetIndex] = useState<number | null>(null);
-  const [subCandidates, setSubCandidates] = useState<any[]>([]);
+  const [subCandidates, setSubCandidates] = useState<SubstituteCandidate[]>([]);
   const [loadingSubs, setLoadingSubs] = useState(false);
+  const [subError, setSubError] = useState<string | null>(null);
+  const subRequest = useRef<AbortController | null>(null);
+  const subToken = useRef(0);
 
   const gl = isDark ? '255,255,255' : '0,0,0';
-  const themeDarken = isDark ? 0 : 40; 
-  const themePrimary = isDark ? colors.primary : '#111111'; 
+  const themeDarken = isDark ? 0 : 40;
+  const themePrimary = isDark ? colors.primary : '#111111';
   const themePrimaryText = isDark ? '#000000' : '#FFFFFF';
 
-  useEffect(() => { fetchRecipeDetail(); }, [id]);
+  const closeSubstituteModal = () => {
+    subToken.current += 1;
+    subRequest.current?.abort();
+    setShowSubModal(false);
+    setSubTargetIndex(null);
+    setSubCandidates([]);
+    setSubError(null);
+  };
 
-  const fetchRecipeDetail = async () => {
-    try {
-      const response = await fetch(`${API_BASE}/api/v2/recipes/${id}`);
-      const json = await response.json();
-      if (json.status === 'success') {
-        setRecipe(json.data);
-        setOriginalComponents(json.data.components);
-        setComponents(json.data.components);
-        
-        let initVols: Record<string, number> = {};
-        json.data.components.forEach((comp: Component) => {
-          initVols[comp.ingredient_name] = comp.volume_ml;
-        });
+  useEffect(() => {
+    const controller = new AbortController();
+    let active = true;
+    closeSubstituteModal();
+    setLoading(true);
+    setLoadError(null);
+    setSaveMessage(null);
+    setSaveError(null);
+    setRecipe(null);
 
-        const methodStr = json.data.method?.toLowerCase() || '';
-        setIsMixedMode(['shaken', 'stirred', 'blend'].some(m => methodStr.includes(m)));
-
-        let initialG = 'rocks';
-        const glassHint = json.data.glass_type?.toLowerCase() || '';
-        if (glassHint.includes('martini') || glassHint.includes('cocktail')) initialG = 'martini';
-        else if (glassHint.includes('highball') || glassHint.includes('collins')) initialG = 'highball';
-        else if (glassHint.includes('flute') || glassHint.includes('champagne')) initialG = 'flute';
-        else if (glassHint.includes('coupe')) initialG = 'coupe';
-        else if (glassHint.includes('nick') || glassHint.includes('nora')) initialG = 'nicknora';
-        else if (glassHint.includes('shot')) initialG = 'shot';
-        else if (glassHint.includes('hurricane') || glassHint.includes('poco')) initialG = 'highball';
-        if (!GLASS_SHAPES[initialG]) initialG = 'rocks';
-
-        const newMaxVol = GLASS_SHAPES[initialG].maxVol;
-        const currentBaseTotal = Object.values(initVols).reduce((sum, val) => sum + val, 0);
-        
-        if (currentBaseTotal > newMaxVol) {
-          const ratio = (newMaxVol * 0.95) / currentBaseTotal;
-          for (const k in initVols) {
-            if (initVols[k] > 0) {
-              let snapped = Math.round((initVols[k] * ratio) / 5) * 5;
-              if (snapped === 0) snapped = 5; 
-              initVols[k] = snapped;
-            }
-          }
+    const load = async () => {
+      try {
+        let detail: RecipeDetail;
+        let saved: SavedBlend | undefined;
+        if (versionId) {
+          saved = await loadById(versionId);
+          if (!saved || saved.recipeId !== Number(routeId)) throw new Error('This saved version is unavailable. Open the original recipe or return to Saved.');
+          detail = saved.recipe;
+        } else {
+          const json = await apiRequest<{ status: string; data: unknown }>(`/api/v2/recipes/${encodeURIComponent(routeId ?? '')}`, { signal: controller.signal });
+          if (json.status !== 'success' || !isRecipeDetail(json.data)) throw new Error('The recipe could not be loaded. Please try again.');
+          detail = json.data;
         }
-
-        setInitialVolumes(initVols);
-        setVolumes(initVols);
-        setBaseVolumes(null); 
-        setInitialGlass(initialG);
-        setSelectedGlass(initialG);
+        if (!active) return;
+        const original = createRecipeState(detail);
+        const current = saved ?? original;
+        setRecipe(detail);
+        setOriginalComponents(original.components);
+        setInitialVolumes(original.volumes);
+        setInitialGlass(original.selectedGlass);
+        setComponents(current.components);
+        setVolumes(current.volumes);
+        setSelectedGlass(current.selectedGlass);
+        setIsMixedMode(current.isMixedMode);
+        setSavedVersion(saved ?? null);
+        setVersionName(saved?.name ?? `${detail.name} — my version`);
+        setViewMode(saved ? 'physics' : 'photo');
+      } catch (cause) {
+        if (active) setLoadError(cause instanceof Error ? cause.message : 'The recipe could not be loaded. Please try again.');
+      } finally {
+        if (active) setLoading(false);
       }
-    } catch (error) { console.error("Fetch failed:", error); } 
-    finally { setLoading(false); }
+    };
+    void load();
+    return () => {
+      active = false;
+      controller.abort();
+      subToken.current += 1;
+      subRequest.current?.abort();
+    };
+  }, [routeId, versionId, reloadKey, loadById]);
+
+  const markChanged = () => { setSaveMessage(null); setSaveError(null); };
+  const handleGlassSelect = (glassKey: GlassKey) => {
+    markChanged();
+    setViewMode('physics');
+    const next = selectGlass({ components, volumes, selectedGlass, isMixedMode }, glassKey);
+    setSelectedGlass(next.selectedGlass);
+    setVolumes(next.volumes);
   };
 
-  const handleGlassSelect = (glassKey: string) => {
-    setViewMode('physics'); 
-    const newMaxVol = GLASS_SHAPES[glassKey].maxVol;
-    const currentBase = baseVolumes || volumes; 
-    const currentBaseTotal = Object.values(currentBase).reduce((sum, val) => sum + val, 0);
-    
-    if (currentBaseTotal > newMaxVol) {
-      if (!baseVolumes) setBaseVolumes(volumes);
-      const ratio = newMaxVol / currentBaseTotal;
-      const newVols = { ...currentBase };
-      let newTotal = 0;
-      for (const k in newVols) {
-        if (newVols[k] > 0) {
-          let snapped = Math.round((newVols[k] * ratio) / 5) * 5;
-          if (snapped === 0) snapped = 5; 
-          newVols[k] = snapped;
-          newTotal += snapped;
-        }
-      }
-      while (newTotal > newMaxVol) {
-        const largestKey = Object.keys(newVols).reduce((a, b) => newVols[a] > newVols[b] ? a : b);
-        newVols[largestKey] -= 5;
-        newTotal -= 5;
-      }
-      setVolumes(newVols);
-    } else {
-      if (baseVolumes) { setVolumes(baseVolumes); setBaseVolumes(null); }
-    }
-    setSelectedGlass(glassKey);
+  const adjustVolume = (slotId: string, delta: number) => {
+    markChanged();
+    setViewMode('physics');
+    setVolumes(previous => adjustSlotVolume(previous, slotId, delta));
   };
 
-  const adjustVolume = (ingredientName: string, delta: number) => {
-    setViewMode('physics'); 
-    setBaseVolumes(null); 
-    setVolumes(prev => {
-      const currentTotal = Object.values(prev).reduce((sum, val) => sum + val, 0);
-      const currentVal = prev[ingredientName] || 0;
-      const currentGlassLimit = (GLASS_SHAPES[selectedGlass] || GLASS_SHAPES['rocks']).maxVol;
-      let newVal = currentVal + delta;
-      if (newVal < 0) newVal = 0;
-      if (delta > 0 && (currentTotal - currentVal + newVal) > currentGlassLimit) {
-        newVal = currentVal + (currentGlassLimit - currentTotal);
-        if (newVal < currentVal) newVal = currentVal; 
-      }
-      return { ...prev, [ingredientName]: newVal };
-    });
+  const resetRecipe = () => {
+    if (!recipe) return;
+    const original = createRecipeState(recipe);
+    closeSubstituteModal();
+    setComponents(original.components);
+    setVolumes(original.volumes);
+    setSelectedGlass(original.selectedGlass);
+    setIsMixedMode(original.isMixedMode);
+    setViewMode('physics');
+    markChanged();
   };
 
-  // Advanced substitution logic: Detects prior substitutions and pins the original ingredient to the top
   const openSubstituteModal = async (index: number) => {
+    subRequest.current?.abort();
+    const controller = new AbortController();
+    subRequest.current = controller;
+    const token = ++subToken.current;
     setSubTargetIndex(index);
     const currentName = components[index].ingredient_name;
-    const originalName = originalComponents[index].ingredient_name;
-
+    const original = originalComponents[index];
+    setSubCandidates([]);
+    setSubError(null);
     setShowSubModal(true);
     setLoadingSubs(true);
     try {
-      const res = await fetch(`${API_BASE}/api/v2/substitute?ingredient=${encodeURIComponent(currentName)}`);
-      const json = await res.json();
-      if (json.status === 'success') {
-        let cands = json.substitutes;
-        
-        if (currentName !== originalName) {
-          cands = cands.filter((c: any) => c.ingredient_name !== originalName);
-          cands.unshift({
-            ingredient_name: originalName,
-            match_score: 'ORIGINAL',
-            isOriginal: true,
-            physics_baseline: originalComponents[index].physics_baseline
-          });
-        }
-        setSubCandidates(cands);
+      const query = new URLSearchParams({ ingredient: currentName, limit: '8' });
+      inventory.forEach(name => query.append('inventory', name));
+      const json = await apiRequest<{ status: string; substitutes: SubstituteCandidate[] }>(`/api/v2/substitute?${query.toString()}`, { signal: controller.signal });
+      if (json.status !== 'success' || !Array.isArray(json.substitutes)) throw new Error('Substitutes could not be loaded. Please try again.');
+      if (token !== subToken.current) return;
+      let candidates = json.substitutes.map(candidate => ({ ...candidate, in_inventory: inventoryNames.has(ingredientKey(candidate.ingredient_name)) }))
+        .sort((a, b) => Number(b.in_inventory) - Number(a.in_inventory));
+      if (currentName !== original.ingredient_name) {
+        candidates = candidates.filter(candidate => candidate.ingredient_name !== original.ingredient_name);
+        candidates.unshift({ ...original, match_score: 'ORIGINAL', isOriginal: true, in_inventory: inventoryNames.has(ingredientKey(original.ingredient_name)) });
       }
-    } catch (e) {
-      console.error(e);
+      setSubCandidates(candidates);
+    } catch (cause) {
+      if (token === subToken.current) setSubError(cause instanceof Error ? cause.message : 'Substitutes could not be loaded. Please try again.');
     } finally {
-      setLoadingSubs(false);
+      if (token === subToken.current) setLoadingSubs(false);
     }
   };
 
-  const performSubstitute = (candidate: any) => {
+  const performSubstitute = (candidate: SubstituteCandidate) => {
     if (subTargetIndex === null) return;
-    setViewMode('physics'); 
-    
-    const oldName = components[subTargetIndex].ingredient_name;
-    const newName = candidate.ingredient_name;
-
-    setComponents(prev => {
-      const newComps = [...prev];
-      newComps[subTargetIndex] = { ...newComps[subTargetIndex], ingredient_name: newName, physics_baseline: candidate.physics_baseline };
-      return newComps;
-    });
-
-    // Transfer volume to the new ingredient
-    setVolumes(prev => {
-      const newVols = { ...prev };
-      const oldVol = newVols[oldName] || 0;
-      delete newVols[oldName];
-      newVols[newName] = oldVol;
-      return newVols;
-    });
-
-    setShowSubModal(false);
+    const slot = components[subTargetIndex];
+    markChanged();
+    setViewMode('physics');
+    setComponents(previous => substituteSlot(previous, slot.slotId, {
+      ingredient_name: candidate.ingredient_name,
+      category: candidate.category ?? slot.category,
+      physics_baseline: candidate.physics_baseline,
+    }));
+    // Volumes stay attached to slots, including when another slot uses the same ingredient.
+    closeSubstituteModal();
   };
 
-  if (loading || !recipe) return <View style={[styles.container, styles.centered, { backgroundColor: colors.background }]}><ActivityIndicator size="large" color={themePrimary} /></View>;
+  const saveCurrentVersion = async () => {
+    if (!recipe || savingRef.current) return;
+    savingRef.current = true;
+    setSaving(true);
+    setSaveError(null);
+    setSaveMessage(null);
+    const now = new Date().toISOString();
+    const blend: SavedBlend = {
+      schemaVersion: 1,
+      id: savedVersion?.id ?? `blend-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`,
+      recipeId: recipe.id,
+      recipe,
+      name: versionName.trim() || `${recipe.name} — my version`,
+      createdAt: savedVersion?.createdAt ?? now,
+      updatedAt: now,
+      components, volumes, selectedGlass, isMixedMode,
+    };
+    try {
+      await saveBlend(blend);
+      setSavedVersion(blend);
+      setVersionName(blend.name);
+      setSaveMessage('Saved on this device. Reopen it from Saved → Your versions.');
+    } catch (cause) {
+      setSaveError(cause instanceof Error ? cause.message : 'Your version could not be saved. Please try again.');
+    } finally {
+      savingRef.current = false;
+      setSaving(false);
+    }
+  };
 
-  const isMutated = JSON.stringify(initialVolumes) !== JSON.stringify(volumes) || 
+  if (loading) return <View style={[styles.container, styles.centered, { backgroundColor: colors.background }]}><ActivityIndicator size="large" color={themePrimary} /><Text style={{ color: colors.subtext, marginTop: 12 }}>Loading recipe…</Text></View>;
+  if (loadError || !recipe) return (
+    <View style={[styles.container, styles.centered, { backgroundColor: colors.background, padding: 28 }]}>
+      <Text style={{ color: colors.text, textAlign: 'center', marginBottom: 20 }}>{loadError ?? 'Recipe unavailable.'}</Text>
+      <TouchableOpacity accessibilityRole="button" onPress={() => setReloadKey(key => key + 1)} style={[styles.actionButton, { backgroundColor: themePrimary }]}><Text style={{ color: themePrimaryText, fontWeight: 'bold' }}>Try again</Text></TouchableOpacity>
+      {versionId && <TouchableOpacity onPress={() => router.replace(`/recipe/${routeId}`)} style={styles.actionButton}><Text style={{ color: colors.text }}>Open original recipe</Text></TouchableOpacity>}
+      <TouchableOpacity onPress={() => router.back()} style={styles.actionButton}><Text style={{ color: colors.text }}>Go back</Text></TouchableOpacity>
+    </View>
+  );
+
+  const isMutated = JSON.stringify(initialVolumes) !== JSON.stringify(volumes) ||
                     initialGlass !== selectedGlass ||
-                    JSON.stringify(originalComponents) !== JSON.stringify(components);
+                    JSON.stringify(originalComponents) !== JSON.stringify(components) ||
+                    isMixedMode !== createRecipeState(recipe).isMixedMode;
 
   const calculatePhysics = (targetVolumes: Record<string, number>, useOriginal: boolean = false) => {
     let totalVol = 0; let totalAlc = 0; let totalBrix = 0; let absR = 0; let absG = 0; let absB = 0; let totalOpacity = 0;
-    
+
     const activeList = useOriginal ? originalComponents : components;
     const activeComps = activeList.filter(c => {
-      // Fallback: When calculating original physics, retrieve the volume using the original ingredient name
-      const vol = useOriginal ? (initialVolumes[c.ingredient_name] || 0) : (targetVolumes[c.ingredient_name] || 0);
+      const vol = targetVolumes[c.slotId] ?? 0;
       return vol > 0;
     });
 
     activeComps.forEach((comp) => {
-      const vol = useOriginal ? (initialVolumes[comp.ingredient_name] || 0) : (targetVolumes[comp.ingredient_name] || 0);
+      const vol = targetVolumes[comp.slotId] ?? 0;
       const physics = comp.physics_baseline;
       totalVol += vol;
-      totalAlc += vol * (physics.abv || 0); 
-      totalBrix += vol * (physics.brix || 0); 
+      totalAlc += vol * (physics.abv || 0);
+      totalBrix += vol * (physics.brix || 0);
       totalOpacity += vol * (physics.opacity || 0);
       const rgb = physics.color_rgb || [255,255,255];
       absR += -Math.log10(Math.max(rgb[0], 1) / 255.0) * vol;
@@ -253,7 +310,7 @@ export default function RecipeLabScreen() {
     const g = totalVol > 0 ? Math.round(Math.min(Math.max(Math.pow(10, -(absG / totalVol)) * 255, 0), 255)) : 0;
     const b = totalVol > 0 ? Math.round(Math.min(Math.max(Math.pow(10, -(absB / totalVol)) * 255, 0), 255)) : 0;
 
-    return { 
+    return {
       totalVol, finalAbv, finalBrix, activeComps, finalOpacity,
       mixedRGB: [ Math.round(Math.max(0, r - themeDarken)), Math.round(Math.max(0, g - themeDarken)), Math.round(Math.max(0, b - themeDarken)) ]
     };
@@ -283,36 +340,41 @@ export default function RecipeLabScreen() {
         swaps.push(`${originalComponents[i].ingredient_name} ➔ ${c.ingredient_name}`);
       }
     });
-    
+
     // Only display the impact module if ingredients were substituted
     if (swaps.length === 0) return null;
 
     const abvDiff = currentPhysics.finalAbv - originalPhysics.finalAbv;
     const brixDiff = currentPhysics.finalBrix - originalPhysics.finalBrix;
-    
-    const notes: string[] = [];
-    if (abvDiff > 1.5) notes.push("🔥 Packs a notably stronger punch (+ABV).");
-    else if (abvDiff < -1.5) notes.push("🧊 Milder and less boozy (-ABV).");
-    
-    if (brixDiff > 1.0) notes.push("🍬 Noticeably sweeter profile (+BRIX).");
-    else if (brixDiff < -1.0) notes.push("🍋 Drier, less sweet finish (-BRIX).");
 
-    if (notes.length === 0) notes.push("⚖️ Very similar flavor and balance to the original.");
+    const notes: string[] = [];
+    if (abvDiff > 1.5) notes.push("Estimated alcohol concentration is higher than the original.");
+    else if (abvDiff < -1.5) notes.push("Estimated alcohol concentration is lower than the original.");
+
+    if (brixDiff > 1.0) notes.push("Estimated sugar concentration is higher; perceived sweetness may differ.");
+    else if (brixDiff < -1.0) notes.push("Estimated sugar concentration is lower; perceived sweetness may differ.");
+
+    if (notes.length === 0) notes.push("Estimated alcohol and sugar concentrations are close. Similar numbers do not imply equivalent flavor.");
 
     return { swaps, notes };
   };
 
   const mutationImpact = getMutationImpact();
+  const glassCapacity = GLASS_SHAPES[selectedGlass].maxVol;
+  const overCapacity = currentPhysics.totalVol > glassCapacity + 0.000001;
+  const missingIngredients = [...new Set(components.filter(component => (volumes[component.slotId] ?? 0) > 0 && !inventoryNames.has(ingredientKey(component.ingredient_name))).map(component => component.ingredient_name))];
+
 
   const CocktailGlassSVG = ({ targetVolumes, title, glassKey, useOriginal }: { targetVolumes: Record<string, number>, title: string, glassKey: string, useOriginal: boolean }) => {
     const { totalVol, activeComps, mixedRGB, finalOpacity } = calculatePhysics(targetVolumes, useOriginal);
     const glass = GLASS_SHAPES[glassKey] || GLASS_SHAPES['rocks'];
+    const clipId = `glass-clip-${useOriginal ? 'original' : 'version'}-${glassKey}`;
     const fillRatio = Math.min(totalVol / glass.maxVol, 0.95);
     const availableHeight = glass.bottomY - glass.topY;
-    
+
     const renderLiquids = () => {
       if (totalVol === 0) return null;
-      if (isMixedMode) {
+      if (useOriginal ? createRecipeState(recipe!).isMixedMode : isMixedMode) {
         const liquidTopY = glass.bottomY - (fillRatio * availableHeight);
         const rxTop = glass.getRadius(liquidTopY);
         const alpha = 0.4 + (finalOpacity * 0.55);
@@ -322,7 +384,7 @@ export default function RecipeLabScreen() {
 
         return (
           <G opacity={alpha}>
-            <G clipPath="url(#glassClip)"><Rect x="0" y={liquidTopY} width="100" height={(glass.bottomY - liquidTopY) + 10} fill={solidBodyColor} /></G>
+            <G clipPath={`url(#${clipId})`}><Rect x="0" y={liquidTopY} width="100" height={(glass.bottomY - liquidTopY) + 10} fill={solidBodyColor} /></G>
             <Ellipse cx="50" cy={liquidTopY} rx={rxTop} ry={rxTop * RY} fill={solidSurfaceColor} stroke={solidBorderColor} strokeWidth="0.5" />
           </G>
         );
@@ -331,7 +393,7 @@ export default function RecipeLabScreen() {
       const sortedLayers = [...activeComps].sort((a, b) => {
         const sgA = 1 + (a.physics_baseline.brix * 0.004) - (a.physics_baseline.abv * 0.001);
         const sgB = 1 + (b.physics_baseline.brix * 0.004) - (b.physics_baseline.abv * 0.001);
-        return sgB - sgA; 
+        return sgB - sgA;
       });
 
       let currentY = glass.bottomY;
@@ -341,7 +403,7 @@ export default function RecipeLabScreen() {
       return (
         <G>
           {sortedLayers.map((comp, idx) => {
-            const vol = targetVolumes[comp.ingredient_name] * volScale; 
+            const vol = (targetVolumes[comp.slotId] ?? 0) * volScale;
             const layerHeight = (vol / glass.maxVol) * availableHeight;
             const layerTopY = currentY - layerHeight;
             const layerBottomY = currentY;
@@ -358,7 +420,7 @@ export default function RecipeLabScreen() {
             currentY = layerTopY;
             return (
               <G key={`layer-${idx}`} opacity={alpha}>
-                <G clipPath="url(#glassClip)">
+                <G clipPath={`url(#${clipId})`}>
                   <Rect x="0" y={layerTopY} width="100" height={layerHeight + (isBottomLayer ? 10 : 0)} fill={solidBodyColor} />
                   {!isBottomLayer && <Ellipse cx="50" cy={layerBottomY} rx={glass.getRadius(layerBottomY)} ry={glass.getRadius(layerBottomY) * RY} fill={solidBodyColor} />}
                 </G>
@@ -374,31 +436,32 @@ export default function RecipeLabScreen() {
       <View style={{ alignItems: 'center', marginHorizontal: 10 }}>
         <Text style={[styles.glassTitle, { color: colors.text }]}>{title}</Text>
         <Svg width="120" height="144" viewBox="0 0 100 120">
-          <Defs><ClipPath id="glassClip"><Path d={`${glass.outline} L120,-20 L-20,-20 Z`} /></ClipPath></Defs>
+          <Defs><ClipPath id={clipId}><Path d={`${glass.outline} L120,-20 L-20,-20 Z`} /></ClipPath></Defs>
           <Ellipse cx="50" cy={glass.topY} rx={glass.rimR} ry={glass.rimR * RY} fill="none" stroke={`rgba(${gl}, 0.2)`} strokeWidth="0.5" />
           {renderLiquids()}
           <Path d={glass.outline} fill="none" stroke={`rgba(${gl}, 0.5)`} strokeWidth="1" pointerEvents="none" />
           <Ellipse cx="50" cy={glass.topY} rx={glass.rimR} ry={glass.rimR * RY} fill="none" stroke={`rgba(${gl}, 0.7)`} strokeWidth="1.5" />
           {glass.drawStem(`rgba(${gl}, 0.6)`)}
         </Svg>
-        <Text style={[styles.glassVolText, { color: totalVol >= glass.maxVol ? '#ff4444' : colors.subtext }]}>{Math.round(totalVol)} / {glass.maxVol} ml</Text>
+        <Text style={[styles.glassVolText, { color: totalVol >= glass.maxVol ? '#ff4444' : colors.subtext }]}>{formatVolume(totalVol)} / {glass.maxVol} ml</Text>
       </View>
     );
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: colors.background }}>
-      <ScrollView contentContainerStyle={styles.scrollContent}>
-        
+    <KeyboardAvoidingView style={{ flex: 1, backgroundColor: colors.background }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+      <ScrollView contentContainerStyle={[styles.scrollContent, { paddingBottom: 24 + insets.bottom }]} keyboardShouldPersistTaps="handled">
+
         <View style={styles.topNav}>
           <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
             <Ionicons name="chevron-back" size={28} color={colors.text} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleFavorite(Number(id))} style={{ padding: 4 }}>
+          <TouchableOpacity accessibilityLabel={isFavorite ? "Remove original recipe from favorites" : "Favorite original recipe"} onPress={() => toggleFavorite(Number(routeId))} style={{ padding: 4 }}>
             <Ionicons name={isFavorite ? "heart" : "heart-outline"} size={28} color={isFavorite ? "#FF3B30" : colors.text} />
           </TouchableOpacity>
         </View>
 
+        {favoriteError && <Text style={[styles.helperText, { color: '#FF9500', marginBottom: 12 }]}>{favoriteError}</Text>}
         <View style={styles.header}>
           <Text style={[styles.title, { color: colors.text }]}>{recipe.name}</Text>
           <Text style={[styles.methodTag, { color: themePrimary }]}>{recipe.method?.toUpperCase()} • {isMixedMode ? 'MIXED' : 'LAYERED'}</Text>
@@ -410,7 +473,7 @@ export default function RecipeLabScreen() {
               <Text style={[styles.toggleText, { color: viewMode === 'photo' ? themePrimaryText : colors.subtext }]}>📸 PHOTO</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => setViewMode('physics')} style={[styles.toggleOption, { backgroundColor: viewMode === 'physics' ? themePrimary : 'transparent' }]}>
-              <Text style={[styles.toggleText, { color: viewMode === 'physics' ? themePrimaryText : colors.subtext }]}>📐 PHYSICS</Text>
+              <Text style={[styles.toggleText, { color: viewMode === 'physics' ? themePrimaryText : colors.subtext }]}>📐 PREVIEW</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -420,13 +483,14 @@ export default function RecipeLabScreen() {
             <View style={styles.singleGlassContainer}>
               {/* Utilize the globally shared RealDrinkImage component */}
               <RealDrinkImage drinkName={recipe.name} size={180} />
+              <Text style={[styles.helperText, { color: colors.subtext }]}>Reference photo of the original recipe.</Text>
             </View>
           ) : (
             isMutated ? (
               <View style={styles.comparisonContainer}>
                 <CocktailGlassSVG targetVolumes={initialVolumes} title="ORIGINAL" glassKey={initialGlass} useOriginal={true} />
                 <View style={styles.arrowContainer}><Ionicons name="arrow-forward" size={24} color={themePrimary} /></View>
-                <CocktailGlassSVG targetVolumes={volumes} title="MUTATED" glassKey={selectedGlass} useOriginal={false} />
+                <CocktailGlassSVG targetVolumes={volumes} title="YOUR VERSION" glassKey={selectedGlass} useOriginal={false} />
               </View>
             ) : (
               <View style={styles.singleGlassContainer}>
@@ -438,7 +502,7 @@ export default function RecipeLabScreen() {
 
         {/* Mixed Fluid Telemetry Panel with dynamic physics indicators */}
         <View style={[styles.physicsPanel, { borderColor: themePrimary, backgroundColor: currentPhysics.totalVol > 0 ? `rgb(${currentPhysics.mixedRGB.join(',')})` : colors.card }]}>
-          <Text style={[styles.panelTitle, { color: '#fff', textShadowColor: 'rgba(0,0,0,0.8)', textShadowRadius: 4 }]}>⚡ MIXED FLUID TELEMETRY</Text>
+          <Text style={[styles.panelTitle, { color: '#fff', textShadowColor: 'rgba(0,0,0,0.8)', textShadowRadius: 4 }]}>ESTIMATED BLEND</Text>
           <View style={styles.metricsRow}>
             <View style={styles.metricBox}>
               <Text style={styles.metricLabelLight}>ABV</Text>
@@ -457,44 +521,53 @@ export default function RecipeLabScreen() {
             <View style={styles.metricBox}>
               <Text style={styles.metricLabelLight}>VOLUME</Text>
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Text style={styles.metricValueLight}>{Math.round(currentPhysics.totalVol)}ml</Text>
+                <Text style={styles.metricValueLight}>{formatVolume(currentPhysics.totalVol)}ml</Text>
                 {renderArrow(currentPhysics.totalVol, originalPhysics.totalVol)}
               </View>
             </View>
           </View>
         </View>
 
+        <Text style={[styles.helperText, { color: colors.subtext, marginTop: -12, marginBottom: 20 }]}>Estimates before ice and dilution. Appearance and taste may differ from this preview.</Text>
+
+        <View style={[styles.notice, { borderColor: overCapacity ? '#FF9500' : colors.border, backgroundColor: colors.card }]}>
+          <Text style={{ color: colors.text, fontWeight: 'bold' }}>{formatVolume(currentPhysics.totalVol)} ml in a {glassCapacity} ml {GLASS_SHAPES[selectedGlass].name.toLowerCase()}</Text>
+          <Text style={[styles.helperText, { color: colors.subtext }]}>{overCapacity ? 'This version exceeds the selected glass. Choose a larger glass or scale all amounts together.' : 'Changing the glass keeps your amounts. Leave room for ice and dilution when serving.'}</Text>
+          {overCapacity && <TouchableOpacity accessibilityRole="button" onPress={() => { setVolumes(previous => scaleVolumesToCapacity(previous, glassCapacity)); setViewMode('physics'); markChanged(); }} style={[styles.actionButton, { backgroundColor: themePrimary, marginTop: 12 }]}><Text style={{ color: themePrimaryText, fontWeight: 'bold' }}>Scale amounts to {glassCapacity} ml</Text></TouchableOpacity>}
+        </View>
+
         <View style={[styles.section, styles.toggleSection]}>
-          <Text style={[styles.sectionTitle, { color: colors.text, borderBottomWidth: 0, marginBottom: 0 }]}>🔄 STATE</Text>
+          <Text style={[styles.sectionTitle, { color: colors.text, borderBottomWidth: 0, marginBottom: 0 }]}>PREVIEW</Text>
           <View style={[styles.toggleContainer, { backgroundColor: colors.card, borderColor: colors.border }]}>
-            <TouchableOpacity onPress={() => setIsMixedMode(true)} style={[styles.toggleOption, { backgroundColor: isMixedMode ? themePrimary : 'transparent' }]}>
+            <TouchableOpacity onPress={() => { setIsMixedMode(true); markChanged(); }} style={[styles.toggleOption, { backgroundColor: isMixedMode ? themePrimary : 'transparent' }]}>
               <Text style={[styles.toggleText, { color: isMixedMode ? themePrimaryText : colors.subtext }]}>MIXED</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => setIsMixedMode(false)} style={[styles.toggleOption, { backgroundColor: !isMixedMode ? themePrimary : 'transparent' }]}>
+            <TouchableOpacity onPress={() => { setIsMixedMode(false); markChanged(); }} style={[styles.toggleOption, { backgroundColor: !isMixedMode ? themePrimary : 'transparent' }]}>
               <Text style={[styles.toggleText, { color: !isMixedMode ? themePrimaryText : colors.subtext }]}>LAYERED</Text>
             </TouchableOpacity>
           </View>
         </View>
 
         <View style={styles.section}>
-          <Text style={[styles.sectionTitle, { color: colors.text, borderBottomColor: colors.border }]}>🎛️ INGREDIENT CONTROLS</Text>
+          <Text style={[styles.sectionTitle, { color: colors.text, borderBottomColor: colors.border }]}>INGREDIENTS & AMOUNTS</Text>
+          <Text style={[styles.helperText, { color: colors.subtext, marginBottom: 12 }]}>{!inventoryLoaded ? 'Loading your cabinet…' : inventoryError ? inventoryError : inventory.length === 0 ? 'Add your ingredients in My Cabinet to check availability.' : missingIngredients.length === 0 ? 'All active ingredients are in your inventory. Check quantities before making.' : `Missing from your inventory: ${missingIngredients.join(', ')}. Tap Swap to explore alternatives.`}</Text>
+          {inventoryError && <TouchableOpacity onPress={() => void retryInventory()} style={styles.actionButton}><Text style={{ color: themePrimary }}>Reload cabinet</Text></TouchableOpacity>}
           <View style={[styles.ingredientsList, { backgroundColor: colors.card }]}>
-            
+
             {components.map((comp, index) => {
-              const currentVol = volumes[comp.ingredient_name] ?? 0;
+              const currentVol = volumes[comp.slotId] ?? 0;
               const origName = originalComponents[index].ingredient_name;
-              const initVol = initialVolumes[origName] || 0;
-              
+              const initVol = initialVolumes[comp.slotId] ?? 0;
+
               // Precise diff tracking: Compare current volume against the original precursor ingredient
               const diff = currentVol - initVol;
               const isSubstituted = comp.ingredient_name !== origName;
 
               const rgb = comp.physics_baseline.color_rgb;
-              const currentGlassLimit = (GLASS_SHAPES[selectedGlass] || GLASS_SHAPES['rocks']).maxVol;
-              const isAtMax = currentPhysics.totalVol >= currentGlassLimit;
-              
+              const inInventory = inventoryNames.has(ingredientKey(comp.ingredient_name));
+
               return (
-                <View key={index} style={[styles.ingredientRow, { borderBottomColor: colors.border }]}>
+                <View key={comp.slotId} style={[styles.ingredientRow, { borderBottomColor: colors.border }]}>
                   <View style={styles.ingredientInfoRow}>
                     <View style={[styles.colorDot, { backgroundColor: `rgb(${Math.round(rgb[0])},${Math.round(rgb[1])},${Math.round(rgb[2])})` }]} />
                     <View style={styles.ingredientInfo}>
@@ -502,10 +575,10 @@ export default function RecipeLabScreen() {
                         {comp.ingredient_name}
                       </Text>
                       <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 4 }}>
-                        <Text style={[styles.ingredientCategory, { color: colors.subtext }]}>{comp.category}</Text>
-                        
+                        <Text style={[styles.ingredientCategory, { color: inInventory ? themePrimary : colors.subtext }]}>{currentVol === 0 ? "Not used" : !inventoryLoaded || inventoryError ? "Availability unknown" : inInventory ? "In inventory" : "Missing"}</Text>
+
                         {/* Trigger substitution modal using index to maintain exact position */}
-                        <TouchableOpacity onPress={() => openSubstituteModal(index)} style={styles.swapBtnTextWrapper}>
+                        <TouchableOpacity accessibilityLabel={`Find alternatives for ${comp.ingredient_name}`} onPress={() => openSubstituteModal(index)} style={styles.swapBtnTextWrapper}>
                           <Ionicons name="swap-horizontal" size={12} color={themePrimary} />
                           <Text style={{ fontSize: 10, color: themePrimary, fontWeight: 'bold', marginLeft: 2 }}>SWAP</Text>
                         </TouchableOpacity>
@@ -514,16 +587,17 @@ export default function RecipeLabScreen() {
                   </View>
 
                   <View style={styles.controlsContainer}>
-                    <TouchableOpacity onPress={() => adjustVolume(comp.ingredient_name, -5)} style={[styles.controlBtn, { borderColor: colors.border }]}><Ionicons name="remove" size={16} color={colors.text} /></TouchableOpacity>
+                    <TouchableOpacity accessibilityLabel={`Decrease ${comp.ingredient_name} amount`} onPress={() => adjustVolume(comp.slotId, -(currentVol < 5 ? 1 : 5))} style={[styles.controlBtn, { borderColor: colors.border }]}><Ionicons name="remove" size={16} color={colors.text} /></TouchableOpacity>
                     <View style={styles.volDisplayWrapper}>
-                      {diff !== 0 && (
+                      {(diff !== 0 || isSubstituted) && (
                         <Text style={[styles.diffIndicator, { color: diff > 0 ? '#4caf50' : '#ff4444' }]}>
-                          {isSubstituted && diff === 0 ? 'SWAP' : (diff > 0 ? `↑+${diff}` : `↓${diff}`)}
+                          {isSubstituted && diff === 0 ? 'SWAP' : (diff > 0 ? `↑+${formatVolume(diff)}` : `↓${formatVolume(diff)}`)}
                         </Text>
                       )}
-                      <Text style={[styles.ingredientAmount, { color: themePrimary }]}>{currentVol} ml</Text>
+                      <AmountInput value={currentVol} onChange={value => { setVolumes(previous => ({ ...previous, [comp.slotId]: value })); setViewMode('physics'); markChanged(); }} color={themePrimary} borderColor={colors.border} label={`Amount of ${comp.ingredient_name} in milliliters`} />
+                      <Text style={{ color: colors.subtext, fontSize: 10 }}>ml</Text>
                     </View>
-                    <TouchableOpacity onPress={() => adjustVolume(comp.ingredient_name, 5)} style={[styles.controlBtn, { borderColor: isAtMax ? '#ff4444' : colors.border }]}><Ionicons name="add" size={16} color={isAtMax ? '#ff4444' : colors.text} /></TouchableOpacity>
+                    <TouchableOpacity accessibilityLabel={`Increase ${comp.ingredient_name} amount`} onPress={() => adjustVolume(comp.slotId, currentVol < 5 ? 1 : 5)} style={[styles.controlBtn, { borderColor: colors.border }]}><Ionicons name="add" size={16} color={colors.text} /></TouchableOpacity>
                   </View>
                 </View>
               );
@@ -534,7 +608,7 @@ export default function RecipeLabScreen() {
         {/* Dynamic Flavor Impact Module (visible only upon recipe mutation) */}
         {mutationImpact && (
           <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: colors.text, borderBottomColor: colors.border }]}>🧬 MUTATION IMPACT</Text>
+            <Text style={[styles.sectionTitle, { color: colors.text, borderBottomColor: colors.border }]}>ESTIMATED CHANGES</Text>
             <View style={[styles.impactContainer, { backgroundColor: isDark ? 'rgba(255, 149, 0, 0.1)' : 'rgba(255, 149, 0, 0.05)', borderColor: '#FF9500' }]}>
               {mutationImpact.swaps.map((s, i) => (
                  <Text key={i} style={[styles.impactSwapText, { color: colors.text }]}>• {s}</Text>
@@ -549,7 +623,8 @@ export default function RecipeLabScreen() {
 
         {recipe.instructions && Array.isArray(recipe.instructions) && (
           <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: colors.text, borderBottomColor: colors.border }]}>📝 MIXING INSTRUCTIONS</Text>
+            <Text style={[styles.sectionTitle, { color: colors.text, borderBottomColor: colors.border }]}>MIXING INSTRUCTIONS</Text>
+            {isMutated && <Text style={[styles.helperText, { color: colors.subtext, marginBottom: 12 }]}>These instructions belong to the original recipe. Use your amounts above; substitutions may require a different preparation.</Text>}
             <View style={[styles.instructionsContainer, { backgroundColor: colors.card, borderColor: colors.border }]}>
               {recipe.instructions.map((step, index) => (
                 <View key={index} style={styles.instructionRow}>
@@ -562,12 +637,12 @@ export default function RecipeLabScreen() {
         )}
 
         <View style={styles.section}>
-          <Text style={[styles.sectionTitle, { color: colors.text, borderBottomColor: colors.border }]}>🥂 GLASSWARE SELECTION</Text>
+          <Text style={[styles.sectionTitle, { color: colors.text, borderBottomColor: colors.border }]}>GLASSWARE</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.glassSelectorContainer}>
             {Object.entries(GLASS_SHAPES).map(([glassKey, glassData]) => {
               const isSelected = selectedGlass === glassKey;
               return (
-                <TouchableOpacity key={glassKey} onPress={() => handleGlassSelect(glassKey)} style={[styles.glassBtn, { backgroundColor: isSelected ? themePrimary : colors.card, borderColor: isSelected ? themePrimary : colors.border }]}>
+                <TouchableOpacity key={glassKey} onPress={() => handleGlassSelect(glassKey as GlassKey)} style={[styles.glassBtn, { backgroundColor: isSelected ? themePrimary : colors.card, borderColor: isSelected ? themePrimary : colors.border }]}>
                   <Svg width="24" height="24" viewBox="0 0 100 120">{glassData.drawIcon(isSelected ? themePrimaryText : colors.text)}</Svg>
                   <Text style={[styles.glassBtnText, { color: isSelected ? themePrimaryText : colors.subtext }]}>{glassData.name}</Text>
                 </TouchableOpacity>
@@ -576,49 +651,62 @@ export default function RecipeLabScreen() {
           </ScrollView>
         </View>
 
+        <View style={[styles.notice, { borderColor: colors.border, backgroundColor: colors.card }]}>
+          <Text style={[styles.sectionTitle, { color: colors.text, borderBottomColor: colors.border }]}>YOUR VERSION</Text>
+          <Text style={[styles.helperText, { color: colors.subtext }]}>Save ingredient swaps, amounts and glass on this device. The heart saves only the original recipe.</Text>
+          <TextInput accessibilityLabel="Version name" value={versionName} onChangeText={name => { setVersionName(name); markChanged(); }} maxLength={80} style={[styles.nameInput, { borderColor: colors.border, color: colors.text }]} />
+          <TouchableOpacity accessibilityRole="button" disabled={saving || currentPhysics.totalVol === 0} onPress={saveCurrentVersion} style={[styles.actionButton, { backgroundColor: themePrimary, opacity: saving || currentPhysics.totalVol === 0 ? 0.5 : 1 }]}><Text style={{ color: themePrimaryText, fontWeight: 'bold' }}>{saving ? 'Saving…' : savedVersion ? 'Update my version' : 'Save my version'}</Text></TouchableOpacity>
+          {currentPhysics.totalVol === 0 && <Text style={[styles.helperText, { color: colors.subtext }]}>Add an amount greater than zero before saving.</Text>}
+          {saveMessage && <Text accessibilityLiveRegion="polite" style={[styles.helperText, { color: colors.text, marginTop: 10 }]}>{saveMessage}</Text>}
+          {saveError && <Text accessibilityRole="alert" style={[styles.helperText, { color: '#FF9500', marginTop: 10 }]}>{saveError}</Text>}
+          <TouchableOpacity accessibilityRole="button" onPress={resetRecipe} style={[styles.actionButton, { marginTop: 8 }]}><Text style={{ color: colors.text }}>Reset to original recipe</Text></TouchableOpacity>
+        </View>
       </ScrollView>
 
       {/* Substitution Modal: Highlights the original ingredient for easy reversion */}
-      <Modal visible={showSubModal} transparent animationType="fade">
+      <Modal visible={showSubModal} transparent animationType="fade" onRequestClose={closeSubstituteModal}>
         <View style={styles.modalOverlay}>
           <View style={[styles.modalContent, { backgroundColor: colors.background, borderColor: colors.border }]}>
             <View style={styles.modalHeader}>
               <View>
-                <Text style={[styles.modalTitle, { color: colors.text }]}>AI SUBSTITUTION</Text>
-                {subTargetIndex !== null && <Text style={{ color: colors.subtext, fontSize: 12, marginTop: 4 }}>Finding physics match for {components[subTargetIndex].ingredient_name}...</Text>}
+                <Text style={[styles.modalTitle, { color: colors.text }]}>SWAP INGREDIENT</Text>
+                {subTargetIndex !== null && <Text style={{ color: colors.subtext, fontSize: 12, marginTop: 4 }}>Alternatives for {components[subTargetIndex]?.ingredient_name}</Text>}
               </View>
-              <TouchableOpacity onPress={() => setShowSubModal(false)} style={{ padding: 4 }}>
+              <TouchableOpacity onPress={closeSubstituteModal} style={{ padding: 4 }}>
                 <Ionicons name="close" size={24} color={colors.text} />
               </TouchableOpacity>
             </View>
 
+            <Text style={[styles.helperText, { color: colors.subtext, marginBottom: 12 }]}>Ingredients you own appear first. Similar alcohol, sugar and appearance estimates do not guarantee the same taste.</Text>
             {loadingSubs ? (
               <View style={{ padding: 40, alignItems: 'center' }}>
                  <ActivityIndicator size="large" color={themePrimary} />
-                 <Text style={{ color: themePrimary, marginTop: 10, fontWeight: 'bold' }}>Calculating Euclidean Distance...</Text>
+                 <Text style={{ color: themePrimary, marginTop: 10, fontWeight: 'bold' }}>Finding alternatives…</Text>
               </View>
+            ) : subError ? (
+              <View><Text style={[styles.helperText, { color: colors.text }]}>{subError}</Text><TouchableOpacity onPress={() => { if (subTargetIndex !== null) void openSubstituteModal(subTargetIndex); }} style={[styles.actionButton, { backgroundColor: themePrimary, marginTop: 12 }]}><Text style={{ color: themePrimaryText, fontWeight: 'bold' }}>Try again</Text></TouchableOpacity></View>
             ) : subCandidates.length === 0 ? (
-              <Text style={{ color: colors.subtext, textAlign: 'center', padding: 20 }}>No good substitutes found in database.</Text>
+              <Text style={{ color: colors.subtext, textAlign: 'center', padding: 20 }}>No alternatives found for this ingredient. Keep the original or try another ingredient.</Text>
             ) : (
               <ScrollView style={{ maxHeight: 350 }} showsVerticalScrollIndicator={false}>
                 {subCandidates.map((cand, idx) => {
                   const isOrig = cand.isOriginal;
                   return (
-                    <TouchableOpacity 
-                      key={idx} 
-                      style={[styles.candCard, { backgroundColor: isOrig ? (isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.03)') : colors.card, borderColor: isOrig ? themePrimary : colors.border }]} 
+                    <TouchableOpacity
+                      key={idx}
+                      style={[styles.candCard, { backgroundColor: isOrig ? (isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.03)') : colors.card, borderColor: isOrig ? themePrimary : colors.border }]}
                       onPress={() => performSubstitute(cand)}
                     >
                       <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
                         <View style={[styles.colorDot, { width: 16, height: 16, borderRadius: 8, backgroundColor: `rgb(${cand.physics_baseline.color_rgb.join(',')})` }]} />
-                        <View>
-                          <Text style={{ color: isOrig ? themePrimary : colors.text, fontWeight: '900', fontSize: 16 }}>{cand.ingredient_name}</Text>
-                          <Text style={{ color: colors.subtext, fontSize: 10, marginTop: 2 }}>{cand.physics_baseline.abv}% ABV • {cand.physics_baseline.brix} BRIX</Text>
+                        <View style={{ flex: 1, paddingRight: 8 }}>
+                          <Text style={{ color: isOrig ? themePrimary : colors.text, fontWeight: '900', fontSize: 14 }}>{cand.ingredient_name}</Text>
+                          <Text style={{ color: colors.subtext, fontSize: 10, marginTop: 2 }}>{!inventoryLoaded || inventoryError ? "Availability unknown" : cand.in_inventory ? "In your inventory" : "Not in inventory"} • {cand.physics_baseline.abv}% ABV</Text>
                         </View>
                       </View>
                       <View style={{ alignItems: 'flex-end' }}>
                         <Text style={{ color: isOrig ? themePrimary : colors.text, fontWeight: '900', fontSize: 16 }}>{cand.match_score}</Text>
-                        {!isOrig && <Text style={{ color: colors.subtext, fontSize: 8, fontWeight: 'bold' }}>MATCH</Text>}
+                        {!isOrig && <Text style={{ color: colors.subtext, fontSize: 8, fontWeight: 'bold' }}>EST. SIMILARITY</Text>}
                       </View>
                     </TouchableOpacity>
                   );
@@ -629,11 +717,16 @@ export default function RecipeLabScreen() {
         </View>
       </Modal>
 
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
 const styles = StyleSheet.create({
+  actionButton: { paddingVertical: 12, paddingHorizontal: 16, borderRadius: 10, alignItems: 'center', justifyContent: 'center', minHeight: 44 },
+  notice: { borderWidth: 1, borderRadius: 12, padding: 16, marginBottom: 24 },
+  helperText: { fontSize: 13, lineHeight: 20, marginTop: 6 },
+  amountInput: { minWidth: 56, maxWidth: 90, borderBottomWidth: 1, fontSize: 15, fontWeight: '700', textAlign: 'center', minHeight: 36, paddingVertical: 4 },
+  nameInput: { borderWidth: 1, borderRadius: 8, padding: 12, marginVertical: 12, fontSize: 15 },
   container: { flex: 1 },
   centered: { justifyContent: 'center', alignItems: 'center', flex: 1 },
   scrollContent: { padding: 20, paddingBottom: 60 },
@@ -657,17 +750,17 @@ const styles = StyleSheet.create({
   section: { marginBottom: 24 },
   sectionTitle: { fontSize: 16, fontWeight: 'bold', marginBottom: 12, borderBottomWidth: 1, paddingBottom: 8, letterSpacing: 1 },
   toggleSection: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  toggleContainer: { flexDirection: 'row', borderRadius: 50, borderWidth: 1, padding: 3, overflow: 'hidden' }, 
-  toggleOption: { paddingHorizontal: 14, paddingVertical: 6, borderRadius: 50 }, 
+  toggleContainer: { flexDirection: 'row', borderRadius: 50, borderWidth: 1, padding: 3, overflow: 'hidden' },
+  toggleOption: { paddingHorizontal: 14, paddingVertical: 6, borderRadius: 50 },
   toggleText: { fontSize: 11, fontWeight: 'bold', letterSpacing: 1 },
   ingredientsList: { borderRadius: 12, padding: 12, borderWidth: 1, borderColor: 'transparent' },
-  ingredientRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: 12, borderBottomWidth: 1 },
-  ingredientInfoRow: { flexDirection: 'row', alignItems: 'center', flex: 1 },
+  ingredientRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 12, justifyContent: 'space-between', alignItems: 'center', paddingVertical: 12, borderBottomWidth: 1 },
+  ingredientInfoRow: { flexDirection: 'row', alignItems: 'center', flex: 1, minWidth: 150 },
   colorDot: { width: 12, height: 12, borderRadius: 6, marginRight: 10, borderWidth: 1, borderColor: 'rgba(255,255,255,0.3)' },
   ingredientInfo: { flex: 1 },
   ingredientName: { fontSize: 16, fontWeight: '600' },
   ingredientCategory: { fontSize: 11, textTransform: 'uppercase', letterSpacing: 0.5 },
-  
+
   swapBtnTextWrapper: { flexDirection: 'row', alignItems: 'center', marginLeft: 10, backgroundColor: 'rgba(0,0,0,0.05)', paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 },
 
   controlsContainer: { flexDirection: 'row', alignItems: 'center', gap: 8 },
@@ -675,7 +768,7 @@ const styles = StyleSheet.create({
   volDisplayWrapper: { alignItems: 'center', justifyContent: 'center', minWidth: 45, position: 'relative' },
   diffIndicator: { position: 'absolute', top: -14, fontSize: 10, fontWeight: '900', fontFamily: 'monospace' },
   ingredientAmount: { fontSize: 16, fontWeight: '700', fontFamily: 'monospace', textAlign: 'center' },
-  
+
   impactContainer: { borderWidth: 1, borderRadius: 12, padding: 16, marginTop: 4 },
   impactSwapText: { fontSize: 14, fontWeight: '800', marginBottom: 4, letterSpacing: 0.5 },
   impactNoteText: { fontSize: 14, fontWeight: '600', color: '#FF9500', marginTop: 4, lineHeight: 22 },

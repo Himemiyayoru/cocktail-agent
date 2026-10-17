@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import { View, TouchableOpacity } from 'react-native';
+import { Platform, View, TouchableOpacity } from 'react-native';
 import { useTheme } from '../../context/ThemeContext';
 import Svg, { Path, Circle, Rect } from 'react-native-svg';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -70,12 +70,14 @@ export default function TabLayout() {
           headerShown: false,
           tabBarActiveTintColor: themePrimary,
           tabBarInactiveTintColor: colors.subtext,
+          // Own the home-indicator inset once. The default tab bar would add it again.
+          safeAreaInsets: { bottom: 0 },
           tabBarStyle: {
             backgroundColor: colors.background,
             borderTopColor: colors.border,
-            height: 65 + insets.bottom,
-            paddingBottom: 10 + insets.bottom,
-            paddingTop: 10,
+            height: (Platform.OS === 'ios' ? 52 : 56) + insets.bottom,
+            paddingBottom: insets.bottom,
+            paddingTop: Platform.OS === 'ios' ? 4 : 8,
           },
           tabBarLabelStyle: {
             fontSize: 10,

@@ -1,48 +1,26 @@
-import { useState, useCallback } from 'react';
+import { useCallback, useSyncExternalStore } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from 'expo-router';
+import { createPersistentListStore } from '../lib/persistentListStore';
+
+const store = createPersistentListStore<string>(
+  AsyncStorage,
+  '@cocktail_inventory',
+  (value): value is string => typeof value === 'string' && value.trim().length > 0,
+  'cabinet',
+);
 
 export function useInventory() {
-  const [inventory, setInventory] = useState<string[]>([]);
-
-  const loadInventory = async () => {
-    try {
-      const stored = await AsyncStorage.getItem('@cocktail_inventory');
-      if (stored) setInventory(JSON.parse(stored));
-    } catch (e) {
-      console.error("Failed to load inventory", e);
-    }
+  const state = useSyncExternalStore(store.subscribe, store.getSnapshot, store.getSnapshot);
+  useFocusEffect(useCallback(() => { void store.load(); }, []));
+  return {
+    inventory: state.items,
+    loaded: state.loaded,
+    saving: state.saving,
+    error: state.error,
+    toggleIngredient: store.toggle,
+    clearInventory: store.clear,
+    replaceInventory: store.replace,
+    retry: store.retry,
   };
-
-  // Reload inventory data every time the screen comes into focus
-  useFocusEffect(
-    useCallback(() => {
-      loadInventory();
-    }, [])
-  );
-
-  const toggleIngredient = async (name: string) => {
-    try {
-      const stored = await AsyncStorage.getItem('@cocktail_inventory');
-      let current = stored ? JSON.parse(stored) : [];
-      
-      if (current.includes(name)) {
-        current = current.filter((ing: string) => ing !== name); // Remove ingredient from inventory
-      } else {
-        current.push(name); // Add ingredient to inventory
-      }
-      
-      setInventory(current);
-      await AsyncStorage.setItem('@cocktail_inventory', JSON.stringify(current));
-    } catch (e) {
-      console.error("Failed to save inventory", e);
-    }
-  };
-
-  const clearInventory = async () => {
-    setInventory([]);
-    await AsyncStorage.removeItem('@cocktail_inventory');
-  };
-
-  return { inventory, toggleIngredient, clearInventory };
 }

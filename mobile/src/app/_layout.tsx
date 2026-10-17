@@ -1,13 +1,14 @@
 import { Stack, useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { ThemeProvider, useTheme } from '../context/ThemeContext';
 import * as SplashScreen from 'expo-splash-screen'; 
-import { useEffect } from 'react';
+import { useCallback, useState } from 'react';
+import { StartupSplash } from '../components/StartupSplash';
 
 // Prevent the splash screen from auto-hiding until manually triggered
-SplashScreen.preventAutoHideAsync();
+void SplashScreen.preventAutoHideAsync().catch(() => {});
 
 function RootLayoutNav() {
   const { isDark, colors, toggleTheme } = useTheme();
@@ -18,7 +19,7 @@ function RootLayoutNav() {
     if (router.canGoBack()) {
       router.back(); 
     } else {
-      router.replace('/(tabs)');
+      router.replace('/(tabs)/library');
     }
   };
 
@@ -38,7 +39,7 @@ function RootLayoutNav() {
           options={{ 
             presentation: 'modal', 
             headerShown: true,
-            headerTitle: 'Physics Lab',
+            headerTitle: 'Recipe Studio',
             headerStyle: { backgroundColor: colors.card },
             headerTintColor: colors.primary,
             headerRight: () => (
@@ -64,14 +65,16 @@ function RootLayoutNav() {
 }
 
 export default function RootLayout() {
-  
-  useEffect(() => {
-    SplashScreen.hideAsync().catch(() => {});
-  }, []);
+  const [appReady, setAppReady] = useState(false);
+  const [startupComplete, setStartupComplete] = useState(false);
+  const finishStartup = useCallback(() => setStartupComplete(true), []);
 
   return (
     <ThemeProvider>
-      <RootLayoutNav />
+      <View style={{ flex: 1 }} onLayout={() => setAppReady(true)}>
+        <RootLayoutNav />
+        {!startupComplete && <StartupSplash ready={appReady} onFinish={finishStartup} />}
+      </View>
     </ThemeProvider>
   );
 }
