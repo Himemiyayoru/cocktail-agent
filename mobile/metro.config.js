@@ -3,7 +3,7 @@ const { getDefaultConfig } = require('expo/metro-config');
 
 const config = getDefaultConfig(__dirname);
 
-// 让 Metro 认识 3D 模型文件的后缀名
+// Register 3D model file extensions with Metro.
 config.resolver.assetExts.push(
   'glb',
   'gltf',

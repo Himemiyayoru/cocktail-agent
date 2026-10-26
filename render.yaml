@@ -1,0 +1,29 @@
+# Apply this Blueprint to the existing service in its current workspace.
+# A paid instance is required for a persistent disk.
+services:
+  - type: web
+    name: bobs-special-blend
+    runtime: python
+    repo: https://github.com/Himemiyayoru/cocktail-agent
+    branch: main
+    rootDir: backend
+    plan: starter
+    numInstances: 1
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /health
+    disk:
+      name: bob-billing
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: BOB_BILLING_DB
+        value: /var/data/bob_billing.sqlite
+      - key: BOB_BILLING_MOUNT
+        value: /var/data
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-20b
+      - key: GROQ_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false

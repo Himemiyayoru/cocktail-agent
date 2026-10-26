@@ -10,6 +10,8 @@ import json
 import os
 from pathlib import Path
 import sys
+import tempfile
+import time
 from types import SimpleNamespace
 import unittest
 from unittest.mock import AsyncMock, patch
@@ -91,9 +93,21 @@ class RouteTests(unittest.TestCase):
 
         spec = importlib.util.spec_from_file_location("bob_api_under_test", API_DIR / "main.py")
         cls.api = importlib.util.module_from_spec(spec)
-        with patch.dict(os.environ, {"GROQ_API_KEY": "", "OPENAI_API_KEY": ""}), \
-                patch("dotenv.load_dotenv"), patch("builtins.open", side_effect=open_fixture):
+        billing_file = tempfile.NamedTemporaryFile(prefix="bob-bill-", suffix=".sqlite", delete=False)
+        billing_file.close()
+        cls.billing_path = billing_file.name
+        environment = patch.dict(os.environ, {
+            "GROQ_API_KEY": "", "OPENAI_API_KEY": "",
+            "BOB_BILLING_DB": cls.billing_path, "BILLING_TOKEN_SECRET": "test-secret",
+        })
+        environment.start()
+        cls.addClassCleanup(environment.stop)
+        with patch("dotenv.load_dotenv"), patch("builtins.open", side_effect=open_fixture):
             spec.loader.exec_module(cls.api)
+
+    def subscriber_headers(self, account="route-subscriber"):
+        token = self.api.billing.activate_subscription(account, int(time.time()) + 30 * 24 * 3600)
+        return {"Authorization": f"Bearer {token}"}
 
     def setUp(self):
         self.api.IP_RATE_LIMIT.clear()
@@ -141,7 +155,7 @@ class RouteTests(unittest.TestCase):
         create = self.mock_reply({})
         for inventory, status in (([], "empty_inventory"), (["Gin"], "no_available_recipes")):
             with self.subTest(inventory=inventory):
-                response = self.client.post("/api/v2/chat_with_bob", json={
+                response = self.client.post("/api/v2/chat_with_bob", headers=self.subscriber_headers(), json={
                     "user_message": "What can I make?", "inventory": inventory, "use_inventory": True})
                 self.assertEqual(response.status_code, 200)
                 self.assertEqual(response.json()["recommendation_status"], status)
@@ -150,7 +164,7 @@ class RouteTests(unittest.TestCase):
 
     def test_inventory_constrains_prompt_and_recommendation(self):
         create = self.mock_reply({"bob_comment": "Try this.", "recommended_cocktail_name": " GIN   tonic "})
-        response = self.client.post("/api/v2/chat_with_bob", json={
+        response = self.client.post("/api/v2/chat_with_bob", headers=self.subscriber_headers(), json={
             "user_message": "What can I make?", "inventory": ["gin", "tonic water"], "use_inventory": True})
         self.assertEqual(response.json()["recipe_id"], 0)
         prompt = create.call_args.kwargs["messages"][0]["content"]
@@ -161,7 +175,7 @@ class RouteTests(unittest.TestCase):
         for name in ("Vodka Tonic", "Gin", "Gin Tonic Special"):
             with self.subTest(name=name):
                 self.mock_reply({"bob_comment": "Unverified drink recommendation.", "recommended_cocktail_name": name})
-                response = self.client.post("/api/v2/chat_with_bob", json={
+                response = self.client.post("/api/v2/chat_with_bob", headers=self.subscriber_headers(), json={
                     "user_message": "Suggest one", "inventory": ["Gin", "Tonic Water"], "use_inventory": True})
                 data = response.json()
                 self.assertEqual(data["recommendation_status"], "unavailable_recommendation")
@@ -170,7 +184,7 @@ class RouteTests(unittest.TestCase):
 
     def test_old_chat_request_can_explore_full_menu(self):
         self.mock_reply({"bob_comment": "Here you go.", "recommended_cocktail_name": "Vodka Tonic"})
-        response = self.client.post("/api/v2/chat_with_bob", json={"user_message": "Suggest one"})
+        response = self.client.post("/api/v2/chat_with_bob", headers=self.subscriber_headers(), json={"user_message": "Suggest one"})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["recipe_id"], 1)
 
@@ -179,13 +193,52 @@ class RouteTests(unittest.TestCase):
                         {"bob_comment": ["Invalid"], "recommended_cocktail_name": "Gin Tonic"}):
             with self.subTest(payload=payload):
                 self.mock_reply(payload)
-                response = self.client.post("/api/v2/chat_with_bob", json={"user_message": "Hello"})
+                response = self.client.post("/api/v2/chat_with_bob", headers=self.subscriber_headers(), json={"user_message": "Hello"})
                 self.assertEqual(response.status_code, 502)
                 self.assertIn("try again", response.json()["detail"])
 
+    def test_bob_requires_subscription_and_stops_at_four_dollars(self):
+        denied = self.client.post("/api/v2/chat_with_bob", json={"user_message": "Hello"})
+        self.assertEqual(denied.status_code, 401)
+        create = self.mock_reply({"bob_comment": "Here you go.", "recommended_cocktail_name": "Gin Tonic"})
+        headers = self.subscriber_headers("capped-account")
+        self.api.billing.set_spent_nano("capped-account", self.api.billing.MONTHLY_BUDGET_NANO)
+        blocked = self.client.post("/api/v2/chat_with_bob", headers=headers, json={"user_message": "Hello"})
+        self.assertEqual(blocked.status_code, 402)
+        self.assertIn("4.00", blocked.json()["detail"])
+        create.assert_not_awaited()
+
+    def test_voice_uses_same_budget_and_never_calls_provider_when_capped(self):
+        from unittest.mock import Mock
+        create = Mock(return_value=SimpleNamespace(text="Hello"))
+        self.api.openai_client = SimpleNamespace(audio=SimpleNamespace(transcriptions=SimpleNamespace(create=create)))
+        headers = self.subscriber_headers("voice-account")
+        with patch("audio_meter.prepare_audio", return_value=(b"metered", 10.1)):
+            response = self.client.post("/api/v2/transcribe", headers=headers, files={"audio_file": ("a.m4a", b"audio")})
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json()["spent_usd"], "0.01")
+            self.api.billing.set_spent_nano("voice-account", self.api.billing.MONTHLY_BUDGET_NANO)
+            create.reset_mock()
+            blocked = self.client.post("/api/v2/transcribe", headers=headers, files={"audio_file": ("a.m4a", b"audio")})
+            self.assertEqual(blocked.status_code, 402)
+            create.assert_not_called()
+
+    def test_timeout_does_not_refund_potential_provider_cost(self):
+        headers = self.subscriber_headers("timeout-account")
+        create = self.mock_reply({})
+        create.side_effect = TimeoutError("network")
+        response = self.client.post("/api/v2/chat_with_bob", headers=headers, json={"user_message": "Hello"})
+        self.assertEqual(response.status_code, 502)
+        self.assertNotEqual(self.api.billing.public_allowance("timeout-account")["spent_usd"], "0.00")
+
     def test_ai_routes_return_503_without_keys(self):
-        chat = self.client.post("/api/v2/chat_with_bob", json={"user_message": "Hello"})
-        audio = self.client.post("/api/v2/transcribe", files={"audio_file": ("test.m4a", b"fixture", "audio/m4a")})
+        headers = self.subscriber_headers("no-key-account")
+        unpaid_chat = self.client.post("/api/v2/chat_with_bob", json={"user_message": "Hello"})
+        unpaid_audio = self.client.post("/api/v2/transcribe", files={"audio_file": ("test.m4a", b"fixture", "audio/m4a")})
+        chat = self.client.post("/api/v2/chat_with_bob", headers=headers, json={"user_message": "Hello"})
+        audio = self.client.post("/api/v2/transcribe", headers=headers, files={"audio_file": ("test.m4a", b"fixture", "audio/m4a")})
+        self.assertEqual(unpaid_chat.status_code, 401)
+        self.assertEqual(unpaid_audio.status_code, 401)
         self.assertEqual(chat.status_code, 503)
         self.assertEqual(audio.status_code, 503)
 

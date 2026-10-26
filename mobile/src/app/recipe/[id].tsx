@@ -11,6 +11,7 @@ import RealDrinkImage from '../../components/RealDrinkImage';
 import { useInventory } from '../../hooks/useInventory';
 import { useSavedBlends } from '../../hooks/useSavedBlends';
 import { apiRequest } from '../../lib/api';
+import { localRecipe } from '../../data/recipeDetails';
 import {
   createRecipeState, selectGlass, adjustSlotVolume, substituteSlot, scaleVolumesToCapacity,
   formatVolume, ingredientKey, isRecipeDetail,
@@ -71,20 +72,22 @@ export default function RecipeLabScreen() {
   const { colors, isDark } = useTheme();
   const insets = useSafeAreaInsets();
 
-  const [recipe, setRecipe] = useState<RecipeDetail | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [initialRecipe] = useState(() => versionId ? null : localRecipe(routeId));
+  const [initialState] = useState(() => initialRecipe ? createRecipeState(initialRecipe) : null);
+  const [recipe, setRecipe] = useState<RecipeDetail | null>(initialRecipe);
+  const [loading, setLoading] = useState(!initialRecipe);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [reloadKey, setReloadKey] = useState(0);
   const [viewMode, setViewMode] = useState<'photo' | 'physics'>('photo');
-  const [originalComponents, setOriginalComponents] = useState<RecipeSlot[]>([]);
-  const [components, setComponents] = useState<RecipeSlot[]>([]);
-  const [initialVolumes, setInitialVolumes] = useState<Record<string, number>>({});
-  const [volumes, setVolumes] = useState<Record<string, number>>({});
-  const [initialGlass, setInitialGlass] = useState<GlassKey>('rocks');
-  const [selectedGlass, setSelectedGlass] = useState<GlassKey>('rocks');
-  const [isMixedMode, setIsMixedMode] = useState(true);
+  const [originalComponents, setOriginalComponents] = useState<RecipeSlot[]>(initialState?.components ?? []);
+  const [components, setComponents] = useState<RecipeSlot[]>(initialState?.components ?? []);
+  const [initialVolumes, setInitialVolumes] = useState<Record<string, number>>(initialState?.volumes ?? {});
+  const [volumes, setVolumes] = useState<Record<string, number>>(initialState?.volumes ?? {});
+  const [initialGlass, setInitialGlass] = useState<GlassKey>(initialState?.selectedGlass ?? 'rocks');
+  const [selectedGlass, setSelectedGlass] = useState<GlassKey>(initialState?.selectedGlass ?? 'rocks');
+  const [isMixedMode, setIsMixedMode] = useState(initialState?.isMixedMode ?? true);
   const [savedVersion, setSavedVersion] = useState<SavedBlend | null>(null);
-  const [versionName, setVersionName] = useState('');
+  const [versionName, setVersionName] = useState(initialRecipe ? `${initialRecipe.name} — my version` : '');
   const [saving, setSaving] = useState(false);
   const savingRef = useRef(false);
   const [saveMessage, setSaveMessage] = useState<string | null>(null);
@@ -115,11 +118,12 @@ export default function RecipeLabScreen() {
     const controller = new AbortController();
     let active = true;
     closeSubstituteModal();
-    setLoading(true);
+    const bundled = versionId ? null : localRecipe(routeId);
+    setLoading(!bundled);
     setLoadError(null);
     setSaveMessage(null);
     setSaveError(null);
-    setRecipe(null);
+    setRecipe(bundled);
 
     const load = async () => {
       try {
@@ -129,6 +133,8 @@ export default function RecipeLabScreen() {
           saved = await loadById(versionId);
           if (!saved || saved.recipeId !== Number(routeId)) throw new Error('This saved version is unavailable. Open the original recipe or return to Saved.');
           detail = saved.recipe;
+        } else if (bundled) {
+          detail = bundled;
         } else {
           const json = await apiRequest<{ status: string; data: unknown }>(`/api/v2/recipes/${encodeURIComponent(routeId ?? '')}`, { signal: controller.signal });
           if (json.status !== 'success' || !isRecipeDetail(json.data)) throw new Error('The recipe could not be loaded. Please try again.');

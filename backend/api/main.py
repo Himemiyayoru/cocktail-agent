@@ -1,6 +1,5 @@
 import json
 import math
-import tempfile
 import os
 import time
 import uvicorn
@@ -12,8 +11,11 @@ from openai import AsyncOpenAI, OpenAI
 from dotenv import load_dotenv
 
 if __package__:
+    from . import billing, store_receipts
     from .recommendations import find_exact_recipe, match_recipes, normalize_inventory, normalize_name, rank_substitutes
 else:
+    import billing
+    import store_receipts
     from recommendations import find_exact_recipe, match_recipes, normalize_inventory, normalize_name, rank_substitutes
 
 # Load environment variables from .env file
@@ -32,11 +34,13 @@ openai_api_key = (os.getenv("OPENAI_API_KEY") or "").strip()
 groq_client = AsyncOpenAI(
     base_url="https://api.groq.com/openai/v1",
     api_key=groq_api_key,
+    max_retries=0,
 ) if groq_api_key else None
 
 # Initialize synchronous client for OpenAI (Whisper API)
 openai_client = OpenAI(
     api_key=openai_api_key,
+    max_retries=0,
 ) if openai_api_key else None
 
 print("[SYSTEM] Optional cloud clients configured.")
@@ -104,6 +108,28 @@ class BobChatRequest(BaseModel):
     use_inventory: bool = False
 
 
+class BobSubscriptionRequest(BaseModel):
+    platform: str
+    product_id: str
+    purchase_token: str = Field(min_length=1, max_length=20000)
+
+
+def require_bob_subscriber(request: Request) -> str:
+    header = request.headers.get("authorization", "")
+    token = header[7:].strip() if header.lower().startswith("bearer ") else ""
+    state, account_id = billing.access_state(token)
+    if state == "expired":
+        raise HTTPException(status_code=402, detail=billing.EXPIRED_MESSAGE)
+    if state != "active" or account_id is None:
+        raise HTTPException(status_code=401, detail=billing.PAYWALL_MESSAGE)
+    return account_id
+
+
+def with_allowance(account_id, payload):
+    payload.update(billing.public_allowance(account_id))
+    return payload
+
+
 class MatchRequest(BaseModel):
     inventory: List[str]
 
@@ -116,6 +142,19 @@ def get_all_recipes():
     """Retrieve a lightweight list of all available recipes."""
     data = [{"id": i, "name": c.get("name"), "glass_type": c.get("glass_type")} for i, c in enumerate(COCKTAILS_DB)]
     return {"status": "success", "count": len(data), "data": data}
+
+
+@app.get("/health")
+def health():
+    """Report readiness only when the catalog and billing storage are accessible."""
+    if not COCKTAILS_DB:
+        raise HTTPException(status_code=503, detail="The recipe catalog is unavailable.")
+    try:
+        billing.check_storage()
+    except (RuntimeError, OSError, billing.sqlite3.Error) as exc:
+        print(f"[STORAGE] Billing readiness check failed: {exc}")
+        raise HTTPException(status_code=503, detail="Billing storage is unavailable.") from exc
+    return {"status": "ok", "billing_storage": "ready", "commit": os.getenv("RENDER_GIT_COMMIT")}
 
 
 @app.get("/api/v2/recipes/{recipe_id}")
@@ -242,45 +281,57 @@ def run_physics_simulation(recipe_name: str, method: str, components: List[dict]
 # ==========================================
 # 6. Whisper Audio Transcription (Cloud)
 # ==========================================
+@app.get("/api/v2/bob/access")
+def bob_access(request: Request):
+    account_id = require_bob_subscriber(request)
+    return {"status": "success", **billing.public_allowance(account_id)}
+
+
+@app.post("/api/v2/bob/subscription")
+def activate_bob_subscription(req: BobSubscriptionRequest):
+    try:
+        account_id, expires_at = store_receipts.verify(req.platform, req.product_id, req.purchase_token)
+        token = billing.activate_subscription(account_id, expires_at)
+    except store_receipts.BillingNotConfigured as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+    except (store_receipts.InvalidReceipt, ValueError) as exc:
+        raise HTTPException(status_code=402, detail=billing.PAYWALL_MESSAGE) from exc
+    return {"status": "success", "access_token": token, **billing.public_allowance(account_id)}
+
+
 @app.post("/api/v2/transcribe")
 async def transcribe_audio(request: Request, audio_file: UploadFile = File(...)):
-    """Process incoming audio files and transcribe them using OpenAI's Whisper API."""
+    """Meter chat and voice against the same server-side monthly allowance."""
+    account_id = require_bob_subscriber(request)
     if openai_client is None:
         raise HTTPException(status_code=503, detail="Voice transcription is unavailable. You can still type your message.")
-    # --- Rate Limiting Logic ---
-    client_ip = request.client.host
-    current_time = time.time()
-
-    if client_ip not in IP_RATE_LIMIT or current_time > IP_RATE_LIMIT[client_ip]["reset_time"]:
-        IP_RATE_LIMIT[client_ip] = {"count": 0, "reset_time": current_time + 3600}
-
-    if IP_RATE_LIMIT[client_ip]["count"] >= MAX_REQUESTS_PER_HOUR:
-        print(f"[RATE LIMIT] Blocked IP (Transcription): {client_ip}")
-        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
-
-    IP_RATE_LIMIT[client_ip]["count"] += 1
-    # ---------------------------
-
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".m4a") as tmp:
-        tmp.write(await audio_file.read())
-        tmp_path = tmp.name
-
+    from starlette.concurrency import run_in_threadpool
     try:
-        print(f"[AUDIO] Sending audio stream to Cloud Whisper: {audio_file.filename}")
-        with open(tmp_path, "rb") as f:
-            result = openai_client.audio.transcriptions.create(
-                model="whisper-1",
-                file=f
-            )
-        text = result.text.strip()
-        print(f"[AUDIO] Transcription success: {text}")
-        return {"status": "success", "text": text}
-    except Exception as e:
-        print(f"[ERROR] Transcription failed: {e}")
-        return {"status": "error", "detail": str(e)}
-    finally:
-        if os.path.exists(tmp_path):
-            os.remove(tmp_path)
+        from .audio_meter import prepare_audio
+    except ImportError:
+        from audio_meter import prepare_audio
+    payload = await audio_file.read(10 * 1024 * 1024 + 1)
+    if len(payload) > 10 * 1024 * 1024:
+        raise HTTPException(status_code=413, detail="Please record a shorter message (maximum 2 minutes).")
+    try:
+        wav, seconds = await run_in_threadpool(prepare_audio, payload)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    # Whisper: $0.006/minute, rounded up to a whole second.
+    reserved = math.ceil(seconds) * 100_000
+    period_id = billing.try_reserve(account_id, reserved)
+    if not period_id:
+        raise HTTPException(status_code=402, detail=billing.CAP_MESSAGE)
+    try:
+        result = await run_in_threadpool(
+            openai_client.audio.transcriptions.create,
+            model="whisper-1", file=("voice.wav", wav, "audio/wav"),
+        )
+        # Normalized PCM duration is known before sending; no client duration trusted.
+        return with_allowance(account_id, {"status": "success", "text": result.text.strip()})
+    except Exception as exc:
+        # Keep the reservation: connection loss does not prove the call was unbilled.
+        raise HTTPException(status_code=502, detail="Transcription could not finish. Please try again.") from exc
 
 
 # ==========================================
@@ -289,29 +340,30 @@ async def transcribe_audio(request: Request, audio_file: UploadFile = File(...))
 @app.post("/api/v2/chat_with_bob")
 async def chat_with_bob(req: BobChatRequest, request: Request):
     """Handle conversational AI requests via Groq, incorporating rate limiting and strict JSON output formatting."""
+    account_id = require_bob_subscriber(request)
     inventory = req.inventory or []
     candidates = list(enumerate(COCKTAILS_DB))
     if req.use_inventory:
         if not normalize_inventory(inventory):
-            return {
+            return with_allowance(account_id, {
                 "status": "success",
                 "bob_says": "Your cabinet is empty. Add the ingredients you have in My Cabinet, or turn off 'Use only my cabinet' to explore the full menu.",
                 "recommendation_status": "empty_inventory",
-            }
+            })
         makeable_ids = {item["id"] for item in match_recipes(COCKTAILS_DB, inventory)["perfect_matches"]}
         candidates = [(recipe_id, recipe) for recipe_id, recipe in candidates if recipe_id in makeable_ids]
         if not candidates:
-            return {
+            return with_allowance(account_id, {
                 "status": "success",
                 "bob_says": "I don't have a complete recipe for what's in your cabinet yet. Check the missing ingredients in My Cabinet, add more supplies, or turn off 'Use only my cabinet' to explore the full menu.",
                 "recommendation_status": "no_available_recipes",
-            }
+            })
     if not candidates:
-        return {
+        return with_allowance(account_id, {
             "status": "success",
             "bob_says": "The recipe catalog is unavailable right now. Please try again later.",
             "recommendation_status": "no_available_recipes",
-        }
+        })
     if groq_client is None:
         raise HTTPException(status_code=503, detail="Bob's chat is unavailable. You can still browse recipes and match your cabinet.")
 
@@ -362,22 +414,35 @@ async def chat_with_bob(req: BobChatRequest, request: Request):
     """
 
     try:
-        # reasoning_format=hidden keeps chain-of-thought out of the JSON body.
-        # max_completion_tokens must cover that reasoning plus the reply.
-        response = await groq_client.chat.completions.create(
-            model=GROQ_MODEL,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": req.user_message}
-            ],
-            temperature=0.5,
-            max_completion_tokens=512,
-            response_format={"type": "json_object"},
-            extra_body={
-                "reasoning_effort": "low",
-                "reasoning_format": "hidden",
-            },
-        )
+        prompt_characters = len(system_prompt.encode("utf-8")) + len(req.user_message.encode("utf-8"))
+        try:
+            reserved = billing.estimate_request_nano(GROQ_MODEL, prompt_characters, 512)
+        except billing.UnknownModelPrice as exc:
+            raise HTTPException(status_code=503, detail="Bob's model price is not configured, so chat is paused.") from exc
+        period_id = billing.try_reserve(account_id, reserved)
+        if not period_id:
+            raise HTTPException(status_code=402, detail=billing.CAP_MESSAGE)
+        try:
+            response = await groq_client.chat.completions.create(
+                model=GROQ_MODEL,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": req.user_message}
+                ],
+                temperature=0.5,
+                max_completion_tokens=512,
+                response_format={"type": "json_object"},
+                extra_body={
+                    "reasoning_effort": "low",
+                    "reasoning_format": "hidden",
+                },
+            )
+            actual = billing.usage_nano(GROQ_MODEL, getattr(response, "usage", None))
+            billing.settle(account_id, reserved, reserved if actual is None else actual, period_id)
+        except Exception:
+            # A timeout may still incur provider charges; keep the reservation.
+            # No automatic retries are allowed on paid provider calls.
+            raise
 
         raw_content = (response.choices[0].message.content or "").strip()
         if not raw_content:
@@ -400,29 +465,29 @@ async def chat_with_bob(req: BobChatRequest, request: Request):
 
         matched = find_exact_recipe(candidates, rec_name)
         if rec_name.strip() and matched is None:
-            # Discard the explanation too: it may recommend the unverified drink.
-            return {
+            return with_allowance(account_id, {
                 "status": "success",
                 "bob_says": "I couldn't verify that recommendation against the available menu. Try asking again, or pick a recipe from the library.",
                 "recommendation_status": "unavailable_recommendation",
-            }
+            })
         if matched is not None:
             matched_id, matched_recipe = matched
-            return {
+            return with_allowance(account_id, {
                 "status": "success",
                 "bob_says": bob_comment.strip(),
                 "recipe_id": matched_id,
                 "recipe_name": matched_recipe["name"],
                 "glass_type": matched_recipe.get("glass_type", "Standard"),
                 "recommendation_status": "recommended",
-            }
-        else:
-            return {
-                "status": "success",
-                "bob_says": bob_comment.strip(),
-                "recommendation_status": "no_recommendation",
-            }
+            })
+        return with_allowance(account_id, {
+            "status": "success",
+            "bob_says": bob_comment.strip(),
+            "recommendation_status": "no_recommendation",
+        })
 
+    except HTTPException:
+        raise
     except Exception as e:
         print(f"[ERROR] Bob Cognitive Core failure: {e}")
         raise HTTPException(status_code=502, detail="Bob couldn't finish that reply. Please try again, or browse recipes while chat is unavailable.") from e

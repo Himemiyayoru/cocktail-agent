@@ -1,13 +1,14 @@
-import { useState, useRef, useEffect } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, ScrollView, ActivityIndicator, KeyboardAvoidingView, Platform, Image as RNImage, Keyboard, Switch } from 'react-native';
+import { useState, useRef, useEffect, useCallback } from 'react';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, ScrollView, ActivityIndicator, KeyboardAvoidingView, Platform, Image as RNImage, Keyboard, Switch, Modal } from 'react-native';
 import { useTheme } from '../../context/ThemeContext';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { Audio } from 'expo-av'; 
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useRouter } from 'expo-router';
+import { useFocusEffect, useRouter } from 'expo-router';
 import { DrinkPhoto } from '../../components/DrinkPhoto';
 import { useInventory } from '../../hooks/useInventory';
 import { apiRequest } from '../../lib/api';
+import { BobAccess, BOB_MONTHLY_PRICE, BOB_AI_BUDGET, clearStoredBobAccess, purchaseBob, readStoredBobAccess, restoreBob } from '../../lib/subscription';
 
 function BobDrinkThumbnail({ drinkName, size = 60, colors }: { drinkName: string, size?: number, colors: any }) {
   return (
@@ -58,6 +59,42 @@ export default function BobScreen() {
   const [isRecording, setIsRecording] = useState(false);
   const [isMicBusy, setIsMicBusy] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
+  const [access, setAccess] = useState<BobAccess | null>(null);
+  const [accessReady, setAccessReady] = useState(false);
+  const [paywallBusy, setPaywallBusy] = useState(false);
+  const [paywallError, setPaywallError] = useState<string | null>(null);
+  const [accessNotice, setAccessNotice] = useState<string | null>(null);
+  const accessRef = useRef<BobAccess | null>(null);
+  accessRef.current = access;
+
+  useFocusEffect(useCallback(() => {
+    let active = true;
+    readStoredBobAccess().then((value) => {
+      if (!active) return;
+      setAccess(value);
+      if (!value) setAccessNotice(`Subscribe for ${BOB_MONTHLY_PRICE}/month to use Bob's chat and voice. Includes ${BOB_AI_BUDGET} of AI usage per subscription month.`);
+      setAccessReady(true);
+    }).catch(() => {
+      if (active) setAccessReady(true);
+    });
+    return () => { active = false; };
+  }, []));
+
+  async function loseAccess(error: unknown) {
+    const status = (error as { status?: number }).status;
+    const message = error instanceof Error ? error.message : '';
+    if (status === 401 || message.includes('subscription has ended')) {
+      await clearStoredBobAccess();
+      setAccess(null);
+      setAccessNotice(message || `Subscribe for ${BOB_MONTHLY_PRICE}/month to use Bob.`);
+      return true;
+    }
+    if (status === 402) {
+      setAccessNotice(message);
+      return true;
+    }
+    return false;
+  }
 
   useEffect(() => {
     const hideSub = Keyboard.addListener('keyboardDidHide', () => {
@@ -148,10 +185,20 @@ export default function BobScreen() {
       } else {
         formData.append('audio_file', { uri, name: 'voice.m4a', type: 'audio/m4a' } as any);
       }
-      const json = await apiRequest<{ status: string; text: string }>('/api/v2/transcribe', { method: 'POST', body: formData, signal: controller.signal }, 45000);
-      if (mounted.current && !controller.signal.aborted) setInputText(json.text);
+      const token = accessRef.current?.accessToken;
+      if (!token) return;
+      const json = await apiRequest<{ status: string; text: string; remaining_usd: string; spent_usd: string }>('/api/v2/transcribe', {
+        method: 'POST', body: formData, signal: controller.signal,
+        headers: { Authorization: `Bearer ${token}` },
+      }, 45000);
+      if (mounted.current && !controller.signal.aborted) {
+        setInputText(json.text);
+        setAccess(current => current ? { ...current, remainingUsd: json.remaining_usd, spentUsd: json.spent_usd } : current);
+      }
     } catch (error) {
-      if (mounted.current && !controller.signal.aborted) setRequestError(error instanceof Error ? error.message : 'Transcription failed. Please try again.');
+      if (mounted.current && !controller.signal.aborted && !(await loseAccess(error))) {
+        setRequestError(error instanceof Error ? error.message : 'Transcription failed. Please try again.');
+      }
     } finally {
       transcriptionRequest.current = null;
       if (mounted.current) setIsTranscribing(false);
@@ -172,18 +219,23 @@ export default function BobScreen() {
     setRequestError(null);
     setFailedRequest(null);
     try {
-      const json = await apiRequest<{ status: string; bob_says: string; recipe_id?: number; recipe_name?: string; glass_type?: string }>('/api/v2/chat_with_bob', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
+      const token = accessRef.current?.accessToken;
+      if (!token) return;
+      const json = await apiRequest<{ status: string; bob_says: string; recipe_id?: number; recipe_name?: string; glass_type?: string; budget_usd?: string; spent_usd?: string; remaining_usd?: string }>('/api/v2/chat_with_bob', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ user_message: pending.text, inventory: pending.inventory, use_inventory: pending.useCabinet }),
         signal: controller.signal,
       }, 45000);
       if (typeof json.bob_says !== 'string') throw new Error('Bob could not reply. Please try again.');
+      if (mounted.current && json.remaining_usd) {
+        setAccess((current) => current ? { ...current, budgetUsd: json.budget_usd || current.budgetUsd, spentUsd: json.spent_usd || current.spentUsd, remainingUsd: json.remaining_usd || current.remainingUsd } : current);
+      }
       if (mounted.current && !controller.signal.aborted) setMessages(prev => [...prev, {
         id: `bob-${Date.now()}`, role: 'bob', text: json.bob_says,
         recipe_id: json.recipe_id, recipe_name: json.recipe_name, glass_type: json.glass_type,
       }]);
     } catch (error) {
-      if (mounted.current) {
+      if (mounted.current && !(await loseAccess(error))) {
         setRequestError(controller.signal.aborted ? 'Request cancelled. Your message is available to retry.' : error instanceof Error ? error.message : 'Bob could not reply. Please try again.');
         setFailedRequest(pending);
       }
@@ -239,10 +291,48 @@ export default function BobScreen() {
         <View style={[styles.fixedHeader, { backgroundColor: colors.background, borderBottomColor: colors.border, paddingRight: 72 }]}>
           <View>
             <Text style={{ fontSize: 24, fontWeight: '900', color: colors.text, letterSpacing: 1 }}>ASK BOB</Text>
-            <Text style={{ fontSize: 12, color: colors.subtext }}>Your AI Bartender</Text>
+            <Text style={{ fontSize: 12, color: colors.subtext }}>{access ? `Monthly model allowance: $${access.remainingUsd} of $${access.budgetUsd} left` : 'Your AI Bartender'}</Text>
           </View>
         </View>
 
+        <Modal visible={accessNotice !== null} transparent animationType="fade" onRequestClose={() => setAccessNotice(null)}>
+          <View style={{ flex: 1, justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.6)', padding: 24 }}>
+            <View accessibilityViewIsModal style={{ backgroundColor: colors.card, borderRadius: 16, padding: 24, gap: 18 }}>
+              <Text accessibilityRole="header" style={{ color: colors.text, fontSize: 22, fontWeight: '800' }}>{access ? 'Monthly AI limit' : 'Bob subscription'}</Text>
+              <Text style={{ color: colors.text, fontSize: 16, lineHeight: 24 }}>{accessNotice}</Text>
+              <TouchableOpacity accessibilityRole="button" onPress={() => setAccessNotice(null)} style={[styles.paywallButton, { backgroundColor: themePrimary }]}>
+                <Text style={{ color: themePrimaryText, fontWeight: '700' }}>{access ? 'OK' : 'View subscription'}</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
+        {!accessReady ? <ActivityIndicator style={{ marginTop: 40 }} color={themePrimary} /> : !access ? (
+          <View style={styles.paywall}>
+            <Text style={{ color: colors.text, fontSize: 22, fontWeight: '800' }}>Bob is {BOB_MONTHLY_PRICE}/month</Text>
+            <Text style={{ color: colors.subtext, fontSize: 16, lineHeight: 24 }}>
+              Library, search, cabinet, recipe studio, and saved versions stay free. Bob's chat and voice are included in the monthly subscription. Model usage in each paid period is capped at {BOB_AI_BUDGET}, shared by chat and voice.
+            </Text>
+            {paywallError && <Text accessibilityRole="alert" style={{ color: colors.text }}>{paywallError}</Text>}
+            <TouchableOpacity accessibilityRole="button" disabled={paywallBusy} style={[styles.paywallButton, { backgroundColor: themePrimary }]} onPress={async () => {
+              setPaywallBusy(true);
+              setPaywallError(null);
+              try { setAccess(await purchaseBob()); }
+              catch (error) { setPaywallError(error instanceof Error ? error.message : 'The subscription could not be completed.'); }
+              finally { setPaywallBusy(false); }
+            }}>
+              <Text style={{ color: themePrimaryText, fontWeight: '800' }}>{paywallBusy ? 'Please wait…' : `Subscribe ${BOB_MONTHLY_PRICE}/month`}</Text>
+            </TouchableOpacity>
+            <TouchableOpacity accessibilityRole="button" disabled={paywallBusy} onPress={async () => {
+              setPaywallBusy(true);
+              setPaywallError(null);
+              try { setAccess(await restoreBob()); }
+              catch (error) { setPaywallError(error instanceof Error ? error.message : 'No subscription was found.'); }
+              finally { setPaywallBusy(false); }
+            }}>
+              <Text style={{ color: colors.text, fontWeight: '700' }}>Restore subscription</Text>
+            </TouchableOpacity>
+          </View>
+        ) : <>
         <View style={[styles.cabinetRow, { borderBottomColor: colors.border }]}>
           <View style={{ flex: 1 }}>
             <Text style={{ color: colors.text, fontWeight: '600' }}>Use only my cabinet</Text>
@@ -307,6 +397,7 @@ export default function BobScreen() {
             <Ionicons name="send" size={18} color={inputText.trim() ? themePrimaryText : colors.subtext} />
           </TouchableOpacity>
         </View>
+        </>}
       </View>
     </KeyboardAvoidingView>
   );
@@ -345,4 +436,6 @@ const styles = StyleSheet.create({
   holdToTalkButton: { flex: 1, borderWidth: 1, borderRadius: 20, justifyContent: 'center', alignItems: 'center', marginRight: 8, minHeight: 44 },
   holdToTalkText: { fontSize: 16, fontWeight: '600' },
   sendButton: { width: 44, height: 44, borderRadius: 22, justifyContent: 'center', alignItems: 'center' },
+  paywall: { flex: 1, padding: 24, gap: 16, justifyContent: 'center' },
+  paywallButton: { minHeight: 48, borderRadius: 14, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 16 },
 });

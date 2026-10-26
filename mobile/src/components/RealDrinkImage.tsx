@@ -17,7 +17,7 @@ export default function RealDrinkImage({ drinkName, size = 150 }: RealDrinkImage
     return (
       <DrinkPhoto
         name={drinkName}
-        preview={false}
+        preview={true}
         style={[styles.container, { width: size, height: size, borderColor: colors.border }]}
         iconColor={colors.subtext}
         iconSize={size * 0.3}

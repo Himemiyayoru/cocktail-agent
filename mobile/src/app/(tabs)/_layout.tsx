@@ -66,12 +66,12 @@ export default function TabLayout() {
   return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
       <Tabs
+        safeAreaInsets={{ bottom: 0 }}
         screenOptions={{
           headerShown: false,
           tabBarActiveTintColor: themePrimary,
           tabBarInactiveTintColor: colors.subtext,
           // Own the home-indicator inset once. The default tab bar would add it again.
-          safeAreaInsets: { bottom: 0 },
           tabBarStyle: {
             backgroundColor: colors.background,
             borderTopColor: colors.border,

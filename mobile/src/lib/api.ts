@@ -18,9 +18,11 @@ export async function apiRequest<T>(path: string, options: RequestInit = {}, tim
     }
     if (!response.ok || data?.status === 'error') {
       const detail = typeof data?.detail === 'string' ? data.detail : undefined;
-      throw new Error(response.status === 429 ? 'Too many requests. Please try again later.'
+      const error = new Error(response.status === 429 ? 'Too many requests. Please try again later.'
         : response.status === 404 ? 'This item is no longer available.'
         : detail || 'The service could not complete this request. Please try again.');
+      (error as Error & { status?: number }).status = response.status;
+      throw error;
     }
     return data as T;
   } catch (error) {
