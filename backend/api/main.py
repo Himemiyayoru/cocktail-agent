@@ -169,8 +169,9 @@ h2 { font-size: 1.15rem; margin-top: 1.6rem; }
 <p>Apple or Google processes the $4.99 monthly subscription. We do not receive your card number. We receive the store’s transaction identifier so we can confirm the subscription and apply the monthly allowance. We store that identifier, the subscription expiry, and how much of the monthly model allowance has been used.</p>
 <h2>How we use this information</h2>
 <p>We use it to run Bob and enforce the monthly model allowance. We do not sell personal information and we do not use it for advertising.</p>
-<h2>Deletion</h2>
-<p>Email himemiyayoru@hotmail.com to ask us to delete the subscription identifier and allowance records we hold.</p>
+<h2 id="deletion">Delete your data</h2>
+<p>This section is for Bob's Special Blend. Chat text and voice recordings are not stored after the request, so there is nothing to delete for them. Network addresses used to limit requests are kept only in memory and are not saved in the billing database.</p>
+<p>To delete the subscription records we do store, email himemiyayoru@hotmail.com with the subject “Delete my Bob data” and the Google Play or Apple account email you used to subscribe. We delete the store transaction identifier, subscription expiry, and monthly allowance records after we match them to that request. We do not keep those records for an extra period. Cabinet items and saved recipes stay on your device until you remove them or uninstall the app.</p>
 <h2>Children</h2>
 <p>The app is about alcoholic drinks and is not directed at children.</p>
 <h2>Contact</h2>
