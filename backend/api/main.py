@@ -163,11 +163,14 @@ h2 { font-size: 1.15rem; margin-top: 1.6rem; }
 <h2>Information stored on your device</h2>
 <p>Your cabinet, saved recipe versions, and Bob subscription access token stay on your device. The recipe library is included with the app.</p>
 <h2>Information sent to our server</h2>
-<p>When you use Bob, the app sends your chat text, and any voice recording you choose to transcribe, to our server at bob-ai-backend.onrender.com. The server sends chat text to Groq and voice audio to OpenAI so Bob can reply or transcribe it. We store the store subscription identifier, its expiry, and how much of the monthly model allowance that subscription has used.</p>
+<p>When you use Bob, the app sends your chat text, and any voice recording you choose to transcribe, to our server at bob-ai-backend.onrender.com. The server sends chat text to Groq and voice audio to OpenAI so Bob can reply or transcribe it. Chat text and voice recordings are used only for that request and are not stored afterward.</p>
+<p>The server briefly sees the network address of a request so it can limit how many Bob requests that network can make in an hour. Those addresses stay in memory and are not written to the billing database.</p>
 <h2>Purchases</h2>
-<p>Apple or Google processes the $4.99 monthly subscription. We do not receive your card number. We receive the store’s transaction identifier so we can confirm the subscription and apply the monthly allowance.</p>
+<p>Apple or Google processes the $4.99 monthly subscription. We do not receive your card number. We receive the store’s transaction identifier so we can confirm the subscription and apply the monthly allowance. We store that identifier, the subscription expiry, and how much of the monthly model allowance has been used.</p>
 <h2>How we use this information</h2>
-<p>We use it to show recipes, run Bob, and enforce the monthly model allowance. We do not sell personal information and we do not use it for advertising.</p>
+<p>We use it to run Bob and enforce the monthly model allowance. We do not sell personal information and we do not use it for advertising.</p>
+<h2>Deletion</h2>
+<p>Email himemiyayoru@hotmail.com to ask us to delete the subscription identifier and allowance records we hold.</p>
 <h2>Children</h2>
 <p>The app is about alcoholic drinks and is not directed at children.</p>
 <h2>Contact</h2>
