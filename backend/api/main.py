@@ -5,6 +5,7 @@ import time
 import uvicorn
 from fastapi import FastAPI, HTTPException, UploadFile, File, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse
 from pydantic import BaseModel, Field
 from typing import List, Optional
 from openai import AsyncOpenAI, OpenAI
@@ -142,6 +143,43 @@ def get_all_recipes():
     """Retrieve a lightweight list of all available recipes."""
     data = [{"id": i, "name": c.get("name"), "glass_type": c.get("glass_type")} for i, c in enumerate(COCKTAILS_DB)]
     return {"status": "success", "count": len(data), "data": data}
+
+
+PRIVACY_POLICY_HTML = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Bob's Special Blend</title>
+<style>
+body { font-family: Georgia, serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; color: #111; }
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.15rem; margin-top: 1.6rem; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy</h1>
+<p>Bob's Special Blend (“the app”) is a cocktail recipe app. This policy describes what the app and its server handle. It was last updated on November 2, 2026.</p>
+<h2>Information stored on your device</h2>
+<p>Your cabinet, saved recipe versions, and Bob subscription access token stay on your device. The recipe library is included with the app.</p>
+<h2>Information sent to our server</h2>
+<p>When you use Bob, the app sends your chat text, and any voice recording you choose to transcribe, to our server at bob-ai-backend.onrender.com. The server sends chat text to Groq and voice audio to OpenAI so Bob can reply or transcribe it. We store the store subscription identifier, its expiry, and how much of the monthly model allowance that subscription has used.</p>
+<h2>Purchases</h2>
+<p>Apple or Google processes the $4.99 monthly subscription. We do not receive your card number. We receive the store’s transaction identifier so we can confirm the subscription and apply the monthly allowance.</p>
+<h2>How we use this information</h2>
+<p>We use it to show recipes, run Bob, and enforce the monthly model allowance. We do not sell personal information and we do not use it for advertising.</p>
+<h2>Children</h2>
+<p>The app is about alcoholic drinks and is not directed at children.</p>
+<h2>Contact</h2>
+<p>Questions about this policy: himemiyayoru@hotmail.com</p>
+</body>
+</html>
+"""
+
+
+@app.get("/privacy", response_class=HTMLResponse)
+def privacy_policy():
+    return PRIVACY_POLICY_HTML
 
 
 @app.get("/health")
